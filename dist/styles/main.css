@@ -4098,6 +4098,7 @@ body {
 .cases__col:nth-child(2) {
   padding-top: 351px;
   padding-left: 22px;
+  align-items: flex-end;
 }
 
 .cases .case {
@@ -4108,10 +4109,12 @@ body {
   flex-flow: column nowrap;
   width: 100%;
   margin-bottom: 326px;
+  max-width: 477px;
 }
 
 .cases .case__big-margin {
   margin-bottom: 373px;
+  max-width: 660px;
 }
 
 .cases .case__picture {
