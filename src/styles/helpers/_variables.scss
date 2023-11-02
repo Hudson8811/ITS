@@ -1,0 +1,24 @@
+/* media */
+$media-list: (
+		'xxs': 375,
+		'xs': 560,
+		'sm': 767,
+		'md': 992,
+		'mdHeader': 1130,
+		'lg': 1279,
+		'xl': 1599,
+		'xxl': 1920
+);
+
+/* шрифты */
+$mainFont: 'HelveticaNeueCyr', sans-serif;
+
+/* цвета */
+$fonBlack: #2A2A2A;
+$white: #fff;
+$red: #FF3E41;
+$grey: #E6E6EE;
+$blue: #237AE9;
+$greyBlack: #7F8589;
+$greyLight: #F5F5F5;
+$mainDark: #2A2A2A;

@@ -1,0 +1,289 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "Project title"
+
+block content
+	.start__section.section
+		.container
+			.hashtag
+				a(href="#").hashtag__item #Дизайн
+				a(href="#").hashtag__item #Аналитика
+				a(href="#").hashtag__item #Аутстафф
+				a(href="#").hashtag__item #Бекенд
+			.start
+				.start__col
+					.start__desc
+						.start__title.title__99
+							!="IT решения <br><span>для бизнеса</span>"
+						.start__text.text__18
+							!="Тут может быть еще какое то описание"
+				.start__col
+					.cube 
+						img(src="../img/cube.png", alt="")
+				.btn.start__btn Заполнить бриф
+	
+	.partners
+		.container
+			.partners__slider.swiper-container.js-partners__slider
+				.swiper-wrapper
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__1.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__2.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__3.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__4.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__1.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__2.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__3.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__4.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__1.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__2.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__3.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__4.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__1.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__2.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__3.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__4.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__1.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__2.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__3.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__4.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__1.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__2.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__3.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__4.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__1.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__2.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__3.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__4.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__1.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__2.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__3.png", alt="")
+					.partners__slide.swiper-slide
+						img(src="img/partners__slide__4.png", alt="")
+	
+	.cases__section.section.rellax(data-rellax-speed="-12")
+		.container
+			.cases__title.title__99 Кейсы
+			.cases
+				.cases__col.rellax(data-rellax-speed="10")
+					.case.case__big-margin
+						.case__picture.case__picture--1
+							picture 
+								source(media="(max-width: 992px )", srcset="../img/case__picture__1.png")
+								img(src="../img/case__picture__1.png", alt="")
+						.case__desc
+							.case__desc__title СберМобайл
+							.case__desc__text.text__18 Тут может быть еще какое то описание
+						.case__labels
+							a(href="#").case__label #Аналитика
+							a(href="#").case__label #Дизайн
+					.case
+						.case__picture.case__picture--2
+							picture 
+								source(media="(max-width: 992px )", srcset="../img/case__picture__3.png")
+								img(src="../img/case__picture__3.png", alt="")
+						.case__desc
+							.case__desc__title Сбербанк
+							//- .case__desc__text.text__18 Тут может быть еще какое то описание
+						.case__labels
+							a(href="#").case__label #Дизайн
+							a(href="#").case__label #Аналитика
+				
+					.case.case__big-margin
+						.case__picture.case__picture--1
+							picture 
+								source(media="(max-width: 992px )", srcset="../img/case__picture__1.png")
+								img(src="../img/case__picture__1.png", alt="")
+						.case__desc
+							.case__desc__title СберМобайл
+							.case__desc__text.text__18 Тут может быть еще какое то описание
+						.case__labels
+							a(href="#").case__label #Аналитика
+							a(href="#").case__label #Дизайн
+					.case
+						.case__picture.case__picture--2
+							picture 
+								source(media="(max-width: 992px )", srcset="../img/case__picture__3.png")
+								img(src="../img/case__picture__3.png", alt="")
+						.case__desc
+							.case__desc__title Сбербанк
+							//- .case__desc__text.text__18 Тут может быть еще какое то описание
+						.case__labels
+							a(href="#").case__label #Дизайн
+							a(href="#").case__label #Аналитика
+				
+				.cases__col.rellax(data-rellax-speed="-2")
+					.case
+						.case__picture.case__picture--2
+							picture 
+								source(media="(max-width: 992px )", srcset="../img/case__picture__2.png")
+								img(src="../img/case__picture__2.png", alt="")
+						.case__desc
+							.case__desc__title Московский комсомолец спорт
+							.case__desc__text.text__18 
+						.case__labels
+							a(href="#").case__label #Дизайн
+							a(href="#").case__label #Аналитика
+
+					.case.case__big-margin
+						.case__picture.case__picture--1
+							picture 
+								source(media="(max-width: 992px )", srcset="../img/case__picture__4.png")
+								img(src="../img/case__picture__4.png", alt="")
+						.case__desc
+							.case__desc__title Haier
+							.case__desc__text.text__18 Тут может быть еще какое то описание
+						.case__labels
+							a(href="#").case__label #Аналитика
+							a(href="#").case__label #Дизайн
+	.cases__btn.btn Все проекты
+	.developing__section.section
+		.container
+			.developing__title.title__65 
+				!="Развиваемся <br> <span>в смежных областях</span>"
+			.developing
+				.developing__item
+					.developing__item__title 
+						!="1С интеграция с сайтом"
+					.developing__item__list
+						ul
+							li
+								!="Торговые отношения (Товары с характеристикой)"
+							li
+								!="Заказы с обратной синхронизацией"
+							li
+								!="Кастомные обмены, вебхуки"
+				.developing__item
+					.developing__item__title 
+						!="1С интеграция с сайтом"
+					.developing__item__list
+						ul
+							li
+								!="Торговые отношения (Товары с характеристикой)"
+							li
+								!="Заказы с обратной синхронизацией"
+							li
+								!="Кастомные обмены, вебхуки"
+				.developing__item
+					.developing__item__title 
+						!="1С интеграция с сайтом"
+					.developing__item__list
+						ul
+							li
+								!="Торговые отношения (Товары с характеристикой)"
+							li
+								!="Заказы с обратной синхронизацией"
+							li
+								!="Кастомные обмены, вебхуки"
+				.developing__item
+					.developing__item__title 
+						!="1С интеграция с сайтом"
+					.developing__item__list
+						ul
+							li
+								!="Торговые отношения (Товары с характеристикой)"
+							li
+								!="Заказы с обратной синхронизацией"
+							li
+								!="Кастомные обмены, вебхуки"
+				.developing__item
+					.developing__item__title 
+						!="1С интеграция с сайтом"
+					.developing__item__list
+						ul
+							li
+								!="Торговые отношения (Товары с характеристикой)"
+							li
+								!="Заказы с обратной синхронизацией"
+							li
+								!="Кастомные обмены, вебхуки"
+	
+	.tell-us__section.section
+		.container
+			.tell-us
+				.tell-us__col
+					.tell-us__title.title__65
+						!="Расскажите нам<br><span>о вашем проекте</span>"			
+					.tell-us__QR
+						.tell-us__QR__title
+							!="Если удобнее, пишите в телеграмм"
+						.tell-us__QR__picture 
+							img(src="../img/qr.png", alt="",)
+				.tell-us__col
+					form.form
+						.form__title 
+							!="Какие задачи перед нами <br>стоят?"
+						.form__checkbox
+							<div class="checkbox">
+								<input class="custom-checkbox" type="checkbox" id="form__check__1" name="form__check__1" value="indigo">
+								<label for="form__check__1">Приложение</label>
+							</div>
+							<div class="checkbox">
+								<input class="custom-checkbox" type="checkbox" id="form__check__2" name="form__check__2" value="indigo">
+								<label for="form__check__2">Сайт</label>
+							</div>
+							<div class="checkbox">
+								<input class="custom-checkbox" type="checkbox" id="form__check__4" name="form__check__4" value="indigo">
+								<label for="form__check__4">Лендинг</label>
+							</div>
+							<div class="checkbox">
+								<input class="custom-checkbox" type="checkbox" id="form__check__5" name="form__check__5" value="indigo">
+								<label for="form__check__5">Каталог</label>
+							</div>
+							<div class="checkbox">
+								<input class="custom-checkbox" type="checkbox" id="form__check__3" name="form__check__3" value="indigo">
+								<label for="form__check__3">Сервис</label>
+							</div>
+							<div class="checkbox">
+								<input class="custom-checkbox" type="checkbox" id="form__check__6" name="form__check__6" value="indigo">
+								<label for="form__check__6">Портал</label>
+							</div>
+							<div class="checkbox">
+								<input class="custom-checkbox" type="checkbox" id="form__check__7" name="form__check__7" value="indigo">
+								<label for="form__check__7">Проект</label>
+							</div>
+							<div class="checkbox">
+								<input class="custom-checkbox" type="checkbox" id="form__check__8" name="form__check__8" value="indigo">
+								<label for="form__check__8">Приложение</label>
+							</div>
+						.form__input__wrap
+							input(type="text", name="" placeholder="Какие задачи перед нами стоят?").form__input
+							input(type="text", name="" placeholder="Ваше имя").form__input
+							input(type="email", name="" placeholder="Ваше Email").form__input
+							input(type="tel", name="" placeholder="Ваше Телефон").form__input.js-mask-phone
+						.form__buttons
+							.form__buttons__text
+								!="<span>*</span>нажимая кнопку вы соглашаетесь согласие на обработку персональных данных"
+							.btn--small Оставить заявку
