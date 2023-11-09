@@ -19,31 +19,7 @@
 		position: relative;
 		justify-content: space-between;
 		align-items: center;
-		// width: 100%;
-		// height: 100%;
-		// padding-left: 80px;
-		// padding-right: 80px;
-		// max-width: 1376px;
-		// overflow: visible;
-		// @include max(xl) {
-		// 	padding-left: 40px;
-		// 	padding-right: 40px;
-		// }
-		// @include max(lg) {
-		// 	//1024
-		// 	width: 1168px;
-		// 	max-width: calc(100% - 32px * 2);
-		// 	padding-left: 0px;
-		// 	padding-right: 0px;
-		// }
-	
-		// @include max(mdHeader) {
-		// 	max-width: calc(100% - 32px * 2);
-		// }
-	
-		// @include max(sm) {
-		// 	max-width: calc(100% - 16px * 2);
-		// }
+		width: 1920px;
 	}
 	.hamburger {
 		display: none;
@@ -93,6 +69,7 @@
 		align-items: center;
 		text-decoration: none;
 		min-width: 158px;
+		max-width: 158px;
 		margin-right: 75px;
 		@include max(lg) {
 			margin-right: 30px;

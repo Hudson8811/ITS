@@ -63,7 +63,7 @@ body {
 	box-sizing: border-box;
 	width: 1376px;
 	// max-width: 95%;
-	max-width: calc(100% - 32px);
+	max-width: calc(100% - 36px);
 	margin: 0 auto;
     position: relative;
 	@include max(lg) {
@@ -381,7 +381,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    min-height: 545px;
+    min-height: 800px;
     @include max(mdHeader) {
         min-height: auto;
     }
@@ -391,6 +391,9 @@ body {
         align-items: flex-start;
     }
     &__section {
+        .container {
+            width: 1920px;
+        }
         @include max(mdHeader) {
             padding-top: 100px;
         }
@@ -406,7 +409,7 @@ body {
         align-items: flex-start;
         flex-flow: column nowrap;
         &:nth-child(1) {
-            align-items: flex-end;
+            align-items: center;
             width: 55.45%;
             @include max(mdHeader) {
                 width: 100%;
