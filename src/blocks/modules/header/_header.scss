@@ -10,6 +10,7 @@
 	background: #fff;
 	z-index: 9999;
 	height: 73px;
+	padding-top: 43px;
 	box-sizing: border-box;
 	@include max(mdHeader) {
 		height: 55px;
