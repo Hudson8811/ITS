@@ -3604,8 +3604,7 @@ body {
 
 .start__section {
   height: calc(100vh - 263px);
-  max-height: 577px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .start__section .container {
