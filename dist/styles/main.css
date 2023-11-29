@@ -4077,6 +4077,7 @@ body {
 
 .cases__section {
   overflow: hidden;
+  margin-top: 100px;
 }
 
 .cases__title {
@@ -4120,6 +4121,7 @@ body {
   width: 100%;
   margin-bottom: 326px;
   max-width: 477px;
+  text-decoration: none;
 }
 
 .cases .case__big-margin {
@@ -4193,13 +4195,6 @@ body {
   text-decoration: none;
   transition: all 0.3s;
   margin-bottom: 20px;
-}
-
-.cases .case__label:hover {
-  transition: all 0.3s;
-  background: #237AE9;
-  border: 1px solid #237AE9;
-  color: #fff;
 }
 
 .cases .case__label:last-child {

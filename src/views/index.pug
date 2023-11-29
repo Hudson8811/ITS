@@ -92,12 +92,12 @@ block content
 				.partners__slide.swiper-slide
 					img(src="img/partners__slide__4.png", alt="")
 
-	.cases__section.section.rellax(data-rellax-speed="-12")
+	.cases__section.section.rellax(data-rellax-speed="1")
 		.container
 			.cases__title.title__99 Кейсы
 			.cases
-				.cases__col.rellax(data-rellax-speed="10")
-					.case.case__big-margin
+				.cases__col.rellax(data-rellax-speed="-5")
+					a(href="#").case.case__big-margin
 						.case__picture.case__picture--1
 							picture 
 								source(media="(max-width: 992px )", srcset="img/case__picture__1.png")
@@ -105,10 +105,14 @@ block content
 						.case__desc
 							.case__desc__title СберМобайл
 							.case__desc__text.text__18 Тут может быть еще какое то описание
+						//- .case__labels
+						//- 	a(href="#").case__label #Аналитика
+						//- 	a(href="#").case__label #Дизайн
 						.case__labels
-							a(href="#").case__label #Аналитика
-							a(href="#").case__label #Дизайн
-					.case
+							.case__label #Аналитика
+							.case__label #Дизайн
+
+					a(href="#").case
 						.case__picture.case__picture--2
 							picture 
 								source(media="(max-width: 992px )", srcset="img/case__picture__3.png")
@@ -117,34 +121,13 @@ block content
 							.case__desc__title Сбербанк
 							//- .case__desc__text.text__18 Тут может быть еще какое то описание
 						.case__labels
-							a(href="#").case__label #Дизайн
-							a(href="#").case__label #Аналитика
-				
-					.case.case__big-margin
-						.case__picture.case__picture--1
-							picture 
-								source(media="(max-width: 992px )", srcset="img/case__picture__1.png")
-								img(src="img/case__picture__1.png", alt="")
-						.case__desc
-							.case__desc__title СберМобайл
-							.case__desc__text.text__18 Тут может быть еще какое то описание
-						.case__labels
-							a(href="#").case__label #Аналитика
-							a(href="#").case__label #Дизайн
-					.case
-						.case__picture.case__picture--2
-							picture 
-								source(media="(max-width: 992px )", srcset="img/case__picture__3.png")
-								img(src="img/case__picture__3.png", alt="")
-						.case__desc
-							.case__desc__title Сбербанк
-							//- .case__desc__text.text__18 Тут может быть еще какое то описание
-						.case__labels
-							a(href="#").case__label #Дизайн
-							a(href="#").case__label #Аналитика
-				
+							.case__label #Дизайн
+							.case__label #Аналитика
+						//- .case__labels
+						//- 	a(href="#").case__label #Дизайн
+						//- 	a(href="#").case__label #Аналитика
 				.cases__col.rellax(data-rellax-speed="-2")
-					.case
+					a(href="#").case
 						.case__picture.case__picture--2
 							picture 
 								source(media="(max-width: 992px )", srcset="img/case__picture__2.png")
@@ -153,10 +136,13 @@ block content
 							.case__desc__title Московский комсомолец спорт
 							.case__desc__text.text__18 
 						.case__labels
-							a(href="#").case__label #Дизайн
-							a(href="#").case__label #Аналитика
+							.case__label #Дизайн
+							.case__label #Аналитика
+						//- .case__labels
+						//- 	a(href="#").case__label #Дизайн
+						//- 	a(href="#").case__label #Аналитика
 
-					.case.case__big-margin
+					a(href="#").case.case__big-margin
 						.case__picture.case__picture--1
 							picture 
 								source(media="(max-width: 992px )", srcset="img/case__picture__4.png")
@@ -165,8 +151,12 @@ block content
 							.case__desc__title Haier
 							.case__desc__text.text__18 Тут может быть еще какое то описание
 						.case__labels
-							a(href="#").case__label #Аналитика
-							a(href="#").case__label #Дизайн
+							.case__label #Аналитика
+							.case__label #Дизайн
+						//- .case__labels
+						//- 	a(href="#").case__label #Аналитика
+						//- 	a(href="#").case__label #Дизайн
+	
 	.cases__btn.btn Все проекты
 	.developing__section.section
 		.container

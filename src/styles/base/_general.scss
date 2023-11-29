@@ -922,11 +922,13 @@ background-color: #e9ecef;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+
     @include max(sm) {
         flex-flow: column nowrap;
     }
     &__section {
         overflow: hidden;
+        margin-top: 100px;
     }
     &__title {
         position: relative;
@@ -979,6 +981,7 @@ background-color: #e9ecef;
         width: 100%;
         margin-bottom: 326px;
         max-width: 477px;
+        text-decoration: none;
         @include max(sm) {
             margin-bottom: 80px;
         }  
@@ -1053,12 +1056,12 @@ background-color: #e9ecef;
             text-decoration: none;
             transition: all 0.3s;
             margin-bottom: 20px;
-            &:hover {
-                transition: all 0.3s;
-                background: $blue;
-                border: 1px solid $blue;
-                color: #fff;
-            }
+            // &:hover {
+            //     transition: all 0.3s;
+            //     background: $blue;
+            //     border: 1px solid $blue;
+            //     color: #fff;
+            // }
             &:last-child{
                 margin-bottom: 0;
             }
