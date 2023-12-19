@@ -1,0 +1,42 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Case title"
+
+block content
+	.section.case__section
+		.case
+			.container 
+				.case__title.title__65 
+					!="Развиваемся <br> <span>в смежных областях</span>"
+				.case__text.text__18
+					!="Тут может быть еще какое то описание"
+			.case__content
+				video.case__video(autoplay muted preload)
+					<source src="https://pictures.s3.yandex.net/landings-video/Backend.webm" type="video/mp4">
+				//- picture.case__picture 
+				//- 	source(media="(man-width: 992px)", srcset="img/case__picture__1.png")
+				//- 	img(src="img/case__picture__1.png", alt="")
+			
+			.container 
+				.case__subtitle.title__35
+					!="СберМобайл"
+				.case__text.text__18
+					!="Тут может быть еще какое то описание"
+				.case__text.text__18
+					!="Тут может быть еще какое то описание"
+				
+				.case__content
+					video.case__video(autoplay muted preload)
+						<source src="https://pictures.s3.yandex.net/landings-video/Backend.webm" type="video/mp4">
+					//- picture.case__picture 
+					//- 	source(media="(man-width: 992px)", srcset="img/case__picture__1.png")
+					//- 	img(src="img/case__picture__1.png", alt="")
+								.case__text.text__18
+				.case__text.text__18
+					!="Тут может быть еще какое то описание"
+				
+				.case__text.text__18
+					!="Тут может быть еще какое то описание"
+				
