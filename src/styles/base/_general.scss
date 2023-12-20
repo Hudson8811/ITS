@@ -294,6 +294,7 @@ body {
         cursor: pointer;
         width: fit-content;
         height: auto;
+        border: 1px solid #2A2A2A;
         &:hover {
             transition: all 0.3s; 
             background: $grey;

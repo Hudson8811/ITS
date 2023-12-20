@@ -3542,6 +3542,7 @@ body {
   cursor: pointer;
   width: fit-content;
   height: auto;
+  border: 1px solid #2A2A2A;
 }
 
 .btn--small:hover {
