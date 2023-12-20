@@ -16,13 +16,13 @@ block content
 				.start__col
 					.start__desc
 						.start__title.title__99
-							!="IT решения <br><span>для бизнеса</span>"
+							!='IT решения <br> <span class="big">для</span> <span>бизнеса</span>'
 						.start__text.text__18
 							!="Тут может быть еще какое то описание"
 				.start__col
 					.cube 
 						img(src="img/cube.png", alt="")
-				.btn.start__btn Заполнить бриф
+				a(href="#tell-us").btn.start__btn Заполнить бриф
 	
 	.partners
 		.partners__slider.swiper-container.js-partners__slider
@@ -157,7 +157,6 @@ block content
 						//- 	a(href="#").case__label #Аналитика
 						//- 	a(href="#").case__label #Дизайн
 	
-	.cases__btn.btn Все проекты
 	.developing__section.section
 		.container
 			.developing__title.title__65 
@@ -196,30 +195,7 @@ block content
 								!="Заказы с обратной синхронизацией"
 							li
 								!="Кастомные обмены, вебхуки"
-				.developing__item
-					.developing__item__title 
-						!="1С интеграция с сайтом"
-					.developing__item__list
-						ul
-							li
-								!="Торговые отношения (Товары с характеристикой)"
-							li
-								!="Заказы с обратной синхронизацией"
-							li
-								!="Кастомные обмены, вебхуки"
-				.developing__item
-					.developing__item__title 
-						!="1С интеграция с сайтом"
-					.developing__item__list
-						ul
-							li
-								!="Торговые отношения (Товары с характеристикой)"
-							li
-								!="Заказы с обратной синхронизацией"
-							li
-								!="Кастомные обмены, вебхуки"
-	
-	.tell-us__section.section
+	#tell-us.tell-us__section.section
 		.container
 			.tell-us
 				.tell-us__col
@@ -237,11 +213,15 @@ block content
 						.form__checkbox
 							<div class="checkbox">
 								<input class="custom-checkbox" type="checkbox" id="form__check__1" name="form__check__1" value="indigo">
-								<label for="form__check__1">Приложение</label>
+								<label for="form__check__1">Корпоративный сайт</label>
 							</div>
 							<div class="checkbox">
 								<input class="custom-checkbox" type="checkbox" id="form__check__2" name="form__check__2" value="indigo">
-								<label for="form__check__2">Сайт</label>
+								<label for="form__check__2">Интернет-магазин</label>
+							</div>
+							<div class="checkbox">
+								<input class="custom-checkbox" type="checkbox" id="form__check__3" name="form__check__2" value="indigo">
+								<label for="form__check__3">Корп. портал</label>
 							</div>
 							<div class="checkbox">
 								<input class="custom-checkbox" type="checkbox" id="form__check__4" name="form__check__4" value="indigo">
@@ -249,29 +229,29 @@ block content
 							</div>
 							<div class="checkbox">
 								<input class="custom-checkbox" type="checkbox" id="form__check__5" name="form__check__5" value="indigo">
-								<label for="form__check__5">Каталог</label>
+								<label for="form__check__5">Интернет-каталог</label>
 							</div>
 							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__3" name="form__check__3" value="indigo">
-								<label for="form__check__3">Сервис</label>
+								<input class="custom-checkbox" type="checkbox" id="form__check__6" name="form__check__3" value="indigo">
+								<label for="form__check__6">Мобильное приложение</label>
 							</div>
-							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__6" name="form__check__6" value="indigo">
-								<label for="form__check__6">Портал</label>
-							</div>
-							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__7" name="form__check__7" value="indigo">
-								<label for="form__check__7">Проект</label>
-							</div>
-							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__8" name="form__check__8" value="indigo">
-								<label for="form__check__8">Приложение</label>
-							</div>
-						.form__input__wrap
-							input(type="text", name="" placeholder="Какие задачи перед нами стоят?").form__input
-							input(type="text", name="" placeholder="Ваше имя").form__input
-							input(type="email", name="" placeholder="Ваше Email").form__input
-							input(type="tel", name="" placeholder="Ваше Телефон").form__input.js-mask-phone
+						.contacts__form 
+							.contacts__form__input-block.error
+								input(type="text", name="").contacts__form__input.text__13
+								.contacts__form__input-block__name Какие задачи перед нами стоят?
+								.contacts__form__input-block__error Введите текст
+							.contacts__form__input-block
+								input(type="text", name="").contacts__form__input.text__13
+								.contacts__form__input-block__name Ваше имя
+								.contacts__form__input-block__error Неправильное имя
+							.contacts__form__input-block
+								input(type="email", name="").contacts__form__input.text__13
+								.contacts__form__input-block__name Ваш Email
+								.contacts__form__input-block__error Неправильный email
+							.contacts__form__input-block
+								input(type="tel", name="").contacts__form__input.js-mask-phone
+								.contacts__form__input-block__name Ваш Телефон
+								.contacts__form__input-block__error Неправильное телефон
 						.form__buttons
 							.form__buttons__text
 								!="<span>*</span>нажимая кнопку вы соглашаетесь согласие на обработку персональных данных"

@@ -9,8 +9,7 @@
 	padding: 0;
 	background: #fff;
 	z-index: 9999;
-	height: 73px;
-	padding-top: 43px;
+	height: 64px;
 	box-sizing: border-box;
 	@include max(mdHeader) {
 		height: 55px;
@@ -278,14 +277,14 @@
 	position: relative;
 	display: flex;
 	width: 100%;
-	max-width: 400px;
-	padding: 32px  16px 44px 16px;
+	max-width: 100%;
+	// padding: 32px  16px 44px 16px;
 	padding-top: 40px;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
 	z-index: 9999;
-	background: $mainDark;
+	background: #fff;
 	height: calc(100vh - 54px);
 	overflow-y: auto;
 	&__section {
@@ -333,7 +332,8 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		margin-bottom: 32px;
-		border-bottom: 1px solid $grey;
+		border-bottom: 1px solid $mainDark;
+		padding: 32px  16px 44px 16px;
 	}
 	&--item {
 		position: relative;
@@ -369,26 +369,53 @@
 	&__fone {
 		position: relative;
 		display: block;
-		color: $white;
+		color: $fonBlack;
 		text-align: right;
 		font-size: 22px;
 		font-style: normal;
 		font-weight: 700;
 		line-height: normal;
 		letter-spacing: 1.1px;
-		text-transform: uppercase;
 		a {
 			display: block;
 			text-decoration: none;
 			position: relative;
-			color: $white;
+			color: $fonBlack;
 			text-align: right;
 			font-size: 22px;
 			font-style: normal;
 			font-weight: 700;
 			line-height: normal;
 			letter-spacing: 1.1px;
-			text-transform: uppercase;
+			transition: all 0.3s;
+			&:hover {
+				transition: all 0.3s;
+				color: $grey;
+			}		
+		}
+	}
+	&__link {
+		position: relative;
+		display: block;
+		color: $fonBlack;
+		text-align: right;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: 1.1px;
+		margin-bottom: 20px;
+		a {
+			display: block;
+			text-decoration: none;
+			position: relative;
+			color: $fonBlack;
+			text-align: right;
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 1.1px;
 			transition: all 0.3s;
 			&:hover {
 				transition: all 0.3s;
@@ -420,6 +447,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
+		padding-left: 16px;
 	}
 	.header__other__user {
 		svg {
@@ -477,12 +505,6 @@
 			&__intro {
 				position: relative;
 				cursor: pointer;
-				color: $grey;
-				font-size: 14px;
-				font-style: normal;
-				font-weight: 550;
-				line-height: normal;
-				letter-spacing: 0.7px;
 				display: flex;
 				text-transform: uppercase;
 				background: transparent;
@@ -491,6 +513,29 @@
 				align-items: center;
 				transition: all 0.3s;
 				margin-bottom: 30px;
+				color: $fonBlack;
+				font-size: 35px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 92.6%; /* 32.41px */
+				letter-spacing: -1.225px;
+				span {
+						color: rgba(42, 42, 42, 0.21);
+				}
+				@include max(sm) {
+						font-size: 35px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 92.6%; /* 32.41px */
+						letter-spacing: -1.225px;
+				}
+				@include max(xs) {
+						font-size: 35px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 92.6%; /* 32.41px */
+						letter-spacing: -1.225px;
+				}
 				&:hover {
 					transition: all 0.3s;
 					color: $white;
@@ -521,7 +566,7 @@
 				a {
 					position: relative;
 					cursor: pointer;
-					color: #fff;
+					color: $fonBlack;
 					font-size: 14px;
 					font-style: normal;
 					font-weight: 500;
@@ -534,13 +579,36 @@
 					text-decoration: none;
 					width: 100%;
 					transition: all 0.3s;
+					color: $fonBlack;
+					font-size: 35px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 92.6%; /* 32.41px */
+					letter-spacing: -1.225px;
+					span {
+							color: rgba(42, 42, 42, 0.21);
+					}
+					@include max(sm) {
+							font-size: 35px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 92.6%; /* 32.41px */
+							letter-spacing: -1.225px;
+					}
+					@include max(xs) {
+							font-size: 35px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 92.6%; /* 32.41px */
+							letter-spacing: -1.225px;
+					}
 					&:hover {
 						transition: all 0.3s;
-						color: $white;
+						color: $greyBlack;
 					}
 				}
 				p {
-					color: $grey;
+					color: $fonBlack;
 					font-size: 14px;
 					font-style: normal;
 					font-weight: 500;
@@ -549,7 +617,7 @@
 					transition: all 0.3s;
 					&:hover {
 						transition: all 0.3s;
-						color: $white;
+						color: $greyBlack;
 					}
 				}
 			} 

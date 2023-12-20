@@ -255,7 +255,7 @@ body {
     align-items: center;
     color: $fonBlack;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 550;
     line-height: normal;
@@ -293,11 +293,16 @@ body {
         transition: all 0.3s;
         cursor: pointer;
         width: fit-content;
+        height: auto;
         &:hover {
             transition: all 0.3s; 
             background: $grey;
             color: #2A2A2A;
+            border: 1px solid $grey;
         }
+    }
+    &--two {
+
     }
 
 }
@@ -457,6 +462,9 @@ body {
     }
     &__title {
         margin-bottom: 36px;
+        .big {
+            letter-spacing: -1px; 
+        }
     }
     &__desc {
         position: relative;
@@ -465,13 +473,13 @@ body {
         align-items: flex-start;
         flex-flow: column nowrap;
         width: 100%;
-        max-width: 542px;
+        max-width: 560px;
     }
     &__btn {
         position: absolute;
         bottom: -55px;
-        width: 171px;
-        height: 171px;
+        width: 181px;
+        height: 181px;
         right: 0;
         z-index: 10;
         @include max(md) {
@@ -511,6 +519,7 @@ body {
         align-items: flex-start;
         margin-bottom: 50px;
         width: 100%;
+        display: none;
     }
     @include max(xs) {
         flex-flow: row wrap;
@@ -633,6 +642,10 @@ body {
 			margin-left: 0px;
 			margin-bottom: 15px;
 		}
+        @include max(sm) {
+            min-height: 280px;
+            border-radius: 20px;
+        }
         &__title {
             position: relative;
             display: block;
@@ -643,7 +656,8 @@ body {
             font-style: normal;
             font-weight: 500;
             line-height: 105.1%; /* 36.785px */
-            letter-spacing: -1.225px            
+            letter-spacing: -1.225px;
+            margin-bottom: 40px;           
         }
         &__list {
             ul {
@@ -853,93 +867,93 @@ background-color: #e9ecef;
     }
 }
 
-.form {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-flow: column nowrap;
-    width: 100%;
-    &__title {
-        color: $fonBlack;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        margin-bottom: 25px;   
-    }
-    &__input {
-        position: relative;
-        width: 100%;
-        min-height: 37px;
-        border: none;
-        border-bottom: 1px solid rgba(42, 42, 42, 0.2);
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        color: $fonBlack;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        margin-bottom: 40px;
-        &::placeholder {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            color: $fonBlack;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;            
-        }    
-        &__wrap {
-            position: relative;
-            display: flex;
-            flex-flow: column wrap;
-            width: 100%;
-            justify-content: flex-start;
-            align-items: flex-start;            
-        }
+// .form {
+//     position: relative;
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+//     flex-flow: column nowrap;
+//     width: 100%;
+//     &__title {
+//         color: $fonBlack;
+//         font-size: 18px;
+//         font-style: normal;
+//         font-weight: 500;
+//         line-height: normal;
+//         margin-bottom: 25px;   
+//     }
+//     &__input {
+//         position: relative;
+//         width: 100%;
+//         min-height: 37px;
+//         border: none;
+//         border-bottom: 1px solid rgba(42, 42, 42, 0.2);
+//         display: flex;
+//         justify-content: flex-start;
+//         align-items: flex-start;
+//         color: $fonBlack;
+//         font-size: 18px;
+//         font-style: normal;
+//         font-weight: 500;
+//         line-height: normal;
+//         margin-bottom: 40px;
+//         &::placeholder {
+//             position: relative;
+//             display: inline-block;
+//             width: 100%;
+//             color: $fonBlack;
+//             font-size: 18px;
+//             font-style: normal;
+//             font-weight: 500;
+//             line-height: normal;            
+//         }    
+//         &__wrap {
+//             position: relative;
+//             display: flex;
+//             flex-flow: column wrap;
+//             width: 100%;
+//             justify-content: flex-start;
+//             align-items: flex-start;            
+//         }
         
-    }
-    &__checkbox{
-        position: relative;
-        display: flex;
-        flex-flow: row wrap;
-        width: 100%;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin-bottom: 52px;
-    }
-    &__buttons {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
-        @include max(xs) {
-            flex-flow: column-reverse nowrap;
-        }
-        &__text {
-            position: relative;
-            max-width: 207px;
-            color: #2A2A2A;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            @include max(xs) {
-                margin-top: 30px;
-            }
-            span {
-                position: absolute;
-                top: 2px;
-                left: -8px;
-            }         
-        }
-    } 
-}
+//     }
+//     &__checkbox{
+//         position: relative;
+//         display: flex;
+//         flex-flow: row wrap;
+//         width: 100%;
+//         justify-content: flex-start;
+//         align-items: flex-start;
+//         margin-bottom: 52px;
+//     }
+//     &__buttons {
+//         position: relative;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: flex-start;
+//         width: 100%;
+//         @include max(xs) {
+//             flex-flow: column-reverse nowrap;
+//         }
+//         &__text {
+//             position: relative;
+//             max-width: 207px;
+//             color: #2A2A2A;
+//             font-size: 12px;
+//             font-style: normal;
+//             font-weight: 400;
+//             line-height: normal;
+//             @include max(xs) {
+//                 margin-top: 30px;
+//             }
+//             span {
+//                 position: absolute;
+//                 top: 2px;
+//                 left: -8px;
+//             }         
+//         }
+//     } 
+// }
 .cases {
     position: relative;
     display: flex;
@@ -952,11 +966,17 @@ background-color: #e9ecef;
     &__section {
         overflow: hidden;
         margin-top: 100px;
+        @include max(sm) {
+            margin-top: 20px;
+        }
     }
     &__title {
         position: relative;
         width: 100%;
         text-align: right;
+        @include max(sm) {
+            text-align: left;
+        }
     }
     &__btn {
         // position: absolute;
@@ -1023,6 +1043,9 @@ background-color: #e9ecef;
             align-items: center;
             border-radius: 42px;
             overflow: hidden;
+            @include max(sm) {
+                border-radius: 20px;
+            }
             &:before {
                 position: relative;
                 content: '';
@@ -1060,6 +1083,10 @@ background-color: #e9ecef;
             flex-flow: column nowrap;
             justify-content: flex-start;
             align-items: flex-end;
+            @include max(sm) {
+                top: 15px;
+                right: 15px; 
+            }
         }
         &__label {
             position: relative;
@@ -1079,6 +1106,12 @@ background-color: #e9ecef;
             text-decoration: none;
             transition: all 0.3s;
             margin-bottom: 20px;
+            @include max(sm) {
+                padding: 5px 7px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                font-size: 12px;
+            }
             // &:hover {
             //     transition: all 0.3s;
             //     background: $blue;
@@ -1128,7 +1161,7 @@ background-color: #e9ecef;
     flex-flow: column nowrap;
     &__section {
         padding-top: 115px;
-        margin-bottom: 384px;
+        margin-bottom: 57px;
     }
     &__title {
         margin-bottom: 45px;
@@ -1228,4 +1261,324 @@ background-color: #e9ecef;
 
     }
     
+}
+
+.form {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    width: 100%;
+    &__title {
+        color: $fonBlack;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 25px;   
+    }
+    &__input {
+        position: relative;
+        width: 100%;
+        min-height: 37px;
+        border: none;
+        border-bottom: 1px solid rgba(42, 42, 42, 0.2);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: $fonBlack;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 40px;
+        &::placeholder {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            color: $fonBlack;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;            
+        }    
+        &__wrap {
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: flex-start;            
+        }
+        
+    }
+    &__checkbox{
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 52px;
+    }
+    &__buttons {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        @include max(xs) {
+            flex-flow: column-reverse nowrap;
+        }
+        &__text {
+            position: relative;
+            max-width: 207px;
+            color: #2A2A2A;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include max(xs) {
+                margin-top: 30px;
+            }
+            span {
+                position: absolute;
+                top: 2px;
+                left: -8px;
+            }         
+        }
+    } 
+}
+
+.contacts__form  {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    &__title {
+        position: relative;
+        display: block;
+        color: #FFF;
+        font-size: vw(32);
+        font-style: normal;
+        font-weight: 500;
+        line-height: vw(36); /* 112.5% */
+        letter-spacing: vw(-1.3);   
+    }
+    &__input-block {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        flex-flow: column nowrap;
+        margin-bottom: vw(40);
+        @include max(md) {
+            margin-bottom: vw2(30);
+        }
+        &__name{
+            position: absolute;
+            top: 22px;
+            left: 0;
+            color: $fonBlack;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            transition: all 0.3s;
+            @include max(md) {
+                font-size: 20px;
+                font-style: normal;
+                line-height: 1.2; /* 98.163% */
+            }
+        }
+        &__error {
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            display: none;
+            width: 100%;
+            color: #F26060;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include max(sm) {
+                bottom: -28px;
+                font-size: 12px;
+                bottom: -18px;
+                font-style: normal;
+                line-height: 1.2; /* 98.163% */
+            }       
+        }
+        &.error{
+            input, textarea {
+                border-bottom: 1px solid $red; 
+            }
+            .contacts__form__input-block__error{
+                display: block;
+                &::before {
+                    position: absolute;
+                    right: 0;
+                    top:-51px;
+                    content: '';
+                    width: 18px;
+                    height: 18px;
+                    background: $red;
+                    border-radius: 50%;
+                    @include max(sm) {
+                        top:-48px;
+                        content: '';
+                        width: 18px;
+                        height: 18px;                    
+                    }
+                }
+            }
+        }
+    }
+    &__input {
+        color: $fonBlack;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        min-height: 71px;
+        padding-right: 18px;
+        padding-top: 20px;
+        width: 100%;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        border: 0px solid rgba(255, 255, 255, 1);
+        border-bottom:1px solid rgba(42, 42, 42, 0.2);
+        
+        @include max(md) {
+            padding-top: 20px;
+            min-height: 71px;
+            font-size: 20px;
+            padding-right: 18px;
+        }
+
+        &:hover {        
+            border-bottom:1px solid $mainDark;
+        }
+        &:focus { 
+            border-bottom: 1px solid $green;
+        }
+        &:active { 
+            border-bottom: 1px solid $green;
+        }
+        &:focus-visible {
+            outline: none;
+        }
+        &:focus + .contacts__form__input-block__name { 
+            top: 0;
+            opacity: 0.2;
+            transition: all 0.3s;
+        }
+        &.value + .contacts__form__input-block__name { 
+            top: 0;
+            opacity: 0.2;
+            transition: all 0.3s;
+        }
+        &:active + .contacts__form__input-block__name { 
+            top: 0;
+            opacity: 0.2;
+            transition: all 0.3s;
+        }
+
+
+    }
+    // &__textarea {
+    //     color: #FFF;
+    //     font-size: vw(13);
+    //     font-style: normal;
+    //     font-weight: 500;
+    //     line-height: normal;
+    //     letter-spacing: vw(0.325);
+    //     padding-top: vw(40);
+    //     text-transform: uppercase;
+    //     padding-right: vw(18);
+    //     border: none;
+    //     width: 100%;
+    //     cursor: pointer;
+    //     background: transparent;
+    //     border-bottom:1px solid rgba(42, 42, 42, 0.2);
+    //     resize: none;
+    //     @include max(md) {
+    //         margin-bottom: vw2(15);
+    //         padding-top: vw2(35);
+    //         padding-right: vw2(18);
+    //         font-size: vw2(20);
+    //     }
+    //     &:hover {        
+    //         border-bottom:1px solid rgba(255, 255, 255, 1);
+    //     }
+    //     &:focus { 
+    //         border-bottom: 1px solid $green;
+    //     }
+    //     &:active { 
+    //         border-bottom: 1px solid $green;
+    //     }
+    //     &:focus + .contacts__form__input-block__name { 
+    //         top: 0;
+    //         opacity: 0.2;
+    //         transition: all 0.3s;
+    //     }
+    //     &:active + .contacts__form__input-block__name { 
+    //         top: 0;
+    //         opacity: 0.2;
+    //         transition: all 0.3s;
+    //     }
+    //     &.value + .contacts__form__input-block__name { 
+    //         top: 0;
+    //         opacity: 0.2;
+    //         transition: all 0.3s;
+    //     }
+    //     &.error {
+    //         border-bottom: 1px solid $red; 
+    //     }
+    // }
+    &__bottom {
+        display: flex;
+        align-self: flex-end;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-flow: column-reverse nowrap;
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+    &__btn {
+        width: 100%;
+        max-width: 100%;
+        @include max(md) {
+            height: vw2(49);
+            min-height: vw2(49); 
+        }
+    }
+    &__mess {
+        position: relative;
+        width: 100%;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: vw(22.5); /* 140.625% */
+        letter-spacing: vw(-0.4);
+        max-width: vw(280);
+        margin-bottom: vw(51); 
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        @include max(md) {
+            max-width: vw2(280);
+            margin-bottom: vw2(30);    
+        }
+    }
 }

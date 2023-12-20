@@ -1,5 +1,22 @@
 jQuery(function () { 
 
+	$('.contacts__form__input').on('input', function (e) {
+		var state = e.target.value;
+		if (state.length > 0) {
+			$(this).addClass( "value" );
+		} else {
+			$(this).removeClass( "value" );
+		}
+	});
+	$('.js-mask-phone').mask('+7(000)000-00-00');
+	$('.contacts__form__textarea').on('input', function (e) {
+		var state = e.target.value;
+		if (state.length > 0) {
+			$(this).addClass( "value" );
+		} else {
+			$(this).removeClass( "value" );
+		}
+	});
 	var partnersSlider
 	$('.js-partners__slider').each(function(){
 		var slider=$(this)
