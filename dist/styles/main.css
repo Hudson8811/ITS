@@ -5700,10 +5700,13 @@ body {
   }
 
   .cases .case__label {
-    padding: 5px 7px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    font-size: 12px;
+    padding: 12px 18px;
+    padding: 8.4px 12.6px;
+    border-radius: 23.1px;
+    border: 1px solid #D8D8D8;
+    background: #F4F4F4;
+    color: #2A2A2A;
+    font-size: 9.8px;
   }
 
   .contacts__form__input-block__error {
