@@ -3696,7 +3696,7 @@ body {
   position: relative;
   display: block;
   color: rgba(42, 42, 42, 0.2);
-  font-size: 14px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -4521,6 +4521,66 @@ body {
   align-items: flex-start;
 }
 
+.modalThanks {
+  position: relative;
+  padding: 0;
+  width: 729px;
+  height: 395px;
+}
+
+.modalThanks__wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  z-index: 5;
+}
+
+.modalThanks__title {
+  text-align: center;
+  margin-bottom: 59px;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -2px;
+}
+
+.modalThanks__text {
+  text-align: center;
+  max-width: 290px;
+}
+
+.modalThanks .fancybox-button {
+  display: none;
+}
+
+.modalThanks__close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 48px;
+  right: 48px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  opacity: 1;
+  z-index: 20;
+}
+
+.modalThanks__close svg {
+  width: 24px;
+  height: 24px;
+}
+
+.modalThanks__close svg path {
+  fill: #1F2120;
+  width: 24px !important;
+  height: 24px !important;
+}
+
 .section__header {
   position: fixed;
   top: 0;
@@ -4824,7 +4884,7 @@ body {
   z-index: 990;
 }
 
-.mob-menu--list {
+.mob-menu__list {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -4833,7 +4893,37 @@ body {
   align-items: flex-start;
   margin-bottom: 32px;
   border-bottom: 1px solid #2A2A2A;
-  padding: 32px 16px 44px 16px;
+  padding: 0px 16px 44px 16px;
+}
+
+.mob-menu__list__item {
+  position: relative;
+  cursor: pointer;
+  color: #2A2A2A;
+  font-size: 58px;
+  line-height: 100%;
+  text-transform: uppercase;
+  padding-right: 0;
+  background: transparent;
+  flex-flow: row nowrap;
+  text-decoration: none;
+  width: 100%;
+  transition: all 0.3s;
+  color: #2A2A2A;
+  margin-bottom: 20px;
+}
+
+.mob-menu__list__item:last-child {
+  margin-bottom: 0;
+}
+
+.mob-menu__list__item span {
+  color: rgba(42, 42, 42, 0.21);
+}
+
+.mob-menu__list__item:hover {
+  transition: all 0.3s;
+  color: #7F8589;
 }
 
 .mob-menu--item {
@@ -5010,229 +5100,6 @@ body {
 .mob-menu .soc__item:hover {
   transition: all 0.3s;
   background: rgba(255, 255, 255, 0.21);
-}
-
-.mob-menu .mob-menu--list.accordions .accordion {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 0px;
-  display: block;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  text-transform: uppercase;
-  background: transparent;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  transition: all 0.3s;
-  margin-bottom: 30px;
-  color: #2A2A2A;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 92.6%;
-  /* 32.41px */
-  letter-spacing: -1.225px;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro span {
-  color: rgba(42, 42, 42, 0.21);
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro:hover {
-  transition: all 0.3s;
-  color: #fff;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro:hover svg {
-  fill: #fff;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro:hover svg path {
-  fill: #fff;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro__img {
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-right: 13px;
-  animation-name: rotationCloseMenuSidebar;
-  animation-duration: 0.2s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  margin-left: 15px;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro__img:hover {
-  background: transparent;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro a {
-  position: relative;
-  cursor: pointer;
-  color: #2A2A2A;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  padding-right: 0;
-  background: transparent;
-  flex-flow: row nowrap;
-  text-decoration: none;
-  width: 100%;
-  transition: all 0.3s;
-  color: #2A2A2A;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 92.6%;
-  /* 32.41px */
-  letter-spacing: -1.225px;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro a span {
-  color: rgba(42, 42, 42, 0.21);
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro a:hover {
-  transition: all 0.3s;
-  color: #7F8589;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro p {
-  color: #2A2A2A;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.7px;
-  transition: all 0.3s;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__intro p:hover {
-  transition: all 0.3s;
-  color: #7F8589;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__content {
-  max-height: 0;
-  overflow: hidden;
-  will-change: max-height;
-  transition: all 0.25s ease-out;
-  opacity: 0;
-  position: relative;
-  background: transparent;
-  max-width: 98%;
-  transition: all 0.1s;
-  cursor: pointer;
-  color: #E6E6EE;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 550;
-  line-height: normal;
-  letter-spacing: 0.7px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-flow: column;
-  margin-bottom: 0;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__content a {
-  color: #E6E6EE;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 550;
-  line-height: normal;
-  letter-spacing: 0.7px;
-  padding-right: 50px;
-  margin-bottom: 22px;
-  width: 100%;
-  transition: all 0.3s;
-  text-decoration: none;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__content a:hover {
-  transition: all 0.3s;
-  color: #fff;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__active .accordion__intro {
-  color: #fff;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.7px;
-  transition: all 0.3s;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__active .accordion__intro a {
-  color: #fff;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__active .accordion__intro p {
-  color: #fff;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__active .accordion__intro .accordion__intro__img {
-  animation-name: rotationOpenMenuSidebar;
-  animation-duration: 0.2s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__active .accordion__intro .accordion__intro__img svg {
-  fill: #fff;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__active .accordion__intro .accordion__intro__img svg path {
-  fill: #fff;
-}
-
-.mob-menu .mob-menu--list.accordions .accordion__active .accordion__content {
-  background: transparent;
-  opacity: 1;
-  width: 100%;
-  margin-left: 20px;
-  transition: all 0.1s;
-  margin-bottom: 30px;
-}
-
-@keyframes rotationOpenMenuSidebar {
-  0% {
-    transform-origin: 50% 50%;
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform-origin: 50% 50%;
-    transform: rotate(-90deg);
-  }
-}
-
-@keyframes rotationCloseMenuSidebar {
-  0% {
-    transform-origin: 50% 50%;
-    transform: rotate(-90deg);
-  }
-
-  100% {
-    transform-origin: 50% 50%;
-    transform: rotate(0deg);
-  }
 }
 
 .hamburger-inner,
@@ -5540,6 +5407,10 @@ body {
     display: none;
   }
 
+  .start__btn {
+    display: none;
+  }
+
   .hashtag {
     position: relative;
     transform: rotate(0deg);
@@ -5564,10 +5435,6 @@ body {
 
   .section__header .hamburger {
     display: block;
-  }
-
-  .header__logo {
-    width: 57px;
   }
 
   .header__menu {
@@ -5735,7 +5602,7 @@ body {
     font-size: 65px;
     font-style: normal;
     font-weight: 700;
-    line-height: 115%;
+    line-height: 94%;
     letter-spacing: -3.942px;
     margin-bottom: 24px;
   }
@@ -5763,7 +5630,7 @@ body {
   }
 
   .start__section {
-    padding-top: 30px;
+    padding-top: 130px;
   }
 
   .developing {
@@ -5855,26 +5722,28 @@ body {
     height: 18px;
   }
 
+  .modalThanks {
+    width: 100%;
+    max-width: 390px;
+    min-height: 343;
+    height: auto;
+  }
+
+  .modalThanks__title {
+    margin-bottom: 40px;
+  }
+
+  .modalThanks__text {
+    font-size: 16px;
+  }
+
   .header__other__tg {
     display: none;
   }
 
-  .mob-menu .mob-menu--list.accordions .accordion__intro {
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 92.6%;
-    /* 32.41px */
-    letter-spacing: -1.225px;
-  }
-
-  .mob-menu .mob-menu--list.accordions .accordion__intro a {
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 92.6%;
-    /* 32.41px */
-    letter-spacing: -1.225px;
+  .mob-menu__list__item {
+    font-size: 36px;
+    margin-bottom: 15px;
   }
 
   .footer__offices__row:first-child {
@@ -5921,12 +5790,9 @@ body {
   }
 
   .title__65 {
-    font-size: 55px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 115%;
-    letter-spacing: -3.942px;
-    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -2px;
   }
 
   .title__35 {
@@ -5959,9 +5825,28 @@ body {
     margin-bottom: 15px;
   }
 
+  .partners {
+    padding-top: 20px;
+  }
+
+  .developing__item__title {
+    font-size: 25px;
+  }
+
   .custom-checkbox + label {
     padding: 5px 15px;
     font-size: 14px;
+  }
+
+  .cases__title {
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -2px;
+  }
+
+  .cases .case__desc__title {
+    font-size: 25px;
+    margin-bottom: 20px;
   }
 
   .form__buttons {
@@ -5972,6 +5857,19 @@ body {
     margin-top: 30px;
   }
 
+  .contacts__form__input-block__name {
+    font-size: 18px;
+  }
+
+  .contacts__form__input {
+    font-size: 18px;
+  }
+
+  .header__logo {
+    min-width: 120px;
+    max-width: 120px;
+  }
+
   .header__other__mail {
     display: none;
   }
@@ -5980,26 +5878,17 @@ body {
     display: none;
   }
 
-  .mob-menu .mob-menu--list.accordions .accordion__intro {
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 92.6%;
-    /* 32.41px */
-    letter-spacing: -1.225px;
-  }
-
-  .mob-menu .mob-menu--list.accordions .accordion__intro a {
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 92.6%;
-    /* 32.41px */
-    letter-spacing: -1.225px;
+  .mob-menu__list__item {
+    font-size: 34px;
   }
 
   .footer {
     padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  .footer__offices {
+    display: none;
   }
 }
 

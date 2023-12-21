@@ -8,15 +8,8 @@ jQuery(function () {
 			$(this).removeClass( "value" );
 		}
 	});
+
 	$('.js-mask-phone').mask('+7(000)000-00-00');
-	$('.contacts__form__textarea').on('input', function (e) {
-		var state = e.target.value;
-		if (state.length > 0) {
-			$(this).addClass( "value" );
-		} else {
-			$(this).removeClass( "value" );
-		}
-	});
 	var partnersSlider
 	$('.js-partners__slider').each(function(){
 		var slider=$(this)
@@ -38,7 +31,16 @@ jQuery(function () {
 		});
 
 	})
-
+	function modalThanks() {
+		event.preventDefault();
+		$.fancybox.open({
+			src: "#modalThanks",
+			type: "inline",
+		});
+	}
+	$(".js-modalThanks").on('click', ()=> {
+		modalThanks()
+	})
 	var rellax = new Rellax('.rellax', {
 		// center:true
 		// wrapper:'.cases__section'
@@ -110,7 +112,29 @@ jQuery(function () {
 	});
 
 
+	document.querySelectorAll('.js-header__menu__item').forEach(link => {
 
+		link.addEventListener('click', function(e) {
+				e.preventDefault();
+	
+				let href = this.getAttribute('href').substring(1);
+	
+				const scrollTarget = document.getElementById(href);
+	
+				const topOffset = document.querySelector('.section__header').offsetHeight;
+				// const topOffset = 0; // если не нужен отступ сверху 
+				const elementPosition = scrollTarget.getBoundingClientRect().top;
+				const offsetPosition = elementPosition - topOffset;
+	
+				window.scrollBy({
+						top: offsetPosition,
+						behavior: 'smooth'
+				});
+				mobMenu.classList.remove("active");
+				humb.classList.remove("is-active");
+				bodyYesScroll()
+		});
+	});
 
 
 

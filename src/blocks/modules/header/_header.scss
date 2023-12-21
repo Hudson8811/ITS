@@ -74,8 +74,9 @@
 		@include max(lg) {
 			margin-right: 30px;
 		}
-		@include max(mdHeader) {
-			width: 57px;
+		@include max(xs) {
+			min-width: 120px;
+			max-width: 120px;
 		}
 		img {
 			position: relative;
@@ -324,7 +325,7 @@
 		background: rgba(6, 6, 6, 0.592);
 		z-index: 990;
 	}
-	&--list {
+	&__list {
 		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
@@ -333,7 +334,41 @@
 		align-items: flex-start;
 		margin-bottom: 32px;
 		border-bottom: 1px solid $mainDark;
-		padding: 32px  16px 44px 16px;
+		padding: 0px  16px 44px 16px;
+		&__item {
+			position: relative;
+			cursor: pointer;
+			color: $fonBlack;
+			font-size: 58px;
+			line-height: 100%;
+			text-transform: uppercase;
+			padding-right: 0;
+			background: transparent;
+			flex-flow: row nowrap;
+			text-decoration: none;
+			width: 100%;
+			transition: all 0.3s;
+			color: $fonBlack;
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			span {
+					color: rgba(42, 42, 42, 0.21);
+			}
+			@include max(sm) {
+				font-size: 36px;
+				margin-bottom: 15px;
+			}
+			@include max(xs) {
+					font-size: 34px;
+			}
+			&:hover {
+				transition: all 0.3s;
+				color: $greyBlack;
+			}
+						
+		}
 	}
 	&--item {
 		position: relative;
@@ -495,244 +530,7 @@
 			}
 		}
 	}
-	.mob-menu--list.accordions{
-		.accordion {
-			width: 100%;
-			overflow: hidden;
-			position: relative;
-			margin-bottom: 0px;
-			display: block;
-			&__intro {
-				position: relative;
-				cursor: pointer;
-				display: flex;
-				text-transform: uppercase;
-				background: transparent;
-				flex-flow: row nowrap;
-				justify-content: flex-start;
-				align-items: center;
-				transition: all 0.3s;
-				margin-bottom: 30px;
-				color: $fonBlack;
-				font-size: 35px;
-				font-style: normal;
-				font-weight: 500;
-				line-height: 92.6%; /* 32.41px */
-				letter-spacing: -1.225px;
-				span {
-						color: rgba(42, 42, 42, 0.21);
-				}
-				@include max(sm) {
-						font-size: 35px;
-						font-style: normal;
-						font-weight: 500;
-						line-height: 92.6%; /* 32.41px */
-						letter-spacing: -1.225px;
-				}
-				@include max(xs) {
-						font-size: 35px;
-						font-style: normal;
-						font-weight: 500;
-						line-height: 92.6%; /* 32.41px */
-						letter-spacing: -1.225px;
-				}
-				&:hover {
-					transition: all 0.3s;
-					color: $white;
-					svg {
-						fill: $white;
-						path {
-							fill: $white;
-						}
-					}
-				}
-				&__img {
-					width: auto;
-					height: auto;
-					display: flex;
-					justify-content: flex-start;
-					align-items: center;
-					margin-right: 13px;
-					animation-name: rotationCloseMenuSidebar;
-					animation-duration: .2s;
-					animation-iteration-count: 1;
-					animation-timing-function: linear;
-					animation-fill-mode: forwards;
-					margin-left: 15px;
-					&:hover {
-						background: transparent;
-					}
-				}
-				a {
-					position: relative;
-					cursor: pointer;
-					color: $fonBlack;
-					font-size: 14px;
-					font-style: normal;
-					font-weight: 500;
-					line-height: normal;
-					letter-spacing: 0.7px;
-					text-transform: uppercase;
-					padding-right: 0;
-					background: transparent;
-					flex-flow: row nowrap;
-					text-decoration: none;
-					width: 100%;
-					transition: all 0.3s;
-					color: $fonBlack;
-					font-size: 35px;
-					font-style: normal;
-					font-weight: 500;
-					line-height: 92.6%; /* 32.41px */
-					letter-spacing: -1.225px;
-					span {
-							color: rgba(42, 42, 42, 0.21);
-					}
-					@include max(sm) {
-							font-size: 35px;
-							font-style: normal;
-							font-weight: 500;
-							line-height: 92.6%; /* 32.41px */
-							letter-spacing: -1.225px;
-					}
-					@include max(xs) {
-							font-size: 35px;
-							font-style: normal;
-							font-weight: 500;
-							line-height: 92.6%; /* 32.41px */
-							letter-spacing: -1.225px;
-					}
-					&:hover {
-						transition: all 0.3s;
-						color: $greyBlack;
-					}
-				}
-				p {
-					color: $fonBlack;
-					font-size: 14px;
-					font-style: normal;
-					font-weight: 500;
-					line-height: normal;
-					letter-spacing: 0.7px;
-					transition: all 0.3s;
-					&:hover {
-						transition: all 0.3s;
-						color: $greyBlack;
-					}
-				}
-			} 
-		
-			&__content {
-				max-height: 0;
-				overflow: hidden;
-				will-change: max-height;
-				transition: all 0.25s ease-out;
-				opacity: 0;
-				position: relative;
-				background: transparent;
-				max-width: 98%;
-				transition: all 0.1s;
-				cursor: pointer;
-				color: $grey;
-				font-size: 14px;
-				font-style: normal;
-				font-weight: 550;
-				line-height: normal;
-				letter-spacing: 0.7px;
-				display: flex;;
-				justify-content: flex-start;
-				align-items: flex-start;
-				flex-flow: column;
-				margin-bottom: 0;
-				a {
-					color: $grey;
-					font-size: 14px;
-					font-style: normal;
-					font-weight: 550;
-					line-height: normal;
-					letter-spacing: 0.7px;
-					padding-right: 50px;
-					margin-bottom: 22px;
-					width: 100%;
-					transition: all 0.3s;
-					text-decoration: none;
-					&:hover {
-						transition: all 0.3s;
-						color: $white;
-					}
-				}
-			} 
-		
-			&__active {
-				.accordion__intro {
-					color: $white;
-					font-size: 14px;
-					font-style: normal;
-					font-weight: 500;
-					line-height: normal;
-					letter-spacing: 0.7px;
-					transition: all 0.3s;
-					a {
-						color: $white;
-					}
-					p {
-						color: $white;
-					}
-					.accordion__intro__img {
-						animation-name: rotationOpenMenuSidebar;
-						animation-duration: .2s;
-						animation-iteration-count: 1;
-						animation-timing-function: linear;
-						animation-fill-mode: forwards;
-						svg {
-							fill: $white;
-							path {
-								fill: $white;
-							}
-						}
-	
-					}
-		
-				}
-				.accordion__content{
-					background: transparent;
-					opacity: 1;
-					width: 100%;
-					margin-left: 20px;
-					transition: all 0.1s;
-					margin-bottom: 30px;
-		
-				}
-		
-		
-			}
-		
-		
-		}
-		@keyframes rotationOpenMenuSidebar  {
-			0% {
-				transform-origin: 50% 50%;
-				transform: rotate(0deg);
-			}
-		
-			100% {
-				transform-origin: 50% 50%;
-				transform: rotate(-90deg);
-			}
-		
-		}
-		@keyframes rotationCloseMenuSidebar {
-			0% {
-				transform-origin: 50% 50%;
-				transform: rotate(-90deg);
-			}
-			100% {
-				transform-origin: 50% 50%;
-				transform: rotate(0deg);
-			}
-		
-		}
-	}
+
 }	
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {

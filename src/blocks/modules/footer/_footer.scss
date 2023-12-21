@@ -17,6 +17,7 @@
 	}
 	@include max(xs) {
 		padding-bottom: 40px;
+		min-height: auto;
 	}	
 	&__section {
 		position: relative;
@@ -77,6 +78,9 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		width: 100%;
+		@include max(xs) {
+			display: none;
+		}
 		&__row {
 			position: relative;
 			display: flex;

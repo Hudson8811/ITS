@@ -3,15 +3,9 @@
 		a(href="index.html").header__logo 
 			img(src="img/logo.png", alt="logo")
 		.header__menu
-			a(href="#").header__menu__item Кейсы
-
-			.header__menu__item Услуги
-				ul.header__menu__list
-					li.header__menu__list__item
-						a(href="#") Твердомеры
-					li.header__menu__list__item 
-						a(href="#") Меры твердости
-			a(href="#").header__menu__item Контакты
+			a(href="#cases__section").header__menu__item.js-header__menu__item Кейсы
+			a(href="#developing__section").header__menu__item.js-header__menu__item Услуги
+			a(href="#tell-us").header__menu__item.js-header__menu__item Контакты
 		.header__other
 			a(href="#").header__other__item.header__other__tg.header__other__lang--desc
 				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -49,22 +43,13 @@
 .mob-menu__section
 	.mob-menu--overlay
 	.mob-menu
-		.mob-menu--list.accordions
-			.accordion
-				.accordion__intro
-					a(href="")  Кейсы
-				.accordion__content
-			.accordion
-				.accordion__intro
-					a(href="")  Услуги
-				.accordion__content
-			.accordion
-				.accordion__intro
-					a(href="")  Контакты
-				.accordion__content
+		.mob-menu__list
+			a(href="#cases__section").mob-menu__list__item.js-header__menu__item  Кейсы
+			a(href="#developing__section").mob-menu__list__item.js-header__menu__item  Услуги
+			a(href="#tell-us").mob-menu__list__item.js-header__menu__item  Контакты
 		.mob-menu__bottom
 			.mob-menu__fone.mob-menu__link
 				a(href="tel:+79999999999") +7(999)999-99-99
 			.mob-menu__mail.mob-menu__link
 				a(href="mailto:User@mail.ru") User@mail.ru
-			.btn.btn--small.mob-menu__btn(href="#tell-us") Заполнить бриф
+			.btn.btn--small.mob-menu__btn.js-header__menu__item(href="#tell-us") Оставить заявку
