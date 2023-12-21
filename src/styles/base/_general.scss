@@ -1194,6 +1194,11 @@ background-color: #e9ecef;
         margin-left: 145px;
         @include max(md) {
             margin-left: 0;
+            
+        }
+        @include max(xs) {
+            font-size:25px;
+            margin-bottom:20px;
         }
     }
     &__text {
@@ -1220,6 +1225,9 @@ background-color: #e9ecef;
             content: '';
             width: 100%;
             padding-top: 43.05%;
+        }
+        @include max(sm) {
+            margin-bottom: 23px;
         }
     }
     &__content-mini {
@@ -1270,7 +1278,7 @@ background-color: #e9ecef;
         height: 100%;
         object-fit: cover;
         source,img {
-            position: relative;
+            position: absolute;
             display: block;
             width: 100%;
             height: 100%;
