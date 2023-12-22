@@ -3504,7 +3504,7 @@ body {
   align-items: center;
   color: #2A2A2A;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 550;
   line-height: normal;
@@ -3547,9 +3547,8 @@ body {
 
 .btn--small:hover {
   transition: all 0.3s;
-  background: #E6E6EE;
-  color: #2A2A2A;
-  border: 1px solid #E6E6EE;
+  background: #237AE9;
+  border: 1px solid #237AE9;
 }
 
 @keyframes rotateCircle {
@@ -3566,7 +3565,7 @@ body {
   font-size: 99px;
   font-style: normal;
   font-weight: 700;
-  line-height: 94.1%;
+  line-height: 94%;
   /* 93.19px */
   letter-spacing: -5.942px;
 }
@@ -3724,6 +3723,7 @@ body {
   align-items: flex-start;
   width: 100%;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .partners__slider .swiper-wrapper {
@@ -3875,6 +3875,10 @@ body {
   cursor: pointer;
 }
 
+.custom-checkbox + label:hover {
+  background: #DADADA;
+}
+
 /* создание в label псевдоэлемента before со следующими стилями */
 
 .custom-checkbox + label::before {
@@ -3927,7 +3931,9 @@ body {
 }
 
 .custom-checkbox:checked + label {
-  background: #DADADA;
+  background: #237AE9;
+  color: #fff;
+  border: 1px solid #237AE9;
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
@@ -4008,7 +4014,7 @@ body {
 
 .cases__section {
   overflow: hidden;
-  margin-top: 100px;
+  margin-top: 180px;
 }
 
 .cases__title {
@@ -4799,22 +4805,27 @@ body {
   justify-content: center;
   align-items: center;
   width: 19px;
-  margin-top: 4px;
+  height: 19px;
+  margin-top: 1px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content: "";
 }
 
 .header__other__item__tg::before {
-  content: url(../img/tg.png);
-  transition: all 0.3s;
+  background-image: url(../img/tg.png);
+  transition: all 0.2s;
 }
 
 .header__other__item__tg:hover {
   color: #237AE9;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .header__other__item__tg:hover::before {
-  content: url(../img/tg-blue.png);
-  transition: all 0.3s;
+  background-image: url(../img/tg-blue.png);
+  transition: all 0.2s;
 }
 
 .header__other__item__fon {
@@ -4822,33 +4833,33 @@ body {
 }
 
 .header__other__item__fon::before {
-  content: url(../img/tel.png);
-  transition: all 0.3s;
+  background-image: url(../img/tel.png);
+  transition: all 0.2s;
 }
 
 .header__other__item__fon:hover {
   color: #237AE9;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .header__other__item__fon:hover::before {
-  content: url(../img/tel-blue.png);
-  transition: all 0.3s;
+  background-image: url(../img/tel-blue.png);
+  transition: all 0.2s;
 }
 
 .header__other__item__mail::before {
-  content: url(../img/mail.png);
-  transition: all 0.3s;
+  background-image: url(../img/mail.png);
+  transition: all 0.2s;
 }
 
 .header__other__item__mail:hover {
   color: #237AE9;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .header__other__item__mail:hover::before {
-  content: url(../img/mail-blue.png);
-  transition: all 0.3s;
+  background-image: url(../img/mail-blue.png);
+  transition: all 0.2s;
 }
 
 .header__other__item:last-child {
@@ -4935,7 +4946,6 @@ body {
   color: #2A2A2A;
   font-size: 58px;
   line-height: 100%;
-  text-transform: uppercase;
   padding-right: 0;
   background: transparent;
   flex-flow: row nowrap;
@@ -5026,29 +5036,31 @@ body {
 
 .mob-menu__link {
   position: relative;
-  display: block;
+  cursor: pointer;
   color: #2A2A2A;
-  text-align: right;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 1.1px;
+  font-size: 23px;
+  line-height: 100%;
+  padding-right: 0;
+  background: transparent;
+  text-decoration: none;
+  width: 100%;
+  transition: all 0.3s;
+  color: #2A2A2A;
   margin-bottom: 20px;
 }
 
 .mob-menu__link a {
-  display: block;
-  text-decoration: none;
   position: relative;
+  cursor: pointer;
   color: #2A2A2A;
-  text-align: right;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 1.1px;
+  font-size: 23px;
+  line-height: 100%;
+  padding-right: 0;
+  background: transparent;
+  text-decoration: none;
+  width: 100%;
   transition: all 0.3s;
+  color: #2A2A2A;
 }
 
 .mob-menu__link a:hover {
@@ -5133,6 +5145,10 @@ body {
 .mob-menu .soc__item:hover {
   transition: all 0.3s;
   background: rgba(255, 255, 255, 0.21);
+}
+
+.mob-menu__btn {
+  margin-top: 20px;
 }
 
 .hamburger-inner,
@@ -5700,7 +5716,7 @@ body {
   }
 
   .cases__section {
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   .cases__title {
@@ -5839,7 +5855,8 @@ body {
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
-    line-height: 115%;
+    line-height: 94%;
+    /* 93.19px */
     letter-spacing: -3.942px;
     margin-bottom: 24px;
   }
@@ -5881,7 +5898,7 @@ body {
   }
 
   .partners {
-    padding-top: 20px;
+    padding-top: 50px;
   }
 
   .developing__item__title {
@@ -5931,7 +5948,7 @@ body {
   }
 
   .mob-menu__list__item {
-    font-size: 34px;
+    font-size: 23px;
   }
 
   .footer {
