@@ -233,6 +233,9 @@
 				margin-top: 4px;
 			}
 			&__tg {
+				@media (max-width: 900px) {
+					display: none;
+				}
 				&::before {
 					content: url(../img/tg.png);
 					transition: all .3s;
@@ -247,6 +250,13 @@
 				}
 			}
 			&__fon {
+				margin-right: 0 !important;
+				@include max(mdHeader) {
+					margin-right: 25px !important;
+				}
+				@media (max-width: 410px) {
+					display: none;
+				}
 				&::before {
 					content: url(../img/tel.png);
 					transition: all .3s;
@@ -261,6 +271,9 @@
 				}
 			}
 			&__mail {
+				@media (max-width: 630px) {
+					display: none;
+				}
 				&::before {
 					content: url(../img/mail.png);
 					transition: all .3s;
@@ -284,34 +297,7 @@
 				margin-right: 10px;
 			}
 		}
-		&__tg {
-			@include max(sm) {
-				display: none;
-			}
-			img, svg {
-				margin-right: 8px;
-			}
-		}
-		&__mail {
-			@include max(xs) {
-				display: none;
-			}
-			img, svg {
-				margin-right: 10px;
-			}
-		}
-		&__fon {
-			margin-right: 0 !important;
-			@include max(mdHeader) {
-				margin-right: 25px !important;
-			}
-			@include max(xs) {
-				display: none;
-			}
-			img, svg {
-				margin-right: 4px;
-			}
-		}
+
 	}
 
 }
