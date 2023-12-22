@@ -223,21 +223,62 @@
 			@media (max-width: 1350px) {
 				margin-right: 25px
 			}
+			&:before {
+				position: relative;
+				margin-right: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 19px;
+				margin-top: 4px;
+			}
+			&__tg {
+				&::before {
+					content: url(../img/tg.png);
+					transition: all .3s;
+				}
+				&:hover {
+					color: $blue;
+					transition: all .3s;
+					&::before {
+						content: url(../img/tg-blue.png);
+						transition: all .3s;
+					}
+				}
+			}
+			&__fon {
+				&::before {
+					content: url(../img/tel.png);
+					transition: all .3s;
+				}
+				&:hover {
+					color: $blue;
+					transition: all .3s;
+					&::before {
+						content: url(../img/tel-blue.png);
+						transition: all .3s;
+					}
+				}
+			}
+			&__mail {
+				&::before {
+					content: url(../img/mail.png);
+					transition: all .3s;
+				}
+				&:hover {
+					color: $blue;
+					transition: all .3s;
+					&::before {
+						content: url(../img/mail-blue.png);
+						transition: all .3s;
+					}
+				}
+			}
 			&:last-child {
 				margin-right: 0;
 
 			}
-			&:hover {
-				color: $blue;
-				transition: all .3s;
-				// svg {
-				// 	fill: $blue;
-				// 	path {
-				// 		fill: $blue;
-				// 		transition: all .3s;
-				// 	}
-				// }
-			}
+
 			img, svg {
 				transition: all .3s;
 				margin-right: 10px;

@@ -3676,7 +3676,6 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  max-width: 249px;
 }
 
 .hashtag {
@@ -3738,17 +3737,17 @@ body {
   align-items: center;
   display: flex;
   width: auto;
-  height: 141px;
   background: transparent;
-  padding: 22px;
   border-radius: 32px;
+  margin-right: 43px;
+  height: 53px;
 }
 
 .partners__slide img,
 .partners__slide svg {
   position: relative;
   display: block;
-  width: 100%;
+  height: 100%;
   object-fit: contain;
   object-position: center center;
 }
@@ -3873,6 +3872,7 @@ body {
   padding: 15px 25px;
   border-radius: 56px;
   border: 1px solid #DADADA;
+  cursor: pointer;
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
@@ -4536,14 +4536,13 @@ body {
   align-items: center;
   flex-flow: column nowrap;
   z-index: 5;
+  min-height: 343px;
 }
 
 .modalThanks__title {
   text-align: center;
   margin-bottom: 59px;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: -2px;
+  line-height: 94%;
 }
 
 .modalThanks__text {
@@ -4793,13 +4792,63 @@ body {
   cursor: pointer;
 }
 
-.header__other__item:last-child {
-  margin-right: 0;
+.header__other__item:before {
+  position: relative;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  margin-top: 4px;
 }
 
-.header__other__item:hover {
+.header__other__item__tg::before {
+  content: url(../img/tg.png);
+  transition: all 0.3s;
+}
+
+.header__other__item__tg:hover {
   color: #237AE9;
   transition: all 0.3s;
+}
+
+.header__other__item__tg:hover::before {
+  content: url(../img/tg-blue.png);
+  transition: all 0.3s;
+}
+
+.header__other__item__fon::before {
+  content: url(../img/tel.png);
+  transition: all 0.3s;
+}
+
+.header__other__item__fon:hover {
+  color: #237AE9;
+  transition: all 0.3s;
+}
+
+.header__other__item__fon:hover::before {
+  content: url(../img/tel-blue.png);
+  transition: all 0.3s;
+}
+
+.header__other__item__mail::before {
+  content: url(../img/mail.png);
+  transition: all 0.3s;
+}
+
+.header__other__item__mail:hover {
+  color: #237AE9;
+  transition: all 0.3s;
+}
+
+.header__other__item__mail:hover::before {
+  content: url(../img/mail-blue.png);
+  transition: all 0.3s;
+}
+
+.header__other__item:last-child {
+  margin-right: 0;
 }
 
 .header__other__item img,
@@ -5735,12 +5784,15 @@ body {
   .modalThanks {
     width: 100%;
     max-width: 390px;
-    min-height: 343;
+    min-height: 343px;
     height: auto;
   }
 
   .modalThanks__title {
     margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -2px;
   }
 
   .modalThanks__text {
