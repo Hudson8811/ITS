@@ -4,6 +4,7 @@
 @@include("./libs/jquery.mask.min.js")
 @@include("./libs/swiper-bundle.min.js")
 @@include("./libs/rellax.min.js")
+@@include("./libs/select2.min.js")
 
 //my files
 @@include("./import/main.js")

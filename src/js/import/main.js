@@ -38,6 +38,10 @@ jQuery(function () {
 			type: "inline",
 		});
 	}
+	$(".contacts__form__select").select2({
+		placeholder: "Бюджет проекта",
+		allowClear: true
+	});
 	$(".js-modalThanks").on('click', ()=> {
 		modalThanks()
 	})
