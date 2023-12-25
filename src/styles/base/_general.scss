@@ -431,7 +431,7 @@ body {
             padding-top: 100px;
         }
         @include max(sm) {
-            padding-top: 130px;
+            padding-top: 50px;
         }
 
     }
@@ -644,7 +644,7 @@ body {
 			margin-bottom: 15px;
 		}
         @include max(sm) {
-            min-height: 280px;
+            min-height: 200px;
             border-radius: 20px;
         }
         &__title {
@@ -819,6 +819,7 @@ body {
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: flex-start;
+        padding-bottom: 50px;
     }
     &__title {
         margin-bottom: 63px;
@@ -1707,6 +1708,64 @@ body {
     }
 
 
+}
+.select2-container.select2-container--default.select2-container--open {
+    .select2-dropdown {
+        border: none
+    }
+    .select2-results {
+        &__options {
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+              
+            &::-webkit-scrollbar-track {
+                background-color: rgba(42, 42, 42, 0.2);
+                border-radius: 10px;
+            }
+              
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background:  $mainDark;
+            }
+        }
+        &__option {
+            
+            color: #DADADA;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            min-height: 71px;
+            padding-right: 18px;
+            padding-top: 20px;
+            width: 100%;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border: 0px solid rgba(255, 255, 255, 1);
+            border-bottom:1px solid rgba(42, 42, 42, 0.2);;
+            
+            @include max(md) {
+                padding-top: 20px;
+                min-height: 71px;
+                font-size: 20px;
+                padding-right: 18px;
+            }
+            @include max(xs) {
+                font-size:18px;
+            }
+            &:hover {        
+                color: $fonBlack;
+                border-bottom:1px solid $mainDark;
+            }
+            &.select2-results__option--highlighted {
+                color: $fonBlack;
+                border-bottom:1px solid $mainDark;
+            }
+        }
+
+    }
 }
 .select2-search {
     display: none;

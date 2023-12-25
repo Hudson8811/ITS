@@ -369,7 +369,10 @@
 		align-items: flex-start;
 		margin-bottom: 32px;
 		border-bottom: 1px solid $mainDark;
-		padding: 0px  16px 44px 16px;
+		padding: 0px  16px 44px 32px;
+		@include max(sm) {
+			padding: 0px  16px 44px 16px;
+		}
 		&__item {
 			position: relative;
 			cursor: pointer;
@@ -518,7 +521,10 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
-		padding-left: 16px;
+		padding: 0px  16px 44px 32px;
+		@include max(sm) {
+			padding: 0px  16px 44px 16px;
+		}
 	}
 	.header__other__user {
 		svg {
