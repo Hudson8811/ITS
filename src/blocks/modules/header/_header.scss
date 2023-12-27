@@ -252,7 +252,7 @@
 				background-position: center center;
 				background-size: contain;
 				opacity: 0;
-				transition: all .2s;
+				transition: all .3s;
 				content: "";
 			}
 			&__tg {
@@ -262,22 +262,22 @@
 				&::before {
 					opacity: 1;
 					background-image: url(../img/tg.png);
-					transition: all .2s;
+					transition: all .3s;
 				}
 				&::after {
 					background-image: url(../img/tg-blue.png);
-					transition: all .2s;
+					transition: all .3s;
 					opacity: 0;
 				}
 				&:hover {
 					color: $blue;
-					transition: all .2s;
+					transition: all .3s;
 					&::before {
 						opacity: 0;
-						transition: all .2s;
+						transition: all .3s;
 					}
 					&::after {
-						transition: all .2s;
+						transition: all .3s;
 						opacity: 1;
 					}
 				}
@@ -289,22 +289,22 @@
 				&::before {
 					opacity: 1;
 					background-image: url(../img/tel.png);
-					transition: all .2s;
+					transition: all .3s;
 				}
 				&::after {
 					background-image: url(../img/tel-blue.png);
-					transition: all .2s;
+					transition: all .3s;
 					opacity: 0;
 				}
 				&:hover {
 					color: $blue;
-					transition: all .2s;
+					transition: all .3s;
 					&::before {
 						opacity: 0;
-						transition: all .2s;
+						transition: all .3s;
 					}
 					&::after {
-						transition: all .2s;
+						transition: all .3s;
 						opacity: 1;
 					}
 				}
@@ -316,22 +316,22 @@
 				&::before {
 					opacity: 1;
 					background-image: url(../img/mail.png);
-					transition: all .2s;
+					transition: all .3s;
 				}
 				&::after {
 					background-image: url(../img/mail-blue.png);
-					transition: all .2s;
+					transition: all .3s;
 					opacity: 0;
 				}
 				&:hover {
 					color: $blue;
-					transition: all .2s;
+					transition: all .3s;
 					&::before {
 						opacity: 0;
-						transition: all .2s;
+						transition: all .3s;
 					}
 					&::after {
-						transition: all .2s;
+						transition: all .3s;
 						opacity: 1;
 					}
 				}
