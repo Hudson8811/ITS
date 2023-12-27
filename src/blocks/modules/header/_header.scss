@@ -265,7 +265,7 @@
 					transition: all .2s;
 				}
 				&::after {
-					background-image: url(../img/tg.png);
+					background-image: url(../img/tg-blue.png);
 					transition: all .2s;
 					opacity: 0;
 				}
@@ -274,11 +274,9 @@
 					transition: all .2s;
 					&::before {
 						opacity: 0;
-						background-image: url(../img/tg.png);
 						transition: all .2s;
 					}
 					&::after {
-						background-image: url(../img/tg-blue.png);
 						transition: all .2s;
 						opacity: 1;
 					}
@@ -294,7 +292,7 @@
 					transition: all .2s;
 				}
 				&::after {
-					background-image: url(../img/tel.png);
+					background-image: url(../img/tel-blue.png);
 					transition: all .2s;
 					opacity: 0;
 				}
@@ -303,11 +301,9 @@
 					transition: all .2s;
 					&::before {
 						opacity: 0;
-						background-image: url(../img/tel.png);
 						transition: all .2s;
 					}
 					&::after {
-						background-image: url(../img/tel-blue.png);
 						transition: all .2s;
 						opacity: 1;
 					}
@@ -323,7 +319,7 @@
 					transition: all .2s;
 				}
 				&::after {
-					background-image: url(../img/mail.png);
+					background-image: url(../img/mail-blue.png);
 					transition: all .2s;
 					opacity: 0;
 				}
@@ -332,11 +328,9 @@
 					transition: all .2s;
 					&::before {
 						opacity: 0;
-						background-image: url(../img/mail.png);
 						transition: all .2s;
 					}
 					&::after {
-						background-image: url(../img/mail-blue.png);
 						transition: all .2s;
 						opacity: 1;
 					}

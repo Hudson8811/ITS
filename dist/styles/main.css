@@ -5605,7 +5605,7 @@ body {
 }
 
 .header__other__item__tg::after {
-  background-image: url(../img/tg.png);
+  background-image: url(../img/tg-blue.png);
   transition: all 0.2s;
   opacity: 0;
 }
@@ -5617,12 +5617,10 @@ body {
 
 .header__other__item__tg:hover::before {
   opacity: 0;
-  background-image: url(../img/tg.png);
   transition: all 0.2s;
 }
 
 .header__other__item__tg:hover::after {
-  background-image: url(../img/tg-blue.png);
   transition: all 0.2s;
   opacity: 1;
 }
@@ -5634,7 +5632,7 @@ body {
 }
 
 .header__other__item__fon::after {
-  background-image: url(../img/tel.png);
+  background-image: url(../img/tel-blue.png);
   transition: all 0.2s;
   opacity: 0;
 }
@@ -5646,12 +5644,10 @@ body {
 
 .header__other__item__fon:hover::before {
   opacity: 0;
-  background-image: url(../img/tel.png);
   transition: all 0.2s;
 }
 
 .header__other__item__fon:hover::after {
-  background-image: url(../img/tel-blue.png);
   transition: all 0.2s;
   opacity: 1;
 }
@@ -5663,7 +5659,7 @@ body {
 }
 
 .header__other__item__mail::after {
-  background-image: url(../img/mail.png);
+  background-image: url(../img/mail-blue.png);
   transition: all 0.2s;
   opacity: 0;
 }
@@ -5675,12 +5671,10 @@ body {
 
 .header__other__item__mail:hover::before {
   opacity: 0;
-  background-image: url(../img/mail.png);
   transition: all 0.2s;
 }
 
 .header__other__item__mail:hover::after {
-  background-image: url(../img/mail-blue.png);
   transition: all 0.2s;
   opacity: 1;
 }
