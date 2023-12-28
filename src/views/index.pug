@@ -204,54 +204,52 @@ block content
 						.tell-us__QR__picture 
 							img(src="img/qr.png", alt="",)
 				.tell-us__col
-					form.form
+					form.form.js-contact-form(method="POST")
+						input(type="hidden" name="mode" value="mail-request")
+						.form-field(style="display:none;")
+							input(type="text" name="tel" value="")
 						.form__title 
 							!="Какие задачи перед нами <br>стоят?"
 						.form__checkbox
-							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__1" name="form__check__1" value="indigo">
-								<label for="form__check__1">Корпоративный сайт</label>
-							</div>
-							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__2" name="form__check__2" value="indigo">
-								<label for="form__check__2">Интернет-магазин</label>
-							</div>
-							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__3" name="form__check__2" value="indigo">
-								<label for="form__check__3">Корп. портал</label>
-							</div>
-							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__4" name="form__check__4" value="indigo">
-								<label for="form__check__4">Личный кабинет</label>
-							</div>
-							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__5" name="form__check__5" value="indigo">
-								<label for="form__check__5">Интернет-каталог</label>
-							</div>
-							<div class="checkbox">
-								<input class="custom-checkbox" type="checkbox" id="form__check__6" name="form__check__3" value="indigo">
-								<label for="form__check__6">Мобильное приложение</label>
-							</div>
-						.contacts__form  
+							label.checkbox
+								input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный сайт")
+								span Корпоративный сайт
+							label.checkbox
+								input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-магазин")
+								span Интернет-магазин
+							label.checkbox
+								input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный портал")
+								span Корп. портал
+							label.checkbox
+								input.custom-checkbox(type="checkbox" name="subjects[]" value="Личный кабинет")
+								span Личный кабинет
+							label.checkbox
+								input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-каталог")
+								span Интернет-каталог
+
+							label.checkbox
+								input.custom-checkbox(type="checkbox" name="subjects[]" value="Мобильное приложение")
+								span Мобильное приложение
+						.contacts__form
 							.contacts__form__input-block
-								input(type="text", name="").contacts__form__input.text__13
-								.contacts__form__input-block__name 	Имя и фимилия*
+								input(type="text" name="fio" required).contacts__form__input.text__13
+								.contacts__form__input-block__name 	Имя и фамилия*
 								.contacts__form__input-block__error Неправильное имя
 							.contacts__form__input-block
-								input(type="tel", name="").contacts__form__input.js-mask-phone
+								input(type="tel" name="contact" required).contacts__form__input.js-mask-phone
 								.contacts__form__input-block__name Телефон*
-								.contacts__form__input-block__error Неправильное телефон
+								.contacts__form__input-block__error Неправильный телефон
 							.contacts__form__input-block
-								input(type="email", name="").contacts__form__input.text__13
+								input(type="email" name="pochta" required).contacts__form__input.text__13
 								.contacts__form__input-block__name Email*
 								.contacts__form__input-block__error Неправильный email						
 							.contacts__form__input-block
-								select.contacts__form__select(name="")
+								select.contacts__form__select(name="sum")
 									option 
-									option До 500 тыс руб.
-									option От 500 тыс до 1,5 млн руб.
-									option От 1,5 млн до 5 млн руб.
-									option От 5 млн руб.
+									option(value="До 500 тыс руб.") До 500 тыс руб.
+									option(value="От 500 тыс до 1,5 млн руб.") От 500 тыс до 1,5 млн руб.
+									option(value="От 1,5 млн до 5 млн руб.") От 1,5 млн до 5 млн руб.
+									option(value="От 5 млн руб.") От 5 млн руб.
 									.localities-centers__select-arrow
 										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
 										<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
@@ -259,5 +257,5 @@ block content
 						.form__buttons
 							.form__buttons__text
 								!="нажимая кнопку вы соглашаетесь согласие на обработку персональных данных"
-							.btn--small.js-modalThanks Оставить заявку
+							button.btn--small(type="submit") Оставить заявку
 
