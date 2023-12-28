@@ -1609,9 +1609,7 @@ body {
                 border-bottom: none;
             }
             @include max(md) {
-                padding-top: 20px;
                 font-size: 20px;
-                padding-right: 18px;
             }
             @include max(xs) {
                 font-size:18px;
