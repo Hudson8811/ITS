@@ -1532,7 +1532,10 @@ body {
             opacity: 0.2;
             transition: all 0.3s;
         }
-
+        &--textarea{
+            height: 150px;
+            resize: none;
+        }
 
     }
     &__bottom {

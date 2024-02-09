@@ -5223,6 +5223,11 @@ body {
   transition: all 0.3s;
 }
 
+.contacts__form__input--textarea {
+  height: 150px;
+  resize: none;
+}
+
 .contacts__form__bottom {
   display: flex;
   align-self: flex-end;
