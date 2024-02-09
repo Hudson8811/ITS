@@ -7,11 +7,15 @@ block variables
 block content
 	.section.case__section
 		.case
-			.container 
-				.case__title.title__65 
-					!="Развиваемся <br> <span>в смежных областях</span>"
-				.case__text.text__18
-					!="Тут может быть еще какое то описание"
+			.container.container--inner
+				.case__top
+					h1.case__title.title__65
+						!="Развиваемся <br> <span>в смежных областях</span>"
+					.case__labels
+						.case__label #Аналитика
+						.case__label #Дизайн
+				.case__text.text__style
+					p Тут может быть еще какое то описание
 			.case__content
 				video.case__video(autoplay muted preload)
 					<source src="https://pictures.s3.yandex.net/landings-video/Backend.webm" type="video/mp4">
@@ -23,25 +27,14 @@ block content
 					source(media="(man-width: 992px)", srcset="img/case__picture__1.png")
 					img(src="img/case__picture__1.png", alt="")
 			
-			.container 
-				.case__subtitle.title__35
-					!="СберМобайл"
-				.case__text.text__18
-					!="Тут может быть еще какое то описание"
-				.case__text.text__18
-					!="Тут может быть еще какое то описание"
-				
-				.case__content
-					video.case__video(autoplay muted preload)
+			.container.container--inner
+				.text__style
+					h2 СберМобайл
+					h3 СберМобайл
+					p Тут может быть еще какое то описание
+					p Тут может быть еще какое то описание
+					video(autoplay muted preload)
 						<source src="https://pictures.s3.yandex.net/landings-video/Backend.webm" type="video/mp4">
-
-				.case__content
-					picture.case__picture 
-						source(media="(man-width: 992px)", srcset="img/case__picture__1.png")
-						img(src="img/case__picture__1.png", alt="")
-				.case__text.text__18
-					!="Тут может быть еще какое то описание"
-				
-				.case__text.text__18
-					!="Тут может быть еще какое то описание"
-				
+					img(src="img/case__picture__1.png", alt="")
+					p Тут может быть еще какое то описание
+					p Тут может быть еще какое то описание

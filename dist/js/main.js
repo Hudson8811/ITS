@@ -101,6 +101,7 @@ jQuery(function () {
     })
     function modalThanks() {
         event.preventDefault();
+        $.fancybox.close();
         $.fancybox.open({
             src: "#modalThanks",
             type: "inline",
@@ -183,26 +184,30 @@ jQuery(function () {
 
 
     document.querySelectorAll('.js-header__menu__item').forEach(link => {
-
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            let href = this.getAttribute('href').substring(1);
-
+            let href = this.getAttribute('href');
+            if (href.includes('#')) {
+                href = href.substring(href.indexOf('#') + 1);
+            } else {
+                return;
+            }
             const scrollTarget = document.getElementById(href);
+            if (scrollTarget !== null) {
+                e.preventDefault();
+                const topOffset = document.querySelector('.section__header').offsetHeight;
+                const elementPosition = scrollTarget.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - topOffset;
 
-            const topOffset = document.querySelector('.section__header').offsetHeight;
-            // const topOffset = 0; // если не нужен отступ сверху
-            const elementPosition = scrollTarget.getBoundingClientRect().top;
-            const offsetPosition = elementPosition - topOffset;
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+                mobMenu.classList.remove("active");
+                humb.classList.remove("is-active");
+                bodyYesScroll();
+            }
 
-            window.scrollBy({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-            mobMenu.classList.remove("active");
-            humb.classList.remove("is-active");
-            bodyYesScroll()
+
         });
     });
 
@@ -254,6 +259,15 @@ jQuery(function () {
            });
        }
     });
+
+    $('.js-show-form').on('click', function (){
+        event.preventDefault();
+        $.fancybox.open({
+            src: "#modalForm",
+            type: "inline",
+        });
+    });
+
 
     $('.js-contact-form input[required]').on('blur',function (){
         checkField($(this));

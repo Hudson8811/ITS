@@ -45,7 +45,7 @@
           <div class="mob-menu__fone mob-menu__link"><a href="tel:+74999384899">+7(499) 938-48-99</a></div>
           <div class="mob-menu__mail mob-menu__link"><a href="https://t.me/itspacegroup_bot">@itspacegroup_bot</a></div>
           <div class="mob-menu__mail mob-menu__link"><a href="mailto:mail@itspace.group">mail@itspace.group</a></div>
-          <div class="btn btn--small mob-menu__btn js-header__menu__item" href="#tell-us">Оставить заявку</div>
+          <div class="btn btn--small mob-menu__btn js-show-form" href="javascript:;">Оставить заявку</div>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@
             <div class="mob-menu__fone mob-menu__link"><a href="tel:+74999384899">+7(499) 938-48-99</a></div>
             <div class="mob-menu__mail mob-menu__link"><a href="https://t.me/itspacegroup_bot">@itspacegroup_bot</a></div>
             <div class="mob-menu__mail mob-menu__link"><a href="mailto:mail@itspace.group">mail@itspace.group</a></div>
-            <div class="btn btn--small mob-menu__btn js-header__menu__item" href="#tell-us">Оставить заявку</div>
+            <div class="btn btn--small mob-menu__btn js-show-form" href="javascript:;">Оставить заявку</div>
           </div>
         </div>
       </div>
@@ -137,6 +137,80 @@
 </svg>
         </div>
       </div>
+      <div class="modalForm" id="modalForm" style="display:none">
+        <div class="modalForm__close" data-fancybox-close><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+<path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
+</svg>
+        </div>
+        <div class="modalForm__wrap">
+          <div class="modalForm__title">Расскажите нам о&nbsp;вашем проекте</div>
+          <div class="modalForm__inner">
+            <form class="form js-contact-form" method="POST">
+              <input type="hidden" name="mode" value="mail-request">
+              <div class="form-field" style="display:none;">
+                <input type="text" name="tel" value="">
+              </div>
+              <div class="form__title">Какие задачи перед нами <br>стоят?
+              </div>
+              <div class="form__checkbox">
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный сайт"><span>Корпоративный сайт</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-магазин"><span>Интернет-магазин</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный портал"><span>Корп. портал</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Личный кабинет"><span>Личный кабинет</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-каталог"><span>Интернет-каталог</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Мобильное приложение"><span>Мобильное приложение</span>
+                </label>
+              </div>
+              <div class="contacts__form">
+                <div class="contacts__form__input-block">
+                  <input class="contacts__form__input text__13" type="text" name="fio" required>
+                  <div class="contacts__form__input-block__name">   Имя и фамилия*</div>
+                  <div class="contacts__form__input-block__error">Неправильное имя</div>
+                </div>
+                <div class="contacts__form__input-block">
+                  <input class="contacts__form__input js-mask-phone" type="tel" name="contact" required>
+                  <div class="contacts__form__input-block__name">Телефон*</div>
+                  <div class="contacts__form__input-block__error">Неправильный телефон</div>
+                </div>
+                <div class="contacts__form__input-block">
+                  <input class="contacts__form__input text__13" type="email" name="pochta" required>
+                  <div class="contacts__form__input-block__name">Email*</div>
+                  <div class="contacts__form__input-block__error">Неправильный email</div>
+                </div>
+                <div class="contacts__form__input-block">
+                  <select class="contacts__form__select" name="sum">
+                    <option></option>
+                    <option value="До 500 тыс руб.">До 500 тыс руб.</option>
+                    <option value="От 500 тыс до 1,5 млн руб.">От 500 тыс до 1,5 млн руб.</option>
+                    <option value="От 1,5 млн до 5 млн руб.">От 1,5 млн до 5 млн руб.</option>
+                    <option value="От 5 млн руб.">От 5 млн руб.</option>
+                    <div class="localities-centers__select-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                    </div>
+                  </select>
+                </div>
+              </div>
+              <div class="form__buttons">
+                <div class="form__buttons__text">нажимая кнопку вы соглашаетесь согласие на обработку персональных данных
+                </div>
+                <button class="btn--small" type="submit">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <div class="footer__section"> 
       <div class="container"> 
@@ -200,6 +274,80 @@
          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
 <path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
 </svg>
+      </div>
+    </div>
+    <div class="modalForm" id="modalForm" style="display:none">
+      <div class="modalForm__close" data-fancybox-close><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+<path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
+</svg>
+      </div>
+      <div class="modalForm__wrap">
+        <div class="modalForm__title">Расскажите нам о&nbsp;вашем проекте</div>
+        <div class="modalForm__inner">
+          <form class="form js-contact-form" method="POST">
+            <input type="hidden" name="mode" value="mail-request">
+            <div class="form-field" style="display:none;">
+              <input type="text" name="tel" value="">
+            </div>
+            <div class="form__title">Какие задачи перед нами <br>стоят?
+            </div>
+            <div class="form__checkbox">
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный сайт"><span>Корпоративный сайт</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-магазин"><span>Интернет-магазин</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный портал"><span>Корп. портал</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Личный кабинет"><span>Личный кабинет</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-каталог"><span>Интернет-каталог</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Мобильное приложение"><span>Мобильное приложение</span>
+              </label>
+            </div>
+            <div class="contacts__form">
+              <div class="contacts__form__input-block">
+                <input class="contacts__form__input text__13" type="text" name="fio" required>
+                <div class="contacts__form__input-block__name">   Имя и фамилия*</div>
+                <div class="contacts__form__input-block__error">Неправильное имя</div>
+              </div>
+              <div class="contacts__form__input-block">
+                <input class="contacts__form__input js-mask-phone" type="tel" name="contact" required>
+                <div class="contacts__form__input-block__name">Телефон*</div>
+                <div class="contacts__form__input-block__error">Неправильный телефон</div>
+              </div>
+              <div class="contacts__form__input-block">
+                <input class="contacts__form__input text__13" type="email" name="pochta" required>
+                <div class="contacts__form__input-block__name">Email*</div>
+                <div class="contacts__form__input-block__error">Неправильный email</div>
+              </div>
+              <div class="contacts__form__input-block">
+                <select class="contacts__form__select" name="sum">
+                  <option></option>
+                  <option value="До 500 тыс руб.">До 500 тыс руб.</option>
+                  <option value="От 500 тыс до 1,5 млн руб.">От 500 тыс до 1,5 млн руб.</option>
+                  <option value="От 1,5 млн до 5 млн руб.">От 1,5 млн до 5 млн руб.</option>
+                  <option value="От 5 млн руб.">От 5 млн руб.</option>
+                  <div class="localities-centers__select-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                  </div>
+                </select>
+              </div>
+            </div>
+            <div class="form__buttons">
+              <div class="form__buttons__text">нажимая кнопку вы соглашаетесь согласие на обработку персональных данных
+              </div>
+              <button class="btn--small" type="submit">Оставить заявку</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <script src="js/vendor.js"></script>
