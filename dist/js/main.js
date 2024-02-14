@@ -197,7 +197,6 @@ jQuery(function () {
                 const topOffset = document.querySelector('.section__header').offsetHeight;
                 const elementPosition = scrollTarget.getBoundingClientRect().top;
                 const offsetPosition = elementPosition - topOffset;
-
                 window.scrollBy({
                     top: offsetPosition,
                     behavior: "smooth"
@@ -289,6 +288,9 @@ jQuery(function () {
             case 'tel':
                 let digitsOnly = value.replace(/\D/g, '');
                 isValid = /^[\d]{10,}$/.test(digitsOnly);
+                break;
+            case 'checkbox':
+                isValid = field.is(':checked');
                 break;
             default:
                 isValid = value !== '';

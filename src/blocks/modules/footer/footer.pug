@@ -1,4 +1,76 @@
-.footer__section 
+#tell-us.tell-us__section.section
+	.container
+		.tell-us
+			.tell-us__col
+				.tell-us__title.title__65
+					!="Расскажите нам<br><span>о вашем проекте</span>"
+				.tell-us__QR
+					.tell-us__QR__title
+						!="Если удобнее, пишите в телеграмм"
+					.tell-us__QR__picture
+						img(src="img/qr.png", alt="",)
+			.tell-us__col
+				form.form.js-contact-form(method="POST")
+					input(type="hidden" name="mode" value="mail-request")
+					.form-field(style="display:none;")
+						input(type="text" name="tel" value="")
+					.form__title
+						!="Какие задачи перед нами <br>стоят?"
+					.form__checkbox
+						label.checkbox
+							input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный сайт")
+							span Корпоративный сайт
+						label.checkbox
+							input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-магазин")
+							span Интернет-магазин
+						label.checkbox
+							input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный портал")
+							span Корп. портал
+						label.checkbox
+							input.custom-checkbox(type="checkbox" name="subjects[]" value="Личный кабинет")
+							span Личный кабинет
+						label.checkbox
+							input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-каталог")
+							span Интернет-каталог
+
+						label.checkbox
+							input.custom-checkbox(type="checkbox" name="subjects[]" value="Мобильное приложение")
+							span Мобильное приложение
+					.contacts__form
+						.contacts__form__input-block
+							input(type="text" name="fio" required).contacts__form__input.text__13
+							.contacts__form__input-block__name 	Имя и фамилия*
+							.contacts__form__input-block__error Неправильное имя
+						.contacts__form__input-block
+							input(type="tel" name="contact" required).contacts__form__input.js-mask-phone
+							.contacts__form__input-block__name Телефон*
+							.contacts__form__input-block__error Неправильный телефон
+						.contacts__form__input-block
+							input(type="email" name="pochta" required).contacts__form__input.text__13
+							.contacts__form__input-block__name Email*
+							.contacts__form__input-block__error Неправильный email
+						.contacts__form__input-block
+							select.contacts__form__select(name="sum")
+								option
+								option(value="До 500 тыс руб.") До 500 тыс руб.
+								option(value="От 500 тыс до 1,5 млн руб.") От 500 тыс до 1,5 млн руб.
+								option(value="От 1,5 млн до 5 млн руб.") От 1,5 млн до 5 млн руб.
+								option(value="От 5 млн руб.") От 5 млн руб.
+								.localities-centers__select-arrow
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+									<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+									</svg>
+						.contacts__form__input-block
+							textarea(name="msg").contacts__form__input.contacts__form__input--textarea.text__13
+							.contacts__form__input-block__name Расскажите о своем проекте
+					.form__buttons
+						.form__buttons__text
+							label.form__check
+								input(type="checkbox" name="agree" value="1" required checked)
+								span
+							!="Я соглашаюсь на обработку персональных данных"
+						button.btn--small(type="submit") Оставить заявку
+.footer__section
 	.container 
 		.footer
 			.footer__col
@@ -55,12 +127,13 @@
 							.footer__office__item.footer__office__adress 
 								!="305001, г.Курск, ул. Ленина, д.60, оф. 17"
 				a(href="#").footer__politics Политика конфиденциальности
+
 #modalThanks.modalThanks(style="display:none")
 	.modalThanks__wrap
-		.modalThanks__title.title__65 
-			!="Спасибо<br> <span>за заявку</span>"
+		.modalThanks__title.title__65
+			!="Благодарим за обращение!<br> <span>Мы не заставим Вас долго ждать!</span>"
 		.modalThanks__text.text__18
-			!="Наш менеджер свяжется с Вами в&nbspближайшее время"
+			!="Наш менеджер уже спешит на помощь :&nbsp;) "
 	.modalThanks__close(data-fancybox-close) 
 		<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
 		<path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
@@ -130,5 +203,8 @@
 						.contacts__form__input-block__name Расскажите о своем проекте
 				.form__buttons
 					.form__buttons__text
-						!="нажимая кнопку вы соглашаетесь согласие на обработку персональных данных"
+						label.form__check
+							input(type="checkbox" name="agree" value="1" required checked)
+							span
+						!="Я соглашаюсь на обработку персональных данных"
 					button.btn--small(type="submit") Оставить заявку

@@ -16,7 +16,7 @@ block content
 				.start__col
 					.start__desc
 						.start__title.title__99
-							!='IT решения <br> <span class="big">для</span> <span>бизнеса</span>'
+							!='IT решения <br> <span>для бизнеса</span>'
 						.start__text.text__18
 							!="Разрабатываем корпоративные сайты и порталы, <br><span>интернет-магазины,</span> каталоги, мобильные&nbsp;приложения, <br>реализуем сложные интеграции <span>(1С, CRM, API).</span>"
 				.start__col
@@ -91,10 +91,11 @@ block content
 			
 
 
-	#cases__section.cases__section.section.rellax(data-rellax-speed="1")
+	#cases__section.cases__section.section
+		.cases__inner
 		.container
 			.cases__title.title__99 Кейсы
-			.cases
+			.cases.rellax(data-rellax-speed="1")
 				.cases__col.rellax(data-rellax-speed="-5")
 					a(href="#").case.case__big-margin
 						.case__picture.case__picture--1
@@ -155,6 +156,10 @@ block content
 						//- .case__labels
 						//- 	a(href="#").case__label #Аналитика
 						//- 	a(href="#").case__label #Дизайн
+
+			.cases__more
+				a.cases__show-more(href="#") Все проекты
+
 	
 	#developing__section.developing__section.section
 		.container
@@ -192,73 +197,5 @@ block content
 								!="Используем готовые решения"
 							li
 								!="Разрабатываем кастомные решения"
-	#tell-us.tell-us__section.section
-		.container
-			.tell-us
-				.tell-us__col
-					.tell-us__title.title__65
-						!="Расскажите нам<br><span>о вашем проекте</span>"			
-					.tell-us__QR
-						.tell-us__QR__title
-							!="Если удобнее, пишите в телеграмм"
-						.tell-us__QR__picture 
-							img(src="img/qr.png", alt="",)
-				.tell-us__col
-					form.form.js-contact-form(method="POST")
-						input(type="hidden" name="mode" value="mail-request")
-						.form-field(style="display:none;")
-							input(type="text" name="tel" value="")
-						.form__title 
-							!="Какие задачи перед нами <br>стоят?"
-						.form__checkbox
-							label.checkbox
-								input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный сайт")
-								span Корпоративный сайт
-							label.checkbox
-								input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-магазин")
-								span Интернет-магазин
-							label.checkbox
-								input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный портал")
-								span Корп. портал
-							label.checkbox
-								input.custom-checkbox(type="checkbox" name="subjects[]" value="Личный кабинет")
-								span Личный кабинет
-							label.checkbox
-								input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-каталог")
-								span Интернет-каталог
 
-							label.checkbox
-								input.custom-checkbox(type="checkbox" name="subjects[]" value="Мобильное приложение")
-								span Мобильное приложение
-						.contacts__form
-							.contacts__form__input-block
-								input(type="text" name="fio" required).contacts__form__input.text__13
-								.contacts__form__input-block__name 	Имя и фамилия*
-								.contacts__form__input-block__error Неправильное имя
-							.contacts__form__input-block
-								input(type="tel" name="contact" required).contacts__form__input.js-mask-phone
-								.contacts__form__input-block__name Телефон*
-								.contacts__form__input-block__error Неправильный телефон
-							.contacts__form__input-block
-								input(type="email" name="pochta" required).contacts__form__input.text__13
-								.contacts__form__input-block__name Email*
-								.contacts__form__input-block__error Неправильный email
-							.contacts__form__input-block
-								select.contacts__form__select(name="sum")
-									option 
-									option(value="До 500 тыс руб.") До 500 тыс руб.
-									option(value="От 500 тыс до 1,5 млн руб.") От 500 тыс до 1,5 млн руб.
-									option(value="От 1,5 млн до 5 млн руб.") От 1,5 млн до 5 млн руб.
-									option(value="От 5 млн руб.") От 5 млн руб.
-									.localities-centers__select-arrow
-										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
-										<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
-										</svg>
-							.contacts__form__input-block
-								textarea(name="msg").contacts__form__input.contacts__form__input--textarea.text__13
-								.contacts__form__input-block__name Расскажите о своем проекте
-						.form__buttons
-							.form__buttons__text
-								!="нажимая кнопку вы соглашаетесь согласие на обработку персональных данных"
-							button.btn--small(type="submit") Оставить заявку
 

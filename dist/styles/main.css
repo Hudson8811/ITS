@@ -3807,13 +3807,15 @@ button.swiper-pagination-bullet {
   font-display: swap;
 }
 
+/*
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueBlackCondensed.woff2") format("woff2"), url("../fonts/HelveticaNeueBlackCondensed.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+	font-family: 'Helvetica Neue';
+	src: url('../fonts/HelveticaNeueBlackCondensed.woff2') format('woff2'),
+			url('../fonts/HelveticaNeueBlackCondensed.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}*/
 
 @font-face {
   font-family: "HelveticaNeueCyr";
@@ -3895,21 +3897,24 @@ button.swiper-pagination-bullet {
   font-display: swap;
 }
 
+/*
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueBoldCondensed.woff2") format("woff2"), url("../fonts/HelveticaNeueBoldCondensed.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Helvetica Neue';
+	src: url('../fonts/HelveticaNeueBoldCondensed.woff2') format('woff2'),
+			url('../fonts/HelveticaNeueBoldCondensed.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueBlackCondensed.woff2") format("woff2"), url("../fonts/HelveticaNeueBlackCondensed.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+	font-family: 'Helvetica Neue';
+	src: url('../fonts/HelveticaNeueBlackCondensed.woff2') format('woff2'),
+			url('../fonts/HelveticaNeueBlackCondensed.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}*/
 
 @font-face {
   font-family: "HelveticaNeueCyr";
@@ -3935,13 +3940,15 @@ button.swiper-pagination-bullet {
   font-display: swap;
 }
 
+/*
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueBoldCondensed.woff2") format("woff2"), url("../fonts/HelveticaNeueBoldCondensed.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+	font-family: 'Helvetica Neue';
+	src: url('../fonts/HelveticaNeueBoldCondensed.woff2') format('woff2'),
+			url('../fonts/HelveticaNeueBoldCondensed.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}*/
 
 @font-face {
   font-family: "HelveticaNeueCyr";
@@ -4172,12 +4179,11 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 94%;
-  /* 93.19px */
-  letter-spacing: -5.942px;
+  letter-spacing: -0.06em;
 }
 
 .title__99 span {
-  color: rgba(42, 42, 42, 0.21);
+  color: #d2d2d2;
 }
 
 .title__65 {
@@ -4332,10 +4338,6 @@ body {
   margin-bottom: 36px;
 }
 
-.start__title .big {
-  letter-spacing: -1px;
-}
-
 .start__desc {
   position: relative;
   display: flex;
@@ -4463,13 +4465,11 @@ body {
   max-width: calc(33.3333% - 18px);
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
   align-items: flex-start;
   border-radius: 35px;
   border: 1px solid #E6E6E6;
   margin-left: 18px;
   margin-bottom: 18px;
-  min-height: 259px;
   transition: all 0.3s;
   padding: 25px 31px 43px 31px;
 }
@@ -4491,7 +4491,7 @@ body {
   line-height: 105.1%;
   /* 36.785px */
   letter-spacing: -1.225px;
-  margin-bottom: 40px;
+  margin-bottom: 22px;
 }
 
 .developing__item__list ul {
@@ -4711,9 +4711,14 @@ body {
   width: 100%;
 }
 
+.cases__inner {
+  width: 100%;
+}
+
 .cases__section {
   overflow: hidden;
   margin-top: 180px;
+  display: block;
 }
 
 .cases__title {
@@ -4761,7 +4766,7 @@ body {
 }
 
 .cases .case__big-margin {
-  margin-bottom: 373px;
+  margin-bottom: 363px;
   max-width: 660px;
 }
 
@@ -5076,6 +5081,53 @@ body {
   margin-bottom: 52px;
 }
 
+.form__check {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0;
+}
+
+.form__check span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #2A2A2A;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.form__check span:hover {
+  background: #a2a2a2;
+}
+
+.form__check input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  outline: 0;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+  background: transparent;
+}
+
+.form__check input:checked + span {
+  background: #2A2A2A url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBklEQVQ4ja3UMWoCQRTG8U8JKAixsPMsQqqArW2w9wAewTp3SBu0iwRiIIIWggjBxsIz2FhZCP5TuKPjc3Y1ow+WfbPz9rdvlmFygO4Z+Rvfb0maS3o6PAFirwqn0QFuAn8SaOfdo8EXzuM5FnwEtqa7NzcfA/YNtgbysWAjsNS6X/MfrABsTHddW+cPykAbKKaA7wbbhGpdUgIWSeEsgNUDS22EPuySpSkem6WuTXefab/GJR+BDr6SuVeDbdlvnUxQQC+A/nLccy6aaZgF/T1mw3U3zMJCoIBvA+28cSUGFDAynQG0LmFZoICph02uwQDlIPXEfpA0kFSVVJO0uubEzQKj4g8Ztym0aJL9lQAAAABJRU5ErkJggg==") center center no-repeat;
+  background-size: contain;
+}
+
+.form__check.error input:not(:checked) + span {
+  background-color: #ffb0b0;
+  border-color: red;
+  outline: 1px solid red;
+}
+
 .form__buttons {
   position: relative;
   display: flex;
@@ -5087,18 +5139,20 @@ body {
 
 .form__buttons__text {
   position: relative;
-  max-width: 207px;
+  max-width: 380px;
   color: #2A2A2A;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: flex;
+  align-items: center;
 }
 
-.form__buttons__text span {
+.form__buttons__text .form__check {
   position: absolute;
-  top: 2px;
-  left: -8px;
+  top: -2px;
+  left: -30px;
 }
 
 .contacts__form {
@@ -5261,12 +5315,13 @@ body {
 .modalThanks__title {
   text-align: center;
   margin-bottom: 59px;
-  line-height: 94%;
+  line-height: 1.2;
+  font-size: 40px;
+  letter-spacing: -0.06em;
 }
 
 .modalThanks__text {
   text-align: center;
-  max-width: 290px;
 }
 
 .modalThanks .fancybox-button {
@@ -5353,6 +5408,13 @@ body {
   fill: #1F2120;
   width: 24px !important;
   height: 24px !important;
+}
+
+.modalForm .form__buttons__text .form__check {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-right: 10px;
 }
 
 .contacts__form__input-block .select2 {
@@ -6219,7 +6281,7 @@ body {
 }
 
 .footer__office__title {
-  color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -6543,6 +6605,13 @@ body {
     margin: 0 10px 15px;
   }
 
+  .form__buttons__text .form__check {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-right: 10px;
+  }
+
   .contacts__form__input-block {
     margin-bottom: 20px;
   }
@@ -6625,7 +6694,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 94%;
-    letter-spacing: -3.942px;
+    letter-spacing: -0.06em;
     margin-bottom: 24px;
   }
 
@@ -6672,7 +6741,6 @@ body {
   }
 
   .developing__item {
-    min-height: 200px;
     border-radius: 20px;
   }
 
@@ -6790,9 +6858,9 @@ body {
 
   .modalThanks__title {
     margin-bottom: 40px;
-    font-size: 40px;
-    line-height: 100%;
-    letter-spacing: -2px;
+    line-height: 1.2;
+    letter-spacing: -0.06em;
+    font-size: 30px;
   }
 
   .modalThanks__text {
@@ -6859,7 +6927,7 @@ body {
     font-weight: 700;
     line-height: 94%;
     /* 93.19px */
-    letter-spacing: -3.942px;
+    letter-spacing: -0.06em;
     margin-bottom: 24px;
   }
 
@@ -6940,11 +7008,11 @@ body {
   }
 
   .form__buttons {
-    flex-flow: column-reverse nowrap;
+    flex-flow: column nowrap;
   }
 
   .form__buttons__text {
-    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .contacts__form__input-block__name {

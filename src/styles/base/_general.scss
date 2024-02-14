@@ -248,17 +248,17 @@ body {
     font-size: 99px;
     font-style: normal;
     font-weight: 700;
-    line-height: 94%; /* 93.19px */
-    letter-spacing: -5.942px;
+    line-height: 94%;
+    letter-spacing: -0.06em;
     span {
-        color: rgba(42, 42, 42, 0.21);
+        color: #d2d2d2;
     }
     @include max(sm) {
         font-size: 65px;
         font-style: normal;
         font-weight: 700;
         line-height:94%;
-        letter-spacing: -3.942px;
+        letter-spacing: -0.06em;
         margin-bottom: 24px;
     }
     @include max(xs) {
@@ -266,7 +266,7 @@ body {
         font-style: normal;
         font-weight: 700;
         line-height: 94%; /* 93.19px */
-        letter-spacing: -3.942px;
+        letter-spacing: -0.06em;
         margin-bottom: 24px;
     }
 }
@@ -473,10 +473,6 @@ body {
     }
     &__title {
         margin-bottom: 36px;
-
-        .big {
-            letter-spacing: -1px; 
-        }
     }
     &__desc {
         position: relative;
@@ -643,13 +639,11 @@ body {
 		max-width: calc(33.3333% - 18px);
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: space-between;
 		align-items: flex-start;
         border-radius: 35px;
         border: 1px solid #E6E6E6;
 		margin-left: 18px;
 		margin-bottom: 18px;
-        min-height: 259px;
         transition: all 0.3s;
         padding: 25px 31px 43px 31px;
 		&:hover {
@@ -668,7 +662,6 @@ body {
 			margin-bottom: 15px;
 		}
         @include max(sm) {
-            min-height: 200px;
             border-radius: 20px;
         }
         &__title {
@@ -682,7 +675,7 @@ body {
             font-weight: 500;
             line-height: 105.1%; /* 36.785px */
             letter-spacing: -1.225px;
-            margin-bottom: 40px;
+            margin-bottom: 22px;
             @include max(xs) {
                 font-size:25px;
             }        
@@ -922,9 +915,13 @@ body {
     @include max(sm) {
         flex-flow: column nowrap;
     }
+    &__inner{
+        width: 100%;
+    }
     &__section {
         overflow: hidden;
         margin-top: 180px;
+        display: block;
         @include max(sm) {
             margin-top: 50px;
         }
@@ -993,7 +990,7 @@ body {
             margin-bottom: 80px;
         }  
         &__big-margin {
-            margin-bottom: 373px;
+            margin-bottom: 363px;
             max-width: 660px;
             @include max(sm) {
                 margin-bottom: 80px;
@@ -1364,6 +1361,51 @@ body {
         align-items: flex-start;
         margin-bottom: 52px;
     }
+
+
+    &__check{
+        position: relative;
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin: 0;
+        span{
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid #2A2A2A;
+            border-radius: 2px;
+            cursor: pointer;
+            &:hover{
+                background: #a2a2a2;
+            }
+        }
+        input{
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            border: 0;
+            outline: 0;
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            user-select: none;
+            background: transparent;
+            &:checked + span{
+                background: #2A2A2A url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBklEQVQ4ja3UMWoCQRTG8U8JKAixsPMsQqqArW2w9wAewTp3SBu0iwRiIIIWggjBxsIz2FhZCP5TuKPjc3Y1ow+WfbPz9rdvlmFygO4Z+Rvfb0maS3o6PAFirwqn0QFuAn8SaOfdo8EXzuM5FnwEtqa7NzcfA/YNtgbysWAjsNS6X/MfrABsTHddW+cPykAbKKaA7wbbhGpdUgIWSeEsgNUDS22EPuySpSkem6WuTXefab/GJR+BDr6SuVeDbdlvnUxQQC+A/nLccy6aaZgF/T1mw3U3zMJCoIBvA+28cSUGFDAynQG0LmFZoICph02uwQDlIPXEfpA0kFSVVJO0uubEzQKj4g8Ztym0aJL9lQAAAABJRU5ErkJggg==') center center no-repeat;
+                background-size: contain;
+            }
+        }
+        &.error{
+            input:not(:checked) + span{
+                background-color: #ffb0b0;
+                border-color: red;
+                outline: 1px solid red;
+            }
+        }
+    }
     &__buttons {
         position: relative;
         display: flex;
@@ -1372,27 +1414,37 @@ body {
         width: 100%;
         margin-top: 20px;
         @include max(xs) {
-            flex-flow: column-reverse nowrap;
+            flex-flow: column nowrap;
         }
         &__text {
             position: relative;
-            max-width: 207px;
+            max-width: 380px;
             color: #2A2A2A;
-            font-size: 12px;
+            font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            display: flex;
+            align-items: center;
             @include max(xs) {
-                margin-top: 30px;
+                margin-bottom: 30px;
             }
-            span {
+
+            .form__check{
                 position: absolute;
-                top: 2px;
-                left: -8px;
-            }         
+                top: -2px;
+                left: -30px;
+                @include max(md) {
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    margin-right: 10px;
+                }
+            }
         }
     } 
 }
+
 
 .contacts__form  {
     position: relative;
@@ -1575,17 +1627,18 @@ body {
     &__title {
         text-align: center;
         margin-bottom: 59px;
-        line-height:94%;
+        line-height: 1.2;
+        font-size: 40px;
+        letter-spacing: -0.06em;
         @include max(sm) {
             margin-bottom: 40px;
-            font-size:40px; 
-            line-height:100%; 
-            letter-spacing: -2px;
+            line-height: 1.2;
+            letter-spacing: -0.06em;
+            font-size:30px;
         }
     }
     &__text {
         text-align: center;
-        max-width: 290px;
         @include max(sm) {
             font-size: 16px;
         }
@@ -1670,6 +1723,15 @@ body {
                 width: 24px !important;
                 height: 24px !important;
             }
+        }
+    }
+
+    .form__buttons__text{
+        .form__check{
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-right: 10px;
         }
     }
 }
