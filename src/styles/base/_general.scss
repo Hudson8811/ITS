@@ -297,7 +297,7 @@ body {
     font-size: 35px;
     font-style: normal;
     font-weight: 500;
-    line-height: 92.6%;
+    line-height: 120%;
     letter-spacing: -1.225px;
     span {
         color: rgba(42, 42, 42, 0.21);
@@ -306,14 +306,12 @@ body {
         font-size: 35px;
         font-style: normal;
         font-weight: 500;
-        line-height: 92.6%;
         letter-spacing: -1.225px;
     }
     @include max(xs) {
         font-size: 35px;
         font-style: normal;
         font-weight: 500;
-        line-height: 92.6%;
         letter-spacing: -1.225px;
     }
 }
@@ -347,6 +345,7 @@ body {
         }
         @include max(xs) {
             font-size:25px;
+            line-height: 120%;
             &:not(:last-child){
                 margin-bottom:20px;
             }
@@ -421,7 +420,7 @@ body {
             position: relative;
             margin-bottom: 23px;
             font-size: 18px;
-            line-height: 140%;
+            line-height: 120%;
             font-weight: normal;
 
 
@@ -442,6 +441,9 @@ body {
                 -moz-border-radius: 50%;
                 border-radius: 50%;
                 background: #2A2A2A;
+            }
+            @include max(sm) {
+                font-size: 16px;
             }
         }
     }
@@ -1135,7 +1137,7 @@ body {
                 font-size: 35px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 92.6%; /* 32.41px */
+
                 letter-spacing: -1.225px; 
                 max-width: 382px;
                 @include max(mdHeader) {

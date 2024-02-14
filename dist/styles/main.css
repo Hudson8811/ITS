@@ -4205,7 +4205,7 @@ body {
   font-size: 35px;
   font-style: normal;
   font-weight: 500;
-  line-height: 92.6%;
+  line-height: 120%;
   letter-spacing: -1.225px;
 }
 
@@ -4311,7 +4311,7 @@ body {
   position: relative;
   margin-bottom: 23px;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 120%;
   font-weight: normal;
 }
 
@@ -4893,8 +4893,6 @@ body {
   font-size: 35px;
   font-style: normal;
   font-weight: 500;
-  line-height: 92.6%;
-  /* 32.41px */
   letter-spacing: -1.225px;
   max-width: 382px;
 }
@@ -6754,7 +6752,6 @@ body {
     font-size: 35px;
     font-style: normal;
     font-weight: 500;
-    line-height: 92.6%;
     letter-spacing: -1.225px;
   }
 
@@ -6771,6 +6768,10 @@ body {
 
   .text__style h3:not(:last-child) {
     margin-bottom: 25px;
+  }
+
+  .text__style ul li {
+    font-size: 16px;
   }
 
   .start__section {
@@ -6984,13 +6985,13 @@ body {
     font-size: 35px;
     font-style: normal;
     font-weight: 500;
-    line-height: 92.6%;
     letter-spacing: -1.225px;
   }
 
   .text__style h2,
   .text__style .h2 {
     font-size: 25px;
+    line-height: 120%;
   }
 
   .text__style h2:not(:last-child),
