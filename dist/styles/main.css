@@ -4798,13 +4798,13 @@ body {
   align-items: flex-start;
   flex-flow: column nowrap;
   width: 100%;
-  margin-bottom: 326px;
+  margin-bottom: 184px;
   max-width: 477px;
   text-decoration: none;
 }
 
 .cases .case__big-margin {
-  margin-bottom: 363px;
+  margin-bottom: 200px;
   max-width: 660px;
 }
 
@@ -4881,11 +4881,8 @@ body {
 
 .cases .case__desc {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .cases .case__desc__title {
@@ -4895,11 +4892,7 @@ body {
   font-weight: 500;
   line-height: 93%;
   letter-spacing: -1.225px;
-  max-width: 382px;
-}
-
-.cases .case__desc__text {
-  max-width: 265px;
+  margin-bottom: 20px;
 }
 
 .case {
@@ -6510,14 +6503,6 @@ body {
     display: none;
   }
 
-  .cases .case__desc {
-    flex-flow: column nowrap;
-  }
-
-  .cases .case__desc__title {
-    margin-bottom: 30px;
-  }
-
   .section__header {
     height: 55px;
   }
@@ -6855,7 +6840,7 @@ body {
   }
 
   .cases .case__desc {
-    margin-top: 32px;
+    margin-top: 30px;
   }
 
   .case__content {
@@ -7042,7 +7027,6 @@ body {
 
   .cases .case__desc__title {
     font-size: 25px;
-    margin-bottom: 20px;
   }
 
   .case__subtitle {

@@ -1017,14 +1017,14 @@ body {
         align-items: flex-start;
         flex-flow: column nowrap;
         width: 100%;
-        margin-bottom: 326px;
+        margin-bottom: 184px;
         max-width: 477px;
         text-decoration: none;
         @include max(sm) {
             margin-bottom: 80px;
         }  
         &__big-margin {
-            margin-bottom: 363px;
+            margin-bottom: 200px;
             max-width: 660px;
             @include max(sm) {
                 margin-bottom: 80px;
@@ -1121,16 +1121,10 @@ body {
         }
         &__desc {
             position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
             width: 100%;
-            margin-top: 40px;
-            @include max(mdHeader) {
-                flex-flow: column nowrap;
-            }
+            margin-top: 32px;
             @include max(sm) {
-                margin-top: calc(40px * 0.8);
+                margin-top: 30px;
             }
             &__title {
                 color: $fonBlack;
@@ -1138,18 +1132,14 @@ body {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 93%;
-                letter-spacing: -1.225px; 
-                max-width: 382px;
-                @include max(mdHeader) {
-                    margin-bottom: 30px;
-                 }
+                letter-spacing: -1.225px;
+                margin-bottom: 20px;
                  @include max(xs) {
                     font-size:25px;
-                    margin-bottom:20px;
                 }
             }
             &__text {
-                max-width: 265px;
+
             }
         }
     }
