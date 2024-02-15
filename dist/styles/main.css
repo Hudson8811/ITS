@@ -4893,6 +4893,7 @@ body {
   font-size: 35px;
   font-style: normal;
   font-weight: 500;
+  line-height: 93%;
   letter-spacing: -1.225px;
   max-width: 382px;
 }
@@ -4911,7 +4912,7 @@ body {
 }
 
 .case__section {
-  padding-top: 115px;
+  padding-top: 93px;
   margin-bottom: 150px;
 }
 

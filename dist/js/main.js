@@ -305,5 +305,18 @@ jQuery(function () {
     }
 
 
+
+    $(".case .text__style img").on('click',function (){
+        let src = $(this).attr('src');
+
+        $.fancybox.open([
+            {
+                src  : src
+            }
+        ]);
+    });
+
+
+
 });
 

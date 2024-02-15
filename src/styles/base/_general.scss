@@ -1137,7 +1137,7 @@ body {
                 font-size: 35px;
                 font-style: normal;
                 font-weight: 500;
-
+                line-height: 93%;
                 letter-spacing: -1.225px; 
                 max-width: 382px;
                 @include max(mdHeader) {
@@ -1163,7 +1163,7 @@ body {
     width: 100%;
     flex-flow: column nowrap;
     &__section {
-        padding-top: 115px;
+        padding-top: 93px;
         margin-bottom: 150px;
         @include max(md) {
             margin-bottom: 100px;
