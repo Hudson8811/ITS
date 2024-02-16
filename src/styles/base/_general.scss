@@ -1981,3 +1981,24 @@ body {
 .select2-search {
     display: none;
 }
+
+
+.case-page{
+    padding-top: 93px;
+    margin-bottom: 150px;
+    @include max(md) {
+        margin-bottom: 100px;
+    }
+    &__title{
+        margin-bottom: 33px;
+    }
+    &__filter{
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 52px;
+    }
+}

@@ -1,0 +1,73 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Case title"
+
+block content
+	.section.case-page
+		.cases__inner
+			.container
+				h1.case-page__title.title__65 Кейсы
+				.case-page__filter
+					label.checkbox
+						input.custom-checkbox(type="checkbox" name="tags[]" value="Аналитика")
+						span #Аналитика
+					label.checkbox
+						input.custom-checkbox(type="checkbox" name="tags[]" value="Аналитика")
+						span #Аналитика
+					label.checkbox
+						input.custom-checkbox(type="checkbox" name="tags[]" value="Аналитика")
+						span #Аналитика
+					label.checkbox
+						input.custom-checkbox(type="checkbox" name="tags[]" value="Аналитика")
+						span #Аналитика
+				.cases
+					.cases__col
+						a(href="#").case.case__big-margin
+							.case__picture.case__picture--1
+								picture
+									source(media="(max-width: 992px )", srcset="img/case__picture__1.png")
+									img(src="img/case__picture__1.png", alt="")
+							.case__desc
+								.case__desc__title СберМобайл
+								.case__desc__text.text__18 Тут может быть еще какое то описание
+							.case__labels
+								.case__label #Аналитика
+								.case__label #Дизайн
+
+						a(href="#").case
+							.case__picture.case__picture--2
+								picture
+									source(media="(max-width: 992px )", srcset="img/case__picture__3.png")
+									img(src="img/case__picture__3.png", alt="")
+							.case__desc
+								.case__desc__title Сбербанк
+								.case__desc__text.text__18 Тут может быть еще какое то описание
+							.case__labels
+								.case__label #Дизайн
+								.case__label #Аналитика
+					.cases__col
+						a(href="#").case
+							.case__picture.case__picture--2
+								picture
+									source(media="(max-width: 992px )", srcset="img/case__picture__2.png")
+									img(src="img/case__picture__2.png", alt="")
+							.case__desc
+								.case__desc__title Московский комсомолец спорт
+								.case__desc__text.text__18 Тут может быть еще какое то описание
+							.case__labels
+								.case__label #Дизайн
+								.case__label #Аналитика
+
+						a(href="#").case.case__big-margin
+							.case__picture.case__picture--1
+								picture
+									source(media="(max-width: 992px )", srcset="img/case__picture__4.png")
+									img(src="img/case__picture__4.png", alt="")
+							.case__desc
+								.case__desc__title Haier
+								.case__desc__text.text__18 Тут может быть еще какое то описание
+							.case__labels
+								.case__label #Аналитика
+								.case__label #Дизайн

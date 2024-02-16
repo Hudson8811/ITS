@@ -5640,6 +5640,25 @@ body {
   display: none;
 }
 
+.case-page {
+  padding-top: 93px;
+  margin-bottom: 150px;
+}
+
+.case-page__title {
+  margin-bottom: 33px;
+}
+
+.case-page__filter {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 52px;
+}
+
 .section__header {
   position: fixed;
   top: 0;
@@ -6719,6 +6738,10 @@ body {
 
   .select2-container.select2-container--default.select2-container--open .select2-results__option {
     font-size: 20px;
+  }
+
+  .case-page {
+    margin-bottom: 100px;
   }
 
   .footer {
