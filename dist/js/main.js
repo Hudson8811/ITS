@@ -112,13 +112,16 @@ jQuery(function () {
         allowClear: true
     });
 
-    var rellax = new Rellax('.rellax', {
-        // center:true
-        // wrapper:'.cases__section'
-    });
-    if(document.documentElement.clientWidth < 767) {
-        rellax.destroy();
+    if ($('.rellax').length > 0){
+        var rellax = new Rellax('.rellax', {
+            // center:true
+            // wrapper:'.cases__section'
+        });
+        if(document.documentElement.clientWidth < 767) {
+            rellax.destroy();
+        }
     }
+
 
 
     function bodyNoScroll() {
@@ -310,4 +313,34 @@ jQuery(function () {
 
 
 });
+$(document).ready(function() {
+	var videoCase = $('.case__video');
+	var blockPreloader = $('.block-preloader');
+	var videoLoaded = false;
 
+	if (videoCase.length) {
+		videoCase.on('canplaythrough', function() {
+			videoLoaded = true;
+			checkVideoLoaded();
+		});
+
+		videoCase.on('canplay', function() {
+			videoLoaded = true;
+			checkVideoLoaded();
+		});
+
+		function checkVideoLoaded() {
+			if (videoLoaded) {
+				blockPreloader.addClass('block-preloader--hidden');
+				videoCase.css('display', 'block');
+				videoCase.get(0).play();
+			}
+		}
+
+		// Если видео уже загружено до события ready, проверяем его статус сразу
+		if (videoCase.get(0).readyState >= 4) {
+			videoLoaded = true;
+			checkVideoLoaded();
+		}
+	}
+});

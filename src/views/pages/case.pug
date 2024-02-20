@@ -17,7 +17,17 @@ block content
 				.case__text.text__style
 					p Тут может быть еще какое то описание
 			.case__content
-				video.case__video(autoplay muted preload)
+				.block-preloader
+					span.block-preloader__circle.block-preloader__circle-1
+					span.block-preloader__circle.block-preloader__circle-2
+					span.block-preloader__circle.block-preloader__circle-3
+					span.block-preloader__circle.block-preloader__circle-4
+					span.block-preloader__circle.block-preloader__circle-5
+					span.block-preloader__circle.block-preloader__circle-6
+					span.block-preloader__circle.block-preloader__circle-7
+					span.block-preloader__circle.block-preloader__circle-8
+
+				video.case__video( muted preload="auto" loop)
 					<source src="https://pictures.s3.yandex.net/landings-video/Backend.webm" type="video/mp4">
 				//- picture.case__picture 
 				//- 	source(media="(man-width: 992px)", srcset="img/case__picture__1.png")

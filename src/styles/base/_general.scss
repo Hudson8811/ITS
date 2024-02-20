@@ -1012,6 +1012,13 @@ body {
         @include max(sm) {
             margin-top: 50px;
         }
+        @include max(md) {
+            .cases__col:last-child{
+                .case:last-child{
+                    margin-bottom: 50px;
+                }
+            }
+        }
     }
     &__title {
         position: relative;
@@ -1062,6 +1069,43 @@ body {
             }       
         }
         
+    }
+
+    &__show{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 133px;
+        margin-top: -150px;
+        position: relative;
+        z-index: 10;
+        @include max(md) {
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+        &-more{
+            font-weight: 500;
+            font-size: 18px;
+            text-align: center;
+            color: #2a2a2a;
+            text-decoration: none;
+            width: 258px;
+            height: 258px;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include max(md) {
+                width: 200px;
+                height: 200px;
+            }
+            &:hover{
+                background-color: #cccccc;
+            }
+        }
     }
     .case {
         position: relative;
@@ -1342,6 +1386,7 @@ body {
             margin-bottom: 45px;
             margin-left: -10px;
             margin-right: -10px;
+            justify-content: flex-end;
         }
         @include max(sm) {
             margin-bottom: 20px;
@@ -1491,11 +1536,12 @@ body {
         position: relative;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
         margin-top: 20px;
         @include max(xs) {
             flex-flow: column nowrap;
+            align-items: flex-start;
         }
         &__text {
             position: relative;
@@ -1512,15 +1558,10 @@ body {
             }
 
             .form__check{
-                position: absolute;
-                top: -2px;
-                left: -30px;
-                @include max(md) {
-                    position: relative;
-                    left: 0;
-                    top: 0;
-                    margin-right: 10px;
-                }
+                position: relative;
+                left: 0;
+                top: 0;
+                margin-right: 10px;
             }
         }
     } 
@@ -1807,14 +1848,7 @@ body {
         }
     }
 
-    .form__buttons__text{
-        .form__check{
-            position: relative;
-            top: 0;
-            left: 0;
-            margin-right: 10px;
-        }
-    }
+
 }
 
 .contacts__form__input-block {
@@ -2000,5 +2034,98 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
         margin-bottom: 52px;
+        .checkbox{
+            @include min(md) {
+                margin-right: 30px;
+            }
+            .custom-checkbox:not(:checked) + span{
+                background: #f4f4f4;
+                &:hover{
+                    background: #DADADA;
+                }
+            }
+        }
+    }
+    .cases{
+        .case{
+            &:last-child{
+                @include min(md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .cases__show{
+        @include min(md) {
+            margin-top: 90px;
+        }
+    }
+}
+
+.block-preloader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s linear;
+    &__circle{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: #2A2A2A;
+        border-radius: 50%;
+        animation: loading 1.5s cubic-bezier(.8, .5, .2, 1.4) infinite;
+        transform-origin: bottom center;
+        position: relative;
+
+        &-1{
+            animation-delay: 0.1s;
+        }
+        &-2{
+            animation-delay: 0.2s;
+        }
+        &-3{
+            animation-delay: 0.3s;
+        }
+        &-4{
+            animation-delay: 0.4s;
+        }
+        &-5{
+            animation-delay: 0.5s;
+        }
+        &-6{
+            animation-delay: 0.6s;
+        }
+        &-7{
+            animation-delay: 0.7s;
+        }
+        &-8{
+            animation-delay: 0.8s;
+        }
+    }
+    &--hidden{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes loading{
+    0%{
+        transform: translateY(0px);
+        background-color: #2A2A2A;
+    }
+    50%{
+        transform: translateY(50px);
+        background-color: #237AE9;
+    }
+    100%{
+        transform: translateY(0px);
+        background-color: #2A2A2A;
     }
 }

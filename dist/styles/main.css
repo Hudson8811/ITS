@@ -4846,6 +4846,37 @@ body {
   align-items: flex-end;
 }
 
+.cases__show {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 133px;
+  margin-top: -150px;
+  position: relative;
+  z-index: 10;
+}
+
+.cases__show-more {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #2a2a2a;
+  text-decoration: none;
+  width: 258px;
+  height: 258px;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cases__show-more:hover {
+  background-color: #cccccc;
+}
+
 .cases .case {
   position: relative;
   display: flex;
@@ -5221,7 +5252,7 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   margin-top: 20px;
 }
@@ -5239,9 +5270,10 @@ body {
 }
 
 .form__buttons__text .form__check {
-  position: absolute;
-  top: -2px;
-  left: -30px;
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-right: 10px;
 }
 
 .contacts__form {
@@ -5499,13 +5531,6 @@ body {
   height: 24px !important;
 }
 
-.modalForm .form__buttons__text .form__check {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin-right: 10px;
-}
-
 .contacts__form__input-block .select2 {
   display: block;
   width: 100% !important;
@@ -5657,6 +5682,93 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 52px;
+}
+
+.case-page__filter .checkbox .custom-checkbox:not(:checked) + span {
+  background: #f4f4f4;
+}
+
+.case-page__filter .checkbox .custom-checkbox:not(:checked) + span:hover {
+  background: #DADADA;
+}
+
+.block-preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s linear;
+}
+
+.block-preloader__circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #2A2A2A;
+  border-radius: 50%;
+  animation: loading 1.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
+  transform-origin: bottom center;
+  position: relative;
+}
+
+.block-preloader__circle-1 {
+  animation-delay: 0.1s;
+}
+
+.block-preloader__circle-2 {
+  animation-delay: 0.2s;
+}
+
+.block-preloader__circle-3 {
+  animation-delay: 0.3s;
+}
+
+.block-preloader__circle-4 {
+  animation-delay: 0.4s;
+}
+
+.block-preloader__circle-5 {
+  animation-delay: 0.5s;
+}
+
+.block-preloader__circle-6 {
+  animation-delay: 0.6s;
+}
+
+.block-preloader__circle-7 {
+  animation-delay: 0.7s;
+}
+
+.block-preloader__circle-8 {
+  animation-delay: 0.8s;
+}
+
+.block-preloader--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(0px);
+    background-color: #2A2A2A;
+  }
+
+  50% {
+    transform: translateY(50px);
+    background-color: #237AE9;
+  }
+
+  100% {
+    transform: translateY(0px);
+    background-color: #2A2A2A;
+  }
 }
 
 .section__header {
@@ -6447,6 +6559,20 @@ body {
   background: rgba(255, 255, 255, 0.21);
 }
 
+@media only screen and (min-width: 993px) {
+  .case-page__filter .checkbox {
+    margin-right: 30px;
+  }
+
+  .case-page .cases .case:last-child {
+    margin-bottom: 0;
+  }
+
+  .case-page .cases__show {
+    margin-top: 90px;
+  }
+}
+
 @media (max-width: 1700px) {
   .header__other__item {
     margin-right: 40px;
@@ -6674,6 +6800,20 @@ body {
     padding-top: 0;
   }
 
+  .cases__section .cases__col:last-child .case:last-child {
+    margin-bottom: 50px;
+  }
+
+  .cases__show {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  .cases__show-more {
+    width: 200px;
+    height: 200px;
+  }
+
   .case__section {
     margin-bottom: 100px;
   }
@@ -6699,17 +6839,11 @@ body {
     margin-bottom: 45px;
     margin-left: -10px;
     margin-right: -10px;
+    justify-content: flex-end;
   }
 
   .case .case__label {
     margin: 0 10px 15px;
-  }
-
-  .form__buttons__text .form__check {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin-right: 10px;
   }
 
   .contacts__form__input-block {
@@ -7115,6 +7249,7 @@ body {
 
   .form__buttons {
     flex-flow: column nowrap;
+    align-items: flex-start;
   }
 
   .form__buttons__text {

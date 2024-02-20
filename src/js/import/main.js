@@ -44,13 +44,16 @@ jQuery(function () {
         allowClear: true
     });
 
-    var rellax = new Rellax('.rellax', {
-        // center:true
-        // wrapper:'.cases__section'
-    });
-    if(document.documentElement.clientWidth < 767) {
-        rellax.destroy();
+    if ($('.rellax').length > 0){
+        var rellax = new Rellax('.rellax', {
+            // center:true
+            // wrapper:'.cases__section'
+        });
+        if(document.documentElement.clientWidth < 767) {
+            rellax.destroy();
+        }
     }
+
 
 
     function bodyNoScroll() {
