@@ -4357,12 +4357,13 @@ body {
   color: #0F1214;
 }
 
-.text__style ul {
-  list-style: none;
+.text__style ul,
+.text__style ol {
   padding-left: 23px;
 }
 
-.text__style ul li {
+.text__style ul li,
+.text__style ol li {
   position: relative;
   margin-bottom: 23px;
   font-size: 18px;
@@ -4370,12 +4371,18 @@ body {
   font-weight: normal;
 }
 
-.text__style ul li > p:first-child {
+.text__style ul li > p:first-child,
+.text__style ol li > p:first-child {
   margin-top: 23px;
 }
 
-.text__style ul li ul {
+.text__style ul li ul,
+.text__style ol li ul {
   padding-left: 50px;
+}
+
+.text__style ul {
+  list-style: none;
 }
 
 .text__style ul li:before {
@@ -4874,7 +4881,9 @@ body {
 }
 
 .cases__show-more:hover {
-  background-color: #cccccc;
+  background-color: #237AE9;
+  color: #fff;
+  border-color: #237AE9;
 }
 
 .cases .case {
@@ -6969,7 +6978,8 @@ body {
     margin-bottom: 25px;
   }
 
-  .text__style ul li {
+  .text__style ul li,
+  .text__style ol li {
     font-size: 16px;
   }
 
