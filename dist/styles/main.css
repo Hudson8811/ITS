@@ -4267,10 +4267,11 @@ body {
 }
 
 .text__style img {
-  width: 100%;
+  max-width: 100%;
+  width: auto !important;
   height: auto !important;
   display: block;
-  margin: 57px 0;
+  margin: 57px 119px;
 }
 
 .text__style img + .zoom-img,
@@ -4291,6 +4292,7 @@ body {
 }
 
 .text__style .zoom-img img {
+  width: 100% !important;
   margin: 0;
   transition: transform 0.3s;
 }
@@ -6764,6 +6766,11 @@ body {
   }
 
   .text__style > * {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .text__style img {
     margin-left: 0;
     margin-right: 0;
   }
