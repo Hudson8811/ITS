@@ -367,6 +367,9 @@ body {
         @extend .text__18;
         &:not(:last-child){
             margin-bottom: 23px;
+            @include max(xs) {
+                margin-bottom: 18px;
+            }
         }
         @include max(md) {
             &:not(:last-child){
@@ -406,7 +409,13 @@ body {
         position: relative;
         cursor: pointer;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 15px;
+
+        @include max(xs) {
+            margin-bottom: 35px;
+            margin-top: 35px;
+        }
+
         img{
             margin: 0;
             transition: transform 0.3s;
@@ -457,7 +466,10 @@ body {
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
         border-radius: 15px;
-
+        @include max(xs) {
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
     }
     video{
         object-fit: cover;
@@ -478,13 +490,17 @@ body {
 
             & > p:first-child{
                 margin-top: 23px;
+                @include max(sm) {
+                    margin-top: 18px;
+                }
             }
             ul{
-                padding-left: 50px;
+                padding-left: 23px;
             }
 
             @include max(sm) {
                 font-size: 16px;
+                margin-bottom: 18px;
             }
         }
     }
@@ -609,6 +625,7 @@ body {
         }
     }
 }
+
 .hashtag {
     position: absolute;
     left: 0;
@@ -649,6 +666,7 @@ body {
         }
     }
 }
+
 .partners {
     position: relative;
     width: 100%;
@@ -860,6 +878,7 @@ body {
     @include max(xs) {
         padding: 5px 15px;
         font-size: 14px;
+        min-height: 40px;
     }    
 }
 
@@ -985,6 +1004,9 @@ body {
             @include max(md) {
                 margin-bottom: 72px;
             }
+            @include max(xs) {
+                margin-bottom: 40px;
+            }
         }
         &:nth-child(2) {
             padding-top: 10px;
@@ -994,7 +1016,6 @@ body {
         }
     }
 }
-
 
 .cases {
     position: relative;
@@ -1123,13 +1144,13 @@ body {
         max-width: 477px;
         text-decoration: none;
         @include max(sm) {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }  
         &__big-margin {
             margin-bottom: 200px;
             max-width: 660px;
             @include max(sm) {
-                margin-bottom: 80px;
+                margin-bottom: 50px;
             }  
         }
         &__picture {
@@ -1181,8 +1202,8 @@ body {
             justify-content: flex-start;
             align-items: flex-end;
             @include max(sm) {
-                top: 15px;
-                right: 15px; 
+                top: 5px;
+                right: 5px;
             }
         }
         &__label {
@@ -1233,7 +1254,7 @@ body {
                 font-size: 35px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 93%;
+                line-height: 100%;
                 letter-spacing: -1.225px;
                 margin-bottom: 20px;
                  @include max(xs) {
@@ -1247,6 +1268,7 @@ body {
     }
     
 }
+
 .case {
     position: relative;
     display: flex;
@@ -1258,7 +1280,8 @@ body {
         padding-top: 93px;
         margin-bottom: 150px;
         @include max(md) {
-            margin-bottom: 100px;
+            margin-bottom: 70px;
+            padding-top: 50px;
         }
     }
     &__title {
@@ -1308,7 +1331,8 @@ body {
             padding-top: 49%;
         }
         @include max(sm) {
-            margin-bottom: 23px;
+            margin-bottom: 35px;
+            margin-top: 23px;
         }
     }
     &__content-mini {
@@ -1341,7 +1365,9 @@ body {
         height: 100%;
         object-fit: cover;
         border-radius: 30px;
-
+        @include max(md) {
+            border-radius: 0;
+        }
         source,img {
             position: relative;
             display: block;
@@ -1376,26 +1402,23 @@ body {
         justify-content: space-between;
         @include max(md) {
             display: block;
+            .case__labels{
+                margin-bottom: 10px;
+                flex-direction: row;
+                margin-left: -11px;
+                margin-right: -11px;
+                .case__label{
+                    margin-bottom: 11.2px;
+                }
+            }
         }
     }
     .case__labels {
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column wrap;
         justify-content: flex-start;
         align-items: flex-end;
         padding-top: 10px;
-        @include max(md) {
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            margin-bottom: 45px;
-            margin-left: -10px;
-            margin-right: -10px;
-            justify-content: flex-end;
-        }
-        @include max(sm) {
-            margin-bottom: 20px;
-        }
     }
     .case__label {
         position: relative;
@@ -1424,7 +1447,7 @@ body {
             background: #F4F4F4;
             color: $fonBlack;
             font-size: calc(14px * 0.7);
-            margin-bottom: calc(20px * 0.8);
+            margin-bottom: calc(14px * 0.8);
         }
         &:last-child{
             margin-bottom: 0;
@@ -1491,6 +1514,9 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
         margin-bottom: 52px;
+        @include max(xs) {
+            margin-bottom: 1px;
+        }
     }
 
 
@@ -2025,6 +2051,9 @@ body {
 .case-page{
     padding-top: 93px;
     margin-bottom: 150px;
+    @include max(xs) {
+        padding-top: 50px;
+    }
     @include max(md) {
         margin-bottom: 100px;
     }

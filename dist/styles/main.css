@@ -4287,7 +4287,7 @@ body {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .text__style .zoom-img img {
@@ -4378,7 +4378,7 @@ body {
 
 .text__style ul li ul,
 .text__style ol li ul {
-  padding-left: 50px;
+  padding-left: 23px;
 }
 
 .text__style ul {
@@ -4985,7 +4985,7 @@ body {
   font-size: 35px;
   font-style: normal;
   font-weight: 500;
-  line-height: 93%;
+  line-height: 100%;
   letter-spacing: -1.225px;
   margin-bottom: 20px;
 }
@@ -5115,7 +5115,7 @@ body {
 
 .case .case__labels {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-end;
   padding-top: 10px;
@@ -6824,7 +6824,8 @@ body {
   }
 
   .case__section {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+    padding-top: 50px;
   }
 
   .case__title {
@@ -6837,18 +6838,23 @@ body {
     margin-right: 0;
   }
 
+  .case__video {
+    border-radius: 0;
+  }
+
   .case__top {
     display: block;
   }
 
-  .case .case__labels {
+  .case__top .case__labels {
+    margin-bottom: 10px;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-bottom: 45px;
-    margin-left: -10px;
-    margin-right: -10px;
-    justify-content: flex-end;
+    margin-left: -11px;
+    margin-right: -11px;
+  }
+
+  .case__top .case__labels .case__label {
+    margin-bottom: 11.2px;
   }
 
   .case .case__label {
@@ -6978,9 +6984,15 @@ body {
     margin-bottom: 25px;
   }
 
+  .text__style ul li > p:first-child,
+  .text__style ol li > p:first-child {
+    margin-top: 18px;
+  }
+
   .text__style ul li,
   .text__style ol li {
     font-size: 16px;
+    margin-bottom: 18px;
   }
 
   .start__section {
@@ -7036,11 +7048,11 @@ body {
   }
 
   .cases .case {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 
   .cases .case__big-margin {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
 
   .cases .case__picture {
@@ -7048,8 +7060,8 @@ body {
   }
 
   .cases .case__labels {
-    top: 15px;
-    right: 15px;
+    top: 5px;
+    right: 5px;
   }
 
   .cases .case__label {
@@ -7067,11 +7079,8 @@ body {
   }
 
   .case__content {
-    margin-bottom: 23px;
-  }
-
-  .case .case__labels {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+    margin-top: 23px;
   }
 
   .case .case__label {
@@ -7081,7 +7090,7 @@ body {
     background: #F4F4F4;
     color: #2A2A2A;
     font-size: 9.8px;
-    margin-bottom: 16px;
+    margin-bottom: 11.2px;
   }
 
   .contacts__form__input-block__error {
@@ -7208,6 +7217,22 @@ body {
     margin-bottom: 20px;
   }
 
+  .text__style p:not(:last-child),
+  .text__style .p:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .text__style .zoom-img {
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+
+  .text__style iframe,
+  .text__style video {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
   .start {
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -7240,6 +7265,11 @@ body {
   .custom-checkbox + span {
     padding: 5px 15px;
     font-size: 14px;
+    min-height: 40px;
+  }
+
+  .tell-us__col:nth-child(1) {
+    margin-bottom: 40px;
   }
 
   .cases__title {
@@ -7255,6 +7285,10 @@ body {
   .case__subtitle {
     font-size: 25px;
     margin-bottom: 20px;
+  }
+
+  .form__checkbox {
+    margin-bottom: 1px;
   }
 
   .form__buttons {
@@ -7280,6 +7314,10 @@ body {
 
   .select2-container.select2-container--default.select2-container--open .select2-results__option {
     font-size: 18px;
+  }
+
+  .case-page {
+    padding-top: 50px;
   }
 
   .header__logo {
