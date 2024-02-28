@@ -222,6 +222,7 @@ body {
         width: fit-content;
         height: auto;
         border: 1px solid #2A2A2A;
+        white-space: nowrap;
         &:hover {
             transition: all 0.3s; 
             background: $blue;
@@ -770,6 +771,9 @@ body {
             margin-bottom: 15px;
 			padding: 20px;
 		}
+        @include max(mdHeader) {
+            border-radius: 30px;
+        }
 		@include max(md) {
 			max-width: calc(100% - 0px);
 			margin-left: 0px;
@@ -1151,12 +1155,14 @@ body {
         text-decoration: none;
         @include max(sm) {
             margin-bottom: 60px;
+            max-width: 100%;
         }  
         &__big-margin {
             margin-bottom: 200px;
             max-width: 660px;
             @include max(sm) {
                 margin-bottom: 50px;
+                max-width: 100%;
             }  
         }
         &__picture {
@@ -1167,6 +1173,9 @@ body {
             align-items: center;
             border-radius: 42px;
             overflow: hidden;
+            @include max(mdHeader) {
+                border-radius: 30px;
+            }
             @include max(sm) {
                 border-radius: 20px;
             }
@@ -1207,6 +1216,10 @@ body {
             flex-flow: column nowrap;
             justify-content: flex-start;
             align-items: flex-end;
+            @include max(mdHeader) {
+                top: 10px;
+                right: 10px;
+            }
             @include max(sm) {
                 top: 5px;
                 right: 5px;
@@ -1229,6 +1242,12 @@ body {
             text-decoration: none;
             transition: all 0.3s;
             margin-bottom: 20px;
+            @include max(mdHeader) {
+                padding: calc(12px * 0.8) calc(18px * 0.8);
+                border-radius: calc(33px * 0.8);
+                font-size: calc(14px * 0.8);
+                margin-bottom: calc(20px * 0.8);
+            }
             @include max(sm) {
                 padding: calc(12px * 0.7) calc(18px * 0.7);
                 border-radius: calc(33px * 0.7);
@@ -1238,12 +1257,6 @@ body {
                 font-size: calc(14px * 0.7);
                 margin-bottom: calc(20px * 0.8);
             }
-            // &:hover {
-            //     transition: all 0.3s;
-            //     background: $blue;
-            //     border: 1px solid $blue;
-            //     color: #fff;
-            // }
             &:last-child{
                 margin-bottom: 0;
             }
@@ -1599,6 +1612,11 @@ body {
                 left: 0;
                 top: 0;
                 margin-right: 10px;
+            }
+        }
+        .btn--small{
+            @include min(xs) {
+                margin-left: 20px;
             }
         }
     } 

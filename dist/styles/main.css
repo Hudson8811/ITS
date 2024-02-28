@@ -4156,6 +4156,7 @@ body {
   width: fit-content;
   height: auto;
   border: 1px solid #2A2A2A;
+  white-space: nowrap;
 }
 
 .btn--small:hover {
@@ -6570,6 +6571,12 @@ body {
   background: rgba(255, 255, 255, 0.21);
 }
 
+@media only screen and (min-width: 561px) {
+  .form__buttons .btn--small {
+    margin-left: 20px;
+  }
+}
+
 @media only screen and (min-width: 993px) {
   .case-page__filter .checkbox {
     margin-right: 30px;
@@ -6713,6 +6720,26 @@ body {
     margin-bottom: 50px;
     width: 100%;
     display: none;
+  }
+
+  .developing__item {
+    border-radius: 30px;
+  }
+
+  .cases .case__picture {
+    border-radius: 30px;
+  }
+
+  .cases .case__labels {
+    top: 10px;
+    right: 10px;
+  }
+
+  .cases .case__label {
+    padding: 9.6px 14.4px;
+    border-radius: 26.4px;
+    font-size: 11.2px;
+    margin-bottom: 16px;
   }
 
   .section__header {
@@ -7056,10 +7083,12 @@ body {
 
   .cases .case {
     margin-bottom: 60px;
+    max-width: 100%;
   }
 
   .cases .case__big-margin {
     margin-bottom: 50px;
+    max-width: 100%;
   }
 
   .cases .case__picture {
