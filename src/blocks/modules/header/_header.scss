@@ -71,6 +71,7 @@
 		min-width: 158px;
 		max-width: 158px;
 		margin-right: 75px;
+		transform: translateY(-3px);
 		@include max(lg) {
 			margin-right: 30px;
 		}
