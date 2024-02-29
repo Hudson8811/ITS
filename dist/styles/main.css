@@ -4290,6 +4290,9 @@ body {
   cursor: pointer;
   overflow: hidden;
   border-radius: 15px;
+  clip-path: content-box;
+  -webkit-clip-path: content-box;
+  -webkit-mask-image: -webkit-linear-gradient(white, black);
 }
 
 .text__style .zoom-img img {
@@ -6590,6 +6593,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 1920px) {
+  .case__video {
+    border-radius: 0;
+  }
+}
+
 @media (max-width: 1700px) {
   .header__other__item {
     margin-right: 40px;
@@ -6869,10 +6878,6 @@ body {
   .case__subtitle {
     margin-left: 0;
     margin-right: 0;
-  }
-
-  .case__video {
-    border-radius: 0;
   }
 
   .case__top {

@@ -416,7 +416,9 @@ body {
         cursor: pointer;
         overflow: hidden;
         border-radius: 15px;
-
+        clip-path: content-box;
+        -webkit-clip-path: content-box;
+        -webkit-mask-image: -webkit-linear-gradient(white, black);
         @include max(xs) {
             margin-bottom: 35px;
             margin-top: 35px;
@@ -1383,7 +1385,7 @@ body {
         height: 100%;
         object-fit: cover;
         border-radius: 30px;
-        @include max(md) {
+        @include max(1920) {
             border-radius: 0;
         }
         source,img {
