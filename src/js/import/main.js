@@ -145,6 +145,33 @@ jQuery(function () {
         });
     });
 
+    document.querySelectorAll('.start__btn').forEach(link => {
+        link.addEventListener('click', function(e) {
+            let href = this.getAttribute('href');
+            if (href.includes('#')) {
+                href = href.substring(href.indexOf('#') + 1);
+            } else {
+                return;
+            }
+            const scrollTarget = document.getElementById(href);
+            if (scrollTarget !== null) {
+                e.preventDefault();
+                const topOffset = document.querySelector('.section__header').offsetHeight;
+                const elementPosition = scrollTarget.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - topOffset;
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+                mobMenu.classList.remove("active");
+                humb.classList.remove("is-active");
+                bodyYesScroll();
+            }
+
+
+        });
+    });
+
 
 
     var allowAjaxForm = true;
