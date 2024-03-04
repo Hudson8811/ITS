@@ -6431,7 +6431,6 @@ body {
 }
 
 .footer__col {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -7373,8 +7372,14 @@ body {
     min-height: auto;
   }
 
-  .footer__offices {
-    display: none;
+  .footer__section {
+    padding-bottom: 20px;
+  }
+
+  .footer__years {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 

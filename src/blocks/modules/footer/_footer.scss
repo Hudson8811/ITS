@@ -24,9 +24,11 @@
 		display: flex;
 		width: 100%;
 		background: #0F1214;
+		@include max(xs) {
+			padding-bottom: 20px;
+		}
 	}
 	&__col {
-		position: relative;
 		display: flex;	
 		justify-content: space-between;
 		align-items: flex-start;
@@ -54,6 +56,11 @@
 	}
 	&__years {
 		color: #fff;
+		@include max(xs) {
+			position: absolute;
+			bottom: 0;
+			left:0;
+		}
 	}
 	a {
 		position: relative;
@@ -78,9 +85,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		width: 100%;
-		@include max(xs) {
-			display: none;
-		}
+
 		&__row {
 			position: relative;
 			display: flex;
