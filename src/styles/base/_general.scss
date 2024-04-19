@@ -2207,6 +2207,12 @@ body {
     flex-direction: column;
     justify-content:center;
     position: relative;
+    @include max(md) {
+      padding-top: 58px;
+      min-height: auto;
+      margin-bottom: 58px;
+    }
+
     .start__btn{
       bottom:0;
       background-color: #237AE9;
@@ -2214,16 +2220,29 @@ body {
     }
 
     h1{
+
+      @include max(xs) {
+        font-size: 35px;
+        line-height: 94%; /* 93.19px */
+      }
+
       span{
         display: block;
         margin-top: 45px;
         margin-bottom: 45px;
         color: rgba(42, 42, 42, 0.21);
+        @include max(md) {
+          margin-top: 25px;
+          margin-bottom: 25px;
+        }
       }
 
       b{
         font-weight: bold;
         font-size: 1.3em;
+        @include max(xs) {
+          font-size: 1.1em;
+        }
       }
     }
   }

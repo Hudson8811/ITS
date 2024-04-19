@@ -6965,6 +6965,17 @@ body {
     margin-bottom: 100px;
   }
 
+  .partners-page__top {
+    padding-top: 58px;
+    min-height: auto;
+    margin-bottom: 58px;
+  }
+
+  .partners-page__top h1 span {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
   .footer {
     padding-top: 56px;
     padding-bottom: 20px;
@@ -7396,6 +7407,16 @@ body {
 
   .case-page {
     padding-top: 50px;
+  }
+
+  .partners-page__top h1 {
+    font-size: 35px;
+    line-height: 94%;
+    /* 93.19px */
+  }
+
+  .partners-page__top h1 b {
+    font-size: 1.1em;
   }
 
   .header__logo {
