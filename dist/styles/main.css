@@ -4416,7 +4416,7 @@ body {
 }
 
 .start__section {
-  height: calc(100vh - 263px);
+  height: calc(100vh - 170px);
   align-items: center;
 }
 
@@ -4492,14 +4492,17 @@ body {
   user-select: none;
 }
 
+.hashtag__item:last-child {
+  margin-right: 0;
+}
+
 .partners {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
   background: transparent;
-  padding-top: 100px;
+  padding-top: 30px;
   flex-flow: column nowrap;
   align-items: center;
   z-index: 5;
@@ -4548,7 +4551,6 @@ body {
   align-items: stretch;
   flex-flow: row wrap;
   margin-left: -18px;
-  margin-bottom: 0px;
   padding-bottom: 0px;
   margin-bottom: 80px;
 }
@@ -5775,6 +5777,43 @@ body {
   }
 }
 
+.partners-page {
+  margin-bottom: 150px;
+}
+
+.partners-page .text__style > * {
+  margin: 0;
+}
+
+.partners-page__top {
+  padding-top: 90px;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  min-height: calc(100vh - 173px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.partners-page__top .start__btn {
+  bottom: 0;
+  background-color: #237AE9;
+  color: #fff;
+}
+
+.partners-page__top h1 span {
+  display: block;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  color: rgba(42, 42, 42, 0.21);
+}
+
+.partners-page__top h1 b {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
 .section__header {
   position: fixed;
   top: 0;
@@ -6595,6 +6634,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 1599px) {
+  .title__99 {
+    font-size: 90px;
+  }
+}
+
 @media (max-width: 1450px) {
   .swiper-buttons {
     position: relative;
@@ -6656,6 +6701,10 @@ body {
     max-width: calc(100% - 64px);
   }
 
+  .title__99 {
+    font-size: 80px;
+  }
+
   .developing {
     margin-bottom: 60px;
     width: calc(100% + 15px);
@@ -6694,7 +6743,7 @@ body {
 
   .start__section {
     height: auto;
-    padding-top: 100px;
+    padding-top: 50px;
   }
 
   .start__btn {
@@ -6709,6 +6758,10 @@ body {
     margin-bottom: 50px;
     width: 100%;
     display: none;
+  }
+
+  .partners {
+    padding-top: 70px;
   }
 
   .developing__item {
@@ -7280,7 +7333,7 @@ body {
   }
 
   .partners {
-    padding-top: 50px;
+    padding-top: 40px;
   }
 
   .developing__item__title {

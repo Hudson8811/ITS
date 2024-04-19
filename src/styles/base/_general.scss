@@ -254,6 +254,12 @@ body {
     span {
         color: #d2d2d2;
     }
+    @include max(xl) {
+        font-size: 90px;
+    }
+    @include max(lg) {
+        font-size: 80px;
+    }
     @include max(sm) {
         font-size: 65px;
         font-style: normal;
@@ -550,7 +556,7 @@ body {
         align-items: flex-start;
     }
     &__section {
-        height: calc(100vh - 263px);
+        height: calc(100vh - 170px);
         // max-height: 577px;
         align-items: center;
         .container {
@@ -558,7 +564,7 @@ body {
         }
         @include max(mdHeader) {
             height: auto;
-            padding-top: 100px;
+            padding-top: 50px;
         }
         @include max(sm) {
             padding-top: 50px;
@@ -575,11 +581,13 @@ body {
     }
     &__title {
         margin-bottom: 76px;
+
         @include max(sm) {
             span{
                 display: none;
             }
         }
+
     }
     &__desc {
         position: relative;
@@ -665,6 +673,9 @@ body {
         @include max(xs) {
             margin-bottom: 15px;
         }
+        &:last-child{
+            margin-right: 0;
+        }
     }
 }
 
@@ -673,16 +684,18 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
     background: transparent;
-    padding-top: 100px;
+    padding-top: 30px;
     flex-flow: column nowrap;
     align-items: center;
     z-index: 5;
-    
-    @include max(xs) {
-        padding-top: 50px;
+    @include max(mdHeader) {
+        padding-top: 70px;
     }
+    @include max(xs) {
+        padding-top: 40px;
+    }
+
     &__slider {
         position: relative;
         display: flex;
@@ -723,7 +736,6 @@ body {
 	align-items: stretch;
 	flex-flow: row wrap;
 	margin-left: -18px;
-	margin-bottom: 0px;
 	padding-bottom: 0px;
 	margin-bottom: 80px;
 	@include max(lg) {
@@ -2177,4 +2189,42 @@ body {
         transform: translateY(0px);
         background-color: #2A2A2A;
     }
+}
+
+
+.partners-page{
+  margin-bottom: 150px;
+  .text__style > *{
+    margin: 0;
+  }
+
+  &__top{
+    padding-top: 90px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 173px);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    position: relative;
+    .start__btn{
+      bottom:0;
+      background-color: #237AE9;
+      color: #fff;
+    }
+
+    h1{
+      span{
+        display: block;
+        margin-top: 45px;
+        margin-bottom: 45px;
+        color: rgba(42, 42, 42, 0.21);
+      }
+
+      b{
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+    }
+  }
 }
