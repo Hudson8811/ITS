@@ -2220,7 +2220,9 @@ body {
     }
 
     h1{
-
+        @media (min-width: 1280px) and (max-width: 1599px){
+            font-size: 82px;
+        }
       @include max(xs) {
         font-size: 35px;
         line-height: 94%; /* 93.19px */

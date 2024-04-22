@@ -7444,6 +7444,12 @@ body {
   }
 }
 
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .partners-page__top h1 {
+    font-size: 82px;
+  }
+}
+
 @media (max-height: 576px) {
   .fancybox-slide {
     padding-left: 6px;
