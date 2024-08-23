@@ -31,6 +31,30 @@ jQuery(function () {
         });
 
     })
+
+    let cooperationSliderMain = $('[data-js="cooperationSliderMain"]')
+    if(cooperationSliderMain.length > 0) {
+        
+        let cooperationSliderTabs = $('[data-js="cooperationSliderTabs"]')
+        let cooperationSliderTabsEx = new Swiper(cooperationSliderTabs[0], {
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+        });
+
+        let cooperationSliderMainEx = new Swiper(cooperationSliderMain[0], {
+            spaceBetween: 0,
+            slidesPerView: 1,
+            allowTouchMove: false,
+            effect: 'fade',
+            thumbs: {
+                swiper: cooperationSliderTabsEx
+            }
+        });
+    }
+    
+
+
+
     function modalThanks() {
         event.preventDefault();
         $.fancybox.close();
