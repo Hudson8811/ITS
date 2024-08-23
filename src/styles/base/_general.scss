@@ -740,6 +740,16 @@ body {
     }
 }
 
+.service-intro {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 180px;
+
+    &__title {
+        margin-bottom: 0;
+    }
+}
+
 .hashtag {
     position: absolute;
     left: 0;

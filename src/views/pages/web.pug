@@ -5,7 +5,7 @@ block variables
 	- const title = "Web services title"
 
 block content
-	.start__section.section
+	.start__section.service-intro.section
 		.container
 			.hashtag
 				a(href="#").hashtag__item #Аналитика
@@ -15,16 +15,175 @@ block content
 			.start
 				.start__col
 					.start__desc
-						.start__title.title__99
+						.start__title.service-intro__title.title__99
 							!='Сайты, веб-сервисы и&nbsp;корпоративный софт<br> <span>любой сложности</span>'
-						.start__text.text__18
+						//-.start__text.text__18
 							!="•&nbsp;Экосистемы •&nbsp;Продуманный UX/UI <br>•&nbsp;Чат-боты •&nbsp;Терминалы •&nbsp;Партнерские сервисы <br>•&nbsp;Единый бэкенд •&nbsp;Сложные интеграции <br>•&nbsp;Удобные админки •&nbsp;Личные кабинеты"
-				//.start__col
+				//-.start__col
 					.cube 
 						img(src="img/cube.png" alt="")
-				a(href="#tell-us").btn.btn.start__btn Оставить заявку
+				//-a(href="#tell-us").btn.btn.start__btn Оставить заявку
 
-	.partners
+	.price
+		.container 
+			.price__title.title__65 Сколько стоит <br>разработать у нас <span>сайт, <br>веб-сервис или ERP?<span>
+			.price__cards
+				.price__card.price-card
+					.price-card__name.title__35 Сайт
+						.price-card__text.text__18
+					.price-card__cost.title__65!= '> 2 млн'
+						.price-card__desc MVP - от 3 мес
+					a(href="#").price-card__btn.btn--small посчитать точно
+
+				.price__card.price-card
+					.price-card__name.title__35 Веб-сервис
+						.price-card__text.text__18 со сложными интеграциями
+					.price-card__cost.title__65!= '> 2 млн'
+						.price-card__desc MVP - от 3 мес
+					a(href="#").price-card__btn.btn--small посчитать точно
+
+				.price__card.price-card
+					.price-card__name.title__35 CRM, ERP, PDM
+						.price-card__text.text__18
+					.price-card__cost.title__65!= '> 3.5 млн'
+						.price-card__desc от 5 мес
+					a(href="#").price-card__btn.btn--small посчитать точно	
+
+
+	#developing__section.developing__section.section
+		.container
+			.developing__title.developing__title--web.title__99
+				!= 'Технологии'
+			.developing__subtitle.title__35
+				!= 'В команде <span>60+ специалистов</span>, все находимся под одной крышей. Работаем с современным стеком:'
+			.developing
+				.developing__item
+					.developing__item__title 
+						!="Бэкенд"
+					.developing__item__list
+						ul
+							li
+								!="PHP"
+							li
+								!="Laravel"
+				.developing__item
+					.developing__item__title 
+						!="Фронтенд"
+					.developing__item__list
+						ul
+							li
+								!="ES6+"
+							li
+								!="React"
+
+				.developing__item
+					.developing__item__title 
+						!="Аналитика и дизайн"
+					.developing__item__list
+						ul
+							li
+								!="Miro"						
+							li
+								!="Figma"
+
+
+				.developing__item
+					.developing__item__title 
+						!="Методологии и инструменты"
+					.developing__item__list
+						ul
+							li
+								!="Agile"
+							li
+								!="Waterfall"
+							li
+								!="Гибрид"
+							li
+								!="Kanban"
+
+				.developing__item
+					.developing__item__title 
+						!="Контроль версий, доставки и окружения"
+					.developing__item__list
+						ul
+							li
+								!="Git"
+
+				.developing__item
+					.developing__item__title 
+						!="Популярные БД"
+					.developing__item__list
+						ul
+							li
+								!="MySQL"
+
+	.cooperation
+		.container 
+			.cooperation__title.title__65 Практикуем 2 модели <br><span>сотрудничества:<span>
+			.cooperation__wrapper
+				.cooperation__slider-main(data-js="cooperationSliderMain")
+					.swiper-wrapper
+						.cooperation__slide.swiper-slide
+							.cooperation__subtitle.title__35 Timе and Material
+							.cooperation__text.title__35 Сложным проектам с высокой неопределенностью и&nbsp;гибким планированием
+						.cooperation__slide.swiper-slide
+							.cooperation__subtitle.title__35 Fixed Price
+							.cooperation__text.title__35 Подходит проектам со строгим ТЗ, <br>предсказуемыми сроками бюджетом
+
+				.cooperation__slider-tabs(data-js="cooperationSliderTabs")
+					.swiper-wrapper
+						.cooperation__tab.swiper-slide Timе and Material
+						.cooperation__tab.swiper-slide Fixed Price
+
+	.process
+		.container 
+			.process__title.title__65 Дальше подробно о том, <br><span>как мы работаем</span>
+			.process__cards
+				.process__card.process__card--1.process-card
+					.process-card__num 1
+					.process-card__content
+						.process-card__title.title__35 Анализируем рынок
+						.process-card__text.text__18 Изучаем вашу нишу, аудиторию и конкурентов. На этом этапе мы состыковываемся в видении и продумываем приложение от и до. Выдвигаем гипотезы, которые помогут достичь результата и реализовываем их при разработке
+
+				.process__card.process__card--2.process-card
+					.process-card__num 2
+					.process-card__content
+						.process-card__title.title__35 Проектируем
+						.process-card__text.text__18 Создаем интерактивную версию будущего продукта — прототип. Он нужен, чтобы еще до разработки показать, каким будет приложение. На этом этапе можем провести кастдев и получить обратную связь от аудитории
+
+				.process__card.process__card--3.process-card
+					.process-card__num 3
+					.process-card__content
+						.process-card__title.title__35 Дизайним
+						.process-card__text.text__18 Продумываем концепцию, прорабатываем UX/UI, отрисовываем 3D и анимации. Наш дизайн занимает призовые места в конкурсах, но мы умеем не только красиво, но и уместно
+
+				.process__card.process__card--4.process-card
+					.process-card__num 4
+					.process-card__content
+						.process-card__title.title__35 Программируем
+						.process-card__text.text__18 Проектируем архитектуру, структуру базы данных, документируем API. Пишем чистый код — продукт будет легко поддерживать
+
+				.process__card.process__card--5.process-card
+					.process-card__num 5
+					.process-card__content
+						.process-card__title.title__35 Тестируем
+						.process-card__text.text__18 На каждом этапе, чтобы ни один баг не прошел! Приложения не тормозят, потому что мы заранее подготавливаем его к высоким нагрузкам
+
+				.process__card.process__card--6.process-card
+					.process-card__num 6
+					.process-card__content
+						.process-card__title.title__35 Запускаем
+						.process-card__text.text__18 Разворачиваем проект на вашем сервере, наполняем контентом
+
+				.process__card.process__card--7.process-card
+					.process-card__num 7
+					.process-card__content
+						.process-card__title.title__35 Поддерживаем и развиваем
+						.process-card__text.text__18 Составляем roadmap, формируем бэклоги на следующие спринты, выпускаем обновления каждые 2 недели
+
+			.process__text.title__35 Если у вас есть своя команда — не проблема. Мы можем курировать работу ваших разработчиков, работать с ними в коллаборации или просто усилить ребят. Берем на себя ведущую роль — создаем общий чат, распределяем зоны ответственности, решаем вопросы по дедлайнам и качеству.
+
+	//-.partners
 		.container
 			.partners__title.title__65 
 				!= 'Мы <span>ITS GROUP</span> — продуктовые разработчики для бизнеса и государства'
@@ -99,7 +258,7 @@ block content
 				!= "Поэтому мы знаем, как работает бизнес, а вы получаете не только сервис, но и консультацию по любым вопросам: юридическим, финансовым и управленческим"
 
 
-	#cases__section.cases__section.section
+	//-#cases__section.cases__section.section
 		.cases__inner
 			.container
 				.cases__title.title__99 Кейсы
@@ -172,82 +331,7 @@ block content
 				.cases__show
 					a.cases__show-more(href="#") Все проекты
 
-
-	#developing__section.developing__section.section
-		.container
-			.developing__title.developing__title--web.title__99
-				!= 'Технологии'
-			.developing__subtitle.title__35
-				!= 'В команде <span>60+ специалистов</span>, все находимся под одной крышей. Работаем с современным стеком:'
-			.developing
-				.developing__item
-					.developing__item__title 
-						!="Бэкенд"
-					.developing__item__list
-						ul
-							li
-								!="PHP"
-							li
-								!="Laravel"							
-				.developing__item
-					.developing__item__title 
-						!="Фронтенд"
-					.developing__item__list
-						ul
-							li
-								!="ES6+"
-							li
-								!="React"
-							li
-								!="GSAP"
-				.developing__item
-					.developing__item__title 
-						!="QA и автоматизация тестирования"
-					.developing__item__list
-						ul
-							li
-								!="Postman"
-
-				.developing__item
-					.developing__item__title 
-						!="Аналитика и дизайн"
-					.developing__item__list
-						ul
-							li
-								!="Miro"						
-							li
-								!="Figma"
-
-
-				.developing__item
-					.developing__item__title 
-						!="Методологии и инструменты"
-					.developing__item__list
-						ul
-							li
-								!="Agile"
-							li
-								!="Waterfall"
-							li
-								!="Гибрид"
-							li
-								!="Kanban"							
-				.developing__item
-					.developing__item__title 
-						!="Контроль версий, доставки и окружения"
-					.developing__item__list
-						ul
-							li
-								!="Git"
-				.developing__item
-					.developing__item__title 
-						!="Популярные БД"
-					.developing__item__list
-						ul
-							li
-								!="MySQL"
-
-	.interaction
+	//-.interaction
 		.container 
 			.interaction__title.title__65 Одно дело — кодить
 			.interaction__subtitle.title__35 Другое — общаться и cтроить процессы
@@ -268,93 +352,3 @@ block content
 					.interaction-card__title.title__35 Планируем работу наперед и&nbsp;заранее согласуем бюджет
 					.interaction-card__text.text__18 Ведем разработку по scrum, поэтому перед каждым спринтом вместе с вами определяем, что будем делать сейчас, а что отложим на потом. Никогда не ставим перед фактом: мы сделали столько-то задач, поэтому заплатит столько-то
 
-	.process
-		.container 
-			.process__title.title__65 Дальше подробно о том, <br><span>как мы работаем</span>
-			.process__cards
-				.process__card.process__card--1.process-card
-					.process-card__num 1
-					.process-card__content
-						.process-card__title.title__35 Анализируем рынок
-						.process-card__text.text__18 Изучаем вашу нишу, аудиторию и конкурентов. На этом этапе мы состыковываемся в видении и продумываем приложение от и до. Выдвигаем гипотезы, которые помогут достичь результата и реализовываем их при разработке
-
-				.process__card.process__card--2.process-card
-					.process-card__num 2
-					.process-card__content
-						.process-card__title.title__35 Проектируем
-						.process-card__text.text__18 Создаем интерактивную версию будущего продукта — прототип. Он нужен, чтобы еще до разработки показать, каким будет приложение. На этом этапе можем провести кастдев и получить обратную связь от аудитории
-
-				.process__card.process__card--3.process-card
-					.process-card__num 3
-					.process-card__content
-						.process-card__title.title__35 Дизайним
-						.process-card__text.text__18 Продумываем концепцию, прорабатываем UX/UI, отрисовываем 3D и анимации. Наш дизайн занимает призовые места в конкурсах, но мы умеем не только красиво, но и уместно
-
-				.process__card.process__card--4.process-card
-					.process-card__num 4
-					.process-card__content
-						.process-card__title.title__35 Программируем
-						.process-card__text.text__18 Проектируем архитектуру, структуру базы данных, документируем API. Пишем чистый код — продукт будет легко поддерживать
-
-				.process__card.process__card--5.process-card
-					.process-card__num 5
-					.process-card__content
-						.process-card__title.title__35 Тестируем
-						.process-card__text.text__18 На каждом этапе, чтобы ни один баг не прошел! Приложения не тормозят, потому что мы заранее подготавливаем его к высоким нагрузкам
-
-				.process__card.process__card--6.process-card
-					.process-card__num 6
-					.process-card__content
-						.process-card__title.title__35 Запускаем
-						.process-card__text.text__18 Разворачиваем проект на вашем сервере, наполняем контентом
-
-				.process__card.process__card--7.process-card
-					.process-card__num 7
-					.process-card__content
-						.process-card__title.title__35 Поддерживаем и развиваем
-						.process-card__text.text__18 Составляем roadmap, формируем бэклоги на следующие спринты, выпускаем обновления каждые 2 недели
-
-			.process__text.title__35 Если у вас есть своя команда — не проблема. Мы можем курировать работу ваших разработчиков, работать с ними в коллаборации или просто усилить ребят. Берем на себя ведущую роль — создаем общий чат, распределяем зоны ответственности, решаем вопросы по дедлайнам и качеству.
-
-	.price
-		.container 
-			.price__title.title__65 Сколько стоит <br>разработать у нас <span>сайт, <br>веб-сервис или ERP?<span>
-			.price__cards
-				.price__card.price-card
-					.price-card__name.title__35 Сайт
-						.price-card__text.text__18
-					.price-card__cost.title__65!= '> 2 млн'
-						.price-card__desc MVP - от 3 мес
-					a(href="#").price-card__btn.btn--small посчитать точно
-
-				.price__card.price-card
-					.price-card__name.title__35 Веб-сервис
-						.price-card__text.text__18 со сложными интеграциями
-					.price-card__cost.title__65!= '> 2 млн'
-						.price-card__desc MVP - от 3 мес
-					a(href="#").price-card__btn.btn--small посчитать точно
-
-				.price__card.price-card
-					.price-card__name.title__35 CRM, ERP, PDM
-						.price-card__text.text__18
-					.price-card__cost.title__65!= '> 3.5 млн'
-						.price-card__desc от 5 мес
-					a(href="#").price-card__btn.btn--small посчитать точно
-
-	.cooperation
-		.container 
-			.cooperation__title.title__65 Практикуем 2 модели <br><span>сотрудничества:<span>
-			.cooperation__wrapper
-				.cooperation__slider-main(data-js="cooperationSliderMain")
-					.swiper-wrapper
-						.cooperation__slide.swiper-slide
-							.cooperation__subtitle.title__35 Timе and Material
-							.cooperation__text.title__35 Сложным проектам с высокой неопределенностью и&nbsp;гибким планированием
-						.cooperation__slide.swiper-slide
-							.cooperation__subtitle.title__35 Fixed Price
-							.cooperation__text.title__35 Подходит проектам со строгим ТЗ, <br>предсказуемыми сроками бюджетом
-
-				.cooperation__slider-tabs(data-js="cooperationSliderTabs")
-					.swiper-wrapper
-						.cooperation__tab.swiper-slide Timе and Material
-						.cooperation__tab.swiper-slide Fixed Price
