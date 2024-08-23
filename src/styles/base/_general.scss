@@ -741,11 +741,15 @@ body {
 }
 
 .service-intro {
-    padding-top: 100px;
-    padding-bottom: 180px;
+    height: auto;
+    padding: 50px 0;
 
     &__title {
         margin-bottom: 0;
+    }
+
+    .hashtag {
+        height: 590px;
     }
 }
 
