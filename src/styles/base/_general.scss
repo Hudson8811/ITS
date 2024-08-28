@@ -751,6 +751,23 @@ body {
     .hashtag {
         height: 590px;
     }
+
+    .start {
+        align-items: flex-start;
+    }
+
+    &__cases.cases__show-more {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #237AE9;
+        color: #fff;
+        border-color: #237AE9;
+
+        &:hover {
+            background-color: darken(#237AE9, 20%);
+        }
+    }
 }
 
 .hashtag {
@@ -1146,13 +1163,17 @@ body {
 .cooperation {
     padding-bottom: 180px;
 
-    &__slider-main {
-        overflow: hidden;
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 40px;
+        margin-top: 80px;
     }
 
-    &__wrapper {
-        max-width: 930px;
-        margin-top: 80px;
+    &__card {
+        flex: 0 0 50%;
+        max-width: 50%;
         padding: 40px;
         border: 1px solid #E6E6E6;
         border-radius: 35px;
@@ -1167,37 +1188,6 @@ body {
         font-weight: 400;
     }
 
-    &__slide.swiper-slide {
-        opacity: 0 !important;
-
-        &.swiper-slide-active {
-            opacity: 1 !important;
-        }
-    }
-
-    &__slider-tabs {
-        margin-top: 60px;
-    }
-
-    &__tab {
-        width: fit-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 30px;
-        border: 1px solid #2a2a2a;
-        border-color: #0F1214;
-        border-radius: 10px;
-        cursor: pointer;
-        color: #2a2a2a;
-        transition: color 0.2s ease, border-color 0.2s ease;
-
-        &:hover,
-        &.swiper-slide-thumb-active {
-            border-color: #237AE9;
-            color: #237AE9;
-        }
-    }
 }
 
 .checkbox {

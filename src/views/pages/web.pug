@@ -17,12 +17,8 @@ block content
 					.start__desc
 						.start__title.service-intro__title.title__99
 							!='Сайты, веб-сервисы и&nbsp;корпоративный софт'
-						//-.start__text.text__18
-							!="•&nbsp;Экосистемы •&nbsp;Продуманный UX/UI <br>•&nbsp;Чат-боты •&nbsp;Терминалы •&nbsp;Партнерские сервисы <br>•&nbsp;Единый бэкенд •&nbsp;Сложные интеграции <br>•&nbsp;Удобные админки •&nbsp;Личные кабинеты"
-				//-.start__col
-					.cube 
-						img(src="img/cube.png" alt="")
-				//-a(href="#tell-us").btn.btn.start__btn Оставить заявку
+				.start__col
+					a.cases__show-more.service-intro__cases(href="#") Кейсы
 
 	.price
 		.container 
@@ -120,20 +116,13 @@ block content
 	.cooperation
 		.container 
 			.cooperation__title.title__65 Практикуем 2 модели <br><span>сотрудничества:<span>
-			.cooperation__wrapper
-				.cooperation__slider-main(data-js="cooperationSliderMain")
-					.swiper-wrapper
-						.cooperation__slide.swiper-slide
-							.cooperation__subtitle.title__35 Timе and Material
-							.cooperation__text.title__35 Сложным проектам с высокой неопределенностью и&nbsp;гибким планированием
-						.cooperation__slide.swiper-slide
-							.cooperation__subtitle.title__35 Fixed Price
-							.cooperation__text.title__35 Подходит проектам со строгим ТЗ, <br>предсказуемыми сроками бюджетом
-
-				.cooperation__slider-tabs(data-js="cooperationSliderTabs")
-					.swiper-wrapper
-						.cooperation__tab.swiper-slide Timе and Material
-						.cooperation__tab.swiper-slide Fixed Price
+			.cooperation__cards
+				.cooperation__card
+					.cooperation__subtitle.title__35 Timе and Material
+					.cooperation__text.title__35 Сложным проектам с высокой неопределенностью и&nbsp;гибким планированием
+				.cooperation__card
+					.cooperation__subtitle.title__35 Fixed Price
+					.cooperation__text.title__35 Подходит проектам со строгим ТЗ, <br>предсказуемыми сроками бюджетом
 
 	.process
 		.container 
@@ -182,173 +171,3 @@ block content
 						.process-card__text.text__18 Составляем roadmap, формируем бэклоги на следующие спринты, выпускаем обновления каждые 2 недели
 
 			.process__text.title__35 Если у вас есть своя команда — не проблема. Мы можем курировать работу ваших разработчиков, работать с ними в коллаборации или просто усилить ребят. Берем на себя ведущую роль — создаем общий чат, распределяем зоны ответственности, решаем вопросы по дедлайнам и качеству.
-
-	//-.partners
-		.container
-			.partners__title.title__65 
-				!= 'Мы <span>ITS GROUP</span> — продуктовые разработчики для бизнеса и государства'
-			.partners__text.partners__text--first.text__24
-				!= "Создаем продукты, которые улучшают имидж, увеличивают конверсию и автоматизируют бизнес-процессы. <br>У нас у самих есть успешно созданные и запущенные продукты:"
-		.partners__slider.swiper-container.js-partners__slider
-			.swiper-wrapper
-				.partners__slide.swiper-slide
-					img(src="img/partners__slide__1.png" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__2.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__3.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__4.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__5.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__6.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__7.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__8.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__9.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__10.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__11.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__12.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__13.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__14.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__15.svg" alt="")
-
-				.partners__slide.swiper-slide
-					img(src="img/partners__slide__1.png" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__2.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__3.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__4.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__5.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__6.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__7.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__8.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__9.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__10.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__11.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__12.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__13.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__14.svg" alt="")
-				.partners__slide.swiper-slide
-					img(src="img/svg/partners__slide__15.svg" alt="")
-
-		.container
-			.partners__text.text__24
-				!= "Поэтому мы знаем, как работает бизнес, а вы получаете не только сервис, но и консультацию по любым вопросам: юридическим, финансовым и управленческим"
-
-
-	//-#cases__section.cases__section.section
-		.cases__inner
-			.container
-				.cases__title.title__99 Кейсы
-				.cases.rellax(data-rellax-speed="1")
-					.cases__col.rellax(data-rellax-speed="-3")
-						a(href="#").case.case__big-margin
-							.case__picture.case__picture--1
-								picture
-									source(media="(max-width: 992px )" srcset="img/case__picture__1.png")
-									img(src="img/case__picture__1.png" alt="")
-							.case__desc
-								.case__desc__title СберМобайл
-								.case__desc__text.text__18 Тут может быть еще какое то описание
-							//- .case__labels
-							//- 	a(href="#").case__label #Аналитика
-							//- 	a(href="#").case__label #Дизайн
-							.case__labels
-								.case__label #Аналитика
-								.case__label #Дизайн
-								.case__label #Аналитика
-								.case__label #Дизайн
-
-						a(href="#").case
-							.case__picture.case__picture--2
-								picture
-									source(media="(max-width: 992px )" srcset="img/case__picture__3.png")
-									img(src="img/case__picture__3.png" alt="")
-							.case__desc
-								.case__desc__title Сбербанк
-								.case__desc__text.text__18 Тут может быть еще какое то описание
-							.case__labels
-								.case__label #Дизайн
-								.case__label #Аналитика
-								.case__label #Дизайн
-								.case__label #Аналитика
-							//- .case__labels
-							//- 	a(href="#").case__label #Дизайн
-							//- 	a(href="#").case__label #Аналитика
-					.cases__col.rellax(data-rellax-speed="0")
-						a(href="#").case
-							.case__picture.case__picture--2
-								picture
-									source(media="(max-width: 992px )" srcset="img/case__picture__2.png")
-									img(src="img/case__picture__2.png" alt="")
-							.case__desc
-								.case__desc__title Московский комсомолец спорт
-								.case__desc__text.text__18 Тут может быть еще какое то описание
-							.case__labels
-								.case__label #Дизайн
-								.case__label #Аналитика
-							//- .case__labels
-							//- 	a(href="#").case__label #Дизайн
-							//- 	a(href="#").case__label #Аналитика
-
-						a(href="#").case.case__big-margin
-							.case__picture.case__picture--1
-								picture
-									source(media="(max-width: 992px )" srcset="img/case__picture__4.png")
-									img(src="img/case__picture__4.png" alt="")
-							.case__desc
-								.case__desc__title Haier
-								.case__desc__text.text__18 Тут может быть еще какое то описание
-							.case__labels
-								.case__label #Аналитика
-								.case__label #Дизайн
-							//- .case__labels
-							//- 	a(href="#").case__label #Аналитика
-							//- 	a(href="#").case__label #Дизайн
-
-				.cases__show
-					a.cases__show-more(href="#") Все проекты
-
-	//-.interaction
-		.container 
-			.interaction__title.title__65 Одно дело — кодить
-			.interaction__subtitle.title__35 Другое — общаться и cтроить процессы
-			.interaction__cards
-				.interaction__card.interaction-card
-					.interaction-card__title.title__35 Погрузимся в специфику вашего бизнеса
-					.interaction-card__text.text__18 Изучим рынок и бизнес-процессы. Проанализируем конкурентов и продумаем пользовательский путь, чтобы продукт принес максимум пользы аудитории, а вам — прибыль
-				.interaction__card.interaction-card
-					.interaction-card__title.title__35 Подскажем, как улучшить продукт
-					.interaction-card__text.text__18 У нас проактивная позиция, а в запасе всегда куча рабочих идей. Бонусом мы можем разработать новый лого, если поймем, что так объективно лучше
-				.interaction__card.interaction-card
-					.interaction-card__title.title__35 Ведем прозрачную отчетность и&nbsp;делимся артефактами
-					.interaction-card__text.text__18 Составляем подробные сметы, даем доступ в репозиторий, присылаем еженедельные отчеты, после созвонов делимся meeting report. А через собственную систему Reporter видим, сколько времени ушло у исполнителей на каждую задачу
-				.interaction__card.interaction-card
-					.interaction-card__title.title__35 Не превышаем сроков по проектам
-					.interaction-card__text.text__18 Мы сами управляем рисками, и если что-то может пойти не по плану, подскажем, как это обойти
-				.interaction__card.interaction-card
-					.interaction-card__title.title__35 Планируем работу наперед и&nbsp;заранее согласуем бюджет
-					.interaction-card__text.text__18 Ведем разработку по scrum, поэтому перед каждым спринтом вместе с вами определяем, что будем делать сейчас, а что отложим на потом. Никогда не ставим перед фактом: мы сделали столько-то задач, поэтому заплатит столько-то
-
