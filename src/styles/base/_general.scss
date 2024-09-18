@@ -758,12 +758,7 @@ body {
     }
 
     .hashtag {
-        height: 590px;
-
-        @include max(1520) {
-            left: -20px;
-            height: 505px;
-        }
+        display: none;
     }
 
     .start {
@@ -2996,17 +2991,17 @@ body {
     }
 
     &__top {
-        padding-top: 90px;
+        padding-top: 50px;
         margin-bottom: 100px;
         box-sizing: border-box;
         min-height: calc(100vh - 173px);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         position: relative;
 
         @include max(md) {
-            padding-top: 58px;
+            padding-top: 50px;
             min-height: auto;
             margin-bottom: 58px;
         }
