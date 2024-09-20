@@ -745,7 +745,7 @@ body {
     padding: 50px 0 70px;
 
     @include max(560) {
-        padding: 50px 0 25px;
+        padding: 50px 0 10px;
     }
 
     &__title {
@@ -1176,7 +1176,7 @@ body {
     }
 
     @include max(767) {
-        margin-bottom: 40px;
+        margin-bottom: 80px;
     }
 
     &__title {
@@ -1299,12 +1299,16 @@ body {
         }
 
         @include max(767) {
+            font-size: 35px;
+            line-height: 120%;
+            letter-spacing: -1.225em;
             margin-bottom: 40px;
-            letter-spacing: -0.06em;
         }
 
         @include max(560) {
-            font-size: 35px;
+            font-size: 25px;
+            line-height: 120%;
+            letter-spacing: -1.225px;
 
         }
     }
