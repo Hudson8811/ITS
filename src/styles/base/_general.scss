@@ -744,6 +744,10 @@ body {
     height: auto;
     padding: 50px 0 70px;
 
+    @include max(560) {
+        padding: 50px 0 25px;
+    }
+
     &__title {
         margin-bottom: 0;
 
@@ -753,7 +757,7 @@ body {
         }
 
         @include max(560) {
-            font-size: 42px;
+            font-size: 35px;
         }
     }
 
@@ -806,13 +810,7 @@ body {
         }
 
         @include max(992) {
-            position: relative;
-        }
-
-        @include max(767) {
-            width: 120px;
-            height: 120px;
-            font-size: 28px;
+            display: none;
         }
     }
 
@@ -1105,7 +1103,7 @@ body {
         }
 
         @include max(560) {
-            font-size: 42px;
+            font-size: 35px;
         }
     }
 
@@ -1116,7 +1114,7 @@ body {
         }
 
         @include max(560) {
-            font-size: 24px;
+            font-size: 25px;
         }
     }
 
@@ -1128,7 +1126,7 @@ body {
         }
 
         @include max(560) {
-            font-size: 26px;
+            font-size: 25px;
         }
     }
 
@@ -1192,7 +1190,7 @@ body {
         }
 
         @include max(560) {
-            font-size: 40px;
+            font-size: 35px;
         }
     }
 
@@ -1225,7 +1223,7 @@ body {
         }
 
         @include max(560) {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 400;
             letter-spacing: 0px;
         }
@@ -1251,13 +1249,14 @@ body {
             }
 
             @include max(560) {
-                font-size: 28px;
+                font-size: 25px;
             }
         }
 
         &__text {
             position: relative;
             margin-bottom: 0;
+
         }
 
         &__num {
@@ -1305,7 +1304,7 @@ body {
         }
 
         @include max(560) {
-            font-size: 42px;
+            font-size: 35px;
 
         }
     }
@@ -1341,7 +1340,7 @@ body {
             }
 
             @include max(560) {
-                font-size: 32px;
+                font-size: 25px;
             }
         }
 
@@ -1355,7 +1354,7 @@ body {
             }
 
             @include max(560) {
-                font-size: 32px;
+                font-size: 25px;
             }
         }
 
@@ -1392,7 +1391,7 @@ body {
         }
 
         @include max(560) {
-            font-size: 40px;
+            font-size: 35px;
         }
     }
 
@@ -1438,7 +1437,7 @@ body {
         }
 
         @include max(560) {
-            font-size: 32px;
+            font-size: 25px;
         }
     }
 
@@ -1457,8 +1456,9 @@ body {
         }
 
         @include max(560) {
-            font-size: 24px;
+            font-size: 16px;
             font-weight: 400;
+            letter-spacing: 0;
         }
     }
 
