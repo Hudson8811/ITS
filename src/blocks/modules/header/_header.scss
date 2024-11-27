@@ -145,6 +145,16 @@
 				color: $blue;
 				transition: all 0.3s;
 			}
+			sup{
+				background: red;
+				color: #ffffff;
+				line-height: 1;
+				padding:3px 2px;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+				font-size: 60%;
+			}
 		}
 
 		&__list {
