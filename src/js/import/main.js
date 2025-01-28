@@ -9,7 +9,13 @@ jQuery(function () {
         }
     });
 
-    $('.js-mask-phone').mask('+7(000)000-00-00');
+    $('.js-mask-phone').mask('+7(A00)000-00-00', {
+        translation: {
+            'A': {
+                pattern: /[1-79]/
+            }
+        }
+    });
     var partnersSlider
     $('.js-partners__slider').each(function(){
         var slider=$(this)
