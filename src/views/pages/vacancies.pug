@@ -1,0 +1,111 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Вакансии"
+
+block content
+	.section.section--top.section--bottom.vacancies
+		.container
+			h1.section__title.title__65 Вакансии
+			.case-page__filter
+				label.checkbox
+					input.custom-checkbox(type="radio" name="vacancies-filters" value="Все" checked)
+					span Все <span>15</span>
+				label.checkbox
+					input.custom-checkbox(type="radio" name="vacancies-filters" value="Разработка")
+					span Разработка <span>11</span>
+				label.checkbox
+					input.custom-checkbox(type="radio" name="vacancies-filters" value="Отдел продаж")
+					span Отдел продаж <span>4</span>
+
+			.vacancies__content
+				.vacancies__filters
+					+radio-block({
+						classes: '',
+						name: '',
+						vMode: 'links',
+						type: 'radio',
+						items: [
+							'Все <span>15</span>',
+							'Курск <span>6</span>',
+							'Удалённая работа <span>7</span>',
+							'Москва <span>2</span>'
+						]
+					})
+				.vacancies__list
+					+v-card({
+						title: 'Системный администратор Linux',
+						category: 'Разработка',
+						location: 'Курск'
+					})
+					+v-card({
+						title: 'Тестировщик',
+						category: 'Разработка',
+						location: 'Курск'
+					})
+					+v-card({
+						title: 'Менеджер по развитию',
+						category: 'Отдел продаж',
+						location: 'Удаленная работа'
+					})
+					+v-card({
+						title: 'Системный аналитик (Mid/Sen)',
+						category: 'Разработка',
+						location: 'Удаленная работа'
+					})
+					+v-card({
+						title: 'Java разработчик',
+						category: 'Разработка',
+						location: 'Удаленная работа'
+					})
+					+v-card({
+						title: 'Android разработчик',
+						category: 'Разработка',
+						location: 'Удаленная работа'
+					})
+					+v-card({
+						title: 'QA auto (Java)',
+						category: 'Разработка',
+						location: 'Удаленная работа'
+					})
+					+v-card({
+						title: 'Аккаунт директор',
+						category: 'Отдел продаж',
+						location: 'Москва'
+					})
+					+v-card({
+						title: 'Системный/бизнес аналитик (Mid/Mid+)',
+						category: 'Разработка',
+						location: 'Удаленная работа'
+					})
+					+v-card({
+						title: 'Программист 1C (Mid/ Sen)',
+						category: 'Разработка',
+						location: 'Курск'
+					})
+					+v-card({
+						title: 'Sales 1C (Mid/ Sen)',
+						category: 'Отдел продаж',
+						location: 'Курск'
+					})
+					+v-card({
+						title: 'Исследователь',
+						category: 'Разработка',
+						location: 'Москва'
+					})
+					+v-card({
+						title: 'Sales Manager',
+						category: 'Отдел продаж',
+						location: 'Курск'
+					})
+					+v-card({
+						title: 'Project Manager',
+						category: 'Разработка',
+						location: 'Курск'
+					})
+					+v-card({
+						title: '1С Разработчик',
+						category: 'Разработка',
+						location: 'Удаленная работа'
+					})

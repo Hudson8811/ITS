@@ -1,0 +1,26 @@
+-
+    const defaultvCardProps = {
+        classes: '',
+        title: '',
+        category: '',
+        location: ''
+    }
+
+mixin v-card(props = defaultvCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultvCardProps.classes,
+            title: props.title ? props.title : defaultvCardProps.title,
+            category: props.category ? props.category : defaultvCardProps.category,
+            location: props.location ? props.location : defaultvCardProps.location,
+        }
+
+    .v-card(class=checkProps.classes)&attributes(attributes)
+        a.v-card__link(href="javascript:void(0);")
+        .v-card__content
+            .v-card__title.title__28!= checkProps.title
+            .v-card__category!= checkProps.category
+            .v-card__location!= checkProps.location
+            .v-card__icon
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#arrow_link`)

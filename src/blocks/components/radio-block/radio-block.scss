@@ -1,0 +1,49 @@
+.radio-block {
+    display: flex;
+
+    &__item {
+        position: relative;
+        width: fit-content;
+        cursor: pointer;
+    }
+
+    &__input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__input+span {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__input+span span {
+        opacity: 0.6;
+    }
+}
+
+.radio-block {
+    &--links {
+        flex-direction: column;
+        gap: 24px;
+        font-size: 20px;
+    }
+
+    &--links &__input+span {
+        color: $fonBlack;
+        border-bottom: 1px solid transparent;
+        transition: all $tr-time linear;
+    }
+
+    &--links &__input:checked+span,
+    &--links &__input:hover+span {
+        color: $blue;
+        border-color: $blue;
+    }
+}

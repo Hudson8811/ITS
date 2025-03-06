@@ -1,0 +1,15 @@
+.vacancies {
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 64px;
+    }
+
+    &__filters {
+        flex: 0 0 auto;
+    }
+
+    &__list {
+        flex: 1 1 auto;
+    }
+}

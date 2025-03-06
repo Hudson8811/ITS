@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Вакансии</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+    <div class="section__header animate__animated animate__fadeInDown">
+      <div class="container"><a class="header__logo" href="index.html"> <img src="img/logo.png" alt="logo"></a>
+        <div class="header__menu"><a class="header__menu__item js-header__menu__item" href="#cases__section">Кейсы<sup>+1</sup></a><a class="header__menu__item js-header__menu__item" href="#">Экспертиза</a><a class="header__menu__item js-header__menu__item" href="#">Сколько стоит?</a><a class="header__menu__item js-header__menu__item" href="#tell-us">Контакты</a><a class="header__menu__item js-header__menu__item" href="#">Партнерам</a></div>
+        <div class="header__other"><a class="header__other__item header__other__item__tg header__other__lang--desc" href="https://t.me/itspacegroup_bot">@itspacegroup_bot</a><a class="header__other__item header__other__item__mail header__other__lang--desc" href="mailto:mail@itspace.group">mail@itspace.group</a><a class="header__other__item header__other__item__fon" href="tel:+74999384899">+7(499) 938-48-99</a><button class="hamburger hamburger--collapse" type="button">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</button>
+        </div>
+      </div>
+    </div>
+    <div class="mob-menu__section">
+      <div class="mob-menu--overlay"></div>
+      <div class="mob-menu">
+        <div class="mob-menu__list"><a class="mob-menu__list__item js-header__menu__item" href="#cases__section"> Кейсы</a><a class="mob-menu__list__item js-header__menu__item" href="#"> Экспертиза</a><a class="mob-menu__list__item js-header__menu__item" href="#"> Сколько стоит?</a><a class="mob-menu__list__item js-header__menu__item" href="#tell-us"> Контакты</a><a class="mob-menu__list__item js-header__menu__item" href="#"> Партнерам</a></div>
+        <div class="mob-menu__bottom">
+          <div class="mob-menu__fone mob-menu__link"><a href="tel:+74999384899">+7(499) 938-48-99</a></div>
+          <div class="mob-menu__mail mob-menu__link"><a href="https://t.me/itspacegroup_bot">@itspacegroup_bot</a></div>
+          <div class="mob-menu__mail mob-menu__link"><a href="mailto:mail@itspace.group">mail@itspace.group</a></div>
+          <div class="btn btn--small mob-menu__btn js-show-form" href="javascript:;">Оставить заявку</div>
+        </div>
+      </div>
+    </div>
+    <main class="site-main">
+      <div class="section section--top section--bottom vacancies">
+        <div class="container">
+          <h1 class="section__title title__65">Вакансии</h1>
+          <div class="case-page__filter">
+            <label class="checkbox">
+              <input class="custom-checkbox" type="radio" name="vacancies-filters" value="Все" checked><span>Все <span>15</span></span>
+            </label>
+            <label class="checkbox">
+              <input class="custom-checkbox" type="radio" name="vacancies-filters" value="Разработка"><span>Разработка <span>11</span></span>
+            </label>
+            <label class="checkbox">
+              <input class="custom-checkbox" type="radio" name="vacancies-filters" value="Отдел продаж"><span>Отдел продаж <span>4</span></span>
+            </label>
+          </div>
+          <div class="vacancies__content">
+            <div class="vacancies__filters">
+                  <div class="radio-block  radio-block--links">
+                    <label class="radio-block__item">
+                      <input class="radio-block__input" type="radio" name="" value="Все &lt;span&gt;15&lt;/span&gt;" checked><span>Все <span>15</span></span>
+                    </label>
+                    <label class="radio-block__item">
+                      <input class="radio-block__input" type="radio" name="" value="Курск &lt;span&gt;6&lt;/span&gt;"><span>Курск <span>6</span></span>
+                    </label>
+                    <label class="radio-block__item">
+                      <input class="radio-block__input" type="radio" name="" value="Удалённая работа &lt;span&gt;7&lt;/span&gt;"><span>Удалённая работа <span>7</span></span>
+                    </label>
+                    <label class="radio-block__item">
+                      <input class="radio-block__input" type="radio" name="" value="Москва &lt;span&gt;2&lt;/span&gt;"><span>Москва <span>2</span></span>
+                    </label>
+                  </div>
+            </div>
+            <div class="vacancies__list">
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Системный администратор Linux</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Курск</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Тестировщик</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Курск</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Менеджер по развитию</div>
+                      <div class="v-card__category">Отдел продаж</div>
+                      <div class="v-card__location">Удаленная работа</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Системный аналитик (Mid/Sen)</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Удаленная работа</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Java разработчик</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Удаленная работа</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Android разработчик</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Удаленная работа</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">QA auto (Java)</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Удаленная работа</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Аккаунт директор</div>
+                      <div class="v-card__category">Отдел продаж</div>
+                      <div class="v-card__location">Москва</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Системный/бизнес аналитик (Mid/Mid+)</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Удаленная работа</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Программист 1C (Mid/ Sen)</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Курск</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Sales 1C (Mid/ Sen)</div>
+                      <div class="v-card__category">Отдел продаж</div>
+                      <div class="v-card__location">Курск</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Исследователь</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Москва</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Sales Manager</div>
+                      <div class="v-card__category">Отдел продаж</div>
+                      <div class="v-card__location">Курск</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">Project Manager</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Курск</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="v-card"><a class="v-card__link" href="javascript:void(0);"></a>
+                    <div class="v-card__content">
+                      <div class="v-card__title title__28">1С Разработчик</div>
+                      <div class="v-card__category">Разработка</div>
+                      <div class="v-card__location">Удаленная работа</div>
+                      <div class="v-card__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_link"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="tell-us__section section" id="tell-us">
+      <div class="container">
+        <div class="tell-us">
+          <div class="tell-us__col">
+            <div class="tell-us__title title__65">Расскажите нам<br><span>о вашем проекте</span>
+            </div>
+            <div class="tell-us__QR">
+              <div class="tell-us__QR__title">Если удобнее, пишите в телеграмм
+              </div>
+              <div class="tell-us__QR__picture"><img src="img/qr.png" alt=""></div>
+            </div>
+          </div>
+          <div class="tell-us__col">
+            <form class="form js-contact-form" method="POST">
+              <input type="hidden" name="mode" value="mail-request">
+              <div class="form-field" style="display:none;">
+                <input type="text" name="tel" value="">
+              </div>
+              <div class="form__title">Какие задачи перед нами <br>стоят?
+              </div>
+              <div class="form__checkbox">
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный сайт"><span>Корпоративный сайт</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-магазин"><span>Интернет-магазин</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный портал"><span>Корп. портал</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Личный кабинет"><span>Личный кабинет</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-каталог"><span>Интернет-каталог</span>
+                </label>
+                <label class="checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Мобильное приложение"><span>Мобильное приложение</span>
+                </label>
+              </div>
+              <div class="contacts__form">
+                <div class="contacts__form__input-block">
+                  <input class="contacts__form__input text__13" type="text" name="fio" required>
+                  <div class="contacts__form__input-block__name">	Имя и фамилия*</div>
+                  <div class="contacts__form__input-block__error">Неправильное имя</div>
+                </div>
+                <div class="contacts__form__input-block">
+                  <input class="contacts__form__input js-mask-phone" type="tel" name="contact" required>
+                  <div class="contacts__form__input-block__name">Телефон*</div>
+                  <div class="contacts__form__input-block__error">Неправильный телефон</div>
+                </div>
+                <div class="contacts__form__input-block">
+                  <input class="contacts__form__input text__13" type="email" name="pochta" required>
+                  <div class="contacts__form__input-block__name">Email*</div>
+                  <div class="contacts__form__input-block__error">Неправильный email</div>
+                </div>
+                <div class="contacts__form__input-block">
+                  <select class="contacts__form__select" name="sum">
+                    <option></option>
+                    <option value="До 500 тыс руб.">До 500 тыс руб.</option>
+                    <option value="От 500 тыс до 1,5 млн руб.">От 500 тыс до 1,5 млн руб.</option>
+                    <option value="От 1,5 млн до 5 млн руб.">От 1,5 млн до 5 млн руб.</option>
+                    <option value="От 5 млн руб.">От 5 млн руб.</option>
+                    <div class="localities-centers__select-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                    </div>
+                  </select>
+                </div>
+                <div class="contacts__form__input-block">
+                  <textarea class="contacts__form__input contacts__form__input--textarea text__13" name="msg"></textarea>
+                  <div class="contacts__form__input-block__name">Расскажите о своем проекте</div>
+                </div>
+              </div>
+              <div class="form__buttons">
+                <div class="form__buttons__text">
+                  <label class="form__check">
+                    <input type="checkbox" name="agree" value="1" required checked><span></span>
+                  </label>Я соглашаюсь на обработку персональных данных
+                </div>
+                <button class="btn--small" type="submit">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__section">
+      <div class="container"> 
+        <div class="footer">
+          <div class="footer__col">
+            <div class="footer__desc">
+              <div class="footer__title title__65">	Всегда<br><span>на связи</span>
+              </div>
+              <div class="footer__text text__18"> с 8 до 19 по МСК
+              </div>
+              <div class="soc"><a class="soc__item" href="#">
+                  <div class="soc__item__picture"> <img src="img/svg/tg--white.svg" alt="logo"></div></a><a class="soc__item" href="#"> 
+                  <div class="soc__item__picture"> <img src="img/svg/wt.svg" alt="logo"></div></a></div>
+              <div class="soc">
+                <p class="text__18">Читайте нас на:</p><a class="soc__item" href="https://vc.ru/u/4145713-itspacegroup" target="_blanc">
+                  <div class="soc__item__picture"><img src="img/svg/vc.svg" alt="logo"></div></a>
+              </div>
+            </div>
+            <div class="footer__years text__18"> ITS @2010-2023
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__offices">
+              <div class="footer__offices__row">
+                <div class="footer__office">
+                  <div class="footer__office__title">Москва</div><a class="footer__office__item footer__office__mail" href="mailto:mail@itspace.group">mail@itspace.group</a><a class="footer__office__item footer__office__tel" href="tel:+74999384899">+7(499) 938-48-99</a><a class="footer__office__item footer__office__tg" href="https://t.me/itspacegroup_bot"> @itspacegroup_bot<svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+<path d="M16.3933 16.5856V5.65674H5.4644" stroke="white" stroke-width="2"/>
+<path d="M16.5 5.5L6.6005 15.3995" stroke="white" stroke-width="2"/>
+</svg></a>
+                  <div class="footer__office__item footer__office__item--mob footer__office__adress"> 107031, г. Москва, ул. Рождественка, д. 20/8, стр. 5, оф. 2
+                  </div>
+                </div>
+                <div class="footer__office">
+                  <div class="footer__office__title">Курск</div><a class="footer__office__item footer__office__mail" href="mailto:mail@itspace.group">mail@itspace.group</a><a class="footer__office__item footer__office__tel" href="tel:+74999384899">+7(499) 938-48-99</a><a class="footer__office__item footer__office__tg" href="https://t.me/itspacegroup_bot"> @itspacegroup_bot<svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+<path d="M16.3933 16.5856V5.65674H5.4644" stroke="white" stroke-width="2"/>
+<path d="M16.5 5.5L6.6005 15.3995" stroke="white" stroke-width="2"/>
+</svg></a>
+                  <div class="footer__office__item footer__office__item--mob footer__office__adress"> 305001, г.Курск, ул. Ленина, д.60, оф. 17
+                  </div>
+                </div>
+              </div>
+              <div class="footer__offices__row footer__offices__row--desc">
+                <div class="footer__office">
+                  <div class="footer__office__item footer__office__adress"> 107031, г. Москва, ул. Рождественка, д. 20/8, стр. 5, оф. 2
+                  </div>
+                </div>
+                <div class="footer__office">
+                  <div class="footer__office__item footer__office__adress"> 305001, г.Курск, ул. Ленина, д.60, оф. 17
+                  </div>
+                </div>
+              </div>
+            </div><a class="footer__politics" href="#">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modalThanks" id="modalThanks" style="display:none">
+      <div class="modalThanks__wrap">
+        <div class="modalThanks__title title__65">Благодарим за обращение!<br> <span>Мы не заставим Вас долго ждать!</span>
+        </div>
+        <div class="modalThanks__text text__18">Наш менеджер уже спешит на помощь :&nbsp;) 
+        </div>
+      </div>
+      <div class="modalThanks__close" data-fancybox-close>
+         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+<path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
+</svg>
+      </div>
+    </div>
+    <div class="modalForm" id="modalForm" style="display:none">
+      <div class="modalForm__close" data-fancybox-close><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+<path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
+</svg>
+      </div>
+      <div class="modalForm__wrap">
+        <div class="modalForm__title">Расскажите нам о&nbsp;вашем проекте</div>
+        <div class="modalForm__inner">
+          <form class="form js-contact-form" method="POST">
+            <input type="hidden" name="mode" value="mail-request">
+            <div class="form-field" style="display:none;">
+              <input type="text" name="tel" value="">
+            </div>
+            <div class="form__title">Какие задачи перед нами <br>стоят?
+            </div>
+            <div class="form__checkbox">
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный сайт"><span>Корпоративный сайт</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-магазин"><span>Интернет-магазин</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный портал"><span>Корп. портал</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Личный кабинет"><span>Личный кабинет</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-каталог"><span>Интернет-каталог</span>
+              </label>
+              <label class="checkbox">
+                <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Мобильное приложение"><span>Мобильное приложение</span>
+              </label>
+            </div>
+            <div class="contacts__form">
+              <div class="contacts__form__input-block">
+                <input class="contacts__form__input text__13" type="text" name="fio" required>
+                <div class="contacts__form__input-block__name">   Имя и фамилия*</div>
+                <div class="contacts__form__input-block__error">Неправильное имя</div>
+              </div>
+              <div class="contacts__form__input-block">
+                <input class="contacts__form__input js-mask-phone" type="tel" name="contact" required>
+                <div class="contacts__form__input-block__name">Телефон*</div>
+                <div class="contacts__form__input-block__error">Неправильный телефон</div>
+              </div>
+              <div class="contacts__form__input-block">
+                <input class="contacts__form__input text__13" type="email" name="pochta" required>
+                <div class="contacts__form__input-block__name">Email*</div>
+                <div class="contacts__form__input-block__error">Неправильный email</div>
+              </div>
+              <div class="contacts__form__input-block">
+                <select class="contacts__form__select" name="sum">
+                  <option></option>
+                  <option value="До 500 тыс руб.">До 500 тыс руб.</option>
+                  <option value="От 500 тыс до 1,5 млн руб.">От 500 тыс до 1,5 млн руб.</option>
+                  <option value="От 1,5 млн до 5 млн руб.">От 1,5 млн до 5 млн руб.</option>
+                  <option value="От 5 млн руб.">От 5 млн руб.</option>
+                  <div class="localities-centers__select-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                  </div>
+                </select>
+              </div>
+              <div class="contacts__form__input-block">
+                <textarea class="contacts__form__input contacts__form__input--textarea text__13" name="msg"></textarea>
+                <div class="contacts__form__input-block__name">Расскажите о своем проекте</div>
+              </div>
+            </div>
+            <div class="form__buttons">
+              <div class="form__buttons__text">
+                <label class="form__check">
+                  <input type="checkbox" name="agree" value="1" required checked><span></span>
+                </label>Я соглашаюсь на обработку персональных данных
+              </div>
+              <button class="btn--small" type="submit">Оставить заявку</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

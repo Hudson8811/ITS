@@ -1,0 +1,32 @@
+-
+    const defaultRadioBlockProps = {
+        classes: '',
+        name: '',
+        vMode: 'links',
+        type: 'radio',
+        items: []
+    }
+
+mixin radio-block(props = defaultRadioBlockProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultRadioBlockProps.classes,
+            name: props.name ? props.name : defaultRadioBlockProps.name,
+            vMode: props.vMode ? props.vMode : defaultRadioBlockProps.vMode,
+            type: props.type ? props.type : defaultRadioBlockProps.type,
+            items: props.items ? props.items : defaultRadioBlockProps.items,
+        }
+
+        const vModeClass = ' radio-block--' + checkProps.vMode
+
+    .radio-block(class=checkProps.classes + vModeClass)&attributes(attributes)
+        - let itemsCount = 0
+        - while(itemsCount < checkProps.items.length)
+            label.radio-block__item
+                - if(itemsCount == 0 && checkProps.type == 'radio')
+                    input.radio-block__input(type=checkProps.type name=checkProps.name value=checkProps.items[itemsCount] checked)
+                - else
+                    input.radio-block__input(type=checkProps.type name=checkProps.name value=checkProps.items[itemsCount])
+                span!= checkProps.items[itemsCount]
+
+            - itemsCount++
