@@ -1,0 +1,107 @@
+.field-file {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    border: 1px solid #d4d4d4;
+    padding: 40px 18px;
+    transition: all $tr-time linear;
+    margin: 20px 0;
+
+    &:hover {
+        border-color: $fonBlack;
+    }
+
+    &.field--invalid {
+        .field-file__error {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 4px);
+            display: block;
+            color: $error;
+            font-size: 14px;
+        }
+    }
+
+    &--full {
+        .field-file__fakeinput {
+            .icon-empty {
+                display: none;
+            }
+
+            .icon-full {
+                display: block;
+            }
+        }
+    }
+
+    &__fakeinput {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        gap: 8px;
+        color: $fonBlack;
+        font-size: 18px;
+        line-height: 1.4em;
+        font-weight: 500;
+        outline: none;
+        cursor: pointer;
+        transition: color $tr-time linear;
+        word-break: break-all;
+
+        .icon-empty {
+            width: 24px;
+            height: 24px;
+            display: block;
+            flex-shrink: 0;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                color: $greyBlack;
+                transition: color $tr-time linear;
+            }
+        }
+
+        .icon-full {
+            display: none;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+
+            &:hover svg {
+                color: $blue;
+            }
+
+            &:hover~span {
+                color: $fonBlack;
+            }
+
+            svg {
+                width: 24px;
+                height: 24px;
+                transition: color $tr-time linear;
+                color: $greyBlack;
+            }
+        }
+    }
+
+    /*&__note {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.02em;
+        color: #B0B2B7;
+        font-size: 11px;
+    }*/
+
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        z-index: -10;
+    }
+}

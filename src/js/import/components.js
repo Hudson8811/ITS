@@ -1,3 +1,5 @@
+@@include("../../blocks/components/field-file/field-file.js")
+
 $(document).ready(function() {
 	var videoCase = $('.case__video');
 	var blockPreloader = $('.block-preloader');
@@ -28,4 +30,7 @@ $(document).ready(function() {
 			checkVideoLoaded();
 		}
 	}
+
+	// Импортированные функции
+	fileFieldInit()
 });

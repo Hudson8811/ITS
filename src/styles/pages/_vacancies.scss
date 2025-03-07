@@ -3,6 +3,17 @@
         display: flex;
         align-items: flex-start;
         gap: 64px;
+        margin-top: 48px;
+
+        @include max(md) {
+            gap: 48px;
+        }
+
+        @include max(sm) {
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 32px;
+        }
     }
 
     &__filters {
@@ -11,5 +22,101 @@
 
     &__list {
         flex: 1 1 auto;
+
+        @include max(sm) {
+            width: 100%;
+        }
+    }
+}
+
+.vacancy {
+    &__content {
+
+        margin-top: 64px;
+
+        @include max(sm) {
+            margin-top: 32px;
+        }
+    }
+
+    &__location {
+        font-weight: 400;
+        width: fit-content;
+        margin-top: 32px;
+        padding: 8px 32px;
+        border: 2px solid $blue;
+        border-radius: 32px;
+    }
+
+    &__desc {
+        flex: 1 1 auto;
+        font-size: 18px;
+        font-weight: 400;
+
+        @include max(sm) {
+            width: 100%;
+        }
+
+
+        h2,
+        h3 {
+            font-size: 32px;
+            margin-bottom: 0.75em;
+            margin-top: 1.25em;
+            font-weight: 500;
+        }
+
+        ul {
+            padding: 0 0 0 1.2em;
+            list-style: disc;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8em;
+        }
+
+        ul li {}
+
+        &>*:first-child {
+            margin-top: 0;
+        }
+
+        &>*:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.vacancy-response {
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 48px;
+    }
+}
+
+.vacancy-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+
+    @include max(md) {
+        gap: 32px;
+    }
+
+    @include max(sm) {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__left {
+        flex: 0 0 530px;
+    }
+
+    &__right {
+        flex: 1 1 auto;
+
+        @include max(sm) {
+            width: 100%;
+        }
     }
 }

@@ -1,0 +1,108 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Вакансия";
+	- const noTellUs = true;
+
+block content
+	.section.section--bottom.vacancy
+		.container
+			a.back-link(href="javascript:void(0);")
+				svg
+					use(xlink:href=`img/sprites/sprite.svg#arrow_long`)
+				span Вакансии
+
+			.vacancy-flex.vacancy__content
+				.vacancy-flex__left
+					h1.section__title.title__65 Системный администратор Linux
+					.vacancy__location.title__28 Курск
+
+				.vacancy-flex__right.vacancy__desc
+					h2 Задачи:
+					ul
+						li Поддержание IT-инфраструктуры в надлежащем состоянии (мониторинг, бэкапы, обновление, совершенствование).
+						li Курирование и координация членов команды, распределение задач.
+
+					h2 Требования:
+					ul
+						li Опыт администрирования Linux-систем от 5 лет;
+						li Опыт наставничества/координации работы сотрудников.
+
+					h2 Базовые навыки:
+					ul
+						li Аналитический склад ума и критическое мышление;
+						li Администрирование GNU/Linux и Windows-серверов
+						li Опыт настройки iptables, LAMP/LNMP
+						li Виртуализация
+						li Умение писать скрипты на языке Bash
+						li DevOps
+						li PostgreSQL, MySQL
+
+					h2 Наши стэки:
+					ul
+						li Proxmox, Zimbra, Gitlab, Gitlab CI, ISPmanager, Nextcloud
+						li Prometheus, Grafana, Graylog
+
+					h2 Будет плюсом:
+					ul
+						li Kubernetes/Rancher
+						li Docker
+						li TeamCity/Jenkins
+						li CI/CD
+						li Опыт в Highload
+						li Elastic Search / Sphinx
+
+					h2 От нас:
+					ul
+						li Трудоустройство по ТК РФ;
+						li Адаптивные бизнес-процессы внутри компании;
+						li Отличная возможность вместе с профессиональной командой создавать продукты, которыми будут пользоваться миллионы людей;
+						li Расширенный ДМС;
+						li Скидки на обучение английскому языку;
+						li Частичная компенсация занятий спортом/тренажерного зала;
+						li Комфортабельное рабочее место, необходимое оборудование;
+						li Обучение за счет компании, участие в митапах.
+
+	.section.section--bottom.vacancy-response
+		.container
+			.vacancy-flex.vacancy-response__content
+				.vacancy-flex__left
+					h2.section__title.title__65 Откликнуться <span>на&nbsp;вакансию</span>
+				.vacancy-flex__right
+					form.vacancy-response__form.form.js-contact-form(method="POST")
+						.contacts__form
+							.contacts__form__input-block
+								input(type="text" name="fio" required).contacts__form__input.text__13
+								.contacts__form__input-block__name 	Имя и фамилия*
+								.contacts__form__input-block__error Неправильное имя
+							.contacts__form__input-block
+								input(type="tel" name="contact" required).contacts__form__input.js-mask-phone
+								.contacts__form__input-block__name Телефон*
+								.contacts__form__input-block__error Неправильный телефон
+							.contacts__form__input-block
+								input(type="email" name="pochta" required).contacts__form__input.text__13
+								.contacts__form__input-block__name Email*
+								.contacts__form__input-block__error Неправильный email
+							.contacts__form__input-block
+								input(type="text" name="portfolio-link").contacts__form__input.text__13
+								.contacts__form__input-block__name Ссылка на портфолио
+								.contacts__form__input-block__error Неправильная ссылка
+							.contacts__form__input-block
+								textarea(name="msg" required).contacts__form__input.contacts__form__input--textarea.text__13
+								.contacts__form__input-block__name Сопроводительное письмо*
+								.contacts__form__input-block__error Обязательное поле
+							+field-file({
+								placeholder: 'Прикрепить резюме',
+								inputAttr: {
+									'data-size': '10485760',
+									'accept': 'image/*, text/plain, .docx, .pdf'
+								}
+							})
+						.form__buttons
+							.form__buttons__text
+								label.form__check
+									input(type="checkbox" name="agree" value="1" required checked)
+									span
+								!="Я соглашаюсь на обработку персональных данных"
+							button.btn--small(type="submit") Оставить заявку

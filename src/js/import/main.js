@@ -198,6 +198,12 @@ jQuery(function () {
            }
        });
 
+       form.find('textarea[required]').each(function (){
+        if (!checkField($(this))){
+            allowSend = false;
+        }
+        });
+
        if (allowSend && allowAjaxForm){
            allowAjaxForm = false;
            let formData = form.serialize();

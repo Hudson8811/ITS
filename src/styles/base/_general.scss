@@ -59,10 +59,18 @@ body {
 
     &--top {
         padding-top: 93px;
+
+        @include max(md) {
+            padding-top: 50px;
+        }
     }
 
     &--bottom {
-        padding-bottom: 150px;
+        margin-bottom: 150px;
+
+        @include max(md) {
+            margin-bottom: 70px;
+        }
     }
 }
 
@@ -283,6 +291,34 @@ body {
 
 }
 
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $fonBlack;
+    text-decoration: none;
+    transition: color $tr-time linear, gap $tr-time linear;
+    font-size: 18px;
+    color: $greyBlack;
+
+    svg {
+        position: relative;
+        width: 27px;
+        height: 16px;
+        left: 0;
+        transition: left $tr-time linear;
+    }
+
+    &:hover {
+        color: $blue;
+        gap: 15px;
+
+        svg {
+            left: -3px;
+        }
+    }
+}
+
 @keyframes rotateCircle {
     0% {
         transform: rotate(0)
@@ -392,6 +428,18 @@ body {
     font-weight: 500;
     line-height: 120%;
     letter-spacing: -0.035em;
+
+    @include max(md) {
+        font-size: 24px;
+    }
+
+    @include max(xs) {
+        font-size: 20px;
+    }
+
+    @include max(xxs) {
+        font-size: 18px;
+    }
 }
 
 .text__24 {

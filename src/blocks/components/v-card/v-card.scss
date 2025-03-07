@@ -22,11 +22,29 @@
         gap: 16px;
         padding: 40px 0;
         z-index: 3;
+
+        @include max(xl) {
+            grid-template-columns: repeat(2, auto) minmax(0, 97%) minmax(15px, 3%);
+            gap: 8px 16px;
+        }
+
+        @include max(md) {
+            padding: 34px 0;
+        }
+
+        @include max(xs) {
+            gap: 4px 8px;
+            padding: 16px 0;
+        }
     }
 
     &__title {
         line-height: 1em;
         font-weight: 400;
+
+        @include max(xl) {
+            grid-column: 1 / 4;
+        }
     }
 
     &__category,
@@ -35,6 +53,14 @@
         font-weight: 400;
         line-height: 1.5em;
         color: $greyBlack;
+
+        @include max(xl) {
+            order: 2;
+        }
+
+        @include max(xs) {
+            font-size: 14px;
+        }
     }
 
     &__icon svg {

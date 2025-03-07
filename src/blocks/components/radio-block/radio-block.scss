@@ -21,6 +21,7 @@
     &__input+span {
         display: flex;
         gap: 8px;
+        user-select: none;
     }
 
     &__input+span span {
@@ -33,6 +34,15 @@
         flex-direction: column;
         gap: 24px;
         font-size: 20px;
+
+        @include max(xl) {
+            font-size: 18px;
+        }
+
+        @include max(sm) {
+            font-size: 16px;
+            gap: 16px;
+        }
     }
 
     &--links &__input+span {
@@ -42,8 +52,55 @@
     }
 
     &--links &__input:checked+span,
-    &--links &__input:hover+span {
+    &--links &__item:hover &__input+span {
         color: $blue;
         border-color: $blue;
     }
+}
+
+.radio-block {
+    &--tags {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 30px;
+
+        @include max(md) {
+            gap: 10px;
+        }
+    }
+
+    &--tags &__input+span {
+        background: $tagsBg;
+        transition: all $tr-time linear;
+    }
+
+    &--tags &__item:hover &__input+span {
+        background: $greyHover;
+    }
+
+    &--tags &__item &__input+span {
+        align-items: center;
+        padding: 0px 25px;
+        min-height: 52px;
+        border-radius: 56px;
+        font-size: 16px;
+        border: 1px solid $greyHover;
+
+        @include max(xs) {
+            padding: 5px 15px;
+            min-height: 40px;
+            font-size: 14px;
+        }
+    }
+
+    &--tags &__item &__input:checked+span {
+        background: $blue;
+        color: $white;
+        border-color: $blue;
+    }
+
+    &--tags &__item span>span {
+        opacity: 0.6;
+    }
+
 }
