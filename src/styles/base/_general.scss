@@ -2174,6 +2174,7 @@ body {
         text-decoration: none;
         transition: all 0.3s;
         margin-bottom: 20px;
+        text-align: center;
 
         @include max(md) {
             margin: 0 10px 15px;

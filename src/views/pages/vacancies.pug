@@ -20,18 +20,51 @@ block content
 					input.custom-checkbox(type="radio" name="vacancies-filters" value="Отдел продаж")
 					span Отдел продаж <span>4</span>
 
+			+radio-block({
+				classes: '',
+				name: 'vacancies-category',
+				vMode: 'tags',
+				type: 'radio',
+				items: [
+					{
+						name: 'Все <span>15</span>',
+						value: 'Все'
+					},
+					{
+						name: 'Разработка <span>11</span>',
+						value: 'Разработка'
+					},
+					{
+						name: 'Отдел продаж <span>4</span>',
+						value: 'Отдел продаж'
+					}
+				]
+			})
+
 			.vacancies__content
 				.vacancies__filters
 					+radio-block({
 						classes: '',
-						name: '',
+						name: 'vacancies-location',
 						vMode: 'links',
 						type: 'radio',
 						items: [
-							'Все <span>15</span>',
-							'Курск <span>6</span>',
-							'Удалённая работа <span>7</span>',
-							'Москва <span>2</span>'
+							{
+								name: 'Все <span>15</span>',
+								value: 'Все'
+							},
+							{
+								name: 'Курск <span>6</span>',
+								value: 'Курск'
+							},
+							{
+								name: 'Удалённая работа <span>7</span>',
+								value: 'Удалённая работа'
+							},
+							{
+								name: 'Москва <span>2</span>',
+								value: 'Москва'
+							},
 						]
 					})
 				.vacancies__list

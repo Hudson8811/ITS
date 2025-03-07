@@ -24,9 +24,9 @@ mixin radio-block(props = defaultRadioBlockProps)
         - while(itemsCount < checkProps.items.length)
             label.radio-block__item
                 - if(itemsCount == 0 && checkProps.type == 'radio')
-                    input.radio-block__input(type=checkProps.type name=checkProps.name value=checkProps.items[itemsCount] checked)
+                    input.radio-block__input(type=checkProps.type name=checkProps.name value=checkProps.items[itemsCount].value checked)
                 - else
-                    input.radio-block__input(type=checkProps.type name=checkProps.name value=checkProps.items[itemsCount])
-                span!= checkProps.items[itemsCount]
+                    input.radio-block__input(type=checkProps.type name=checkProps.name value=checkProps.items[itemsCount].value)
+                span!= checkProps.items[itemsCount].name
 
             - itemsCount++
