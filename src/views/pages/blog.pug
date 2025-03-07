@@ -1,0 +1,39 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Медиа";
+
+block content
+	.section.section--top.section--bottom.media
+		.container
+			h1.section__title.title__65 Медиа
+			+radio-block({
+				classes: '',
+				name: 'media-category',
+				vMode: 'tags',
+				type: 'radio',
+				items: [
+					{
+						name: 'Все',
+						value: 'Все'
+					},
+					{
+						name: 'Подкасты',
+						value: 'Подкасты'
+					},
+					{
+						name: 'Новости',
+						value: 'Новости'
+					},
+					{
+						name: 'Статьи',
+						value: 'Статьи'
+					}
+				]
+			})
+
+			.media__list
+				+blog-card({
+
+				})

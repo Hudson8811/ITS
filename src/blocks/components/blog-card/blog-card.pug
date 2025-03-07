@@ -1,0 +1,36 @@
+-
+    const defaultBlogCardProps = {
+        classes: '',
+        img: '',
+        title: '',
+        author: {},
+        bntText: '',
+        externalLink: false
+    }
+
+mixin blog-card(props = defaultBlogCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultBlogCardProps.classes,
+            img: props.img ? props.img : defaultBlogCardProps.img,
+            title: props.title ? props.title : defaultBlogCardProps.title,
+            author: props.author ? props.author : defaultBlogCardProps.author,
+            bntText: props.bntText ? props.bntText : defaultBlogCardProps.bntText,
+            externalLink: props.externalLink ? props.externalLink : defaultBlogCardProps.externalLink,
+        }
+
+    .blog-card(class=checkProps.classes)&attributes(attributes)
+        .blog-card__top
+            - if(checkProps.img.length > 0)
+                .blog-card__img
+                    img(src="")
+            .blog-card__title.title__28!= checkProps.title
+        .blog-card__bottom
+            - if(checkProps.externalLink == true)
+                a.blog-card__link(href="javascript:void(0)" target="_blank")!= checkProps.btnText
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+            - else
+                a.blog-card__link(href="javascript:void(0)")!= checkProps.btnText
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
