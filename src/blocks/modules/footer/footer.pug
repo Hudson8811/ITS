@@ -1,15 +1,162 @@
-#tell-us.tell-us__section.section
-	.container
-		.tell-us
-			.tell-us__col
-				.tell-us__title.title__65
-					!="Расскажите нам<br><span>о вашем проекте</span>"
-				.tell-us__QR
-					.tell-us__QR__title
-						!="Если удобнее, пишите в телеграмм"
-					.tell-us__QR__picture
-						img(src="img/qr.png", alt="",)
-			.tell-us__col
+mixin footer(noTellUs = false)
+
+	if(noTellUs == false)
+		#tell-us.tell-us__section.section
+			.container
+				.tell-us
+					.tell-us__col
+						.tell-us__title.title__65
+							!="Расскажите нам<br><span>о вашем проекте</span>"
+						.tell-us__QR
+							.tell-us__QR__title
+								!="Если удобнее, пишите в телеграмм"
+							.tell-us__QR__picture
+								img(src="img/qr.png" alt="",)
+					.tell-us__col
+						form.form.js-contact-form(method="POST")
+							input(type="hidden" name="mode" value="mail-request")
+							.form-field(style="display:none;")
+								input(type="text" name="tel" value="")
+							.form__title
+								!="Какие задачи перед нами <br>стоят?"
+							.form__checkbox
+								label.checkbox
+									input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный сайт")
+									span Корпоративный сайт
+								label.checkbox
+									input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-магазин")
+									span Интернет-магазин
+								label.checkbox
+									input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный портал")
+									span Корп. портал
+								label.checkbox
+									input.custom-checkbox(type="checkbox" name="subjects[]" value="Личный кабинет")
+									span Личный кабинет
+								label.checkbox
+									input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-каталог")
+									span Интернет-каталог
+
+								label.checkbox
+									input.custom-checkbox(type="checkbox" name="subjects[]" value="Мобильное приложение")
+									span Мобильное приложение
+							.contacts__form
+								.contacts__form__input-block
+									input(type="text" name="fio" required).contacts__form__input.text__13
+									.contacts__form__input-block__name 	Имя и фамилия*
+									.contacts__form__input-block__error Неправильное имя
+								.contacts__form__input-block
+									input(type="tel" name="contact" required).contacts__form__input.js-mask-phone
+									.contacts__form__input-block__name Телефон*
+									.contacts__form__input-block__error Неправильный телефон
+								.contacts__form__input-block
+									input(type="email" name="pochta" required).contacts__form__input.text__13
+									.contacts__form__input-block__name Email*
+									.contacts__form__input-block__error Неправильный email
+								.contacts__form__input-block
+									select.contacts__form__select(name="sum")
+										option
+										option(value="До 500 тыс руб.") До 500 тыс руб.
+										option(value="От 500 тыс до 1,5 млн руб.") От 500 тыс до 1,5 млн руб.
+										option(value="От 1,5 млн до 5 млн руб.") От 1,5 млн до 5 млн руб.
+										option(value="От 5 млн руб.") От 5 млн руб.
+										.localities-centers__select-arrow
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+											<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+											</svg>
+								.contacts__form__input-block
+									textarea(name="msg").contacts__form__input.contacts__form__input--textarea.text__13
+									.contacts__form__input-block__name Расскажите о своем проекте
+							.form__buttons
+								.form__buttons__text
+									label.form__check
+										input(type="checkbox" name="agree" value="1" required checked)
+										span
+									!="Я соглашаюсь на обработку персональных данных"
+								button.btn--small(type="submit") Оставить заявку
+	.footer__section
+		.container 
+			.footer
+				.footer__col
+					.footer__desc
+						.footer__title.title__65 	
+							!="Всегда<br><span>на связи</span>"
+						.footer__text.text__18 
+							!="с 8 до 19 по МСК"
+						.soc
+							a(href="#").soc__item
+								.soc__item__picture 
+									img(src="img/svg/tg--white.svg" alt="logo")
+							a(href="#").soc__item 
+								.soc__item__picture 
+									img(src="img/svg/wt.svg" alt="logo")
+							//- a(href="#").soc__item
+							//- 	.soc__item__picture 
+							//- 		img(src="img/svg/sms-white.svg" alt="logo")
+						.soc
+							p(class="text__18") Читайте нас на:
+							a(href="https://vc.ru/u/4145713-itspacegroup" target="_blanc").soc__item
+
+								.soc__item__picture
+									img(src="img/svg/vc.svg" alt="logo")
+					.footer__years.text__18 
+						!="ITS @2010-2023"
+
+				.footer__col
+					.footer__offices
+						.footer__offices__row
+							.footer__office
+								.footer__office__title Москва
+								a(href="mailto:mail@itspace.group").footer__office__item.footer__office__mail mail@itspace.group
+								a(href="tel:+74999384899").footer__office__item.footer__office__tel +7(499) 938-48-99
+								a(href="https://t.me/itspacegroup_bot").footer__office__item.footer__office__tg 
+									!="@itspacegroup_bot"
+									<svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+									<path d="M16.3933 16.5856V5.65674H5.4644" stroke="white" stroke-width="2"/>
+									<path d="M16.5 5.5L6.6005 15.3995" stroke="white" stroke-width="2"/>
+									</svg>
+								.footer__office__item.footer__office__item--mob.footer__office__adress 
+									!="107031, г. Москва, ул. Рождественка, д. 20/8, стр. 5, оф. 2"
+							.footer__office
+								.footer__office__title Курск
+								a(href="mailto:mail@itspace.group").footer__office__item.footer__office__mail mail@itspace.group
+								a(href="tel:+74999384899").footer__office__item.footer__office__tel +7(499) 938-48-99
+								a(href="https://t.me/itspacegroup_bot").footer__office__item.footer__office__tg 
+									!="@itspacegroup_bot"
+									<svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+									<path d="M16.3933 16.5856V5.65674H5.4644" stroke="white" stroke-width="2"/>
+									<path d="M16.5 5.5L6.6005 15.3995" stroke="white" stroke-width="2"/>
+									</svg>
+								.footer__office__item.footer__office__item--mob.footer__office__adress 
+									!="305001, г.Курск, ул. Ленина, д.60, оф. 17"
+						.footer__offices__row.footer__offices__row--desc
+							.footer__office
+								.footer__office__item.footer__office__adress 
+									!="107031, г. Москва, ул. Рождественка, д. 20/8, стр. 5, оф. 2"
+							.footer__office
+								.footer__office__item.footer__office__adress 
+									!="305001, г.Курск, ул. Ленина, д.60, оф. 17"
+					a(href="#").footer__politics Политика конфиденциальности
+
+	#modalThanks.modalThanks(style="display:none")
+		.modalThanks__wrap
+			.modalThanks__title.title__65
+				!="Благодарим за обращение!<br> <span>Мы не заставим Вас долго ждать!</span>"
+			.modalThanks__text.text__18
+				!="Наш менеджер уже спешит на помощь :&nbsp;) "
+		.modalThanks__close(data-fancybox-close) 
+			<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+			<path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
+			</svg>
+
+
+	#modalForm.modalForm(style="display:none")
+		.modalForm__close(data-fancybox-close)
+			<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+			<path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
+			</svg>
+		.modalForm__wrap
+			.modalForm__title Расскажите нам о&nbsp;вашем проекте
+			.modalForm__inner
 				form.form.js-contact-form(method="POST")
 					input(type="hidden" name="mode" value="mail-request")
 					.form-field(style="display:none;")
@@ -39,7 +186,7 @@
 					.contacts__form
 						.contacts__form__input-block
 							input(type="text" name="fio" required).contacts__form__input.text__13
-							.contacts__form__input-block__name 	Имя и фамилия*
+							.contacts__form__input-block__name    Имя и фамилия*
 							.contacts__form__input-block__error Неправильное имя
 						.contacts__form__input-block
 							input(type="tel" name="contact" required).contacts__form__input.js-mask-phone
@@ -70,147 +217,3 @@
 								span
 							!="Я соглашаюсь на обработку персональных данных"
 						button.btn--small(type="submit") Оставить заявку
-.footer__section
-	.container 
-		.footer
-			.footer__col
-				.footer__desc
-					.footer__title.title__65 	
-						!="Всегда<br><span>на связи</span>"
-					.footer__text.text__18 
-						!="с 8 до 19 по МСК"
-					.soc
-						a(href="#").soc__item
-							.soc__item__picture 
-								img(src="img/svg/tg--white.svg", alt="logo")
-						a(href="#").soc__item 
-							.soc__item__picture 
-								img(src="img/svg/wt.svg", alt="logo")
-						//- a(href="#").soc__item
-						//- 	.soc__item__picture 
-						//- 		img(src="img/svg/sms-white.svg", alt="logo")
-					.soc
-						p(class="text__18") Читайте нас на:
-						a(href="https://vc.ru/u/4145713-itspacegroup" target="_blanc").soc__item
-
-							.soc__item__picture
-								img(src="img/svg/vc.svg", alt="logo")
-				.footer__years.text__18 
-					!="ITS @2010-2023"
-						
-			.footer__col
-				.footer__offices
-					.footer__offices__row
-						.footer__office
-							.footer__office__title Москва
-							a(href="mailto:mail@itspace.group").footer__office__item.footer__office__mail mail@itspace.group
-							a(href="tel:+74999384899").footer__office__item.footer__office__tel +7(499) 938-48-99
-							a(href="https://t.me/itspacegroup_bot").footer__office__item.footer__office__tg 
-								!="@itspacegroup_bot"
-								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
-								<path d="M16.3933 16.5856V5.65674H5.4644" stroke="white" stroke-width="2"/>
-								<path d="M16.5 5.5L6.6005 15.3995" stroke="white" stroke-width="2"/>
-								</svg>
-							.footer__office__item.footer__office__item--mob.footer__office__adress 
-								!="107031, г. Москва, ул. Рождественка, д. 20/8, стр. 5, оф. 2"
-						.footer__office
-							.footer__office__title Курск
-							a(href="mailto:mail@itspace.group").footer__office__item.footer__office__mail mail@itspace.group
-							a(href="tel:+74999384899").footer__office__item.footer__office__tel +7(499) 938-48-99
-							a(href="https://t.me/itspacegroup_bot").footer__office__item.footer__office__tg 
-								!="@itspacegroup_bot"
-								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
-								<path d="M16.3933 16.5856V5.65674H5.4644" stroke="white" stroke-width="2"/>
-								<path d="M16.5 5.5L6.6005 15.3995" stroke="white" stroke-width="2"/>
-								</svg>
-							.footer__office__item.footer__office__item--mob.footer__office__adress 
-								!="305001, г.Курск, ул. Ленина, д.60, оф. 17"
-					.footer__offices__row.footer__offices__row--desc
-						.footer__office
-							.footer__office__item.footer__office__adress 
-								!="107031, г. Москва, ул. Рождественка, д. 20/8, стр. 5, оф. 2"
-						.footer__office
-							.footer__office__item.footer__office__adress 
-								!="305001, г.Курск, ул. Ленина, д.60, оф. 17"
-				a(href="#").footer__politics Политика конфиденциальности
-
-#modalThanks.modalThanks(style="display:none")
-	.modalThanks__wrap
-		.modalThanks__title.title__65
-			!="Благодарим за обращение!<br> <span>Мы не заставим Вас долго ждать!</span>"
-		.modalThanks__text.text__18
-			!="Наш менеджер уже спешит на помощь :&nbsp;) "
-	.modalThanks__close(data-fancybox-close) 
-		<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-		<path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
-		</svg>
-
-
-#modalForm.modalForm(style="display:none")
-	.modalForm__close(data-fancybox-close)
-		<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-		<path d="M1 1L25 25M25 1L1 25" stroke="#1F2120" stroke-width="1.5"/>
-		</svg>
-	.modalForm__wrap
-		.modalForm__title Расскажите нам о&nbsp;вашем проекте
-		.modalForm__inner
-			form.form.js-contact-form(method="POST")
-				input(type="hidden" name="mode" value="mail-request")
-				.form-field(style="display:none;")
-					input(type="text" name="tel" value="")
-				.form__title
-					!="Какие задачи перед нами <br>стоят?"
-				.form__checkbox
-					label.checkbox
-						input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный сайт")
-						span Корпоративный сайт
-					label.checkbox
-						input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-магазин")
-						span Интернет-магазин
-					label.checkbox
-						input.custom-checkbox(type="checkbox" name="subjects[]" value="Корпоративный портал")
-						span Корп. портал
-					label.checkbox
-						input.custom-checkbox(type="checkbox" name="subjects[]" value="Личный кабинет")
-						span Личный кабинет
-					label.checkbox
-						input.custom-checkbox(type="checkbox" name="subjects[]" value="Интернет-каталог")
-						span Интернет-каталог
-
-					label.checkbox
-						input.custom-checkbox(type="checkbox" name="subjects[]" value="Мобильное приложение")
-						span Мобильное приложение
-				.contacts__form
-					.contacts__form__input-block
-						input(type="text" name="fio" required).contacts__form__input.text__13
-						.contacts__form__input-block__name    Имя и фамилия*
-						.contacts__form__input-block__error Неправильное имя
-					.contacts__form__input-block
-						input(type="tel" name="contact" required).contacts__form__input.js-mask-phone
-						.contacts__form__input-block__name Телефон*
-						.contacts__form__input-block__error Неправильный телефон
-					.contacts__form__input-block
-						input(type="email" name="pochta" required).contacts__form__input.text__13
-						.contacts__form__input-block__name Email*
-						.contacts__form__input-block__error Неправильный email
-					.contacts__form__input-block
-						select.contacts__form__select(name="sum")
-							option
-							option(value="До 500 тыс руб.") До 500 тыс руб.
-							option(value="От 500 тыс до 1,5 млн руб.") От 500 тыс до 1,5 млн руб.
-							option(value="От 1,5 млн до 5 млн руб.") От 1,5 млн до 5 млн руб.
-							option(value="От 5 млн руб.") От 5 млн руб.
-							.localities-centers__select-arrow
-								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
-								<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
-								</svg>
-					.contacts__form__input-block
-						textarea(name="msg").contacts__form__input.contacts__form__input--textarea.text__13
-						.contacts__form__input-block__name Расскажите о своем проекте
-				.form__buttons
-					.form__buttons__text
-						label.form__check
-							input(type="checkbox" name="agree" value="1" required checked)
-							span
-						!="Я соглашаюсь на обработку персональных данных"
-					button.btn--small(type="submit") Оставить заявку

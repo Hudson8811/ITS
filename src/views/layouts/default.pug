@@ -37,8 +37,9 @@ html(lang="ru")
 
 		main.site-main
 			block content
+
 		block footer
-			include ../../blocks/modules/footer/footer
+			+footer(noTellUs)
 
 		block scripts
 			script(src="js/main.js")
