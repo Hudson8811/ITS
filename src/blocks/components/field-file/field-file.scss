@@ -1,14 +1,14 @@
 .field-file {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     width: 100%;
-    padding: 0;
-    border: 1px solid #d4d4d4;
-    padding: 40px 18px;
+    padding: 20px 18px 20px 0;
+    border-bottom: 1px solid $greyHover;
     transition: all $tr-time linear;
-    margin: 20px 0;
+    margin: 0 0 40px;
+    cursor: pointer;
 
     &:hover {
         border-color: $fonBlack;
@@ -23,6 +23,10 @@
             color: $error;
             font-size: 14px;
         }
+
+        .field-file__note {
+            display: none;
+        }
     }
 
     &--full {
@@ -34,6 +38,10 @@
             .icon-full {
                 display: block;
             }
+        }
+
+        .field-file__note {
+            display: none;
         }
     }
 
@@ -51,15 +59,23 @@
         transition: color $tr-time linear;
         word-break: break-all;
 
+        @include max(md) {
+            font-size: 20px;
+        }
+
+        @include max(xs) {
+            font-size: 18px;
+        }
+
         .icon-empty {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             display: block;
             flex-shrink: 0;
 
             svg {
-                width: 24px;
-                height: 24px;
+                width: 32px;
+                height: 32px;
                 color: $greyBlack;
                 transition: color $tr-time linear;
             }
@@ -67,8 +83,8 @@
 
         .icon-full {
             display: none;
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             flex-shrink: 0;
 
             &:hover svg {
@@ -80,21 +96,22 @@
             }
 
             svg {
-                width: 24px;
-                height: 24px;
+                width: 32px;
+                height: 32px;
                 transition: color $tr-time linear;
                 color: $greyBlack;
             }
         }
     }
 
-    /*&__note {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 1.02em;
-        color: #B0B2B7;
-        font-size: 11px;
-    }*/
+    &__note {
+        position: absolute;
+        bottom: 0;
+        top: calc(100% + 4px);
+        font-size: 14px;
+        font-weight: 400;
+        color: $greyBlack;
+    }
 
     &__input {
         position: absolute;

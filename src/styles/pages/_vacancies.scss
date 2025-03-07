@@ -46,6 +46,15 @@
         padding: 8px 32px;
         border: 2px solid $blue;
         border-radius: 32px;
+
+        @include max(sm) {
+            margin-top: 24px;
+        }
+
+        @include max(xs) {
+            margin-top: 16px;
+            padding: 4px 24px;
+        }
     }
 
     &__desc {
@@ -53,10 +62,17 @@
         font-size: 18px;
         font-weight: 400;
 
+        @include max(md) {
+            font-size: 16px;
+        }
+
         @include max(sm) {
             width: 100%;
         }
 
+        @include max(xxs) {
+            font-size: 14px;
+        }
 
         h2,
         h3 {
@@ -64,6 +80,18 @@
             margin-bottom: 0.75em;
             margin-top: 1.25em;
             font-weight: 500;
+
+            @include max(md) {
+                font-size: 28px;
+            }
+
+            @include max(xs) {
+                font-size: 24px;
+            }
+
+            @include max(xxs) {
+                font-size: 20px;
+            }
         }
 
         ul {
@@ -73,8 +101,6 @@
             flex-direction: column;
             gap: 0.8em;
         }
-
-        ul li {}
 
         &>*:first-child {
             margin-top: 0;
@@ -100,22 +126,41 @@
     gap: 48px;
 
     @include max(md) {
-        gap: 32px;
+        flex-direction: column;
     }
 
     @include max(sm) {
-        flex-direction: column;
-        gap: 16px;
+        gap: 32px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+
+        @include max(lg) {
+            font-size: 48px;
+        }
+
+        @include max(xs) {
+            margin-bottom: 0;
+        }
     }
 
     &__left {
         flex: 0 0 530px;
+
+        @include max(lg) {
+            flex-basis: 350px;
+        }
+
+        @include max(md) {
+            flex-basis: auto;
+        }
     }
 
     &__right {
         flex: 1 1 auto;
 
-        @include max(sm) {
+        @include max(md) {
             width: 100%;
         }
     }
