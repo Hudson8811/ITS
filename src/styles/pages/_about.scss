@@ -1,0 +1,90 @@
+.about {
+    &__title {
+        line-height: 1.1em;
+    }
+
+    &__intro {
+        position: relative;
+    }
+
+    &__text {
+        margin-top: 76px;
+        width: calc(100% - 200px);
+        max-width: 1000px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 120px;
+        gap: 48px;
+        align-items: center;
+    }
+}
+
+.about-card {
+    &__title {
+        font-size: 170px;
+        line-height: 1em;
+        position: relative;
+        z-index: 5;
+
+        span {
+            font-size: 0.6em;
+            line-height: 1em;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        max-width: 550px;
+        position: relative;
+        z-index: 5;
+    }
+
+    &--small &__title {
+        font-size: 56px;
+    }
+
+    &--small &__text {
+        font-size: 22px;
+        margin-top: 16px;
+    }
+
+    &--decor {
+        padding: 50px 0;
+        position: relative;
+
+    }
+
+    &--decor::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: calc(100% + 16px);
+        width: 114px;
+        height: 100%;
+        background-color: transparent;
+        border: 30px solid $blue;
+        border-right-width: 0;
+        box-sizing: border-box;
+        z-index: 1;
+        opacity: 0.8;
+    }
+
+    &--decor::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 40%;
+        width: 114px;
+        height: 100%;
+        background-color: transparent;
+        border: 30px solid $blue;
+        border-left-width: 0;
+        box-sizing: border-box;
+        z-index: 1;
+        opacity: 0.8;
+    }
+
+}
