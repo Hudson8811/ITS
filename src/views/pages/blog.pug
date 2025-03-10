@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Медиа";
+	- const title = "Блог";
 
 block content
 	.section.section--top.section--bottom.blog
@@ -80,7 +80,8 @@ block content
 						name: 'Иван Викторов',
 						position: 'Системный аналитик',
 						photo: 'img/blog/person_2.webp'
-					}
+					},
+					articleLogo: '/img/blog/article_logo.webp'
 				})
 				+blog-card({
 					classes: 'grid-masonry-item',
@@ -111,10 +112,11 @@ block content
 					img: '',
 					title: 'Интеграция систем: что нужно знать заказчику перед стартом разработки',
 					btnText: 'Читать',
-					externalLink: false,
+					externalLink: true,
 					author: {
 						name: 'Иван Викторов',
 						position: 'Системный аналитик',
 						photo: 'img/blog/person_2.webp'
-					}
+					},
+					articleLogo: '/img/blog/article_logo.svg'
 				})

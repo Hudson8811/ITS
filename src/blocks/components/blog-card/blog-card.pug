@@ -5,7 +5,8 @@
         title: '',
         author: {},
         btnText: '',
-        externalLink: false
+        externalLink: false,
+        articleLogo: ''
     }
 
 mixin blog-card(props = defaultBlogCardProps)
@@ -17,6 +18,7 @@ mixin blog-card(props = defaultBlogCardProps)
             author: props.author ? props.author : defaultBlogCardProps.author,
             btnText: props.btnText ? props.btnText : defaultBlogCardProps.btnText,
             externalLink: props.externalLink ? props.externalLink : defaultBlogCardProps.externalLink,
+            articleLogo: props.articleLogo ? props.articleLogo : defaultBlogCardProps.articleLogo,
         }
 
         let linkTypeClass = checkProps.externalLink == true ? ' blog-card--external' : ''
@@ -32,6 +34,8 @@ mixin blog-card(props = defaultBlogCardProps)
                 .blog-card__img
                     img(src=checkProps.img)
             .blog-card__title.title__28!= checkProps.title
+                - if(checkProps.articleLogo.length > 0)
+                    img(src=checkProps.articleLogo)
 
         .blog-card__bottom
             .blog-card__author.blog-author

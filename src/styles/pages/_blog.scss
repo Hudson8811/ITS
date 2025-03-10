@@ -12,3 +12,38 @@
         }
     }
 }
+
+.blog-article {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 64px;
+
+        @include max(sm) {
+            margin-top: 32px;
+            gap: 16px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0;
+
+        @include max(xs) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__body {
+        margin-top: 48px;
+
+        @include max(sm) {
+            margin-top: 32px;
+        }
+    }
+
+    .text__style>* {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

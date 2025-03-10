@@ -46,6 +46,7 @@
     }
 
     &__title {
+        position: relative;
         line-height: 1.2em;
         max-height: 7.2em;
         min-height: 7.2em;
@@ -53,12 +54,30 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        padding-right: 56px;
+
+        @include max(sm) {
+            padding-right: 40px;
+        }
 
         @include max(xs) {
             min-height: auto;
         }
-    }
 
+        img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+
+            @include max(sm) {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
 
     &__bottom {
         display: flex;
