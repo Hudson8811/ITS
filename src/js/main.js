@@ -5,6 +5,7 @@
 @@include("./libs/swiper-bundle.min.js")
 @@include("./libs/rellax.min.js")
 @@include("./libs/select2.min.js")
+@@include("./libs/masonry.pkgd.min.js")
 
 //my files
 @@include("./import/main.js")

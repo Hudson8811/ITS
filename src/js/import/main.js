@@ -279,10 +279,19 @@ jQuery(function () {
         }
         return isValid;
     }
-
-
-
-
-
-
+   
+    masonryInit()
 });
+
+
+function masonryInit() {
+    const elems = document.querySelectorAll('[data-js="grid-masonry"]');
+    if(elems.length > 0) {
+        elems.forEach(elem => {
+            let msnr = new Masonry( elem, {
+                gutter: 20,
+                itemSelector: '.grid-masonry-item',
+            });
+        })
+    }
+}

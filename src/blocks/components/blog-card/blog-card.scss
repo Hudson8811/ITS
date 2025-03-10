@@ -1,7 +1,23 @@
 .blog-card {
     position: relative;
-    border-bottom: 1px solid $grey;
-    color: $fonBlack;
+    padding: 40px;
+    background-color: $tagsBg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+
+    @include max(lg) {
+        padding: 20px;
+    }
+
+    @include max(sm) {
+        padding: 10px;
+    }
+
+    @include max(xs) {
+        padding: 15px;
+    }
 
     &__link {
         position: absolute;
@@ -10,46 +26,133 @@
         width: 100%;
         height: 100%;
         z-index: 5;
-
-        svg {
-            width: 16px;
-            height: 16px;
-        }
     }
 
-    &__content {
-        position: relative;
+    &__img {
         width: 100%;
-        display: grid;
-        grid-template-columns: minmax(0, 57%) minmax(0, 20%) minmax(0, 20%) minmax(15px, 3%);
-        align-items: start;
-        justify-content: start;
-        gap: 16px;
-        padding: 40px 0;
-        z-index: 3;
+        aspect-ratio: 1 / 0.61;
+        margin-bottom: 24px;
 
-        @include max(xl) {
-            grid-template-columns: repeat(2, auto) minmax(0, 97%) minmax(15px, 3%);
-            gap: 8px 16px;
+        @include max(sm) {
+            margin-bottom: 8px;
         }
 
-        @include max(md) {
-            padding: 34px 0;
-        }
-
-        @include max(xs) {
-            gap: 4px 8px;
-            padding: 16px 0;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
     &__title {
-        line-height: 1em;
-        font-weight: 400;
+        line-height: 1.2em;
+        max-height: 7.2em;
+        min-height: 7.2em;
+        -webkit-line-clamp: 6;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
 
-        @include max(xl) {
-            grid-column: 1 / 4;
+        @include max(xs) {
+            min-height: auto;
         }
     }
 
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__btn {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 18px;
+        border-radius: 42px;
+        min-height: 42px;
+        border: 1px solid $fonBlack;
+        transition: all $tr-time linear;
+
+        svg {
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+        }
+
+        @include max(md) {
+            width: 32px;
+            height: 32px;
+            min-height: auto;
+            padding: 5px;
+
+            span {
+                display: none;
+            }
+        }
+
+        @include max(sm) {
+            width: 24px;
+            height: 24px;
+
+            svg {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+    }
+
+    &--external &__btn svg {
+        transform: rotate(0);
+    }
+
+    &:hover &__btn {
+        color: $blue;
+        border-color: $blue;
+    }
+
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: $fonBlack;
+
+    @include max(sm) {
+        font-size: 12px;
+    }
+
+    &__photo {
+        flex: 0 0 56px;
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        overflow: hidden;
+
+        @include max(xs) {
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__position {
+        color: $greyBlack;
+    }
 }

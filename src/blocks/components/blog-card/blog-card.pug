@@ -4,7 +4,7 @@
         img: '',
         title: '',
         author: {},
-        bntText: '',
+        btnText: '',
         externalLink: false
     }
 
@@ -15,22 +15,33 @@ mixin blog-card(props = defaultBlogCardProps)
             img: props.img ? props.img : defaultBlogCardProps.img,
             title: props.title ? props.title : defaultBlogCardProps.title,
             author: props.author ? props.author : defaultBlogCardProps.author,
-            bntText: props.bntText ? props.bntText : defaultBlogCardProps.bntText,
+            btnText: props.btnText ? props.btnText : defaultBlogCardProps.btnText,
             externalLink: props.externalLink ? props.externalLink : defaultBlogCardProps.externalLink,
         }
 
-    .blog-card(class=checkProps.classes)&attributes(attributes)
+        let linkTypeClass = checkProps.externalLink == true ? ' blog-card--external' : ''
+
+    .blog-card(class=checkProps.classes + linkTypeClass)&attributes(attributes)
+        - if(checkProps.externalLink == true)
+            a.blog-card__link(href="javascript:void(0)" target="_blank")
+        - else
+            a.blog-card__link(href="javascript:void(0)")
+
         .blog-card__top
             - if(checkProps.img.length > 0)
                 .blog-card__img
-                    img(src="")
+                    img(src=checkProps.img)
             .blog-card__title.title__28!= checkProps.title
+
         .blog-card__bottom
-            - if(checkProps.externalLink == true)
-                a.blog-card__link(href="javascript:void(0)" target="_blank")!= checkProps.btnText
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-            - else
-                a.blog-card__link(href="javascript:void(0)")!= checkProps.btnText
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+            .blog-card__author.blog-author
+                .blog-author__photo
+                    img(src=checkProps.author.photo alt=checkProps.author.name)
+                div
+                    .blog-author__name!= checkProps.author.name
+                    .blog-author__position!= checkProps.author.position
+
+            .blog-card__btn
+                span!= checkProps.btnText
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#arrow_link`)

@@ -5,7 +5,7 @@ block variables
 	- const title = "Медиа";
 
 block content
-	.section.section--top.section--bottom.media
+	.section.section--top.section--bottom.blog
 		.container
 			h1.section__title.title__65 Медиа
 			+radio-block({
@@ -33,7 +33,88 @@ block content
 				]
 			})
 
-			.media__list
+			.blog__list(data-js="grid-masonry")
 				+blog-card({
-
+					classes: 'grid-masonry-item',
+					img: 'img/blog/blog_1.webp',
+					title: 'Разработка с нуля или готовое решение',
+					btnText: 'Смотреть подкаст',
+					externalLink: true,
+					author: {
+						name: 'Виктор Иванов',
+						position: 'CEO',
+						photo: 'img/blog/person_1.webp'
+					}
+				})
+				+blog-card({
+					classes: 'grid-masonry-item',
+					img: 'img/blog/blog_2.webp',
+					title: 'Как архитектору говорить на языке бизнеса',
+					btnText: 'Смотреть подкаст',
+					externalLink: true,
+					author: {
+						name: 'Виктор Иванов',
+						position: 'CEO',
+						photo: 'img/blog/person_1.webp'
+					}
+				})
+				+blog-card({
+					classes: 'grid-masonry-item',
+					img: 'img/blog/blog_3.webp',
+					title: 'Как построить архитектуру в ритейле',
+					btnText: 'Смотреть подкаст',
+					externalLink: true,
+					author: {
+						name: 'Виктор Иванов',
+						position: 'CEO',
+						photo: 'img/blog/person_1.webp'
+					}
+				})
+				+blog-card({
+					classes: 'grid-masonry-item',
+					img: '',
+					title: 'Системный анализ в IT: что важно знать заказчику аутсорс-разработки',
+					btnText: 'Читать',
+					externalLink: false,
+					author: {
+						name: 'Иван Викторов',
+						position: 'Системный аналитик',
+						photo: 'img/blog/person_2.webp'
+					}
+				})
+				+blog-card({
+					classes: 'grid-masonry-item',
+					img: 'img/blog/blog_4.webp',
+					title: 'Почему аутстаффинг прибыльнее аутсорсинга',
+					btnText: 'Смотреть подкаст',
+					externalLink: true,
+					author: {
+						name: 'Артём Белов',
+						position: 'Account Director',
+						photo: 'img/blog/person_3.webp'
+					}
+				})
+				+blog-card({
+					classes: 'grid-masonry-item',
+					img: 'img/blog/blog_5.webp',
+					title: 'Как ITS работает с клиентами на аутстаффинге и аутсорсинге',
+					btnText: 'Смотреть тут',
+					externalLink: true,
+					author: {
+						name: 'Виктор Иванов',
+						position: 'CEO',
+						photo: 'img/blog/person_1.webp'
+					}
+				})
+				+blog-card({
+					classes: 'grid-masonry-item',
+					img: '',
+					title: 'Интеграция систем: что нужно знать заказчику перед стартом разработки',
+					btnText: 'Читать',
+					externalLink: false,
+					author: {
+						name: 'Иван Викторов',
+						position: 'Системный аналитик',
+						photo: 'img/blog/person_2.webp'
+					}
 				})

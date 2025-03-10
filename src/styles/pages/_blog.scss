@@ -1,0 +1,14 @@
+.blog {
+    &__list {
+        margin-top: 48px;
+    }
+
+    .grid-masonry-item {
+        width: calc((100% - 20px) / 2);
+        margin-bottom: 20px;
+
+        @include max(xs) {
+            width: 100%;
+        }
+    }
+}
