@@ -1,4 +1,9 @@
 .about {
+
+    @include max(xs) {
+        margin-bottom: 0;
+    }
+
     &__title {
         line-height: 1.1em;
     }
@@ -11,6 +16,15 @@
         margin-top: 76px;
         width: calc(100% - 200px);
         max-width: 1000px;
+
+        @include max(md) {
+            width: calc(100% - 100px);
+        }
+
+        @include max(sm) {
+            margin-top: 24px;
+            width: 100%;
+        }
     }
 
     &__cards {
@@ -19,6 +33,16 @@
         margin-top: 120px;
         gap: 48px;
         align-items: center;
+
+        @include max(sm) {
+            margin-top: 48px;
+            grid-template-columns: 1fr;
+        }
+
+        @include max(xs) {
+            gap: 24px;
+            margin-top: 24px;
+        }
     }
 }
 
@@ -28,6 +52,18 @@
         line-height: 1em;
         position: relative;
         z-index: 5;
+
+        @include max(md) {
+            font-size: 120px;
+        }
+
+        @include max(sm) {
+            font-size: 56px;
+        }
+
+        @include max(xs) {
+            font-size: 36px;
+        }
 
         span {
             font-size: 0.6em;
@@ -40,20 +76,56 @@
         max-width: 550px;
         position: relative;
         z-index: 5;
+
+        @include max(sm) {
+            margin-top: 16px;
+        }
+
+        @include max(xs) {
+            font-size: 16px;
+            margin-top: 8px;
+            font-weight: 400;
+        }
     }
 
     &--small &__title {
         font-size: 56px;
+        line-height: 1.4em;
+
+        @include max(sm) {
+            line-height: 1em;
+        }
+
+        @include max(xs) {
+            font-size: 36px;
+        }
     }
 
     &--small &__text {
         font-size: 22px;
         margin-top: 16px;
+
+        @include max(sm) {
+            font-size: 20px;
+        }
+
+        @include max(xs) {
+            font-size: 16px;
+            margin-top: 8px;
+        }
     }
 
     &--decor {
         padding: 50px 0;
         position: relative;
+
+        @include max(md) {
+            padding: 30px 0;
+        }
+
+        @include max(sm) {
+            padding: 0;
+        }
 
     }
 
@@ -70,6 +142,20 @@
         box-sizing: border-box;
         z-index: 1;
         opacity: 0.8;
+
+        @include max(xl) {
+            right: auto;
+            left: -30px;
+        }
+
+        @include max(md) {
+            border-width: 20px;
+            border-right-width: 0;
+        }
+
+        @include max(sm) {
+            display: none;
+        }
     }
 
     &--decor::after {
@@ -85,6 +171,266 @@
         box-sizing: border-box;
         z-index: 1;
         opacity: 0.8;
+
+        @include max(xl) {
+            left: auto;
+            right: 0;
+        }
+
+        @include max(lg) {
+            right: -30px;
+        }
+
+        @include max(md) {
+            border-width: 20px;
+            border-left-width: 0;
+        }
+
+        @include max(sm) {
+            display: none;
+        }
     }
 
+    &--square {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 0;
+        position: relative;
+        min-height: 318px;
+
+        @include max(md) {
+            padding: 30px 0;
+        }
+
+        @include max(sm) {
+            min-height: 240px;
+        }
+
+        @include max(xs) {
+            padding: 15px 0;
+            min-height: auto;
+        }
+    }
+
+    &--square &__text {
+        max-width: 100%;
+    }
+
+    &--square::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 250px;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: transparent;
+        border: 30px solid $blue;
+        box-sizing: border-box;
+        z-index: 1;
+        opacity: 0.8;
+
+        @include max(md) {
+            left: auto;
+            right: -35px;
+            border-width: 20px;
+        }
+
+        @include max(sm) {
+            right: -15px;
+        }
+
+        @include max(xs) {
+            border-width: 15px;
+        }
+    }
+
+    &--circle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 0;
+        position: relative;
+        min-height: 430px;
+
+        @include max(md) {
+            padding: 30px 0;
+        }
+
+        @include max(sm) {
+            min-height: 290px;
+        }
+
+        @include max(xs) {
+            padding: 15px 0;
+            min-height: auto;
+        }
+    }
+
+    &--circle &__text {
+        max-width: 100%;
+    }
+
+    &--circle::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50px;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: $blue;
+        border-radius: 100%;
+        box-sizing: border-box;
+        z-index: 1;
+        opacity: 0.8;
+        animation-name: circleDecor;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+    }
+}
+
+.about-socials {
+    @include max(xs) {
+        margin-bottom: 0;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px 80px;
+
+        @include max(sm) {
+            gap: 32px;
+        }
+
+        @include max(xs) {
+            gap: 16px;
+        }
+    }
+
+    &__item {
+        font-size: 26px;
+        color: $blue;
+        text-decoration: none;
+        font-weight: 700;
+
+        @include max(sm) {
+            font-size: 20px;
+        }
+
+        @include max(xs) {
+            font-size: 18px;
+        }
+    }
+
+    &__video {
+        position: relative;
+        margin-top: 32px;
+
+        @include max(xs) {
+            margin-top: 24px;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 15px;
+
+            @include max(xs) {
+                border-radius: 8px;
+            }
+        }
+    }
+
+    &__wdecor {
+        position: absolute;
+        bottom: 50%;
+        left: -16px;
+        transform: rotate(-90deg) translateX(-50%);
+        transform-origin: left bottom;
+        font-size: 115px;
+        line-height: 1em;
+
+        @include max(xl) {
+            display: none;
+        }
+    }
+}
+
+.about-team {
+    &__content {
+        display: grid;
+        grid-template-columns: 310px minmax(0, 650px);
+        align-items: center;
+        gap: 110px;
+
+        @include max(md) {
+            gap: 48px;
+        }
+
+        @include max(sm) {
+            grid-template-columns: 1fr;
+        }
+
+        @include max(xs) {
+            gap: 24px;
+        }
+    }
+}
+
+.about-areas {
+    &__card {
+        max-width: 922px;
+    }
+
+    .about-card__title {
+        font-weight: 700;
+
+        @include max(sm) {
+            font-size: 42px;
+        }
+
+        @include max(xs) {
+            font-size: 28px;
+        }
+    }
+
+}
+
+.about-clients {
+    flex-direction: column;
+
+    &__title {
+        @include max(xs) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__text {
+        margin-top: 16px;
+        max-width: 800px;
+        font-weight: 500;
+
+        @include max(xs) {
+            font-size: 18px;
+        }
+    }
+}
+
+@keyframes circleDecor {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
