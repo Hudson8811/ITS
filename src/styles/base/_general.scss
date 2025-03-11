@@ -3239,3 +3239,34 @@ body {
         }
     }
 }
+
+.bordered-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 18px;
+    border-radius: 42px;
+    min-height: 42px;
+    border: 1px solid $fonBlack;
+    color: $fonBlack;
+    text-decoration: none;
+    transition: all $tr-time linear;
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:hover {
+        color: $blue;
+        border-color: $blue;
+    }
+
+    @include max(xs) {
+        font-size: 14px;
+        border-radius: 36px;
+        min-height: 36px;
+        padding: 0 16px;
+    }
+}

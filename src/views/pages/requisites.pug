@@ -2,126 +2,145 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "О нас";
+	- const title = "Реквизиты";
 
 block content
-	section.section.section--top.section--bottom.about
+	section.section.section--top.requisites-intro
 		.container
-			.about__intro
-				h1.section__title.about__title.title__99 Студия <span>ITS&nbsp;GROUP</span>
+			h1.section__title.requisites-intro__title.title__99 Реквизиты
+			.requisites-intro__subtitle.title__28 работаем в диадок
+			a.requisites-intro__download.bordered-btn(href="javascript:void(0);")
+				svg
+					use(xlink:href=`img/sprites/sprite.svg#download`)
+				span Скачать PDF
 
-				.about__text.text__24 Интегратор digital-решений. Наша специализация — интернет-маркетинг, веб и мобильная разработка, веб-дизайн, видеопродакшн и создание графики, создание и проведение рекламных интернет-кампаний.
-				a.btn.start__btn(href="#tell-us") Оставить заявку
-
-			.about__cards
-				.about-card
-					.about-card__title 10<span> лет</span>
-					.about-card__text.text__24 мы работаем с российскими и зарубежными клиентами
-				.about-card
-					.about-card__title >600
-					.about-card__text.text__24 проектов для крупных компаний практически во всех секторах экономики
-
-			.about__cards
-				.about-card.about-card--small.about-card--decor
-					.about-card__title c 2010 года
-					.about-card__text.text__24 мы реализовали более 600 различных проектов. Сотрудничали с креативными и рекламными агентствами, что позволило нам приобрести обширные связи и серьезные компетенции
-				.about-card.about-card--small
-					.about-card__title мы создаем
-					.about-card__text.text__24 сайты и мобильные приложения, создаем игровые механики, проводим сложные интеграции с ERP, программами лояльности, разрабатываем дизайнпроектов для крупных компаний практически во всех секторах экономики
-
-	section.section.section--top.section--bottom.about-socials
+	section.section.section--top.section--bottom.requisites-content
 		.container
-			.about-socials__list
-				a.about-socials__item(href="javascript:void(0);") Telegram
-				a.about-socials__item(href="javascript:void(0);") WhatsApp
-				a.about-socials__item(href="https://vc.ru/u/4145713-itspacegroup") vc.ru
+			.requisites-content__blocks
+				.requisites-content__block
+					.requisites-content__title.title__28 Агентство
+					.requisites-content__list
+						.requisites-content__row
+							.requisites-content__name Полное наименование
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: 'ITS GROUP',
+								copyText: 'ITS GROUP'
+							})
+						.requisites-content__row
+							.requisites-content__name Генеральный директор
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: 'Иванов Иван Иванович',
+								copyText: 'Иванов Иван Иванович'
+							})
+						.requisites-content__row
+							.requisites-content__name ИНН
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: '0000000000',
+								copyText: '0000000000'
+							})
+						.requisites-content__row
+							.requisites-content__name КПП
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: '999999999',
+								copyText: '999999999'
+							})
+						.requisites-content__row
+							.requisites-content__name ОГРН
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: '3333333333333',
+								copyText: '3333333333333'
+							})
 
-			.about-socials__video
-				.about-socials__wdecor #SHOWREEL
-				video(autoplay muted preload)
-					source(src="https://pictures.s3.yandex.net/landings-video/Backend.webm" type="video/mp4")
+				.requisites-content__block
+					.requisites-content__title.title__28 Банковские реквизиты
+					.requisites-content__list
+						.requisites-content__row
+							.requisites-content__name Банк
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: 'ФИЛИАЛ “НИЖЕГОРОДСКИЙ” АО “АЛЬФА-БАНК” г. Нижний-Новгород',
+								copyText: 'ФИЛИАЛ “НИЖЕГОРОДСКИЙ” АО “АЛЬФА-БАНК” г. Нижний-Новгород'
+							})
+						.requisites-content__row
+							.requisites-content__name Р/c
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: '5555 5555 5555 5555',
+								copyText: '5555 5555 5555 5555'
+							})
+						.requisites-content__row
+							.requisites-content__name К/c
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: '1234 5678 9123 4567',
+								copyText: '1234 5678 9123 4567'
+							})
+						.requisites-content__row
+							.requisites-content__name БИК
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: '999999999',
+								copyText: '999999999'
+							})
 
-	section.section.section--top.section--bottom.about-team
-		.container
-			.about-team__content
-				.about-card
-					.about-card__title >60
-					.about-card__text.text__24 сотрудников работает в компании
-				.about-card.about-card--small.about-card--square
-					.about-card__title dreamteam
-					.about-card__text.text__24 Наша команда — увлеченные энтузиасты и трудоголики, сообщество талантливых людей творческих и технических профессий, решающее задачи клиента 24/7
+				.requisites-content__block
+					.requisites-content__title.title__28 Основной вид экономической деятельности
+					.requisites-content__list
+						.requisites-content__row
+							.requisites-content__name ОКВЭД
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: '62.01',
+								copyText: '62.01'
+							})
 
-	section.section.section--bottom.about-areas
-		.container
-			.about-areas__card.about-card.about-card--small.about-card--circle
-				.about-card__title ITS GROUP работает<br>в&nbsp;различных отраслях
-				.about-card__text.text__24 FMCG, банки, финансы и&nbsp;страхование, медицина и&nbsp;фармацевтика, туризм, ритейл и&nbsp;e-commerce, IT, онлайн-сервисы, порталы и&nbsp;в&nbsp;многих других
-
-	section.section.section--bottom.about-clients
-		.container
-			.about-clients__title.title__65 Клиенты
-			.about-clients__text.text__24 Делаем так, чтобы бизнес клиента становился узнаваемым, эффективным и приносил больше дохода
-		.partners
-			.partners__slider.swiper-container.js-partners__slider
-				.swiper-wrapper
-					.partners__slide.swiper-slide
-						img(src="img/partners__slide__1.png" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__2.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__3.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__4.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__5.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__6.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__7.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__8.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__9.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__10.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__11.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__12.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__13.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__14.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__15.svg" alt="")
-
-					.partners__slide.swiper-slide
-						img(src="img/partners__slide__1.png" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__2.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__3.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__4.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__5.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__6.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__7.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__8.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__9.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__10.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__11.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__12.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__13.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__14.svg" alt="")
-					.partners__slide.swiper-slide
-						img(src="img/svg/partners__slide__15.svg" alt="")
+				.requisites-content__block
+					.requisites-content__title.title__28 Контакты
+					.requisites-content__list
+						.requisites-content__row
+							.requisites-content__name Фактический адрес (г. Курск)
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: 'ул. Ленина, д.60, оф. 17',
+								copyText: 'ул. Ленина, д.60, оф. 17'
+							})
+						.requisites-content__row
+							.requisites-content__name Фактический адрес (г. Москва)
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: 'ул. Рождественка, д. 20/8, стр. 5, оф. 2',
+								copyText: 'ул. Рождественка, д. 20/8, стр. 5, оф. 2'
+							})
+						.requisites-content__row
+							.requisites-content__name Юридический адрес
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: '107031, г. Москва, ул. Рождественка, д. 20/8, стр. 5, оф. 2',
+								copyText: '107031, г. Москва, ул. Рождественка, д. 20/8, стр. 5, оф. 2'
+							})
+						.requisites-content__row
+							.requisites-content__name Сайт
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: 'https://itspace.group',
+								copyText: 'https://itspace.group'
+							})
+						.requisites-content__row
+							.requisites-content__name Электронная почта
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: 'mail@itspace.group',
+								copyText: 'mail@itspace.group'
+							})
+						.requisites-content__row
+							.requisites-content__name Телефон
+							+copy-block({
+								classes: 'requisites-content__value',
+								text: '+7(499) 938-48-99',
+								copyText: '+7(499) 938-48-99'
+							})

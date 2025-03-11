@@ -1,0 +1,21 @@
+-
+    const defaultCopyBlockProps = {
+        classes: '',
+        text: '',
+        copyText: ''
+    }
+
+mixin copy-block(props = defaultCopyBlockProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCopyBlockProps.classes,
+            text: props.text ? props.text : defaultCopyBlockProps.text,
+            copyText: props.copyText ? props.copyText : defaultCopyBlockProps.copyText,
+        }
+
+    .copy-block(data-js="copyBlock" data-content=checkProps.copyText)
+        .copy-block__content!= checkProps.text
+        .copy-block__icon
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#copy`)
+        .copy-block__tooltip(data-js="copyBlockTooltip") Текст скопирован
