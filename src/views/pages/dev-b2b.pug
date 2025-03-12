@@ -1,0 +1,15 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Разработка";
+
+block content
+    section.section.section--top.section--bottom.dev-intro
+        .container
+            h1.section__title.dev-intro__title.title__99 Разработка
+            .dev-intro__tags.text__24 • Frontend • Backend • iOS • Android • Api
+            .dev-intro__bottom
+                .dev-intro__text.text__24 разрабатываем приложения и&nbsp;веб-сервисы со&nbsp;множеством интеграций
+                a.dev-intro__btn.btn.start__btn(href="#tell-us")
+                    span Обсудить проект
