@@ -1,0 +1,23 @@
+-
+	const defaultReviewsSectionProps = {
+		classes: '',
+		title: '',
+		items: '',
+		top: false,
+		bottom: false
+	}
+
+mixin reviews-section(props = defaultReviewsSectionProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultReviewsSectionProps.classes,
+			title: props.title ? props.title : defaultReviewsSectionProps.title,
+			items: props.items ? props.items : defaultReviewsSectionProps.items,
+			top: props.top ? props.top : defaultReviewsSectionProps.top,
+			bottom: props.bottom ? props.bottom : defaultReviewsSectionProps.bottom
+		}
+
+		let topClass = checkProps.top == true ? ' section--top' : ''
+		let topClass = checkProps.bottom == true ? ' section--bottom' : ''
+
+	section.section.reviews-section(class= checkProps.classes + topClass + bottomClass)&attributes(attributes)

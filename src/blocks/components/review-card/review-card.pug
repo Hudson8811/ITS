@@ -1,0 +1,20 @@
+-
+    const defaultReviewCardProps = {
+        classes: '',
+        text: '',
+        photo: '',
+        name: '',
+        position: '',
+    }
+
+mixin review-card(props = defaultReviewCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultReviewCardProps.classes,
+            text: props.text ? props.text : defaultReviewCardProps.text,
+            photo: props.photo ? props.photo : defaultReviewCardProps.photo,
+            name: props.name ? props.name : defaultReviewCardProps.name,
+            position: props.position ? props.position : defaultReviewCardProps.position,
+        }
+
+    .review-card(class=checkProps.classes)&attributes(attributes)

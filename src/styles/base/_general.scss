@@ -72,6 +72,17 @@ body {
             margin-bottom: 70px;
         }
     }
+
+    &--bg {
+        background-color: $tagsBg;
+        padding-top: 93px;
+        padding-bottom: 93px;
+
+        @include max(md) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
 }
 
 .site-main {

@@ -34,3 +34,63 @@
     }
 
 }
+
+.dev-info {
+
+    &__title {
+        max-width: 900px;
+    }
+
+    &__cards {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 64px;
+    }
+}
+
+.dev-stack {
+
+    &__title {
+        max-width: 800px;
+    }
+
+    &__cards {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 40px;
+    }
+}
+
+.stack-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    text-align: center;
+    font-size: 22px;
+    color: $blue;
+
+    &__name {
+        opacity: 0;
+        transition: opacity $tr-time linear;
+    }
+
+    &:hover &__name {
+        opacity: 1;
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+    }
+}
