@@ -1,1 +1,6 @@
-.reviews-section {}
+.reviews-section {
+    &__slider {
+        position: relative;
+        margin-top: 80px;
+    }
+}

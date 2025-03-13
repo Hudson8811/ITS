@@ -2,7 +2,7 @@
 	const defaultReviewsSectionProps = {
 		classes: '',
 		title: '',
-		items: '',
+		items: [],
 		top: false,
 		bottom: false
 	}
@@ -18,6 +18,22 @@ mixin reviews-section(props = defaultReviewsSectionProps)
 		}
 
 		let topClass = checkProps.top == true ? ' section--top' : ''
-		let topClass = checkProps.bottom == true ? ' section--bottom' : ''
+		let bottomClass = checkProps.bottom == true ? ' section--bottom' : ''
 
 	section.section.reviews-section(class= checkProps.classes + topClass + bottomClass)&attributes(attributes)
+		.container
+			.reviews-section__title.title__65!= checkProps.title
+			.reviews-section__slider(data-js="reviewsSlider")
+				.swiper-wrapper
+					- let i = 0
+					- let slides = checkProps.items
+					- while(i < slides.length)
+						- slides[i].classes = 'swiper-slide'
+						+review-card(slides[i])
+						- i++
+
+				.slider-controls(data-js="sliderControls")
+					.slider-control.slider-control--prev(data-js="sliderControlPrev")
+					.slider-control.slider-control--next(data-js="sliderControlNext")
+
+

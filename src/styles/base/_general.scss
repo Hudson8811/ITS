@@ -2435,6 +2435,22 @@ body {
         padding-bottom: 50px;
     }
 
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    &__all {
+        flex: 0 0 auto;
+        width: fit-content;
+        margin-top: 12px;
+    }
+
+    &__title {
+        flex: 1 1 auto;
+    }
+
     &__cards {
         margin-top: 60px;
         display: grid;
@@ -3263,6 +3279,7 @@ body {
     color: $fonBlack;
     text-decoration: none;
     transition: all $tr-time linear;
+    cursor: pointer;
 
     svg {
         width: 16px;
