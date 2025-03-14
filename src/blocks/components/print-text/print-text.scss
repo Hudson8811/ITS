@@ -4,4 +4,22 @@
     align-items: center;
     gap: 0.5em;
     line-height: 1.2em;
+
+    @include max(md) {
+        font-size: 35px;
+    }
+
+    @include max(sm) {
+        margin-top: 24px;
+        font-size: 28px;
+    }
+
+    @include max(xs) {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    @include max(xxs) {
+        font-size: 18px;
+    }
 }
