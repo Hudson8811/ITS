@@ -30,13 +30,13 @@ block content
 				video.case__video( muted preload="auto" loop)
 					<source src="https://pictures.s3.yandex.net/landings-video/Backend.webm" type="video/mp4">
 				//- picture.case__picture 
-				//- 	source(media="(man-width: 992px)", srcset="img/case__picture__1.png")
-				//- 	img(src="img/case__picture__1.png", alt="")
+				//- 	source(media="(man-width: 992px)" srcset="img/case__picture__1.png")
+				//- 	img(src="img/case__picture__1.png" alt="")
 			.case__content
 				picture.case__picture 
-					source(media="(man-width: 992px)", srcset="img/case__picture__1.png")
-					img(src="img/case__picture__1.png", alt="")
-			
+					source(media="(man-width: 992px)" srcset="img/case__picture__1.png")
+					img(src="img/case__picture__1.png" alt="")
+
 			.container.container--inner
 				.text__style
 					h2 СберМобайл
@@ -55,8 +55,11 @@ block content
 					p Тут может быть еще какое то описание
 					video(autoplay muted preload)
 						<source src="https://pictures.s3.yandex.net/landings-video/Backend.webm" type="video/mp4">
-					a.zoom-img(href="img/case__picture__1.png" data-fancybox)
-						img(src="img/case__picture__1.png", alt="")
+					a.zoom-img(href="img/case__picture__1.png" data-fancybox="group1")
+						img(src="img/case__picture__1.png" alt="")
+					.text-fancy-links
+						a(href="img/case__picture__2.webp" data-fancybox="group1")
+						a(href="img/case__picture__3.webp" data-fancybox="group1")
 
 					p Тут может быть еще какое то описание
 					p Тут может быть еще какое то описание

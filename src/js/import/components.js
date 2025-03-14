@@ -1,6 +1,6 @@
 @@include("../../blocks/components/field-file/field-file.js")
 @@include("../../blocks/components/copy-block/copy-block.js")
-@@include("../../blocks/modules/reviews-section/reviews-section.js")
+@@include("../../blocks/components/print-text/print-text.js")
 
 $(document).ready(function() {
 	var videoCase = $('.case__video');
@@ -36,5 +36,5 @@ $(document).ready(function() {
 	// Импортированные функции
 	fileFieldInit();
 	copyBlock();
-	reviewsSliderInit();
+	printTextController();
 });

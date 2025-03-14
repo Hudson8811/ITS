@@ -6,6 +6,7 @@
 @@include("./libs/rellax.min.js")
 @@include("./libs/select2.min.js")
 @@include("./libs/masonry.pkgd.min.js")
+@@include("./libs/typewriter-effect.min.js")
 
 //my files
 @@include("./import/main.js")

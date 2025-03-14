@@ -3,8 +3,6 @@ function reviewsSliderInit() {
 
     if(sliders.length < 1) return
 
-    console.log(sliders)
-
     sliders.forEach(slider => {
         const sliderControls = slider.querySelector('[data-js="sliderControls"]')
         const sliderPrev = sliderControls.querySelector('[data-js="sliderControlPrev"]')

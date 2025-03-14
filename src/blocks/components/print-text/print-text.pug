@@ -1,0 +1,19 @@
+-
+    const defaultPrintTextProps = {
+        classes: '',
+        text: '', //- перечислить через запятую
+        prolog: ''
+    }
+
+mixin print-text(props = defaultPrintTextProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPrintTextProps.classes,
+            text: props.text ? props.text : defaultPrintTextProps.text,
+            prolog: props.prolog ? props.prolog : defaultPrintTextProps.prolog,
+        }
+
+    .print-text(class=checkProps.classes data-js="printText" data-text=checkProps.text)&attributes(attributes)
+        - if(checkProps.prolog.length > 0)
+            .print-text__prolog!= checkProps.prolog
+        .print-text__printing(data-js="printTextPrinting")

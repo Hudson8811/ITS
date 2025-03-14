@@ -88,6 +88,7 @@
         ]
     },
     "dependencies": {
-        "masonry-layout": "^4.2.2"
+        "masonry-layout": "^4.2.2",
+        "typewriter-effect": "^2.21.0"
     }
 }
