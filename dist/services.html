@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Страницы</title>
+    <title>Услуги</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -50,81 +50,105 @@
       </div>
     </div>
     <main class="site-main">
-      <style type="text/css">
-        .pages-list {
-            padding: 40px 0 60px;
-            border-bottom: 1px solid #7F8589;
-        }
-        
-        .pages-list__links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .pages-list__link {
-            position: relative;
-            font-size: 24px;
-            text-decoration: none;
-            color: #2A2A2A;
-            transition: color 0.3s linear;
-            line-height: 1.02em;
-            min-height: 2.04em;
-        
-            span {
-                font-size: 0.7em;
-                opacity: 0.7;
-            }
-        }
-        
-        .pages-list__link:hover {
-            color: #237AE9;
-        }
-        
-        @media (max-width: 600px) {
-            .pages-list__link {
-                padding-right: 0;
-                padding-top: 30px;
-            }
-        }
-        
-        @media (max-width: 1340px) {
-        
-            .pages-list__links {
-                grid-gap: 15px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                font-size: 20px;
-            }
-        }
-        
-        @media (max-width: 1023px) {
-            .pages-list {
-                padding: 85px 0 50px;
-            }
-        
-            .pages-list__links {
-                grid-template-columns: 1fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                min-height: auto;
-            }
-        }
-        
-      </style>
-      <div class="section pages-list">
+      <section class="section section--top section--bottom dev-intro">
         <div class="container">
-          <h1 class="vacancies__title title__65">Страницы</h1>
-          <div class="pages-list__links"><a class="pages-list__link" href="index.html" target="_blank">Главная</a><a class="pages-list__link" href="cases.html" target="_blank">Кейсы</a><a class="pages-list__link" href="case.html" target="_blank">Кейс</a><a class="pages-list__link" href="partners.html" target="_blank">Партнерская программа</a><a class="pages-list__link" href="web.html" target="_blank">Услуги</a><a class="pages-list__link" href="vacancies.html" target="_blank">Вакансии</a><a class="pages-list__link" href="vacancy.html" target="_blank">Вакансия</a><a class="pages-list__link" href="blog.html" target="_blank">Блог</a><a class="pages-list__link" href="article.html" target="_blank">Статья</a><a class="pages-list__link" href="about.html" target="_blank">О нас</a><a class="pages-list__link" href="requisites.html" target="_blank">Реквизиты</a><a class="pages-list__link" href="dev-b2b.html" target="_blank">Разработка B2B ЛК</a><a class="pages-list__link" href="services.html" target="_blank">Услуги</a></div>
+          <h1 class="section__title dev-intro__title title__99">Услуги студии <span>ITS&nbsp;GROUP</span></h1>
+          <div class="dev-intro__bottom">
+            <div class="dev-intro__text text__24">Мы предлагаем полный комплекс услуг для проектов любого уровня сложности и стадии готовности — от начальной, когда есть лишь идея, до поддержки готового ресурса</div><a class="dev-intro__btn btn start__btn" href="#tell-us"><span>Обсудить проект</span></a>
+          </div>
         </div>
-      </div>
+      </section>
+      <section class="section services-list">
+        <div class="container"></div>
+      </section>
     </main>
+        <div class="tell-us__section section" id="tell-us">
+          <div class="container">
+            <div class="tell-us">
+              <div class="tell-us__col">
+                <div class="tell-us__title title__65">Расскажите нам<br><span>о вашем проекте</span>
+                </div>
+                <div class="tell-us__QR">
+                  <div class="tell-us__QR__title">Если удобнее, пишите в телеграмм
+                  </div>
+                  <div class="tell-us__QR__picture"><img src="img/qr.png" alt=""></div>
+                </div>
+              </div>
+              <div class="tell-us__col">
+                <form class="form js-contact-form" method="POST">
+                  <input type="hidden" name="mode" value="mail-request">
+                  <div class="form-field" style="display:none;">
+                    <input type="text" name="tel" value="">
+                  </div>
+                  <div class="form__title">Какие задачи перед нами <br>стоят?
+                  </div>
+                  <div class="form__checkbox">
+                    <label class="checkbox">
+                      <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный сайт"><span>Корпоративный сайт</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-магазин"><span>Интернет-магазин</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Корпоративный портал"><span>Корп. портал</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Личный кабинет"><span>Личный кабинет</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Интернет-каталог"><span>Интернет-каталог</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="custom-checkbox" type="checkbox" name="subjects[]" value="Мобильное приложение"><span>Мобильное приложение</span>
+                    </label>
+                  </div>
+                  <div class="contacts__form">
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="text" name="fio" required>
+                      <div class="contacts__form__input-block__name">	Имя и фамилия*</div>
+                      <div class="contacts__form__input-block__error">Неправильное имя</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-phone" type="tel" name="contact" required>
+                      <div class="contacts__form__input-block__name">Телефон*</div>
+                      <div class="contacts__form__input-block__error">Неправильный телефон</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="email" name="pochta" required>
+                      <div class="contacts__form__input-block__name">Email*</div>
+                      <div class="contacts__form__input-block__error">Неправильный email</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <select class="contacts__form__select" name="sum">
+                        <option></option>
+                        <option value="До 500 тыс руб.">До 500 тыс руб.</option>
+                        <option value="От 500 тыс до 1,5 млн руб.">От 500 тыс до 1,5 млн руб.</option>
+                        <option value="От 1,5 млн до 5 млн руб.">От 1,5 млн до 5 млн руб.</option>
+                        <option value="От 5 млн руб.">От 5 млн руб.</option>
+                        <div class="localities-centers__select-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                        </div>
+                      </select>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <textarea class="contacts__form__input contacts__form__input--textarea text__13" name="msg"></textarea>
+                      <div class="contacts__form__input-block__name">Расскажите о своем проекте</div>
+                    </div>
+                  </div>
+                  <div class="form__buttons">
+                    <div class="form__buttons__text">
+                      <label class="form__check">
+                        <input type="checkbox" name="agree" value="1" required checked><span></span>
+                      </label>Я соглашаюсь на обработку персональных данных
+                    </div>
+                    <button class="btn--small" type="submit">Оставить заявку</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="footer__section">
           <div class="container"> 
             <div class="footer">
@@ -274,6 +298,6 @@
             </div>
           </div>
         </div>
-    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
