@@ -2439,12 +2439,22 @@ body {
         display: flex;
         align-items: flex-start;
         gap: 24px;
+
+        @include max(sm) {
+            flex-direction: column;
+            gap: 0;
+            padding-bottom: 40px;
+        }
     }
 
     &__all {
         flex: 0 0 auto;
         width: fit-content;
         margin-top: 12px;
+
+        @include max(xs) {
+            margin-top: 0;
+        }
     }
 
     &__title {

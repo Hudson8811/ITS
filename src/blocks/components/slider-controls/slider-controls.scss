@@ -1,0 +1,56 @@
+.slider-controls {
+    opacity: 0;
+    visibility: hidden;
+    transition: all $tr-time linear;
+
+    @include max(md) {
+        display: none;
+    }
+}
+
+
+
+.slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    background-color: $white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $fonBlack;
+    box-shadow: 0 3px 10px rgba(100, 100, 111, .08);
+    z-index: 10;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        transition: color $tr-time linear;
+    }
+
+    &:hover {
+        svg {
+            color: $blue;
+        }
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0;
+    }
+
+    &--prev {
+        left: 15px;
+    }
+
+    &--next {
+        right: 15px;
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}

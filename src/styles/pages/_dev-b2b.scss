@@ -22,6 +22,16 @@
             margin-top: 130px;
         }
 
+        @include max(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 80px;
+        }
+
+        @include max(xs) {
+            padding-bottom: 50px;
+        }
+
     }
 
     &__text {
@@ -42,6 +52,22 @@
 
         @include max(mdHeader) {
             display: flex;
+        }
+
+        @include max(sm) {
+            position: relative;
+            margin-top: 24px;
+            width: fit-content;
+            height: auto;
+            font-size: 14px;
+            border-radius: 36px;
+            min-height: 36px;
+            padding: 0 16px;
+            border: 1px solid $fonBlack;
+        }
+
+        @include max(xs) {
+            margin-top: 24px;
         }
     }
 
@@ -68,6 +94,10 @@
             gap: 48px;
             grid-template-columns: repeat(1, 1fr);
         }
+
+        @include max(xs) {
+            margin-top: 40px;
+        }
     }
 }
 
@@ -84,10 +114,30 @@
         flex-wrap: wrap;
         gap: 40px;
 
+        @include max(md) {
+            gap: 24px;
+        }
+
+        @include max(xs) {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        @include max(xxs) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
         .stack-card {
             flex: 1 1 auto;
             max-width: 120px;
-            min-width: 115px;
+            min-width: 100px;
+
+            @include max(xs) {
+                max-width: none;
+                min-width: auto;
+            }
         }
     }
 }
@@ -102,9 +152,23 @@
     font-size: 22px;
     color: $blue;
 
+    @include max(md) {
+        font-size: 18px;
+        color: $fonBlack;
+    }
+
+    @include max(xs) {
+        font-size: 14px;
+    }
+
     &__name {
         opacity: 0;
         transition: opacity $tr-time linear;
+
+        @include max(md) {
+            opacity: 1;
+        }
+
     }
 
     &:hover &__name {

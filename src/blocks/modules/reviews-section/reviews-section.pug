@@ -32,8 +32,6 @@ mixin reviews-section(props = defaultReviewsSectionProps)
 						+review-card(slides[i])
 						- i++
 
-				.slider-controls(data-js="sliderControls")
-					.slider-control.slider-control--prev(data-js="sliderControlPrev")
-					.slider-control.slider-control--next(data-js="sliderControlNext")
+				+slider-controls
 
 

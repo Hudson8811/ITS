@@ -1,6 +1,23 @@
 .reviews-section {
+    @include max(md) {
+        padding-top: 70px;
+    }
+
+    @include max(xs) {
+        padding-top: 40px;
+    }
+
     &__slider {
         position: relative;
         margin-top: 80px;
+
+        @include max(xs) {
+            margin-top: 40px;
+        }
+
+        &:hover .slider-controls {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }
