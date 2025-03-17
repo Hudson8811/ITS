@@ -161,6 +161,15 @@
         }
     }
 
+    &__group {
+        font-size: 18px;
+        color: $greyBlack;
+    }
+
+    &__val {
+        opacity: 0.6;
+    }
+
     &__btn {
         width: fit-content;
     }
@@ -215,6 +224,117 @@
             &:hover {
                 opacity: 1;
             }
+        }
+    }
+}
+
+.services-slider {
+    overflow: hidden;
+
+    &__slide {
+        position: relative;
+        padding: 70px 0 90px;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    &__title {
+        position: relative;
+        color: $white;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        max-width: 1035px;
+
+        span {
+            display: flex;
+            color: $white;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px $white;
+        }
+    }
+
+    &__tags {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 48px;
+    }
+
+    &__tag {
+        font-size: 22px;
+        line-height: 1.1em;
+        color: $white;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 22px;
+            height: 10px;
+            border-left: 3px solid $white;
+            border-bottom: 3px solid $white;
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-44deg);
+            transform: rotate(-44deg);
+            margin-right: 12px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        margin-top: 48px;
+    }
+
+    &__btn {
+        width: fit-content;
+        flex: 0 0 auto;
+    }
+
+    &__line {
+        flex: 1 1 auto;
+        border-color: $white;
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(25%, -50%);
+        width: 53%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        position: relative;
+        display: flex;
+        gap: 64px;
+        margin-top: 48px;
+        color: $white;
+
+        &>* {
+            flex: 0 0 380px;
         }
     }
 }

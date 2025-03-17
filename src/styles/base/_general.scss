@@ -3291,6 +3291,11 @@ body {
     transition: all $tr-time linear;
     cursor: pointer;
 
+    &--white {
+        color: $white;
+        border-color: $white;
+    }
+
     svg {
         width: 16px;
         height: 16px;
@@ -3299,6 +3304,11 @@ body {
     &:hover {
         color: $blue;
         border-color: $blue;
+    }
+
+    &--white:hover {
+        color: $greyHover;
+        border-color: $greyHover;
     }
 
     @include max(xs) {

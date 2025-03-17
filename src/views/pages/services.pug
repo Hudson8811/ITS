@@ -14,7 +14,29 @@ block content
 				a.dev-intro__btn.btn.start__btn(href="#tell-us")
 					span Обсудить проект
 
-	section.section.services-list.section--bottom
+	section.section.services-slider(data-js="servicesSlider")
+		.swiper-wrapper
+			.swiper-slide.services-slider__slide
+				.services-slider__bg
+					img(src="img/services/services_slider_bg_1.webp")
+				.container.services-slider__container
+					.services-slider__img
+						img(src="img/services/services_slider_img_1.webp")
+					.services-slider__title.title__99 Брендинг <span>в ITS GROUP</span>
+					.services-slider__tags
+						.services-slider__tag Логотип
+						.services-slider__tag Фирменный стиль
+						.services-slider__tag Брендбук
+						.services-slider__tag Бренд платформа
+					.services-slider__text.text__18
+						p Создаем сервисные, информационные и&nbsp;развлекательные приложения
+						p Наши клиенты: mos.ru, Эхо Москвы, Зарядье, Jaguar & Land Rover и&nbsp;еще 15
+					.services-slider__bottom
+						a.services-slider__btn.bordered-btn.bordered-btn--white(href="javascript:void(0);")
+							span Подробнее
+						hr.services-slider__line
+
+	section.section.services-list.section--top.section--bottom
 		.container
 			.services-list__items
 				.services-list__item.services-elem
