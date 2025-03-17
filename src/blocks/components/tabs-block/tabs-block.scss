@@ -1,0 +1,96 @@
+.tabs-block {
+    width: 100%;
+    overflow: hidden;
+
+    @include max(sm) {
+        overflow: visible;
+    }
+
+    .tabs {
+
+        @include max(sm) {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &__tab {
+            max-width: fit-content;
+            display: flex;
+            padding-bottom: 12px;
+            bottom: -2px;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s linear;
+            margin-right: 40px;
+
+            @include max(md) {
+                padding-bottom: 12px;
+                bottom: -2px;
+                gap: 10px;
+            }
+
+            @include max(sm) {
+                padding-bottom: 10px;
+                bottom: -2px;
+                gap: 10px;
+            }
+
+            &.swiper-slide-thumb-active {
+                border-color: $blue;
+
+                .tabs__name {
+                    color: $blue;
+                }
+
+                .tabs__counter {
+                    background-color: $blue;
+                }
+            }
+
+        }
+
+        &__name {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.35;
+            color: #B0B2B7;
+            transition: color 0.3s linear;
+            white-space: nowrap;
+
+            @include max(md) {
+                font-size: 18px;
+            }
+
+            @include max(sm) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__slides {
+        margin-top: 40px;
+
+        @include max(md) {
+            margin-top: 40px;
+        }
+
+        @include max(sm) {
+            margin-top: 20px;
+        }
+    }
+
+    .slides {
+        &__slide {
+            background: white;
+
+            &:not(.swiper-slide-active) {
+                opacity: 0 !important;
+                z-index: -10;
+            }
+        }
+    }
+}

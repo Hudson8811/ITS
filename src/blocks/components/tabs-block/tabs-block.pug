@@ -1,0 +1,37 @@
+-
+    const defaultTabsProps = {
+        classes: '',
+        tabs: [
+            {
+                name: 'Вкладка 1',
+            },
+            {
+                name: 'Вкладка 2',
+            },
+            {
+                name: 'Вкладка 3',
+            },
+        ],
+    }
+
+mixin tabs-block(props= defaultTabsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTabsProps.classes,
+            tabs: props.tabs ? props.tabs : defaultTabsProps.tabs
+        }
+
+    .tabs-block(class= checkProps.classes)&attributes(attributes)
+        .tabs-block__tabs.tabs(data-js="tabsBlockTabs")
+            .swiper-wrapper
+                - let count = 0 
+                - while (count < checkProps.tabs.length)
+                    .swiper-slide.tabs__tab
+                        .tabs__name!= checkProps.tabs[count].name
+
+                    - count += 1;
+        .tabs-block__slides(data-js="tabsBlockSlides")
+            .swiper-wrapper
+                block
+
+

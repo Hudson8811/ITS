@@ -1,6 +1,7 @@
 @@include("../../blocks/components/field-file/field-file.js")
 @@include("../../blocks/components/copy-block/copy-block.js")
 @@include("../../blocks/components/print-text/print-text.js")
+@@include("../../blocks/components/tabs-block/tabs-block.js")
 
 $(document).ready(function() {
 	var videoCase = $('.case__video');
@@ -37,4 +38,5 @@ $(document).ready(function() {
 	fileFieldInit();
 	copyBlock();
 	printTextController();
+	tabsBlockInit();
 });
