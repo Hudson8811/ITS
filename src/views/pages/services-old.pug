@@ -1,0 +1,305 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Услуги";
+
+block content
+	section.section.section--top.section--bottom.dev-intro
+		.container
+			h1.section__title.dev-intro__title.title__99 Услуги студии <span>ITS&nbsp;GROUP</span>
+
+			.dev-intro__bottom
+				.dev-intro__text.text__24 Мы предлагаем полный комплекс услуг для проектов любого уровня сложности и стадии готовности — от начальной, когда есть лишь идея, до поддержки готового ресурса
+				a.dev-intro__btn.btn.start__btn(href="#tell-us")
+					span Обсудить проект
+
+	section.section.services-slider(data-js="servicesSlider")
+		.swiper-wrapper
+			.swiper-slide.services-slider__slide
+				.services-slider__bg
+					img(src="img/services/services_slider_bg_1.webp")
+				.container.services-slider__container
+					.services-slider__img
+						img(src="img/services/services_slider_img_1.webp")
+					h2.services-slider__title.title__99 Брендинг <span>в ITS GROUP</span>
+					.services-slider__tags
+						.services-slider__tag Логотип
+						.services-slider__tag Фирменный стиль
+						.services-slider__tag Брендбук
+						.services-slider__tag Бренд платформа
+					.services-slider__text.text__18
+						p Разрабатываем новые бренды и улучшаем существующие
+						p Качественный брендинг это не статья расходов, а инвестиция в добавочную стоимость продукта, услуги, бизнеса
+					.services-slider__bottom
+						a.services-slider__btn.bordered-btn.bordered-btn--white(href="javascript:void(0);")
+							span Подробнее
+						hr.services-slider__line
+
+			.swiper-slide.services-slider__slide
+				.services-slider__bg
+					img(src="img/services/services_slider_bg_2.webp")
+				.container.services-slider__container
+					.services-slider__img
+						img(src="img/services/services_slider_img_2.webp")
+					h2.services-slider__title.title__99 Мобильная разработка <span>в ITS GROUP</span>
+					.services-slider__tags
+						.services-slider__tag iOS/Android
+						.services-slider__tag Публикация
+						.services-slider__tag Тестирование
+						.services-slider__tag Поддержка
+					.services-slider__text.text__18
+						p Создаем сервисные, информационные и&nbsp;развлекательные приложения
+						p Наши клиенты: mos.ru, Эхо Москвы, Зарядье, Jaguar & Land Rover и&nbsp;еще 15
+					.services-slider__bottom
+						a.services-slider__btn.bordered-btn.bordered-btn--white(href="javascript:void(0);")
+							span Подробнее
+						hr.services-slider__line
+
+			.swiper-slide.services-slider__slide
+				.services-slider__bg
+					img(src="img/services/services_slider_bg_3.webp")
+				.container.services-slider__container
+					.services-slider__img
+						img(src="img/services/services_slider_img_3.webp")
+					h2.services-slider__title.title__99 Веб разработка <span>в ITS GROUP</span>
+					.services-slider__tags
+						.services-slider__tag Аналитика, исследования
+						.services-slider__tag UI/UX
+						.services-slider__tag Адаптивный дизайн
+					.services-slider__text.text__18
+						p Реализуем проекты для госструктур, крупного и среднего бизнеса
+						p Знаем, как создавать цифровые сервисы, которые действительно решают ваши задачи
+					.services-slider__bottom
+						a.services-slider__btn.bordered-btn.bordered-btn--white(href="javascript:void(0);")
+							span Подробнее
+						hr.services-slider__line
+
+		+slider-controls
+
+	section.section.services-list.section--top.section--bottom
+		.container
+			.services-list__items
+				.services-list__item.services-elem
+					.services-elem__aside
+						.services-elem__header
+							a.services-elem__title.title__35(href="javascript:void(0") Веб-разработка                                        
+								span.services-elem__icon
+									svg
+										use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+
+							.services-elem__group
+								.services-elem__label CMS
+								.services-elem__val 1C-Bitrix, Wordpress, Mod X, Tilda
+
+							.services-elem__group
+								.services-elem__label Front-end
+								.services-elem__val React, React Native, Vue
+
+							.services-elem__group
+								.services-elem__label Back-end 
+								.services-elem__val yii|yii2, Laravel, Symfony, Python, Django, Celery, Java, Spring framework
+
+							.services-elem__group
+								.services-elem__label Devops
+								.services-elem__val Docker, Kubernetes, NGINX
+
+							a.services-elem__btn.bordered-btn(href="javascript:void(0);")
+								svg
+									use(xlink:href=`img/sprites/sprite.svg#download`)
+								span Скачать презентацию
+
+						.services-elem__body
+							.services-elem__projects <span>300+</span> проектов
+
+					.services-elem__content
+						ul
+							li Аналитика, исследования
+							li Проектирование UI/UX
+							li Адаптивный дизайн
+							li Верстка
+							li Разработка логики, интеграция шаблонов с CMS
+							li Внедрение
+							li Наполнение контентом
+							li Тестирование
+							li Поддержка
+
+				.services-list__item.services-elem
+					.services-elem__aside
+						.services-elem__header
+							a.services-elem__title.title__35(href="javascript:void(0") Мобильная разработка                                        
+								span.services-elem__icon
+									svg
+										use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+
+							.services-elem__group
+								.services-elem__label Native
+								.services-elem__val iOS/Android
+
+							.services-elem__group
+								.services-elem__label Кросс-платформы
+								.services-elem__val Flutter, Xamarin, React Native
+
+						.services-elem__body
+							.services-elem__projects <span>30+</span> проектов
+
+					.services-elem__content
+						ul
+							li Аналитика, исследования
+							li Проектирование UI/UX
+							li Разработка: нативная, кросс-платформенная
+							li Публикация
+							li Тестирование
+							li Поддержка
+
+				.services-list__item.services-elem
+					.services-elem__aside
+						.services-elem__header
+							.services-elem__title.services-elem__title--nolink.title__35 Аналитика и дизайн
+
+						.services-elem__body
+							.services-elem__projects
+								<span>150+</span> проектов
+
+					.services-elem__content
+						+tabs-block({
+							tabs: [
+								{name: 'UX/UI'},
+								{name: 'Дизайн-системы'},
+								{name: 'Имиджевое промо'},
+								{name: 'Визуализация данных'}
+							]
+						})
+							.swiper-slide.slides__slide
+								ul
+									li Аналитика
+									li Комплексные исследования
+									li Проектирование UI/UX
+									li Информационный дизайн
+									li Промо
+									li Юзабилити тестирование сайта или прототипов
+
+							.swiper-slide.slides__slide
+								ul
+									li Библиотеки компонентов
+									li Паттерны и принципы дизайна, с учетом философии компании
+									li Единый визуальный стиль для всех элементов дизайна
+									li Инструкции для дизайнеров и разработчиков
+
+							.swiper-slide.slides__slide
+								ul
+									li Брендинговые материалы
+									li Промо-сайты с нестандартной графикой
+									li Digital-маркетинг
+
+							.swiper-slide.slides__slide
+								ul
+									li Создание дашбордов
+									li Креативное оформление инфографики и отчетов
+									li Разработка и внедрение инструментов для анализа больших данных
+
+				.services-list__item.services-elem
+					.services-elem__aside
+						.services-elem__header
+							a.services-elem__title.title__35(href="javascript:void(0") Брендинг
+								span.services-elem__icon
+									svg
+										use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+
+							a.services-elem__btn.bordered-btn(href="javascript:void(0);")
+								svg
+									use(xlink:href=`img/sprites/sprite.svg#download`)
+								span Скачать презентацию
+
+						.services-elem__body
+							.services-elem__projects <span>100+</span> проектов
+
+					.services-elem__content
+						ul
+							li Разработка платформ бренда
+							li Нейминг, разработка слогана
+							li Логотип, фирменный стиль
+							li Разработка принтов и сувенирных материалов
+
+				.services-list__item.services-elem
+					.services-elem__aside
+						.services-elem__header
+							.services-elem__title.services-elem__title--nolink.title__35 Консалтинг
+
+						.services-elem__body
+							.services-elem__projects <span>150+</span> проектов
+
+					.services-elem__content
+						ul
+							li Проводим аудит бизнес-процессов компании
+							li Определяем критерии качества продуктов и&nbsp;варианты их&nbsp;улучшения
+							li Даем рекомендации по развитию команд
+
+				.services-list__item.services-elem
+					.services-elem__aside
+						.services-elem__header
+							.services-elem__title.services-elem__title--nolink.title__35 Продвижение
+
+						.services-elem__body
+							.services-elem__projects <span>150+</span> проектов
+
+					.services-elem__content
+						ul
+							li Анализ рынка и конкурентов
+							li Unit-экономика
+							li
+								a(href="javascript:void(0)") SEO
+							li Контекстная реклама
+							li Таргетинг
+							li SMM &amp; PR
+							li Автоматизация маркетинга 
+							li Сквозная аналитика
+
+				.services-list__item.services-elem
+					.services-elem__aside
+						.services-elem__header
+							.services-elem__title.services-elem__title--nolink.title__35 Разработка технической документации по&nbsp;ГОСТ
+
+						.services-elem__body
+							.services-elem__projects <span>150+</span> проектов
+
+					.services-elem__content
+						ul
+							li Технические проекты (ТЗ, ЧТЗ, ПЗ)
+							li Руководство пользователя, администратора
+							li Эксплуатационные документы
+							li Документы по информационной безопасности
+							li Программы и методики испытаний
+							li Оформление документов по стандартам
+							li ФЗ&nbsp;44/223 консалтинг и&nbsp;информационная поддержка
+							li Экспертиза документации
+							li Помощь по&nbsp;вопросам участия в&nbsp;торгах
+
+				.services-list__item.services-elem
+					.services-elem__aside
+						.services-elem__header
+							.services-elem__title.services-elem__title--nolink.title__35 Гарантия
+
+						.services-elem__body
+							.services-elem__projects <span>150+</span> проектов
+
+					.services-elem__content
+						ul
+							li Передаем исходные файлы и другие материалы согласно договору
+							li Передаем все необходимые юридические права
+							li В течение 1 года исправляем проблемы и неполадки, возникшие после запуска продукта
+
+	section.section--bg.section--bottom.services-auto
+		.container
+			.services-auto__container
+				h2.services-auto__title.title__65 Автоматизируем бизнес-процессы
+				.services-auto__list
+					.services-auto__item(style="border-color: #019681") Интеграция сервисов в&nbsp;ИТ-инфраструктуру
+					.services-auto__item(style="border-color: #28A1CE") Заказная разработка информационных систем
+					.services-auto__item(style="border-color: #28A1CE") Автоматизация процессов
+					.services-auto__item(style="border-color: #28A1CE") Техническая поддержка 
+					.services-auto__item(style="border-color: #A2C14B") Информационная безопасность
+					.services-auto__item(style="border-color: #28A1CE") Внедрение CRM и&nbsp;ERP систем
+					.services-auto__item(style="border-color: #28A1CE")  Digital‑ и&nbsp;контент-маркетинг
+					.services-auto__item(style="border-color: #28A1CE") Внедрение BI‑систем
+					a.services-auto__item.services-auto__item--link(target="_blank" href="javascript:void(0)") Перейти на сайт интегратора
