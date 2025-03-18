@@ -385,7 +385,7 @@ body {
     font-weight: 700;
     line-height: 91.1%;
     /* 59.215px */
-    letter-spacing: -2.6px;
+    letter-spacing: -0.04em;
 
     span {
         color: rgba(42, 42, 42, 0.21);
@@ -396,14 +396,14 @@ body {
         font-style: normal;
         font-weight: 700;
         line-height: 115%;
-        letter-spacing: -3.942px;
+        letter-spacing: -0.06em;
         margin-bottom: 24px;
     }
 
     @include max(xs) {
         font-size: 40px;
         line-height: 100%;
-        letter-spacing: -2px;
+        letter-spacing: -0.05em;
     }
 }
 
@@ -412,7 +412,7 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
-    letter-spacing: -1.225px;
+    letter-spacing: -0.035em;
 
     span {
         color: rgba(42, 42, 42, 0.21);
@@ -422,14 +422,12 @@ body {
         font-size: 35px;
         font-style: normal;
         font-weight: 500;
-        letter-spacing: -1.225px;
     }
 
     @include max(xs) {
         font-size: 35px;
         font-style: normal;
         font-weight: 500;
-        letter-spacing: -1.225px;
     }
 }
 
