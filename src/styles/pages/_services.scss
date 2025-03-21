@@ -1,4 +1,14 @@
 .services-common {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100dvh - 73px);
+    padding-bottom: 93px;
+
+    @include max(mdHeader) {
+        min-height: calc(100dvh - 55px);
+    }
+
     &__container {
         display: flex;
         align-items: center;
