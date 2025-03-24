@@ -1,0 +1,17 @@
+-
+    const defaultShowMoreProps = {
+        classes: '',
+        height: '120'
+    }
+
+mixin show-more(props= defaultShowMoreProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultShowMoreProps.classes,
+            height: props.height ? props.height : defaultShowMoreProps.height
+        }
+
+    .show-more(class= checkProps.classes data-js="showMoreBlock" data-height=checkProps.height)&attributes(attributes)
+        .show-more__content(data-js="showMoreBlockContent")
+            block
+

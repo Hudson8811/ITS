@@ -1,0 +1,262 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Услуга - Техническая поддержка";
+
+block content
+	section.section.service-banner
+		.service-banner__bg
+			img(src="img/services/services_slider_bg_3.webp")
+		.container.service-banner__container
+			.service-banner__img
+				img(src="img/services/services_slider_img_3.webp")
+			h2.service-banner__title.title__99 Техническая поддержка <span>от ITS GROUP</span>
+			.service-banner__tags
+				.service-banner__tag Фронтенд
+				.service-banner__tag Бэкенд
+				.service-banner__tag Аналитика
+				.service-banner__tag Дизайн
+			.service-banner__text.text__18
+				p Знаем, как поддерживать и развивать цифровые сервисы любой сложности. Берём на поддержку проекты госструктур, крупного и среднего бизнеса.
+				p Сейчас в руках нашей команды разработки более 10 проектов, в том числе Открытие, HOFF, ДОМ.РФ, Газпромнефть и АСИ.
+			.service-banner__bottom
+				a.service-banner__btn.bordered-btn.bordered-btn--white(href="#tell-us")
+					span Оставить заявку
+				hr.service-banner__line
+
+	section.section.section--top.section--bottom.process.process--cols2
+		.container 
+			.process__title.title__65 Преимущества
+			.process__cards
+				.process__card.process__card--1.process-card
+					.process-card__num 1
+					.process-card__content
+						.process-card__title.title__35 Один договор
+						.process-card__text.text__18 
+							p Все типы работ, от поддержки до внедрения нового модуля или интеграции — в рамках одного договора. 
+							p Аналитика, программирование, верстка, дизайн (в том числе отрисовка баннеров), DevOps и даже маркетинг при необходимости. 
+							p Интеграции, включая создание API — также включены
+
+				.process__card.process__card--2.process-card
+					.process-card__num 2
+					.process-card__content
+						.process-card__title.title__35 Фиксированная команда
+						.process-card__text.text__18 
+							p Выделяем персонального менеджера проекта, аналитика и разработчиков под проект под проект (при необходимости зафиксируем ФИО участников).
+
+				.process__card.process__card--3.process-card
+					.process-card__num 3
+					.process-card__content
+						.process-card__title.title__35 Полный контроль
+						.process-card__text.text__18 
+							p Информация не теряется: работаем через систему постановки задач. Пишем мини-ТЗ (постановку) по сложным задачам, чтобы избежать завышенных оценок и срыва сроков.
+
+				.process__card.process__card--4.process-card
+					.process-card__num 4
+					.process-card__content
+						.process-card__title.title__35 Оценка задач
+						.process-card__text.text__18 Все работы оцениваем до выполнения. Если что-то неясно, проведем интервью/аналитику или уточним.
+
+				.process__card.process__card--5.process-card
+					.process-card__num 5
+					.process-card__content
+						.process-card__title.title__35 Фиксированная цена
+						.process-card__text.text__18 Фиксированная цена нормо-часа (2 500 ₽ разработка/техподдержка, 3 000 ₽ аналитика, 2 500 ₽ дизайн/тестирование).
+
+				.process__card.process__card--6.process-card
+					.process-card__num 6
+					.process-card__content
+						.process-card__title.title__35 Прозрачность
+						.process-card__text.text__18 Отчетность каждый месяц, с детальным описанием каждой работы.
+
+			.process__text.title__28 Техническая поддержка сайтов — это 30% оборота компании
+
+	section.section.section--bottom.dev-stack
+		.container
+			h2.section__title.dev-stack__title.title__65 Работаем <span>со стеком</span>
+			.dev-stack__cards
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-1.svg' alt="Nest js")
+					.stack-card__name Nest js
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-2.svg' alt="React")
+					.stack-card__name React
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-3.svg' alt="Vue")
+					.stack-card__name Vue
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-8.svg' alt="Docker")
+					.stack-card__name Docker
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-10.svg' alt="Angular")
+					.stack-card__name Angular
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-11.svg' alt="Redis")
+					.stack-card__name Redis
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-12.svg' alt="ClickHouse")
+					.stack-card__name ClickHouse
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-13.svg' alt="Prisma")
+					.stack-card__name Prisma
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-14.svg' alt="NATS")
+					.stack-card__name NATS
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-15.svg' alt="Next")
+					.stack-card__name Next
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-16.svg' alt="Laravel")
+					.stack-card__name Laravel
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-17.svg' alt="PostgreSQL")
+					.stack-card__name PostgreSQL
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-18.svg' alt="Typescript")
+					.stack-card__name Typescript
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-19.svg' alt="Yii2")
+					.stack-card__name Yii2
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-20.svg' alt="PHP")
+					.stack-card__name PHP
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-21.svg' alt="RabbitMQ")
+					.stack-card__name RabbitMQ
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-22.svg' alt="Grafana/k6")
+					.stack-card__name Grafana/k6
+				.stack-card
+					.stack-card__img
+						img(src='img/stack/stack-23.svg' alt="Jest")
+					.stack-card__name Jest
+
+	section.section.price
+		.container 
+			.price__title.title__65 Тарифы
+			.price__cards
+				.price__card.price-card.price-card--nodesc
+					.price-card__name.title__35 Техподдержка
+						.price-card__text.text__18
+					.price-card__cost.title__65!= '2500 ₽'
+					a(href="#").price-card__btn.btn--small посчитать точно
+
+				.price__card.price-card.price-card--nodesc
+					.price-card__name.title__35 Аналитика
+					.price-card__cost.title__65!= '3 000 ₽'
+
+					a(href="#").price-card__btn.btn--small посчитать точно
+
+				.price__card.price-card.price-card--nodesc
+					.price-card__name.title__35 Дизайн
+						.price-card__text.text__18
+					.price-card__cost.title__65!= '2 000 ₽'
+
+					a(href="#").price-card__btn.btn--small посчитать точно
+
+			.price__text.title__28 Срочное выполнение работ или работа в выходные дни/нерабочее время — возможна по удвоенной ставке
+
+	section.section.about-work.section--bottom
+		.container
+			.about-work__title.title__65 Ещё немного <span>о&nbsp;нашей работе</span>
+			.about-work__desc.text__24 Тут бы какой-нибудь текст, типа краткого описания. Например, современные технологии достигли такого уровня, что социально-экономическое развитие однозначно определяет каждого участника как способного принимать собственные решения касаемо стандартных подходов.
+			.about-work__blocks
+				.about-work__block
+					.about-work__subtitle.title__35 Порядок работ
+					+show-more
+						.about-work__text.text__style
+							ul
+								li Рабочая группа Заказчика заводится в системе постановки задач. Вы ставите нам задачи и наблюдаете за их решением. Вы получите уведомление на телефон или электронную почту о ходе работ.
+								li Менеджер в течение 1-2 часов реагирует на нее и дает оценку либо задает уточняющие вопросы.
+								li После получения оценки Вы ее утверждаете, и мы приступаем к работе.
+								li Если мы неверно рассчитали нормо-часы (а задача осталась той же) — это наши риски и наши проблемы, Вы оплачиваете только оговоренные часы.
+								li В конце каждого месяца мы предоставляем детализированный отчет.
+
+				.about-work__block
+					.about-work__subtitle.title__35 Производство: схема разработки, контроль версий, автотесты.
+					+show-more
+						.about-work__text.text__style
+							p С помощью системы контроля версий на проект можно поставить сразу несколько программистов, причем их изменения легко отслеживать. Эта же технология применяется и при дальнейшей поддержке сайта.
+
+							p При сдаче проекта мы применяем как автоматическое, так и ручное тестирование, чтобы все предусмотреть.
+
+				.about-work__block
+					.about-work__subtitle.title__35 Контроль сроков и тестирование
+					+show-more
+						.about-work__text.text__style
+							p Контроль сроков реализуем через диаграмму Ганта и ее регулярное обновление.
+
+							p Наши тестировшики проверяют работу как вручную, так и через автоматические тесты. Что важно, мы это делаем не в конце всего проекта, а в конце каждого недельного этапа, что обеспечивает контроль качества.
+
+				.about-work__block
+					.about-work__subtitle.title__35 Доработка чужих проектов
+					+show-more
+						.about-work__text.text__style
+							p Берем ли мы чужие проекты? Да, берем, почти во всех случаях сразу приступаем к работам.
+
+				.about-work__block
+					.about-work__subtitle.title__35 Интеграция с 1С и другими системами
+					+show-more
+						.about-work__text.text__style
+							p Сопровождаем и дорабатываем системы на базе 1С, от Управления торговлей до ERP.
+
+							p Работаем с IT-службой заказчика: разрабатываем API обмена, проектируем каналы обмена данными. Результат: одно- или двусторонний обмен с 1С, ERP, AXAPTA, SAP и еще 20+ менее известными системами учета и автоматизации.
+
+	+cases-slider({
+		classes: 'section--bottom'
+	})
+
+	+reviews-section({
+		title: 'Отзывы клиентов',
+		items: [
+			{
+				text: 'За время работы над проектами, команда зарекомендовала себя как надежный, высококвалифицированный и инициативный партнер, ответственно подходящий к работе и решающий поставленные задачи в срок.',
+				photo: 'img/blog/person_1.webp',
+				name: 'Максим Соколов',
+				position: 'Генеральный директор АО «Компания»'
+			},
+			{
+				text: 'Крутая команда профессионалов, быстро адаптирующаяся под периодически изменяемые требования заказчика, качественно и в срок выполняющая поставленные задачи.',
+				photo: 'img/blog/person_4.webp',
+				name: 'Александра Борисова',
+				position: 'Начальник отдела управления производственными ИТ-продуктами'
+			},
+			{
+				text: 'За время работы над проектом разработчики показали себя как команда профессионалов, успешно решивших все поставленные перед ними задачи и достигнувших цели проекта.',
+				photo: 'img/blog/person_2.webp',
+				name: 'Олег Белимов',
+				position: 'Руководитель проектов группы компаний'
+			},
+			{
+				text: 'Рекомендуем компанию как надежного и компетентного партнера, который способен успешно реализовать сложные проекты и качественно выполнить поставленные задачи.',
+				photo: 'img/blog/person_3.webp',
+				name: 'Илья Макаркин',
+				position: 'Директор проектов'
+			},
+			{
+				text: 'Ребята разработали масштабную систему, которая требовала крайне высокую техническую экспертность и позволила поднять сервис на новый уровень.',
+				photo: 'img/blog/person_5.webp',
+				name: 'Мария Михайлова',
+				position: 'Руководитель проектов цифровизации'
+			}
+		],
+		bottom: true
+	})
