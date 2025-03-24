@@ -42,28 +42,8 @@ block content
 					.stack-card__name Vue
 				.stack-card
 					.stack-card__img
-						img(src='img/stack/stack-4.svg' alt="ASP.net")
-					.stack-card__name ASP.net
-				.stack-card
-					.stack-card__img
-						img(src='img/stack/stack-5.svg' alt="Java")
-					.stack-card__name Java
-				.stack-card
-					.stack-card__img
-						img(src='img/stack/stack-6.svg' alt="Kotlin")
-					.stack-card__name Kotlin
-				.stack-card
-					.stack-card__img
-						img(src='img/stack/stack-7.svg' alt="Kafka")
-					.stack-card__name Kafka
-				.stack-card
-					.stack-card__img
 						img(src='img/stack/stack-8.svg' alt="Docker")
 					.stack-card__name Docker
-				.stack-card
-					.stack-card__img
-						img(src='img/stack/stack-9.svg' alt="Swift")
-					.stack-card__name Swift
 				.stack-card
 					.stack-card__img
 						img(src='img/stack/stack-10.svg' alt="Angular")
@@ -132,43 +112,9 @@ block content
 					.cooperation__subtitle.title__35 Fixed Price
 					.cooperation__text.title__35 Подходит проектам со&nbsp;строгим ТЗ, предсказуемыми сроками бюджетом
 
-	section.releases.section
-		.container
-			.releases__header
-				.releases__title.title__65 Релизы 2024
-				.releases__all.bordered-btn(href="javascript:void(0);")
-					span Смотреть все
-			.releases__cards
-				.releases__card.releases-card.releases-card--dark
-					a.releases-card__link(href="https://tverdomer.ru/" target="_blank")
-					.releases-card__img
-						img(src="img/release_1.jpg" alt="")
-					.releases-card__title tverdomer.ru
-				.releases__card.releases-card
-					a.releases-card__link(href="https://www.bonum-trailer.ru/" target="_blank")
-					.releases-card__img
-						img(src="img/release_2.jpg" alt="")
-					.releases-card__title bonum-trailer.ru
-				.releases__card.releases-card
-					a.releases-card__link(href="https://www.tn.ru/" target="_blank")
-					.releases-card__img
-						img(src="img/release_3.jpg" alt="")
-					.releases-card__title tn.ru
-				.releases__card.releases-card
-					a.releases-card__link(href="https://vrf-mrv.ru/" target="_blank")
-					.releases-card__img
-						img(src="img/release_4.jpg" alt="")
-					.releases-card__title vrf-mrv.ru
-				.releases__card.releases-card
-					a.releases-card__link(href="https://fishmarket.ru/" target="_blank")
-					.releases-card__img
-						img(src="img/release_5.jpg" alt="")
-					.releases-card__title fishmarket.ru
-				.releases__card.releases-card
-					a.releases-card__link(href="https://kolkunovo.ru/" target="_blank")
-					.releases-card__img
-						img(src="img/release_6.jpg" alt="")
-					.releases-card__title kolkunovo.ru
+	+cases-slider({
+		classes: 'section--bottom'
+	})
 
 	+reviews-section({
 		title: 'Отзывы клиентов',

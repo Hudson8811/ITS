@@ -1,0 +1,214 @@
+.cases-slider {
+    overflow: hidden;
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 70px 0 90px;
+        height: auto;
+        overflow: hidden;
+
+        @include max(md) {
+            padding: 40px 0 64px;
+            min-height: auto;
+        }
+
+        @include max(sm) {
+            padding: 32px 0 48px;
+        }
+    }
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        z-index: 3;
+        height: 100%;
+
+        @include max(md) {
+            gap: 48px;
+        }
+
+        @include max(sm) {
+            gap: 32px;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+
+            @include max(md) {
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    &__title {
+        position: relative;
+        color: $white;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        max-width: 1035px;
+
+        @include max(xs) {
+            font-size: 40px;
+        }
+
+        span {
+            display: flex;
+            color: $white;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px $white;
+        }
+    }
+
+    &__tags {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+        margin-top: 24px;
+        max-width: 1035px;
+
+        @include max(md) {
+            gap: 12px 16px;
+        }
+    }
+
+    &__tag {
+        font-size: 22px;
+        line-height: 1.1em;
+        color: $white;
+        width: fit-content;
+
+        @include max(md) {
+            font-size: 18px;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 22px;
+            height: 10px;
+            border-left: 3px solid $white;
+            border-bottom: 3px solid $white;
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-44deg);
+            transform: rotate(-44deg);
+            margin-right: 12px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__body {
+        max-width: 800px;
+
+        @include max(lg) {
+            max-width: 650px;
+        }
+
+        @include max(md) {
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        color: $white;
+
+        @include max(sm) {
+            font-size: 14px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        margin-top: auto;
+
+        @include max(md) {
+            gap: 32px;
+        }
+    }
+
+    &__btn {
+        width: fit-content;
+        flex: 0 0 auto;
+    }
+
+    &__line {
+        flex: 1 1 auto;
+        border-color: $white;
+
+        @include max(sm) {
+            display: none;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        right: calc((100% - 1376px) / 2);
+        top: 50%;
+        transform: translate(25%, -50%);
+        width: calc(1376px * 0.6);
+        z-index: 1;
+
+        @include max(lg) {
+            right: 36px;
+            width: 60%;
+        }
+
+        @include max(md) {
+            width: 80%;
+            transform: translate(10%, -50%);
+            z-index: 0;
+        }
+
+        @include max(xs) {
+            width: 200%;
+            transform: translate(-25%, -50%);
+            right: auto;
+            left: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &:hover .slider-controls {
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -281,7 +281,6 @@ jQuery(function () {
     }
    
     masonryInit();
-    servicesSliderInit()
 });
 
 
@@ -297,21 +296,3 @@ function masonryInit() {
     }
 }
 
-function servicesSliderInit() {
-    const slider = document.querySelector('[data-js="servicesSlider"]')
-
-    if(!slider) return
-
-    const sliderControls = slider.querySelector('[data-js="sliderControls"]')
-    const sliderPrev = sliderControls.querySelector('[data-js="sliderControlPrev"]')
-    const sliderNext = sliderControls.querySelector('[data-js="sliderControlNext"]')
-
-    const sliderEx = new Swiper(slider, {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        navigation: {
-            nextEl: sliderNext,
-            prevEl: sliderPrev,
-        },
-    })
-}

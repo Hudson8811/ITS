@@ -1,0 +1,90 @@
+-
+	const defaultCasesSliderProps = {
+		classes: '',
+	}
+
+mixin cases-slider(props = defaultCasesSliderProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultCasesSliderProps.classes,
+		}
+
+	section.section.cases-slider(class=checkProps.classes data-js="casesSlider")&attributes(attributes)
+		.swiper-wrapper
+			.swiper-slide.cases-slider__slide
+				.cases-slider__bg
+					img(src="img/cases/alfamedex/slider_bg.webp")
+				.cases-slider__img
+					img(src="img/cases/alfamedex/slider_img.webp")
+				.container.cases-slider__container
+					.cases-slider__header
+						h2.cases-slider__title.title__99 Альфамедэкс
+						.cases-slider__tags
+							.cases-slider__tag Онлайн-сервис
+							.cases-slider__tag UX/UI дизайн
+							.cases-slider__tag Разработка
+					.cases-slider__body
+						.cases-slider__text.text__18
+							p Компания «Альфамедэкс» работает с дистрибьюторами, которые занимаются тендерными закупками медицинских расходных материалов. 
+							p Раньше менеджеры принимали и формировали заказы вручную, но на это уходила уйма времени, потому что только одна заявка может состоять из сотни позиций.
+							p Мы создали для них простой и понятный сервис, где клиент может найти всю информацию по каждому товару, скачать сравнительные таблицы и сопроводительные документы, собрать корзину и отследить статус заказа.
+					.cases-slider__bottom
+						a.cases-slider__btn.bg-btn(href="javascript:void(0);")
+							span Подробнее
+						a.cases-slider__btn.bordered-btn.bordered-btn--white(href="javascript:void(0);")
+							span Смотреть сайт
+						hr.cases-slider__line
+
+			.swiper-slide.cases-slider__slide
+				.cases-slider__bg
+					img(src="img/cases/met/slider_bg.webp")
+				.cases-slider__img
+					img(src="img/cases/met/slider_img.webp")
+				.container.cases-slider__container
+					.cases-slider__header
+						h2.cases-slider__title.title__99 Центр «МЕТ»
+						.cases-slider__tags
+							.cases-slider__tag Аналитика
+							.cases-slider__tag Дизайн
+							.cases-slider__tag Фронтенд
+							.cases-slider__tag Бэкенд
+					.cases-slider__body
+						.cases-slider__text.text__18
+							p B2B-компания Центр «МЕТ» - разработчик высокоточных портативных твердомеров и мер твердости. 
+							p В Центре «МЕТ» хотели, чтобы дилеры могли заказывать товары без помощи менеджеров. На сайте должен быть интуитивно понятный интерфейс и актуальная информация. Предыдущая версия сайта не позволяла быстро ориентироваться в структуре и заказывать товары онлайн. Хотелось, чтобы клиент мог покупать продукцию в личном кабинете, а еще проверять ее подлинность на сайте.
+							p Сейчас через сайт обрабатывается порядка 55% заказов. Это позволило разгрузить отдел продаж от большого количества повторяющихся запросов от дилеров и оптовиков, чтобы они могли качественнее работать с конечными и крупными клиентами. Заказы онлайн стали постоянными.
+					.cases-slider__bottom
+						a.cases-slider__btn.bg-btn(href="javascript:void(0);")
+							span Подробнее
+						a.cases-slider__btn.bordered-btn.bordered-btn--white(href="javascript:void(0);")
+							span Смотреть сайт
+						hr.cases-slider__line
+
+			.swiper-slide.cases-slider__slide
+				.cases-slider__bg
+					img(src="img/cases/skyfish/slider_bg.webp")
+				.cases-slider__img
+					img(src="img/cases/skyfish/slider_img.webp")
+				.container.cases-slider__container
+					.cases-slider__header
+						h2.cases-slider__title.title__99 SKY FISH
+						.cases-slider__tags
+							.cases-slider__tag Аналитика
+							.cases-slider__tag Дизайн
+							.cases-slider__tag Фронтенд
+							.cases-slider__tag Бэкенд
+					.cases-slider__body
+						.cases-slider__text.text__18
+							p Компания “SKY FISH” - ведущий поставщик свежемороженой рыбы и морепродуктов из 15 стран.
+							p Целью было создание сайта, который делает уклон на корпоративных клиентов, Нужно было показать, что SKY FISH готовы всегда дать персональное предложение при первом касании с клиентом. Цены на сайте указаны в предварительном формате, при взаимодействии клиент получает индивидуальные условия по сотрудничеству.
+							p В итоге у нас получился сайт, который не только привлек новых клиентов, но и вошел в ТОП-10 рейтинга Рунета в категории «Потребительские товары и торговля»
+					.cases-slider__bottom
+						a.cases-slider__btn.bg-btn(href="javascript:void(0);")
+							span Подробнее
+						a.cases-slider__btn.bordered-btn.bordered-btn--white(href="javascript:void(0);")
+							span Смотреть сайт
+						hr.cases-slider__line
+
+		+slider-controls
+
+

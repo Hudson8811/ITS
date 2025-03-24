@@ -3316,3 +3316,35 @@ body {
         padding: 0 16px;
     }
 }
+
+.bg-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 18px;
+    border-radius: 42px;
+    min-height: 42px;
+    background-color: $white;
+    color: $fonBlack;
+    text-decoration: none;
+    transition: all $tr-time linear;
+    cursor: pointer;
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:hover {
+        color: $white;
+        background-color: $blue;
+    }
+
+    @include max(xs) {
+        font-size: 14px;
+        border-radius: 36px;
+        min-height: 36px;
+        padding: 0 16px;
+    }
+}
