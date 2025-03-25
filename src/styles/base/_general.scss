@@ -1316,6 +1316,12 @@ body {
         }
     }
 
+    &--cols2 &__title {
+        @include max(560) {
+            font-size: 40px;
+        }
+    }
+
     &__text {
         margin-top: 40px;
         font-weight: 400;
@@ -3411,6 +3417,9 @@ body {
     &__subtitle {
         margin-bottom: 16px;
 
+        @include max(560) {
+            font-size: 24px;
+        }
     }
 
     &__text {

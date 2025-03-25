@@ -47,7 +47,7 @@
         max-width: 1035px;
 
         @include max(xs) {
-            font-size: 48px;
+            font-size: 40px;
         }
 
         span {
@@ -176,4 +176,17 @@
         }
     }
 
+}
+
+.service-price.price {
+    .price__title {
+
+        @include max(767) {
+            font-size: 65px;
+        }
+
+        @include max(560) {
+            font-size: 40px;
+        }
+    }
 }
