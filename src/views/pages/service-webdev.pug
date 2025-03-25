@@ -24,7 +24,52 @@ block content
 					span Оставить заявку
 				hr.service-banner__line
 
-	section.section.section--top.section--bottom.dev-stack
+	section.section.section--top.section--bottom.process.process--cols2
+		.container 
+			.process__title.title__65 Преимущества
+			.process__cards
+				.process__card.process__card--1.process-card
+					.process-card__num 1
+					.process-card__content
+						.process-card__title.title__35 Один договор
+						.process-card__text.text__18 
+							p Все типы работ, от поддержки до внедрения нового модуля или интеграции — в рамках одного договора. 
+							p Аналитика, программирование, верстка, дизайн (в том числе отрисовка баннеров), DevOps и даже маркетинг при необходимости. 
+							p Интеграции, включая создание API — также включены
+
+				.process__card.process__card--2.process-card
+					.process-card__num 2
+					.process-card__content
+						.process-card__title.title__35 Фиксированная команда
+						.process-card__text.text__18 
+							p Выделяем персонального менеджера проекта, аналитика и разработчиков под проект (при необходимости зафиксируем ФИО участников).
+
+				.process__card.process__card--3.process-card
+					.process-card__num 3
+					.process-card__content
+						.process-card__title.title__35 Полный контроль
+						.process-card__text.text__18 
+							p Информация не теряется: работаем через систему постановки задач. Пишем мини-ТЗ (постановку) по сложным задачам, чтобы избежать завышенных оценок и срыва сроков.
+
+				.process__card.process__card--4.process-card
+					.process-card__num 4
+					.process-card__content
+						.process-card__title.title__35 Оценка задач
+						.process-card__text.text__18 Все работы оцениваем до выполнения. Если что-то неясно, проведем интервью/аналитику или уточним.
+
+				.process__card.process__card--5.process-card
+					.process-card__num 5
+					.process-card__content
+						.process-card__title.title__35 Фиксированная цена
+						.process-card__text.text__18 Фиксированная цена нормо-часа (2 500 ₽ разработка/техподдержка, 3 000 ₽ аналитика, 2 500 ₽ дизайн/тестирование).
+
+				.process__card.process__card--6.process-card
+					.process-card__num 6
+					.process-card__content
+						.process-card__title.title__35 Прозрачность
+						.process-card__text.text__18 Отчетность каждый месяц, с детальным описанием каждой работы.
+
+	section.section.section--bottom.dev-stack
 		.container
 			h2.section__title.dev-stack__title.title__65 Используем <span>востребованный стек</span>
 			.dev-stack__cards
@@ -101,6 +146,31 @@ block content
 						img(src='img/stack/stack-23.svg' alt="Jest")
 					.stack-card__name Jest
 
+	section.section.price.service-price
+		.container 
+			.price__title.title__65 Цены
+			.price__cards
+				price__card.price-card
+					.price-card__name.title__35 Сайт
+						.price-card__text.text__18
+					.price-card__cost.title__65!= '> 2 млн'
+						.price-card__desc MVP - от 3 мес
+					a(href="#").price-card__btn.btn--small посчитать точно
+
+				.price__card.price-card
+					.price-card__name.title__35 Веб-сервис
+						.price-card__text.text__18 со сложными интеграциями
+					.price-card__cost.title__65!= '> 2 млн'
+						.price-card__desc MVP - от 3 мес
+					a(href="#").price-card__btn.btn--small посчитать точно
+
+				.price__card.price-card
+					.price-card__name.title__35 CRM, ERP, PDM
+						.price-card__text.text__18
+					.price-card__cost.title__65!= '> 3.5 млн'
+						.price-card__desc от 5 мес
+					a(href="#").price-card__btn.btn--small посчитать точно
+
 	section.cooperation
 		.container 
 			.cooperation__title.title__65 Форматы сотрудничества
@@ -111,6 +181,52 @@ block content
 				.cooperation__card
 					.cooperation__subtitle.title__35 Fixed Price
 					.cooperation__text.title__35 Подходит проектам со&nbsp;строгим ТЗ, предсказуемыми сроками бюджетом
+
+	section.section.about-work.section--bottom
+		.container
+			.about-work__title.title__65 Ещё немного <span>о&nbsp;нашей работе</span>
+			.about-work__desc.text__24 Тут бы какой-нибудь текст, типа краткого описания. Например, современные технологии достигли такого уровня, что социально-экономическое развитие однозначно определяет каждого участника как способного принимать собственные решения касаемо стандартных подходов.
+			.about-work__blocks
+				.about-work__block
+					.about-work__subtitle.title__35 Порядок работ
+					+show-more
+						.about-work__text.text__style
+							ul
+								li Рабочая группа Заказчика заводится в системе постановки задач. Вы ставите нам задачи и наблюдаете за их решением. Вы получите уведомление на телефон или электронную почту о ходе работ.
+								li Менеджер в течение 1-2 часов реагирует на нее и дает оценку либо задает уточняющие вопросы.
+								li После получения оценки Вы ее утверждаете, и мы приступаем к работе.
+								li Если мы неверно рассчитали нормо-часы (а задача осталась той же) — это наши риски и наши проблемы, Вы оплачиваете только оговоренные часы.
+								li В конце каждого месяца мы предоставляем детализированный отчет.
+
+				.about-work__block
+					.about-work__subtitle.title__35 Производство: схема разработки, контроль версий, автотесты.
+					+show-more
+						.about-work__text.text__style
+							p С помощью системы контроля версий на проект можно поставить сразу несколько программистов, причем их изменения легко отслеживать. Эта же технология применяется и при дальнейшей поддержке сайта.
+
+							p При сдаче проекта мы применяем как автоматическое, так и ручное тестирование, чтобы все предусмотреть.
+
+				.about-work__block
+					.about-work__subtitle.title__35 Контроль сроков и тестирование
+					+show-more
+						.about-work__text.text__style
+							p Контроль сроков реализуем через диаграмму Ганта и ее регулярное обновление.
+
+							p Наши тестировшики проверяют работу как вручную, так и через автоматические тесты. Что важно, мы это делаем не в конце всего проекта, а в конце каждого недельного этапа, что обеспечивает контроль качества.
+
+				.about-work__block
+					.about-work__subtitle.title__35 Доработка чужих проектов
+					+show-more
+						.about-work__text.text__style
+							p Берем ли мы чужие проекты? Да, берем, почти во всех случаях сразу приступаем к работам.
+
+				.about-work__block
+					.about-work__subtitle.title__35 Интеграция с 1С и другими системами
+					+show-more
+						.about-work__text.text__style
+							p Сопровождаем и дорабатываем системы на базе 1С, от Управления торговлей до ERP.
+
+							p Работаем с IT-службой заказчика: разрабатываем API обмена, проектируем каналы обмена данными. Результат: одно- или двусторонний обмен с 1С, ERP, AXAPTA, SAP и еще 20+ менее известными системами учета и автоматизации.
 
 	+cases-slider({
 		classes: 'section--bottom'

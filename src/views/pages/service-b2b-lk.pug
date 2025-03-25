@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Услуга - Техническая поддержка";
+	- const title = "Услуга - B2b Личные кабинеты";
 
 block content
 	section.section.service-banner
@@ -11,15 +11,14 @@ block content
 		.container.service-banner__container
 			.service-banner__img
 				img(src="img/services/services_slider_img_3.webp")
-			h2.service-banner__title.title__99 Техническая поддержка <span>от ITS GROUP</span>
+			h2.service-banner__title.title__99 B2B Личные кабинеты <span>от ITS GROUP</span>
 			.service-banner__tags
 				.service-banner__tag Фронтенд
 				.service-banner__tag Бэкенд
-				.service-banner__tag Аналитика
-				.service-banner__tag Дизайн
+				.service-banner__tag Api
 			.service-banner__text.text__18
-				p Знаем, как поддерживать и развивать цифровые сервисы любой сложности. Берём на поддержку проекты госструктур, крупного и среднего бизнеса.
-				p Сейчас в руках нашей команды разработки более 10 проектов, в том числе Открытие, HOFF, ДОМ.РФ, Газпромнефть и АСИ.
+				p Разрабатываем и внедряем личные кабинеты последние 10 лет.
+				p Для всех решений: стандарты качества, бессрочная гарантия на весь наш код и отсутствие взломов/утечек.
 			.service-banner__bottom
 				a.service-banner__btn.bordered-btn.bordered-btn--white(href="#tell-us")
 					span Оставить заявку
@@ -29,52 +28,40 @@ block content
 		.container 
 			.process__title.title__65 Преимущества
 			.process__cards
-				.process__card.process__card--1.process-card
+				.process__card.process__card--2.process-card
 					.process-card__num 1
 					.process-card__content
-						.process-card__title.title__35 Один договор
+						.process-card__title.title__35 Точно в срок
 						.process-card__text.text__18 
-							p Все типы работ, от поддержки до внедрения нового модуля или интеграции — в рамках одного договора. 
-							p Аналитика, программирование, верстка, дизайн (в том числе отрисовка баннеров), DevOps и даже маркетинг при необходимости. 
-							p Интеграции, включая создание API — также включены
-
-				.process__card.process__card--2.process-card
-					.process-card__num 2
-					.process-card__content
-						.process-card__title.title__35 Фиксированная команда
-						.process-card__text.text__18 
-							p Выделяем персонального менеджера проекта, аналитика и разработчиков под проект (при необходимости зафиксируем ФИО участников).
+							p Мы умеем контролировать сроки:
+							p
+								| — сразу делаем дорожную карту проекта с зависимостями, чтобы не было простоев
+								<br>— планируем ресурсы
+								<br>— в первую очередь уделяем внимание самому сложному: интеграциям, используя технологии Big Data при предобработке данных
 
 				.process__card.process__card--3.process-card
-					.process-card__num 3
+					.process-card__num 2
 					.process-card__content
 						.process-card__title.title__35 Полный контроль
 						.process-card__text.text__18 
-							p Информация не теряется: работаем через систему постановки задач. Пишем мини-ТЗ (постановку) по сложным задачам, чтобы избежать завышенных оценок и срыва сроков.
+							p Клиенты видят всю команду в системе постановки задач: все задачи, чеклисты, отчеты и обсуждение. Договоренности фиксируются в задачах, информация не теряется. Контроль сроков реализуем через диаграмму Ганта и ее регулярное обновление.
+							p Наши тестировшики проверяют работу как вручную, так и через автоматические тесты. Что важно, мы это делаем не в конце всего проекта, а в конце каждого недельного этапа, что обеспечивает контроль качества.
 
 				.process__card.process__card--4.process-card
-					.process-card__num 4
+					.process-card__num 3
 					.process-card__content
-						.process-card__title.title__35 Оценка задач
-						.process-card__text.text__18 Все работы оцениваем до выполнения. Если что-то неясно, проведем интервью/аналитику или уточним.
-
-				.process__card.process__card--5.process-card
-					.process-card__num 5
-					.process-card__content
-						.process-card__title.title__35 Фиксированная цена
-						.process-card__text.text__18 Фиксированная цена нормо-часа (2 500 ₽ разработка/техподдержка, 3 000 ₽ аналитика, 2 500 ₽ дизайн/тестирование).
+						.process-card__title.title__35 Сопровождение
+						.process-card__text.text__18 После сдачи мы сопровождаем проект, используя continuous integration — непрерывной отгрузки обновлений, и GIT для контроля версий.
 
 				.process__card.process__card--6.process-card
-					.process-card__num 6
+					.process-card__num 4
 					.process-card__content
 						.process-card__title.title__35 Прозрачность
 						.process-card__text.text__18 Отчетность каждый месяц, с детальным описанием каждой работы.
 
-			.process__text.title__28 Техническая поддержка сайтов — это 30% оборота компании
-
 	section.section.section--bottom.dev-stack
 		.container
-			h2.section__title.dev-stack__title.title__65 Работаем <span>со стеком</span>
+			h2.section__title.dev-stack__title.title__65 Используем <span>востребованный стек</span>
 			.dev-stack__cards
 				.stack-card
 					.stack-card__img
@@ -151,28 +138,28 @@ block content
 
 	section.section.price.service-price
 		.container 
-			.price__title.title__65 Тарифы
+			.price__title.title__65 Стоимость
 			.price__cards
-				.price__card.price-card.price-card--nodesc
-					.price-card__name.title__35 Техподдержка
+				.price__card.price-card
+					.price-card__name.title__35 Сайт
 						.price-card__text.text__18
-					.price-card__cost.title__65!= '2500 ₽'
+					.price-card__cost.title__65!= '> 2 млн'
+						.price-card__desc MVP - от 3 мес
 					a(href="#").price-card__btn.btn--small посчитать точно
 
-				.price__card.price-card.price-card--nodesc
-					.price-card__name.title__35 Аналитика
-					.price-card__cost.title__65!= '3 000 ₽'
-
+				.price__card.price-card
+					.price-card__name.title__35 Веб-сервис
+						.price-card__text.text__18 со сложными интеграциями
+					.price-card__cost.title__65!= '> 2 млн'
+						.price-card__desc MVP - от 3 мес
 					a(href="#").price-card__btn.btn--small посчитать точно
 
-				.price__card.price-card.price-card--nodesc
-					.price-card__name.title__35 Дизайн
+				.price__card.price-card
+					.price-card__name.title__35 CRM, ERP, PDM
 						.price-card__text.text__18
-					.price-card__cost.title__65!= '2 000 ₽'
-
+					.price-card__cost.title__65!= '> 3.5 млн'
+						.price-card__desc от 5 мес
 					a(href="#").price-card__btn.btn--small посчитать точно
-
-			.price__text.title__28 Срочное выполнение работ или работа в выходные дни/нерабочее время — возможна по удвоенной ставке
 
 	section.cooperation
 		.container 
@@ -187,49 +174,53 @@ block content
 
 	section.section.about-work.section--bottom
 		.container
-			.about-work__title.title__65 Ещё немного <span>о&nbsp;нашей работе</span>
+			.about-work__title.title__65 Подробнее о <span>корпоративных порталах</span>
 			.about-work__desc.text__24 Тут бы какой-нибудь текст, типа краткого описания. Например, современные технологии достигли такого уровня, что социально-экономическое развитие однозначно определяет каждого участника как способного принимать собственные решения касаемо стандартных подходов.
 			.about-work__blocks
 				.about-work__block
-					.about-work__subtitle.title__35 Порядок работ
+					.about-work__subtitle.title__35 Какие задачи решают?
 					+show-more
 						.about-work__text.text__style
 							ul
-								li Рабочая группа Заказчика заводится в системе постановки задач. Вы ставите нам задачи и наблюдаете за их решением. Вы получите уведомление на телефон или электронную почту о ходе работ.
-								li Менеджер в течение 1-2 часов реагирует на нее и дает оценку либо задает уточняющие вопросы.
-								li После получения оценки Вы ее утверждаете, и мы приступаем к работе.
-								li Если мы неверно рассчитали нормо-часы (а задача осталась той же) — это наши риски и наши проблемы, Вы оплачиваете только оговоренные часы.
-								li В конце каждого месяца мы предоставляем детализированный отчет.
+								li Личный кабинет, помимо контроля данных о клиенте и отправки заявок, может решать и нестандартные задачи:
+								li Интеграция учетных записей клиентов с ЕСИА (верификация пользователей для замены офлайн-обращений);
+								li Оформление и подписание договоров онлайн внутри ЛК;
+								li Контроль задолженности и просмотр графика платежей, оформление справок, создание запросов в поддержку;
+								li Просмотр данных личного счета (инвестиционного, например) и графиков динамики инвестиционных продуктов;
+								li Управление подключенными услугами клиента и заказ новых услуг, пополнение счета;
+								li Автоматизация создания и обработки заявок от клиентов, в том числе со сложными маршрутами;
+
+				.about-work__block
+					.about-work__subtitle.title__35 Миграция с Sharepoint и других систем
+					+show-more
+						.about-work__text.text__style
+							p У нас богатый опыт миграции из Sharepoint и других систем в Битрикс24. Мы быстро перенесем все данные и бизнес-процессы, наладим заново интеграции и добавим новую функциональность.
+
+				.about-work__block
+					.about-work__subtitle.title__35 Проектирование и архитектура
+					+show-more
+						.about-work__text.text__style
+							p Пишем раздельные ТЗ: одно описывает UX (опыт пользователя при работе с ЛК) и логику работы, второе — взаимодействие с внешними системами Заказчика: 1С, ERP, AXAPTA, SAP-системы и так далее.
+
+							p Наша команда взаимодействует с IT-службой Заказчика и выясняет: есть ли API или его надо писать, меняемся ли данными через запросы или сервер очередей (RabbitMQ, ZMQ). При необходимости используем Swagger для создания API — сегодня это становится стандартом, например, в нашем проекте с Ростелекомом.
+
+							p После проектирования мы проводим аудит архитектуры: нет ли избыточных или неполных запросов, будет ли система работать быстро?
 
 				.about-work__block
 					.about-work__subtitle.title__35 Производство: схема разработки, контроль версий, автотесты.
 					+show-more
 						.about-work__text.text__style
+							p В процессе написания техзадания мы формируем схему блоков сайта с зависимостями: это позволяет программировать поэтапно, а также давать параллельные задачи программистам.
+
 							p С помощью системы контроля версий на проект можно поставить сразу несколько программистов, причем их изменения легко отслеживать. Эта же технология применяется и при дальнейшей поддержке сайта.
 
-							p При сдаче проекта мы применяем как автоматическое, так и ручное тестирование, чтобы все предусмотреть.
-
 				.about-work__block
-					.about-work__subtitle.title__35 Контроль сроков и тестирование
+					.about-work__subtitle.title__35 Сдача проекта: автотесты, нагрузочное тестирование, ПМИ
 					+show-more
 						.about-work__text.text__style
-							p Контроль сроков реализуем через диаграмму Ганта и ее регулярное обновление.
+							p Мы пишем специальный документ: программу и методику испытаний. По ней проводится сдача системы. Также при сдаче проекта мы пишем автотесты (Selenium), далее в Allure смотрим наглядные отчеты по их прохождению.
 
-							p Наши тестировшики проверяют работу как вручную, так и через автоматические тесты. Что важно, мы это делаем не в конце всего проекта, а в конце каждого недельного этапа, что обеспечивает контроль качества.
-
-				.about-work__block
-					.about-work__subtitle.title__35 Доработка чужих проектов
-					+show-more
-						.about-work__text.text__style
-							p Берем ли мы чужие проекты? Да, берем, почти во всех случаях сразу приступаем к работам.
-
-				.about-work__block
-					.about-work__subtitle.title__35 Интеграция с 1С и другими системами
-					+show-more
-						.about-work__text.text__style
-							p Сопровождаем и дорабатываем системы на базе 1С, от Управления торговлей до ERP.
-
-							p Работаем с IT-службой заказчика: разрабатываем API обмена, проектируем каналы обмена данными. Результат: одно- или двусторонний обмен с 1С, ERP, AXAPTA, SAP и еще 20+ менее известными системами учета и автоматизации.
+							p Нагрузочное тестирование выполняется на сервере Заказчика, мы используем Яндекс.Танк и еще ряд сервисов.
 
 	+cases-slider({
 		classes: 'section--bottom'
