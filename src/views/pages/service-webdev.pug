@@ -7,9 +7,12 @@ block variables
 block content
 	section.section.service-banner
 		.service-banner__bg
-			img(src="img/services/services_slider_bg_3.webp")
+			<picture>
+				<source srcset="img/services/services_banner_mob.webp" media="(max-width: 767px)" />
+				<img src="img/services/services_banner.webp" />
+			</picture>
 		.container.service-banner__container
-			.service-banner__img
+			//-.service-banner__img
 				img(src="img/services/services_slider_img_3.webp")
 			h2.service-banner__title.title__99 Веб разработка <span>в ITS GROUP</span>
 			.service-banner__tags
@@ -268,3 +271,6 @@ block content
 		],
 		bottom: true
 	})
+
+
+
