@@ -1426,7 +1426,7 @@ body {
     &__cards {
         display: flex;
         align-items: stretch;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         gap: 18px;
 
