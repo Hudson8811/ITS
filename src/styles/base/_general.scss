@@ -3335,7 +3335,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 11px 18px;
+    padding: 12px 18px;
     border-radius: 42px;
     border: 1px solid $fonBlack;
     color: $fonBlack;
@@ -3367,7 +3367,7 @@ body {
     @include max(xs) {
         font-size: 14px;
         border-radius: 36px;
-        padding: 9px 16px;
+        padding: 10px 16px;
     }
 }
 
@@ -3376,7 +3376,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 11px 18px;
+    padding: 12px 18px;
     border-radius: 42px;
     line-height: normal;
     background-color: $white;
@@ -3398,7 +3398,7 @@ body {
     @include max(xs) {
         font-size: 14px;
         border-radius: 36px;
-        padding: 9px 16px;
+        padding: 10px 16px;
     }
 }
 
