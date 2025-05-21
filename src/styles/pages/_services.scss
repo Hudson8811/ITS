@@ -67,7 +67,11 @@
     }
 
     &__text {
-        margin-top: 32px;
+        margin-top: 40px;
+
+        @include max(sm) {
+            margin-top: 32px;
+        }
     }
 
     &__list {

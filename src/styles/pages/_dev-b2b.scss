@@ -81,7 +81,6 @@
     }
 
     &__cards {
-        margin-top: 80px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 64px;
@@ -95,10 +94,6 @@
             gap: 48px;
             grid-template-columns: repeat(1, 1fr);
         }
-
-        @include max(xs) {
-            margin-top: 40px;
-        }
     }
 }
 
@@ -109,7 +104,6 @@
     }
 
     &__cards {
-        margin-top: 80px;
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;
@@ -123,7 +117,6 @@
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 16px;
-            margin-top: 40px;
         }
 
         @include max(xxs) {

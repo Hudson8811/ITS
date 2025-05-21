@@ -22,7 +22,7 @@ mixin reviews-section(props = defaultReviewsSectionProps)
 
 	section.section.reviews-section(class= checkProps.classes + topClass + bottomClass)&attributes(attributes)
 		.container
-			.reviews-section__title.title__65!= checkProps.title
+			.reviews-section__title.title__65.title-mb!= checkProps.title
 			.reviews-section__slider(data-js="reviewsSlider")
 				.swiper-wrapper
 					- let i = 0

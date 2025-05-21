@@ -9,11 +9,6 @@
 
     &__slider {
         position: relative;
-        margin-top: 80px;
-
-        @include max(xs) {
-            margin-top: 40px;
-        }
 
         &:hover .slider-controls {
             opacity: 1;
