@@ -20,7 +20,8 @@ mixin review-card(props = defaultReviewCardProps)
     .review-card(class=checkProps.classes)&attributes(attributes)
         .review-card__icon
             img(src="img/quotes.svg")
-        .review-card__text.text__24!= checkProps.text
+        +show-more
+            .review-card__text.text__24!= checkProps.text
         .review-card__author
             .review-card__photo
                 img(src=checkProps.photo alt=checkProps.name)
