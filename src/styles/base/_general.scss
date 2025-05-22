@@ -1400,7 +1400,7 @@ body {
     }
 
     &__title {
-        padding-right: 300px;
+        /*padding-right: 300px;
 
         @include max(1199) {
             padding-right: 180px;
@@ -1408,7 +1408,7 @@ body {
 
         @include max(992) {
             padding-right: 0;
-        }
+        }*/
 
         @include max(767) {
             font-size: 35px;
@@ -3436,8 +3436,8 @@ body {
         margin-right: 0;
     }
 
-    &__text.text__style ul li:last-child {
+    &__text.text__style ul li:last-child,
+    &__text.text__style ol li:last-child {
         margin-bottom: 0;
-
     }
 }
