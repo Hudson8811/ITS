@@ -1,0 +1,29 @@
+-
+    const defaultAchievementsProps = {
+        classes: ''
+    }
+
+mixin achievements(props = defaultAchievementsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAchievementsProps.classes,
+        }
+
+    .achievements(class=checkProps.classes)&attributes(attributes)
+        .achievements__item
+            a.achievements__link(href="https://ratingruneta.ru/web/universities/")
+            .achievements__img
+                img(src="img/achievements/achievement_6.webp")
+            .achievements__name Образование.Вузы (Рейтинг&nbsp;Рунета)
+
+        .achievements__item
+            a.achievements__link(href="/cases/skyfish/")
+            .achievements__img
+                img(src="img/achievements/achievement_10.webp")
+            .achievements__name Финалист конкурса за лучший сайт 2024 (Рейтинг&nbsp;Рунета)
+
+        .achievements__item
+            a.achievements__link(href="https://ratingruneta.ru/web/#middle")
+            .achievements__img
+                img(src="img/achievements/achievement_40.webp")
+            .achievements__name Сайты и веб-сервисы (Рейтинг&nbsp;Рунета)

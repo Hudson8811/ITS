@@ -749,11 +749,15 @@ body {
 
     &__section {
         height: calc(100vh - 170px);
-        // max-height: 577px;
         align-items: center;
 
         .container {
             width: 1920px;
+
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         @include max(mdHeader) {
