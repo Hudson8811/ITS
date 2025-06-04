@@ -19,6 +19,6 @@ function casesSliderInit() {
         navigation: {
             nextEl: sliderNext,
             prevEl: sliderPrev,
-        },
+        }
     })
 }

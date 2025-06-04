@@ -29,7 +29,7 @@ function reviewsSliderInit() {
                     spaceBetween: 64,
                 }
 
-              }
+            }
         })
     })
 }
