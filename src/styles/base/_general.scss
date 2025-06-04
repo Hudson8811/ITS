@@ -751,6 +751,10 @@ body {
         height: calc(100vh - 170px);
         align-items: center;
 
+        @media (max-width: 1800px) {
+            padding-top: 150px;
+        }
+
         .container {
             width: 1920px;
 
@@ -762,12 +766,31 @@ body {
 
         @include max(mdHeader) {
             height: auto;
-            padding-top: 50px;
         }
 
         @include max(sm) {
             padding-top: 50px;
+            padding-bottom: 130px;
         }
+
+    }
+
+    &__achievements {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 0;
+        padding-right: 64px;
+
+        @include max(1700) {
+            padding-right: 0;
+        }
+
+        @include max(sm) {
+            top: auto;
+            bottom: 0;
+        }
+
 
     }
 

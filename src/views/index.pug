@@ -2,245 +2,246 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-    - const title = "Project title"
+	- const title = "Project title"
 
 block content
-    .start__section.section
-        .container
-            .hashtag
-                a(href="#").hashtag__item #Аналитика
-                a(href="#").hashtag__item #Дизайн
-                a(href="#").hashtag__item #Фронтэнд
-                a(href="#").hashtag__item #Бэкэнд
-            +achievements({
-                classes: 'achievements--start'
-            })
-            .start
-                .start__col
-                    .start__desc
-                        .start__title.title__99
-                            !='Работаем с&nbsp;лидерами рынка <br> <span>Мощная разработка и управление проектами</span>'
-                        +print-text({
-                            text: '["# Корпоративные порталы", "# Веб сервисы", "# B2B, B2С личные кабинеты", "# Сайты", "# Сложные интеграции", "# Автоматизация", "# Мобильные приложения"]'
-                        })
-                        //-.start__text.text__18
-                            !="•&nbsp;Корпоративные порталы •&nbsp;Веб сервисы <br>•&nbsp;B2B, B2С личные кабинеты •&nbsp;Сайты<br>•&nbsp;Сложные интеграции •&nbsp;Автоматизация •&nbsp;Мобильные приложения"
-                //.start__col
-                    .cube 
-                        img(src="img/cube.png" alt="")
-                a(href="#tell-us").btn.btn.start__btn Оставить заявку
+	.start__section.section
+		.container.start__achievements
+			+achievements({
+				classes: 'achievements--start'
+			})
+		.container
+			.hashtag
+				a(href="#").hashtag__item #Аналитика
+				a(href="#").hashtag__item #Дизайн
+				a(href="#").hashtag__item #Фронтэнд
+				a(href="#").hashtag__item #Бэкэнд
+			.start
+				.start__col
+					.start__desc
+						.start__title.title__99
+							!='Работаем с&nbsp;лидерами рынка <br> <span>Мощная разработка и управление проектами</span>'
+						+print-text({
+							text: '["# Корпоративные порталы", "# Веб сервисы", "# B2B, B2С личные кабинеты", "# Сайты", "# Сложные интеграции", "# Автоматизация", "# Мобильные приложения"]'
+						})
+						//-.start__text.text__18
+							!="•&nbsp;Корпоративные порталы •&nbsp;Веб сервисы <br>•&nbsp;B2B, B2С личные кабинеты •&nbsp;Сайты<br>•&nbsp;Сложные интеграции •&nbsp;Автоматизация •&nbsp;Мобильные приложения"
+				//.start__col
+					.cube 
+						img(src="img/cube.png" alt="")
+				a(href="#tell-us").btn.btn.start__btn Оставить заявку
 
 
 
 
-    .partners
-        .partners__slider.swiper-container.js-partners__slider
-            .swiper-wrapper
-                .partners__slide.swiper-slide
-                    img(src="img/partners__slide__1.png" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__2.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__3.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__4.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__5.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__6.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__7.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__8.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__9.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__10.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__11.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__12.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__13.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__14.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__15.svg" alt="")
+	.partners
+		.partners__slider.swiper-container.js-partners__slider
+			.swiper-wrapper
+				.partners__slide.swiper-slide
+					img(src="img/partners__slide__1.png" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__2.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__3.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__4.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__5.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__6.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__7.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__8.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__9.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__10.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__11.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__12.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__13.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__14.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__15.svg" alt="")
 
-                .partners__slide.swiper-slide
-                    img(src="img/partners__slide__1.png" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__2.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__3.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__4.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__5.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__6.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__7.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__8.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__9.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__10.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__11.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__12.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__13.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__14.svg" alt="")
-                .partners__slide.swiper-slide
-                    img(src="img/svg/partners__slide__15.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/partners__slide__1.png" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__2.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__3.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__4.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__5.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__6.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__7.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__8.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__9.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__10.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__11.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__12.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__13.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__14.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__15.svg" alt="")
 
-    #cases__section.cases__section.section.section--bottom
-        .cases__inner
-            .container
-                .cases__title.title__99 Кейсы
-                .cases.rellax(data-rellax-speed="1")
-                    .cases__col.rellax(data-rellax-speed="-3")
-                        a(href="#").case.case__big-margin
-                            .case__picture.case__picture--1
-                                picture
-                                    source(media="(max-width: 992px )" srcset="img/case__picture__1.png")
-                                    img(src="img/case__picture__1.png" alt="")
-                            .case__desc
-                                .case__desc__title СберМобайл
-                                .case__desc__text.text__18 Тут может быть еще какое то описание
-                            //- .case__labels
-                            //- 	a(href="#").case__label #Аналитика
-                            //- 	a(href="#").case__label #Дизайн
-                            .case__labels
-                                .case__label #Аналитика
-                                .case__label #Дизайн
-                                .case__label #Аналитика
-                                .case__label #Дизайн
+	#cases__section.cases__section.section.section--bottom
+		.cases__inner
+			.container
+				.cases__title.title__99 Кейсы
+				.cases.rellax(data-rellax-speed="1")
+					.cases__col.rellax(data-rellax-speed="-3")
+						a(href="#").case.case__big-margin
+							.case__picture.case__picture--1
+								picture
+									source(media="(max-width: 992px )" srcset="img/case__picture__1.png")
+									img(src="img/case__picture__1.png" alt="")
+							.case__desc
+								.case__desc__title СберМобайл
+								.case__desc__text.text__18 Тут может быть еще какое то описание
+							//- .case__labels
+							//- 	a(href="#").case__label #Аналитика
+							//- 	a(href="#").case__label #Дизайн
+							.case__labels
+								.case__label #Аналитика
+								.case__label #Дизайн
+								.case__label #Аналитика
+								.case__label #Дизайн
 
-                        a(href="#").case
-                            .case__picture.case__picture--2
-                                picture
-                                    source(media="(max-width: 992px )" srcset="img/case__picture__3.png")
-                                    img(src="img/case__picture__3.png" alt="")
-                            .case__desc
-                                .case__desc__title Сбербанк
-                                .case__desc__text.text__18 Тут может быть еще какое то описание
-                            .case__labels
-                                .case__label #Дизайн
-                                .case__label #Аналитика
-                                .case__label #Дизайн
-                                .case__label #Аналитика
-                            //- .case__labels
-                            //- 	a(href="#").case__label #Дизайн
-                            //- 	a(href="#").case__label #Аналитика
-                    .cases__col.rellax(data-rellax-speed="0")
-                        a(href="#").case
-                            .case__picture.case__picture--2
-                                picture
-                                    source(media="(max-width: 992px )" srcset="img/case__picture__2.png")
-                                    img(src="img/case__picture__2.png" alt="")
-                            .case__desc
-                                .case__desc__title Московский комсомолец спорт
-                                .case__desc__text.text__18 Тут может быть еще какое то описание
-                            .case__labels
-                                .case__label #Дизайн
-                                .case__label #Аналитика
-                            //- .case__labels
-                            //- 	a(href="#").case__label #Дизайн
-                            //- 	a(href="#").case__label #Аналитика
+						a(href="#").case
+							.case__picture.case__picture--2
+								picture
+									source(media="(max-width: 992px )" srcset="img/case__picture__3.png")
+									img(src="img/case__picture__3.png" alt="")
+							.case__desc
+								.case__desc__title Сбербанк
+								.case__desc__text.text__18 Тут может быть еще какое то описание
+							.case__labels
+								.case__label #Дизайн
+								.case__label #Аналитика
+								.case__label #Дизайн
+								.case__label #Аналитика
+							//- .case__labels
+							//- 	a(href="#").case__label #Дизайн
+							//- 	a(href="#").case__label #Аналитика
+					.cases__col.rellax(data-rellax-speed="0")
+						a(href="#").case
+							.case__picture.case__picture--2
+								picture
+									source(media="(max-width: 992px )" srcset="img/case__picture__2.png")
+									img(src="img/case__picture__2.png" alt="")
+							.case__desc
+								.case__desc__title Московский комсомолец спорт
+								.case__desc__text.text__18 Тут может быть еще какое то описание
+							.case__labels
+								.case__label #Дизайн
+								.case__label #Аналитика
+							//- .case__labels
+							//- 	a(href="#").case__label #Дизайн
+							//- 	a(href="#").case__label #Аналитика
 
-                        a(href="#").case.case__big-margin
-                            .case__picture.case__picture--1
-                                picture
-                                    source(media="(max-width: 992px )" srcset="img/case__picture__4.png")
-                                    img(src="img/case__picture__4.png" alt="")
-                            .case__desc
-                                .case__desc__title Haier
-                                .case__desc__text.text__18 Тут может быть еще какое то описание
-                            .case__labels
-                                .case__label #Аналитика
-                                .case__label #Дизайн
-                            //- .case__labels
-                            //- 	a(href="#").case__label #Аналитика
-                            //- 	a(href="#").case__label #Дизайн
+						a(href="#").case.case__big-margin
+							.case__picture.case__picture--1
+								picture
+									source(media="(max-width: 992px )" srcset="img/case__picture__4.png")
+									img(src="img/case__picture__4.png" alt="")
+							.case__desc
+								.case__desc__title Haier
+								.case__desc__text.text__18 Тут может быть еще какое то описание
+							.case__labels
+								.case__label #Аналитика
+								.case__label #Дизайн
+							//- .case__labels
+							//- 	a(href="#").case__label #Аналитика
+							//- 	a(href="#").case__label #Дизайн
 
-                .cases__show
-                    a.cases__show-more(href="#") Все проекты
+				.cases__show
+					a.cases__show-more(href="#") Все проекты
 
 
-    .releases.section
-        .container
-            .releases__title.title__65 
-                !="Релизы 2024 года"
-            .releases__cards
-                .releases__card.releases-card.releases-card--dark
-                    a.releases-card__link(href="https://tverdomer.ru/" target="_blank")
-                    .releases-card__img
-                        img(src="img/release_1.jpg" alt="")
-                    .releases-card__title tverdomer.ru
-                .releases__card.releases-card
-                    a.releases-card__link(href="https://www.bonum-trailer.ru/" target="_blank")
-                    .releases-card__img
-                        img(src="img/release_2.jpg" alt="")
-                    .releases-card__title bonum-trailer.ru
-                .releases__card.releases-card
-                    a.releases-card__link(href="https://www.tn.ru/" target="_blank")
-                    .releases-card__img
-                        img(src="img/release_3.jpg" alt="")
-                    .releases-card__title tn.ru
-                .releases__card.releases-card
-                    a.releases-card__link(href="https://vrf-mrv.ru/" target="_blank")
-                    .releases-card__img
-                        img(src="img/release_4.jpg" alt="")
-                    .releases-card__title vrf-mrv.ru
-                .releases__card.releases-card
-                    a.releases-card__link(href="https://fishmarket.ru/" target="_blank")
-                    .releases-card__img
-                        img(src="img/release_5.jpg" alt="")
-                    .releases-card__title fishmarket.ru
-                .releases__card.releases-card
-                    a.releases-card__link(href="https://kolkunovo.ru/" target="_blank")
-                    .releases-card__img
-                        img(src="img/release_6.jpg" alt="")
-                    .releases-card__title kolkunovo.ru
+	.releases.section
+		.container
+			.releases__title.title__65 
+				!="Релизы 2024 года"
+			.releases__cards
+				.releases__card.releases-card.releases-card--dark
+					a.releases-card__link(href="https://tverdomer.ru/" target="_blank")
+					.releases-card__img
+						img(src="img/release_1.jpg" alt="")
+					.releases-card__title tverdomer.ru
+				.releases__card.releases-card
+					a.releases-card__link(href="https://www.bonum-trailer.ru/" target="_blank")
+					.releases-card__img
+						img(src="img/release_2.jpg" alt="")
+					.releases-card__title bonum-trailer.ru
+				.releases__card.releases-card
+					a.releases-card__link(href="https://www.tn.ru/" target="_blank")
+					.releases-card__img
+						img(src="img/release_3.jpg" alt="")
+					.releases-card__title tn.ru
+				.releases__card.releases-card
+					a.releases-card__link(href="https://vrf-mrv.ru/" target="_blank")
+					.releases-card__img
+						img(src="img/release_4.jpg" alt="")
+					.releases-card__title vrf-mrv.ru
+				.releases__card.releases-card
+					a.releases-card__link(href="https://fishmarket.ru/" target="_blank")
+					.releases-card__img
+						img(src="img/release_5.jpg" alt="")
+					.releases-card__title fishmarket.ru
+				.releases__card.releases-card
+					a.releases-card__link(href="https://kolkunovo.ru/" target="_blank")
+					.releases-card__img
+						img(src="img/release_6.jpg" alt="")
+					.releases-card__title kolkunovo.ru
 
-    #developing__section.developing__section.section
-        .container
-            .developing__title.title__65 
-                !="Эксперты <br> <span>в интеграциях</span>"
-            .developing
-                .developing__item
-                    .developing__item__title 
-                        !="1С"
-                    .developing__item__list
-                        ul
-                            li
-                                !="С сайтами"
-                            li
-                                !="С web-сервисами"
-                            li
-                                !="С CRM-системами"
-                .developing__item
-                    .developing__item__title 
-                        !="CRM"
-                    .developing__item__list
-                        ul
-                            li
-                                !="Bitrix24"
-                            li
-                                !="Amo CRM"
-                            li
-                                !="Retail CRM"
-                .developing__item
-                    .developing__item__title 
-                        !="API"
-                    .developing__item__list
-                        ul
-                            li
-                                !="Используем готовые решения"
-                            li
-                                !="Разрабатываем кастомные решения"
+	#developing__section.developing__section.section
+		.container
+			.developing__title.title__65 
+				!="Эксперты <br> <span>в интеграциях</span>"
+			.developing
+				.developing__item
+					.developing__item__title 
+						!="1С"
+					.developing__item__list
+						ul
+							li
+								!="С сайтами"
+							li
+								!="С web-сервисами"
+							li
+								!="С CRM-системами"
+				.developing__item
+					.developing__item__title 
+						!="CRM"
+					.developing__item__list
+						ul
+							li
+								!="Bitrix24"
+							li
+								!="Amo CRM"
+							li
+								!="Retail CRM"
+				.developing__item
+					.developing__item__title 
+						!="API"
+					.developing__item__list
+						ul
+							li
+								!="Используем готовые решения"
+							li
+								!="Разрабатываем кастомные решения"
