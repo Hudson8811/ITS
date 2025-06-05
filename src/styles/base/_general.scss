@@ -755,6 +755,10 @@ body {
             padding-top: 150px;
         }
 
+        @media (max-width: 1439px) {
+            padding-top: 120px;
+        }
+
         .container {
             width: 1920px;
 
@@ -806,6 +810,10 @@ body {
     &__title {
         margin-bottom: 76px;
 
+        @media (max-width: 1439px) {
+            font-size: 80px;
+        }
+
         @include max(sm) {
             span {
                 display: none;
@@ -835,7 +843,14 @@ body {
             display: none;
         }
 
+        @include max(1439) {
+            bottom: -20px;
+            width: 160px;
+            height: 160px;
+        }
+
         @include max(md) {
+            bottom: -55px;
             width: 130px;
             height: 130px;
             font-size: 12px;

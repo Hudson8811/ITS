@@ -26,9 +26,13 @@
         max-width: 145px;
         width: auto;
 
+        @media (max-width: 1439px) {
+            max-width: 120px;
+            gap: 10px;
+        }
+
         @media (max-width: 767px) {
             max-width: 104px;
-            gap: 10px;
         }
     }
 
@@ -44,7 +48,7 @@
         width: 95px;
         height: 82px;
 
-        @media (max-width: 767px) {
+        @media (max-width: 1439px) {
             width: 70px;
             height: 61px;
         }
@@ -63,6 +67,10 @@
         line-height: 100%;
         text-align: center;
         color: #2A2A2A;
+
+        @media (max-width: 1439px) {
+            font-size: 12px;
+        }
 
         @media (max-width: 767px) {
             font-size: 10px;
