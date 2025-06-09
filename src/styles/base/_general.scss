@@ -759,6 +759,10 @@ body {
             padding-top: 120px;
         }
 
+        @media (max-width: 480px) {
+            padding-bottom: 230px;
+        }
+
         .container {
             width: 1920px;
 
