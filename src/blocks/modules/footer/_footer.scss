@@ -1,67 +1,90 @@
 .footer {
 	position: relative;
 	width: 100%;
-	display: flex;
+	display: grid;
+	grid-template-columns: minmax(0, 30%) minmax(0, 20%) minmax(0, 50%);
+	gap: 30px;
 	justify-content: space-between;
 	align-items: stretch;
 	padding-top: 47px;
 	padding-bottom: 54px;
 	color: #fff;
 	min-height: 551px;
+
+	@include max(lg) {
+		gap: 10px;
+	}
+
 	@include max(md) {
 		padding-top: 56px;
 		padding-bottom: 20px;
+		gap: 0;
+		display: flex;
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		align-items: flex-start;
 	}
+
 	@include max(xs) {
 		padding-bottom: 40px;
 		min-height: auto;
-	}	
+	}
+
 	&__section {
 		position: relative;
 		display: flex;
 		width: 100%;
 		background: #0F1214;
+
 		@include max(xs) {
 			padding-bottom: 20px;
 		}
 	}
+
 	&__col {
-		display: flex;	
+		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
 		flex-flow: column nowrap;
-		width: 50%;
+
 		@include max(md) {
 			width: 100%;
 
 		}
-		&:first-child {
-			@include max(md) {
-				margin-bottom: 20px;
-			}
+
+	}
+
+	&__col+&__col {
+		@include max(md) {
+			margin-top: 30px;
+			padding-top: 30px;
+			border-top: 1px solid rgba(252, 252, 253, 0.2);
 		}
 
 	}
+
 	&__title {
 		margin-bottom: 20px;
+
 		span {
 			color: rgba(255, 255, 255, 0.21);
 		}
 	}
+
 	&__text {
 		color: #fff;
 	}
+
 	&__years {
 		color: #fff;
+
 		@include max(xs) {
 			position: absolute;
 			bottom: 0;
-			left:0;
+			left: 0;
 		}
 	}
+
 	a {
 		position: relative;
 		display: block;
@@ -73,11 +96,25 @@
 		font-weight: 500;
 		line-height: normal;
 		transition: all 0.3s;
+
 		&:hover {
 			transition: all 0.3s;
 			color: $blue;
-		}	
+		}
 	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		list-style-type: none;
+
+		@include max(xs) {
+			gap: 15px;
+		}
+	}
+
 	&__offices {
 		position: relative;
 		display: flex;
@@ -94,25 +131,30 @@
 			width: 100%;
 			padding-bottom: 20px;
 			padding-top: 34px;
+
 			&:first-child {
 				padding-top: 0;
 				border-bottom: 1px solid rgba(252, 252, 253, 0.2);
+
 				@include max(sm) {
 					padding-bottom: 20px;
 					padding-top: 0px;
 					margin-bottom: 30px;
-				}			
+				}
 			}
-			&--desc{
+
+			&--desc {
 				@include max(sm) {
 					display: none;
 				}
 			}
+
 			@include max(sm) {
 				flex-flow: column nowrap;
 			}
 		}
 	}
+
 	&__office {
 		position: relative;
 		display: flex;
@@ -122,17 +164,20 @@
 		min-width: 258px;
 		width: 258px;
 		margin-right: 34px;
+
 		@include max(mdHeader) {
 			min-width: auto;
 			width: 100%;
 			max-width: 258px;
 		}
-		&__tg  {
+
+		&__tg {
 			svg {
 				margin-left: 9px;
 				margin-bottom: -8px;
 			}
 		}
+
 		&__title {
 			color: #ffffff;
 			font-size: 18px;
@@ -141,21 +186,26 @@
 			line-height: normal;
 			margin-bottom: 34px;
 		}
+
 		&__item {
 			margin-bottom: 18px;
+
 			&--mob {
 				display: none;
+
 				@include max(md) {
 					display: flex;
 				}
 			}
 		}
+
 		&:first-child {
 			@include max(sm) {
 				margin-bottom: 50px;
 			}
 		}
 	}
+
 	.soc {
 		position: relative;
 		display: flex;
@@ -166,12 +216,15 @@
 		top: auto;
 		margin-top: 22px;
 		margin-left: -12px;
+
 		@include max(md) {
 			margin-bottom: 50px;
 		}
+
 		&__text {
 			display: none;
 		}
+
 		&__item {
 			display: flex;
 			justify-content: center;
@@ -187,20 +240,29 @@
 			height: 44px;
 			transition: all 0.3s;
 			border-radius: 7px;
+
 			&__text {
 				display: none;
 			}
+
 			&:hover {
 				transition: all 0.3s;
 				background: rgba(255, 255, 255, 0.21);
 			}
 
 		}
-		p{
+
+		p {
 			color: #fff;
 			line-height: 44px;
 			padding-left: 8px;
 			margin-right: 10px;
+		}
+
+		&:last-child {
+			@include max(xs) {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
