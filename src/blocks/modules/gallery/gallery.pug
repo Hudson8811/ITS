@@ -1,0 +1,40 @@
+-
+	const defaultGalleryProps = {
+		classes: '',
+		title: '',
+		fancyGroup: 'achievements',
+		items: [
+			{
+				preview: '',
+				full: ''
+			}
+		]
+	}
+
+mixin gallery(props = defaultGalleryProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultGalleryProps.classes,
+			title: props.title ? props.title : defaultGalleryProps.title,
+			fancyGroup: props.fancyGroup ? props.fancyGroup : defaultGalleryProps.fancyGroup,
+			items: props.items ? props.items : defaultGalleryProps.items,
+		}
+
+	section.section.gallery(class=checkProps.classes)&attributes(attributes)
+		.container
+			if(checkProps.title.length > 0)
+				h2.section__title.gallery__title.title__65.title-mb!= checkProps.title
+				.gallery__grid
+					- let itemsCount = 0;
+					- const itemsList = checkProps.items
+					- while(itemsList.length > itemsCount)
+						- const item = itemsList[itemsCount]
+
+						.gallery-item
+							.gallery-item__image
+								img(src=item.preview)
+							a.gallery-item__link(href=item.full data-fancybox=checkProps.fancyGroup data-thumb=item.preview)
+								svg
+									use(xlink:href=`img/sprites/sprite.svg#plus`)
+
+						-itemsCount++

@@ -1,0 +1,49 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Наши достижения";
+
+block content
+	+gallery({
+		classes: 'section--top section--bottom',
+		title: 'Наши <br><span>достижения</span>',
+		items: [
+			{
+				preview: 'img/awards/awards_1.webp',
+				full: 'img/awards/awards_full_1.webp'
+			},
+			{
+				preview: 'img/awards/awards_2.webp',
+				full: 'img/awards/awards_full_2.webp'
+			},
+			{
+				preview: 'img/awards/awards_3.webp',
+				full: 'img/awards/awards_full_3.webp'
+			},
+			{
+				preview: 'img/awards/awards_4.webp',
+				full: 'img/awards/awards_full_4.webp'
+			},
+			{
+				preview: 'img/awards/awards_5.webp',
+				full: 'img/awards/awards_full_5.webp'
+			},
+			{
+				preview: 'img/awards/awards_6.webp',
+				full: 'img/awards/awards_full_6.webp'
+			},
+			{
+				preview: 'img/awards/awards_7.webp',
+				full: 'img/awards/awards_full_7.webp'
+			},
+			{
+				preview: 'img/awards/awards_8.webp',
+				full: 'img/awards/awards_full_8.webp'
+			},
+			{
+				preview: 'img/awards/awards_9.webp',
+				full: 'img/awards/awards_full_9.webp'
+			},
+		]
+	})
