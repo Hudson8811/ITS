@@ -2875,6 +2875,11 @@ body {
         opacity: 1;
         z-index: 20;
 
+        @include max(sm) {
+            top: 20px;
+            right: 20px;
+        }
+
         svg {
             width: 24px;
             height: 24px;
