@@ -145,11 +145,12 @@
 				color: $blue;
 				transition: all 0.3s;
 			}
-			sup{
+
+			sup {
 				background: red;
 				color: #ffffff;
 				line-height: 1;
-				padding:3px 2px;
+				padding: 3px 2px;
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				border-radius: 50%;
@@ -512,6 +513,17 @@
 
 			&:last-child {
 				margin-bottom: 0;
+			}
+
+			sup {
+				background: red;
+				color: #ffffff;
+				line-height: 1;
+				padding: 3px 2px;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+				font-size: 60%;
 			}
 
 			span {
