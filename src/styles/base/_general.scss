@@ -199,7 +199,7 @@ body {
             right: auto;
             top: auto;
             bottom: auto;
-            background: #F5F5F5;
+            background: $greyLight;
 
             &::after {
                 font-size: 20px;
@@ -280,7 +280,7 @@ body {
         justify-content: center;
         align-items: center;
         padding: 16px 24px;
-        border-radius: 7px;
+        border-radius: 50px;
         background: #2A2A2A;
         color: #FFF;
         text-align: center;
@@ -1121,16 +1121,17 @@ body {
         flex-flow: column nowrap;
         align-items: flex-start;
         border-radius: 35px;
-        border: 1px solid #E6E6E6;
+        //border: 1px solid #E6E6E6;
         margin-left: 18px;
         margin-bottom: 18px;
         transition: all 0.3s;
         padding: 25px 31px 43px 31px;
+        background-color: $greyLight;
 
-        &:hover {
+        /*&:hover {
             transition: all 0.3s;
             background: #E6E6E6;
-        }
+        }*/
 
         @include max(lg) {
             max-width: calc(33.3333% - 15px);
@@ -1388,7 +1389,7 @@ body {
 
     .process-card {
         position: relative;
-        background-color: #e6e6e6;
+        background-color: $greyLight;
         border-radius: 35px;
         padding: 50px 30px 20px;
 
@@ -1429,7 +1430,7 @@ body {
             font-size: 150px;
             line-height: 1em;
             font-weight: 700;
-            opacity: 0.1;
+            opacity: 0.08;
 
         }
     }
@@ -2427,7 +2428,7 @@ body {
             height: 100%;
             box-sizing: border-box;
             border: 1px solid #2A2A2A;
-            border-radius: 2px;
+            border-radius: 7px;
             cursor: pointer;
 
             &:hover {
@@ -2449,7 +2450,9 @@ body {
 
             &:checked+span {
                 background: #2A2A2A url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBklEQVQ4ja3UMWoCQRTG8U8JKAixsPMsQqqArW2w9wAewTp3SBu0iwRiIIIWggjBxsIz2FhZCP5TuKPjc3Y1ow+WfbPz9rdvlmFygO4Z+Rvfb0maS3o6PAFirwqn0QFuAn8SaOfdo8EXzuM5FnwEtqa7NzcfA/YNtgbysWAjsNS6X/MfrABsTHddW+cPykAbKKaA7wbbhGpdUgIWSeEsgNUDS22EPuySpSkem6WuTXefab/GJR+BDr6SuVeDbdlvnUxQQC+A/nLccy6aaZgF/T1mw3U3zMJCoIBvA+28cSUGFDAynQG0LmFZoICph02uwQDlIPXEfpA0kFSVVJO0uubEzQKj4g8Ztym0aJL9lQAAAABJRU5ErkJggg==') center center no-repeat;
-                background-size: contain;
+                background-size: 55% 55%;
+                background-position: left 4px top 4px;
+
             }
         }
 
