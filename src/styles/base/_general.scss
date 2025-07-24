@@ -3475,3 +3475,112 @@ body {
         margin-bottom: 0;
     }
 }
+
+.outstaff {
+    &__title span {
+        font-size: 80%;
+    }
+
+    &__text br {
+        @media (max-width: 610px) {
+            display: none;
+        }
+    }
+}
+
+.outstaff-price {
+    &__tables {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        max-width: 950px;
+
+        @media (max-width: 560px) {
+            gap: 50px;
+        }
+    }
+
+}
+
+.outstaff-table {
+    &__title {
+        margin-bottom: 24px;
+
+        @media (max-width: 560px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        @media (max-width: 560px) {
+            gap: 40px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 16px;
+
+        @media (max-width: 560px) {
+            font-size: 18px;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        th {
+            font-size: 12px;
+            text-align: left;
+            color: rgba(42, 42, 42, 0.21);
+            padding: 0 0 3px;
+        }
+
+        td {
+            font-size: 20px;
+            text-align: left;
+            color: $mainDark;
+            padding: 9px 0;
+            border-bottom: 1px solid $greyHover;
+
+            @media (max-width: 560px) {
+                font-size: 16px;
+            }
+        }
+
+        td {
+            width: 15%;
+
+            @media (max-width: 900px) {
+                width: 20%;
+            }
+
+            @media (max-width: 560px) {
+                width: 30%;
+            }
+        }
+
+        td:first-child {
+            width: 70%;
+
+            @media (max-width: 900px) {
+                width: 60%;
+            }
+
+            @media (max-width: 560px) {
+                width: 40%;
+            }
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+}

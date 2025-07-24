@@ -1,0 +1,200 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Аутстаф"
+
+block content
+	section.section.section--top.section--bottom.about.outstaff
+		.container
+			.about__intro
+				h1.title__99.outstaff__title Аутстаф <br><span>разработчики — дизайнеры — аналитики — тестеры</span>
+				a.btn.btn.start__btn(href="#tell-us") Обсудить проект
+				.about__text.outstaff__text.text__24 Усилим вашу команду квалифицированными специалистами <br>или соберем её с нуля
+
+	.partners
+		.partners__slider.swiper-container.js-partners__slider
+			.swiper-wrapper
+				.partners__slide.swiper-slide
+					img(src="img/partners__slide__1.png" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__2.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__3.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__4.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__5.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__6.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__7.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__8.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__9.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__10.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__11.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__12.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__13.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__14.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__15.svg" alt="")
+
+				.partners__slide.swiper-slide
+					img(src="img/partners__slide__1.png" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__2.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__3.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__4.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__5.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__6.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__7.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__8.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__9.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__10.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__11.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__12.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__13.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__14.svg" alt="")
+				.partners__slide.swiper-slide
+					img(src="img/svg/partners__slide__15.svg" alt="")
+
+	section.section.section--top.section--bottom.outstaff-price#outstaff-price
+		.container
+			.outstaff-price__title.title__65.title-mb Стоимость <span>аутстаффинга</span>
+			.outstaff-price__tables
+				.outstaff-table
+					.outstaff-table__title.title__35 Backend-разработчики
+					.outstaff-table__items
+						.outstaff-table__item
+							.outstaff-table__subtitle.text__24 PHP (Yii2, Laravel)
+							table
+								thead
+									tr
+										th Уровень
+										th Час
+										th Месяц
+								tbody
+									tr
+										td Middle
+										td 2 500 ₽
+										td 412 500 ₽
+									tr
+										td Middle +
+										td 2 700 ₽
+										td 445 500 ₽
+									tr
+										td Senior
+										td 2 900 ₽
+										td 478 500 ₽
+				.outstaff-table
+					.outstaff-table__title.title__35 Frontend-разработчики
+					.outstaff-table__items
+						.outstaff-table__item
+							.outstaff-table__subtitle.text__24 React JavaScript
+							table
+								thead
+									tr
+										th Уровень
+										th Час
+										th Месяц
+								tbody
+									tr
+										td Middle
+										td 2 500 ₽
+										td 412 500 ₽
+									tr
+										td Middle +
+										td 2 700 ₽
+										td 445 500 ₽
+									tr
+										td Senior
+										td 2 900 ₽
+										td 478 500 ₽
+
+				.outstaff-table
+					.outstaff-table__title.title__35 Другое
+					.outstaff-table__items
+						.outstaff-table__item
+							.outstaff-table__subtitle.text__24 Дизайнеры (Figma)
+							table
+								thead
+									tr
+										th Уровень
+										th Час
+										th Месяц
+								tbody
+									tr
+										td Middle
+										td 2 200 ₽
+										td 363 000 ₽
+									tr
+										td Middle +
+										td 2 300 ₽
+										td 379 500 ₽
+									tr
+										td Senior
+										td 2 500 ₽
+										td 412 500 ₽
+
+						.outstaff-table__item
+							.outstaff-table__subtitle.text__24 Руководители проектов/Project manager
+							table
+								thead
+									tr
+										th Уровень
+										th Час
+										th Месяц
+								tbody
+									tr
+										td Middle
+										td 2 300 ₽
+										td 379 500 ₽
+									tr
+										td Middle +
+										td 2 500 ₽
+										td 412 500 ₽
+									tr
+										td Senior
+										td 2 700 ₽
+										td 445 500 ₽
+
+						.outstaff-table__item
+							.outstaff-table__subtitle.text__24 DevOps
+							table
+								thead
+									tr
+										th Уровень
+										th Час
+										th Месяц
+								tbody
+									tr
+										td Middle
+										td 2 700 ₽
+										td 445 500 ₽
+									tr
+										td Middle +
+										td 2 900 ₽
+										td 478 500 ₽
+									tr
+										td Senior
+										td 3 100 ₽
+										td 511 500 ₽
