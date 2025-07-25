@@ -106,7 +106,7 @@ jQuery(function () {
             mobMenu.addEventListener('touchmove', touchmoveController)
 
             mobMenu.addEventListener('touchend', touchendController)
-        })
+        }, { passive: true })
 
         function touchendController(e) {
             let endY = e.changedTouches[0].clientY

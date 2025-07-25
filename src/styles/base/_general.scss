@@ -3478,7 +3478,12 @@ body {
 
 .outstaff {
     &__title span {
-        font-size: 80%;
+        font-size: 65px;
+    }
+
+    &__subtitle {
+        margin-top: 35px;
+        max-width: 1150px;
     }
 
     &__text br {
@@ -3493,7 +3498,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 80px;
-        max-width: 950px;
+        max-width: 100%;
 
         @media (max-width: 560px) {
             gap: 50px;
@@ -3581,6 +3586,12 @@ body {
         tbody tr:last-child td {
             border-bottom: none;
             padding-bottom: 0;
+        }
+
+        tr>th:last-child,
+        tr>td:last-child {
+            width: 5%;
+            white-space: nowrap;
         }
     }
 }

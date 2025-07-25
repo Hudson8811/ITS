@@ -440,6 +440,7 @@
 	height: calc(100vh - 104px);
 	height: calc(100dvh - 104px);
 	overflow-y: auto;
+	border-radius: 0 0 20px 20px;
 
 	&:after {
 		background-color: $greyBlack;
@@ -489,7 +490,7 @@
 	}
 
 	&--overlay {
-		position: absolute;
+		position: fixed;
 		left: 0;
 		right: 0;
 		display: block;
@@ -497,6 +498,14 @@
 		height: 100%;
 		background: rgba(6, 6, 6, 0.592);
 		z-index: 990;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s linear;
+	}
+
+	&__section.active+&--overlay {
+		opacity: 1;
+		visibility: visible;
 	}
 
 	&__list {
