@@ -148,7 +148,6 @@ jQuery(function () {
             humb.classList.remove("is-active");
             bodyYesScroll()
         }
-    
 
     }
 
@@ -186,7 +185,6 @@ jQuery(function () {
             mobMenu.classList.remove("active");
             bodyYesScroll()
         }
-
 
     });
 
