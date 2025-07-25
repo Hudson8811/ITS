@@ -516,7 +516,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		margin-bottom: 32px;
-		border-bottom: 1px solid $mainDark;
+		border-bottom: 1px solid $greyHover;
 		padding: 0px 16px 44px 32px;
 
 		@include max(sm) {
