@@ -749,14 +749,17 @@ body {
 
     &__section {
         height: calc(100vh - 170px);
+        min-height: 700px;
         align-items: center;
 
         @media (max-width: 1800px) {
             padding-top: 150px;
+            min-height: 600px;
         }
 
         @media (max-width: 1439px) {
             padding-top: 120px;
+            min-height: 540px;
         }
 
         @media (max-width: 480px) {
@@ -889,6 +892,15 @@ body {
 .service-intro {
     height: auto;
     padding: 50px 0 70px;
+    min-height: auto;
+
+    @media (max-width: 1800px) {
+        min-height: auto;
+    }
+
+    @media (max-width: 1439px) {
+        min-height: auto;
+    }
 
     @include max(560) {
         padding: 50px 0 10px;
