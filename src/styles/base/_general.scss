@@ -544,7 +544,8 @@ body {
         }
     }
 
-    >* {
+    >*,
+    .text-columns {
         margin-left: 119px;
         margin-right: 119px;
 
@@ -729,7 +730,7 @@ body {
         display: flex;
         gap: 40px;
 
-        @include max(md) {
+        @include max(lg) {
             flex-direction: column;
         }
 
