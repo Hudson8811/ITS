@@ -724,6 +724,28 @@ body {
         visibility: hidden;
         position: absolute;
     }
+
+    .text-columns {
+        display: flex;
+        gap: 40px;
+
+        @include max(md) {
+            flex-direction: column;
+        }
+
+        @include max(xs) {
+            gap: 20px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+
+        &__side {
+            flex: 0 1 50%;
+        }
+    }
 }
 
 .start {
