@@ -33,7 +33,10 @@ html(lang="ru")
 		+mixins
 
 		block header
-			include ../../blocks/modules/header/header
+			- if(newDesign === true)
+				include ../../blocks/modules/its-header/its-header
+			- else
+				include ../../blocks/modules/header/header
 
 		main.site-main
 			block content

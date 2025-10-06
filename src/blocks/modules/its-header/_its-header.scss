@@ -1,0 +1,715 @@
+.its-header {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 1s;
+	width: 100%;
+	padding: 0;
+	background: #fff;
+	z-index: 9999;
+	height: auto;
+	box-sizing: border-box;
+
+	&__side {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		position: absolute;
+		top: 0;
+		padding: 70px 40px;
+		height: 100vh;
+		height: 100dvh;
+	}
+
+	&__left {
+		max-width: 250px;
+		left: 0;
+		border-right: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+	&__right {
+		max-width: 200px;
+		right: 0;
+		border-left: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+	&__menu {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+		width: 100%;
+		margin-top: auto;
+		margin-bottom: auto;
+
+		&__item {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			color: $fonBlack;
+			text-align: center;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			white-space: nowrap;
+			text-decoration: none;
+			margin-right: 37px;
+			height: 100%;
+			transition: all 0.3s;
+			border-bottom: 1px solid transparent;
+
+			@include max(1500) {
+				margin-right: 20px;
+			}
+
+			&:hover {
+				color: $blue;
+				transition: all 0.3s;
+			}
+
+			sup {
+				background: red;
+				color: #ffffff;
+				line-height: 1;
+				padding: 3px 2px;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+				font-size: 60%;
+			}
+		}
+	}
+
+	.hamburger {
+		align-self: center;
+		width: 50px;
+		height: 45px;
+		padding: 0;
+		margin-top: -8px;
+
+		&-box {
+			width: 50px;
+			height: 45px;
+		}
+
+		.hamburger-inner,
+		.hamburger-inner::before,
+		.hamburger-inner::after {
+			width: 50px;
+			height: 4px;
+		}
+
+		.hamburger-inner::after {
+			top: -40px;
+			bottom: auto;
+		}
+
+		.hamburger-inner::before {
+			top: -20px;
+			//width: 60px;
+		}
+
+		&.is-active {
+			.hamburger-inner {
+				transform: translate3d(0, -5px, 0) rotate(-45deg);
+
+				&::before {
+					top: 0px;
+					width: 20px;
+				}
+			}
+		}
+	}
+
+	&__logo {
+		display: flex;
+		position: relative;
+		justify-content: flex-start;
+		align-items: center;
+		text-decoration: none;
+		min-width: 158px;
+		max-width: 158px;
+		margin-right: 75px;
+		transform: translateY(-3px);
+
+		@include max(1500) {
+			margin-right: 30px;
+		}
+
+		@include max(xs) {
+			min-width: 120px;
+			max-width: 120px;
+		}
+
+		img {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+
+	}
+
+	&__other {
+		margin-top: auto;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+		width: 100%;
+		max-width: 100%;
+
+		&__item {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			text-decoration: none;
+			white-space: nowrap;
+			color: $fonBlack;
+			transition: all .3s;
+			cursor: pointer;
+
+			&:before {
+				position: relative;
+				margin-right: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 20px;
+				height: 20px;
+				margin-top: 1px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: contain;
+				opacity: 1;
+				transition: all .3s;
+				content: "";
+			}
+
+			&:after {
+				position: absolute;
+				left: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 20px;
+				height: 20px;
+				margin-top: 1px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: contain;
+				opacity: 0;
+				transition: all .3s;
+				content: "";
+			}
+
+			&__tg {
+				@media (max-width: 900px) {
+					display: none;
+				}
+
+				&::before {
+					opacity: 1;
+					background-image: url(../img/tg.png);
+					transition: all .3s;
+				}
+
+				&::after {
+					background-image: url(../img/tg-blue.png);
+					transition: all .3s;
+					opacity: 0;
+				}
+
+				&:hover {
+					color: $blue;
+					transition: all .3s;
+
+					&::before {
+						opacity: 0;
+						transition: all .3s;
+					}
+
+					&::after {
+						transition: all .3s;
+						opacity: 1;
+					}
+				}
+			}
+
+			&__fon {
+				@media (max-width: 900px) {
+					display: none;
+				}
+
+				&::before {
+					opacity: 1;
+					background-image: url(../img/tel.png);
+					transition: all .3s;
+				}
+
+				&::after {
+					background-image: url(../img/tel-blue.png);
+					transition: all .3s;
+					opacity: 0;
+				}
+
+				&:hover {
+					color: $blue;
+					transition: all .3s;
+
+					&::before {
+						opacity: 0;
+						transition: all .3s;
+					}
+
+					&::after {
+						transition: all .3s;
+						opacity: 1;
+					}
+				}
+			}
+
+			&__mail {
+				@media (max-width: 900px) {
+					display: none;
+				}
+
+				&::before {
+					opacity: 1;
+					background-image: url(../img/mail.png);
+					transition: all .3s;
+				}
+
+				&::after {
+					background-image: url(../img/mail-blue.png);
+					transition: all .3s;
+					opacity: 0;
+				}
+
+				&:hover {
+					color: $blue;
+					transition: all .3s;
+
+					&::before {
+						opacity: 0;
+						transition: all .3s;
+					}
+
+					&::after {
+						transition: all .3s;
+						opacity: 1;
+					}
+				}
+			}
+
+			&:hover {
+				svg {
+					path {
+						fill: #237AE9;
+					}
+				}
+			}
+
+			// img, svg {
+			// 	transition: all .3s;
+			// 	margin-right: 10px;
+			// }
+		}
+
+	}
+}
+
+.burger-menu {
+	position: relative;
+	display: flex;
+	width: 100%;
+	max-width: 100%;
+	// padding: 32px  16px 44px 16px;
+	padding-top: 40px;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	z-index: 9999;
+	background: #fff;
+	height: calc(100vh - 104px);
+	height: calc(100dvh - 104px);
+	overflow-y: auto;
+	border-radius: 0 0 20px 20px;
+
+	&:after {
+		background-color: $greyBlack;
+		border-radius: 15px;
+		content: "";
+		width: 50px;
+		height: 5px;
+		margin: auto;
+		opacity: .3;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 10px;
+	}
+
+	&__section {
+		position: fixed;
+		//top: 55px;
+		top: -100%;
+		//left: 100vw;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+		overflow: hidden;
+		transition: all .5s;
+		z-index: 999;
+
+		&.active {
+			transition: all .5s;
+			//width: 100vw;
+			//height: 100vh;
+			//left: 0;
+			top: 55px;
+		}
+	}
+
+	&--close {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		right: 10px;
+		top: 10px;
+	}
+
+	&--overlay {
+		position: fixed;
+		left: 0;
+		right: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: rgba(6, 6, 6, 0.592);
+		z-index: 990;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s linear;
+	}
+
+	&__section.active+&--overlay {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__list {
+		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
+		width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-bottom: 32px;
+		border-bottom: 1px solid $greyHover;
+		padding: 0px 16px 44px 32px;
+
+		@include max(sm) {
+			padding: 0px 16px 44px 16px;
+		}
+
+		&__item {
+			position: relative;
+			cursor: pointer;
+			color: $fonBlack;
+			font-size: 58px;
+			line-height: 100%;
+			padding-right: 0;
+			background: transparent;
+			flex-flow: row nowrap;
+			text-decoration: none;
+			width: 100%;
+			transition: all 0.3s;
+			color: $fonBlack;
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			sup {
+				background: red;
+				color: #ffffff;
+				line-height: 1;
+				padding: 3px 2px;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+				font-size: 60%;
+			}
+
+			span {
+				color: rgba(42, 42, 42, 0.21);
+			}
+
+			@include max(sm) {
+				font-size: 36px;
+				margin-bottom: 15px;
+			}
+
+			@include max(xs) {
+				font-size: 23px;
+			}
+
+			&:hover {
+				transition: all 0.3s;
+				color: $greyBlack;
+			}
+
+		}
+	}
+
+	&--item {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		color: $grey;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 550;
+		line-height: normal;
+		letter-spacing: 0.7px;
+		text-transform: uppercase;
+
+		a {
+			position: relative;
+			display: flex;
+			transition: all .3s;
+			color: $grey;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: normal;
+			letter-spacing: 0.7px;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $greyBlack;
+				transition: all .3s;
+			}
+
+			text-decoration: none;
+		}
+	}
+
+	&__fone {
+		position: relative;
+		display: block;
+		color: $fonBlack;
+		text-align: right;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: 1.1px;
+
+		a {
+			display: block;
+			text-decoration: none;
+			position: relative;
+			color: $fonBlack;
+			text-align: right;
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 1.1px;
+			transition: all 0.3s;
+
+			&:hover {
+				transition: all 0.3s;
+				color: $grey;
+			}
+		}
+	}
+
+	&__link {
+		position: relative;
+		cursor: pointer;
+		color: $fonBlack;
+		font-size: 23px;
+		line-height: 100%;
+		padding-right: 0;
+		background: transparent;
+		text-decoration: none;
+		width: 100%;
+		transition: all 0.3s;
+		color: $fonBlack;
+		margin-bottom: 20px;
+
+		a {
+			position: relative;
+			cursor: pointer;
+			color: $fonBlack;
+			font-size: 23px;
+			line-height: 100%;
+			padding-right: 0;
+			background: transparent;
+			text-decoration: none;
+			width: 100%;
+			transition: all 0.3s;
+			color: $fonBlack;
+
+			&:hover {
+				transition: all 0.3s;
+				color: $grey;
+			}
+		}
+	}
+
+	&__top {
+		position: relative;
+		display: flex;
+		width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		margin-bottom: 32px;
+		border-bottom: 1px solid $grey;
+
+		&__row {
+			position: relative;
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 26px;
+		}
+	}
+
+	&__bottom {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		padding: 0px 16px 44px 32px;
+
+		@include max(sm) {
+			padding: 0px 16px 44px 16px;
+		}
+	}
+
+	.header__other__user {
+		svg {
+			margin-right: 10px;
+		}
+	}
+
+	.header__other__lang {
+		margin-right: 0;
+
+	}
+
+	.soc {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row nowrap;
+		left: auto;
+		top: auto;
+		margin-top: 22px;
+		margin-left: -12px;
+
+		&__text {
+			display: none;
+		}
+
+		&__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			letter-spacing: 0.7px;
+			text-decoration: none;
+			width: 44px;
+			height: 44px;
+			transition: all 0.3s;
+			border-radius: 7px;
+
+			&__text {
+				display: none;
+			}
+
+			&:hover {
+				transition: all 0.3s;
+				background: rgba(255, 255, 255, 0.21);
+			}
+		}
+	}
+
+	&__btn {
+		margin-top: 20px;
+	}
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	background: $mainDark;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+	background: $mainDark;
+}
+
+
+/* Общие стили, потом перенести в general */
+
+.its-container {
+	width: 100%;
+	padding: 0 300px;
+
+	&--full {
+		padding: 0 250px;
+	}
+}
+
+
+.home-intro {
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		z-index: 10;
+
+		@include max(xs) {
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+	}
+}
