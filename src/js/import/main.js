@@ -203,7 +203,9 @@ jQuery(function () {
             const scrollTarget = document.getElementById(href);
             if (scrollTarget !== null) {
                 e.preventDefault();
-                const topOffset = document.querySelector('.section__header') ? document.querySelector('.section__header').offsetHeight : 0;
+                const pt = document.querySelector('.its-header__side') ? parseFloat(getComputedStyle(document.querySelector('.its-header__side')).paddingTop) : 0;
+                const sh = document.querySelector('.its-header__soc') ? parseFloat(document.querySelector('.its-header__soc').offsetHeight) : 0;
+                const topOffset = document.querySelector('.section__header') ? document.querySelector('.section__header').offsetHeight : pt + sh;
                 const elementPosition = scrollTarget.getBoundingClientRect().top;
                 const offsetPosition = elementPosition - topOffset;
                 window.scrollBy({
