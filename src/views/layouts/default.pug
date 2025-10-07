@@ -38,12 +38,12 @@ html(lang="ru")
 			- else
 				include ../../blocks/modules/header/header
 
-		main.site-main
+		main.site-main(class= `${newDesign === true ? 'site-main--pt0' : ''}` )
 			block content
 
 		- if(!noFooter)
 			block footer
-				+footer(noTellUs)
+				+footer(noTellUs, newDesign)
 
 		+cookie
 

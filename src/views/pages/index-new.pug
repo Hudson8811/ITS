@@ -6,7 +6,7 @@ block variables
 	- const newDesign = true
 
 block content
-	.start__section.section.home-intro
+	.start__section.section.home-intro#home-intro(data-js="anhorSection")
 		.its-container.start__achievements
 			+achievements({
 				classes: 'achievements--start'
@@ -88,9 +88,9 @@ block content
 					.partners__slide.swiper-slide
 						img(src="../img/svg/partners__slide__15.svg" alt="")
 
-	#cases__section.cases__section.section.section--bottom
+	#cases.cases__section.section.section--bottom(data-js="anhorSection")
 		.cases__inner
-			.container
+			.its-container
 				.cases__title.title__99 Кейсы
 				.cases.rellax(data-rellax-speed="1")
 					.cases__col.rellax(data-rellax-speed="-3")
@@ -161,9 +161,8 @@ block content
 				.cases__show
 					a.cases__show-more(href="#") Все проекты
 
-
-	.releases.section
-		.container
+	.releases.section#releases(data-js="anhorSection")
+		.its-container
 			.releases__title.title__65 
 				!="Релизы 2024 года"
 			.releases__cards
@@ -198,8 +197,8 @@ block content
 						img(src="../img/release_6.jpg" alt="")
 					.releases-card__title kolkunovo.ru
 
-	#developing__section.developing__section.section
-		.container
+	#developing.developing__section.section(data-js="anhorSection")
+		.its-container
 			.developing__title.title__65 
 				!="Эксперты <br> <span>в интеграциях</span>"
 			.developing

@@ -99,6 +99,14 @@ body {
         padding-top: 55px;
     }
 
+    &--pt0 {
+        padding-top: 0;
+
+        @include max(mdHeader) {
+            padding-top: 0;
+        }
+    }
+
     &.site-main__over-visidle {
         overflow: visible;
     }
@@ -824,8 +832,6 @@ body {
             top: auto;
             bottom: 0;
         }
-
-
     }
 
     &__col {

@@ -1,8 +1,8 @@
-mixin footer(noTellUs = false)
+mixin footer(noTellUs = false, itsDesign = false)
 
 	if(noTellUs == false)
-		#tell-us.tell-us__section.section
-			.container
+		#tell-us.tell-us__section.section(data-js="anhorSection")
+			div(class= `${itsDesign == true ? 'its-container' : 'container'}`)
 				.tell-us
 					.tell-us__col
 						.tell-us__title.title__65
@@ -73,8 +73,8 @@ mixin footer(noTellUs = false)
 										span
 									!="Я соглашаюсь на обработку персональных данных"
 								button.btn--small(type="submit") Оставить заявку
-	.footer__section
-		.container 
+	.footer__section#footer(data-js="anhorSection" data-bgc="dark")
+		div(class= `${itsDesign == true ? 'its-container' : 'container'}`) 
 			.footer
 				.footer__col
 					.footer__desc

@@ -8,7 +8,7 @@
 	width: 100%;
 	padding: 0;
 	background: #fff;
-	z-index: 9999;
+	z-index: 90;
 	height: auto;
 	box-sizing: border-box;
 
@@ -21,18 +21,30 @@
 		padding: 70px 40px;
 		height: 100vh;
 		height: 100dvh;
+
+		@include max(xl) {
+			padding: 24px 20px 70px;
+		}
 	}
 
 	&__left {
 		max-width: 250px;
 		left: 0;
-		border-right: 1px solid rgba(0, 0, 0, 0.2);
+		border-right: 1px solid #CCCCCC;
+
+		@include max(xl) {
+			max-width: 210px;
+		}
 	}
 
 	&__right {
-		max-width: 200px;
+		max-width: 130px;
 		right: 0;
-		border-left: 1px solid rgba(0, 0, 0, 0.2);
+		border-left: 1px solid #CCCCCC;
+
+		@include max(xl) {
+			max-width: 90px;
+		}
 	}
 
 	&__menu {
@@ -67,7 +79,12 @@
 				margin-right: 20px;
 			}
 
-			&:hover {
+			&.light {
+				color: $white;
+			}
+
+			&:hover,
+			&.active {
 				color: $blue;
 				transition: all 0.3s;
 			}
@@ -87,31 +104,29 @@
 
 	.hamburger {
 		align-self: center;
-		width: 50px;
-		height: 45px;
+		width: 40px;
+		height: 36px;
 		padding: 0;
-		margin-top: -8px;
 
 		&-box {
-			width: 50px;
-			height: 45px;
+			width: 40px;
+			height: 36px;
 		}
 
 		.hamburger-inner,
 		.hamburger-inner::before,
 		.hamburger-inner::after {
-			width: 50px;
-			height: 4px;
+			width: 40px;
+			height: 3px;
 		}
 
 		.hamburger-inner::after {
-			top: -40px;
+			top: -30px;
 			bottom: auto;
 		}
 
 		.hamburger-inner::before {
-			top: -20px;
-			//width: 60px;
+			top: -15px;
 		}
 
 		&.is-active {
@@ -162,7 +177,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		gap: 16px;
 		width: 100%;
 		max-width: 100%;
@@ -182,151 +197,30 @@
 			transition: all .3s;
 			cursor: pointer;
 
-			&:before {
-				position: relative;
-				margin-right: 5px;
+			&--icon {
+				color: $fonBlack;
+				width: 50px;
+				height: 50px;
 				display: flex;
-				justify-content: center;
 				align-items: center;
-				width: 20px;
-				height: 20px;
-				margin-top: 1px;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: contain;
-				opacity: 1;
-				transition: all .3s;
-				content: "";
-			}
-
-			&:after {
-				position: absolute;
-				left: 0;
-				display: flex;
 				justify-content: center;
-				align-items: center;
-				width: 20px;
-				height: 20px;
-				margin-top: 1px;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: contain;
-				opacity: 0;
-				transition: all .3s;
-				content: "";
-			}
+				border-radius: 100%;
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				background-color: $white;
 
-			&__tg {
-				@media (max-width: 900px) {
-					display: none;
-				}
-
-				&::before {
-					opacity: 1;
-					background-image: url(../img/tg.png);
-					transition: all .3s;
-				}
-
-				&::after {
-					background-image: url(../img/tg-blue.png);
-					transition: all .3s;
-					opacity: 0;
-				}
-
-				&:hover {
-					color: $blue;
-					transition: all .3s;
-
-					&::before {
-						opacity: 0;
-						transition: all .3s;
-					}
-
-					&::after {
-						transition: all .3s;
-						opacity: 1;
-					}
-				}
-			}
-
-			&__fon {
-				@media (max-width: 900px) {
-					display: none;
-				}
-
-				&::before {
-					opacity: 1;
-					background-image: url(../img/tel.png);
-					transition: all .3s;
-				}
-
-				&::after {
-					background-image: url(../img/tel-blue.png);
-					transition: all .3s;
-					opacity: 0;
-				}
-
-				&:hover {
-					color: $blue;
-					transition: all .3s;
-
-					&::before {
-						opacity: 0;
-						transition: all .3s;
-					}
-
-					&::after {
-						transition: all .3s;
-						opacity: 1;
-					}
-				}
-			}
-
-			&__mail {
-				@media (max-width: 900px) {
-					display: none;
-				}
-
-				&::before {
-					opacity: 1;
-					background-image: url(../img/mail.png);
-					transition: all .3s;
-				}
-
-				&::after {
-					background-image: url(../img/mail-blue.png);
-					transition: all .3s;
-					opacity: 0;
-				}
-
-				&:hover {
-					color: $blue;
-					transition: all .3s;
-
-					&::before {
-						opacity: 0;
-						transition: all .3s;
-					}
-
-					&::after {
-						transition: all .3s;
-						opacity: 1;
-					}
-				}
-			}
-
-			&:hover {
 				svg {
-					path {
-						fill: #237AE9;
-					}
+					width: 20px;
+					height: 20px;
+				}
+
+				&:hover {
+					color: $blue;
+					border-color: $blue;
 				}
 			}
 
-			// img, svg {
-			// 	transition: all .3s;
-			// 	margin-right: 10px;
-			// }
+
+
 		}
 
 	}
@@ -337,37 +231,20 @@
 	display: flex;
 	width: 100%;
 	max-width: 100%;
-	// padding: 32px  16px 44px 16px;
 	padding-top: 40px;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-	z-index: 9999;
+	z-index: 95;
 	background: #fff;
 	height: calc(100vh - 104px);
 	height: calc(100dvh - 104px);
 	overflow-y: auto;
 	border-radius: 0 0 20px 20px;
 
-	&:after {
-		background-color: $greyBlack;
-		border-radius: 15px;
-		content: "";
-		width: 50px;
-		height: 5px;
-		margin: auto;
-		opacity: .3;
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 10px;
-	}
-
 	&__section {
 		position: fixed;
-		//top: 55px;
 		top: -100%;
-		//left: 100vw;
 		left: 0;
 		width: 100vw;
 		height: 100vh;
@@ -376,14 +253,26 @@
 		align-items: flex-start;
 		overflow: hidden;
 		transition: all .5s;
-		z-index: 999;
+		z-index: 99;
 
 		&.active {
 			transition: all .5s;
-			//width: 100vw;
-			//height: 100vh;
-			//left: 0;
-			top: 55px;
+			top: 0;
+		}
+
+		&:after {
+			background-color: $greyBlack;
+			border-radius: 15px;
+			content: "";
+			width: 50px;
+			height: 5px;
+			margin: auto;
+			opacity: .3;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 118px;
+			z-index: 96;
 		}
 	}
 
@@ -396,6 +285,16 @@
 		top: 10px;
 	}
 
+	&__header {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 32px;
+		border-bottom: 1px solid $greyHover;
+		padding: 0px 16px 24px 32px;
+	}
+
 	&--overlay {
 		position: fixed;
 		left: 0;
@@ -404,7 +303,7 @@
 		width: 100%;
 		height: 100%;
 		background: rgba(6, 6, 6, 0.592);
-		z-index: 990;
+		z-index: 90;
 		opacity: 0;
 		visibility: hidden;
 		transition: all 0.5s linear;
@@ -434,7 +333,7 @@
 			position: relative;
 			cursor: pointer;
 			color: $fonBlack;
-			font-size: 58px;
+			font-size: 45px;
 			line-height: 100%;
 			padding-right: 0;
 			background: transparent;
@@ -689,15 +588,28 @@
 
 .its-container {
 	width: 100%;
-	padding: 0 300px;
+	padding: 0 170px 0 290px;
+
+	@include max(xl) {
+		padding: 0 110px 0 230px;
+	}
+
 
 	&--full {
-		padding: 0 250px;
+		padding: 0 130px 0 250px;
+
+		@include max(xl) {
+			padding: 0 90px 0 210px;
+		}
+
+
 	}
 }
 
 
 .home-intro {
+	padding-top: 70px;
+
 	&__content {
 		position: relative;
 		display: flex;
@@ -710,6 +622,14 @@
 			flex-flow: column nowrap;
 			justify-content: flex-start;
 			align-items: flex-start;
+		}
+	}
+
+	.start__achievements {
+		top: 70px;
+
+		@include max(xl) {
+			top: 24px;
 		}
 	}
 }
