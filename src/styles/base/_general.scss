@@ -1818,6 +1818,10 @@ body {
             line-height: normal;
             margin-bottom: 15px;
             max-width: 215px;
+
+            &.light {
+                color: $white;
+            }
         }
 
         &__picture {

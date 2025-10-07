@@ -50,14 +50,14 @@
 	&__soc {
 		position: absolute;
 		right: calc(100% + 40px);
-		top: 53px;
+		top: 70px;
 		display: flex;
 		align-items: center;
 		gap: 16px;
 
 		@include max(xl) {
 			right: calc(100% + 20px);
-			top: 17px;
+			top: 24px;
 		}
 	}
 
@@ -70,6 +70,7 @@
 		width: 100%;
 		margin-top: auto;
 		margin-bottom: auto;
+		padding-bottom: 10px;
 
 		&__item {
 			position: relative;
