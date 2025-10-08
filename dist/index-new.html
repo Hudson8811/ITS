@@ -28,7 +28,7 @@
   <body>
     <header class="its-header">
       <div class="its-header__left its-header__side"><a class="its-header__logo" href="index.html"> <img src="img/logo.png" alt="logo"></a>
-        <div class="its-header__menu"><a class="its-header__menu__item js-header__menu__item" href="#home-intro" data-js="headerMenuItem">О компании</a><a class="its-header__menu__item js-header__menu__item" href="#cases" data-js="headerMenuItem">Кейсы<sup>+1</sup></a><a class="its-header__menu__item js-header__menu__item" href="#releases" data-js="headerMenuItem">Недавние релизы</a><a class="its-header__menu__item js-header__menu__item" href="#developing" data-js="headerMenuItem">Экспертиза</a><a class="its-header__menu__item js-header__menu__item" href="#footer" data-js="headerMenuItem">Контакты</a></div>
+        <div class="its-header__menu"><a class="its-header__menu__item js-header__menu__item" href="javascript:void(0);" data-target="home-intro" data-js="mainSliderTab">О компании</a><a class="its-header__menu__item js-header__menu__item" href="javascript:void(0);" data-target="cases" data-js="mainSliderTab">Кейсы<sup>+1</sup></a><a class="its-header__menu__item js-header__menu__item" href="javascript:void(0);" data-target="releases" data-js="mainSliderTab">Недавние релизы</a><a class="its-header__menu__item js-header__menu__item" href="javascript:void(0);" data-target="developing" data-js="mainSliderTab">Экспертиза</a><a class="its-header__menu__item js-header__menu__item" href="javascript:void(0);" data-target="footer" data-js="mainSliderTab">Контакты</a></div>
         <div class="tell-us__QR">
           <div class="tell-us__QR__title" data-js="headerMenuItem">Пишите нам в телеграмм</div>
           <div class="tell-us__QR__picture"><img src="img/qr.png" alt=""></div>
@@ -88,222 +88,190 @@
     </div>
     <div class="burger-menu--overlay" data-js="burgerMenuOverlay"></div>
     <main class="site-main site-main--pt0">
-      <div class="start__section section home-intro" id="home-intro" data-js="anhorSection">
-        <div class="its-container start__achievements">
-              <div class="achievements achievements--start">
-                <div class="achievements__item"><a class="achievements__link" href="https://ratingruneta.ru/web/universities/"></a>
-                  <div class="achievements__img"><img src="img/achievements/achievement_6.webp"></div>
-                  <div class="achievements__name">Образование.Вузы (Рейтинг&nbsp;Рунета)</div>
+      <div class="its-container">
+        <div class="main-slider" data-js="mainSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide main-slider__slide" data-id="home-intro">
+              <div class="start__section section home-intro">
+                <div class="start__achievements">
+                      <div class="achievements achievements--start">
+                        <div class="achievements__item"><a class="achievements__link" href="https://ratingruneta.ru/web/universities/"></a>
+                          <div class="achievements__img"><img src="img/achievements/achievement_6.webp"></div>
+                          <div class="achievements__name">Образование.Вузы (Рейтинг&nbsp;Рунета)</div>
+                        </div>
+                        <div class="achievements__item"><a class="achievements__link" href="https://ratingruneta.ru/web/universities/"></a>
+                          <div class="achievements__img"><img src="img/achievements/achievement_6.webp"></div>
+                          <div class="achievements__name">Образование.Вузы (Рейтинг&nbsp;Рунета)</div>
+                        </div>
+                        <div class="achievements__item"><a class="achievements__link" href="/cases/skyfish/"></a>
+                          <div class="achievements__img"><img src="img/achievements/achievement_10.webp"></div>
+                          <div class="achievements__name">Финалист конкурса за лучший сайт 2024 (Рейтинг&nbsp;Рунета)</div>
+                        </div>
+                        <div class="achievements__item"><a class="achievements__link" href="https://ratingruneta.ru/web/#middle"></a>
+                          <div class="achievements__img"><img src="img/achievements/achievement_40.webp"></div>
+                          <div class="achievements__name">Сайты и веб-сервисы (Рейтинг&nbsp;Рунета)</div>
+                        </div>
+                      </div>
                 </div>
-                <div class="achievements__item"><a class="achievements__link" href="https://ratingruneta.ru/web/universities/"></a>
-                  <div class="achievements__img"><img src="img/achievements/achievement_6.webp"></div>
-                  <div class="achievements__name">Образование.Вузы (Рейтинг&nbsp;Рунета)</div>
-                </div>
-                <div class="achievements__item"><a class="achievements__link" href="/cases/skyfish/"></a>
-                  <div class="achievements__img"><img src="img/achievements/achievement_10.webp"></div>
-                  <div class="achievements__name">Финалист конкурса за лучший сайт 2024 (Рейтинг&nbsp;Рунета)</div>
-                </div>
-                <div class="achievements__item"><a class="achievements__link" href="https://ratingruneta.ru/web/#middle"></a>
-                  <div class="achievements__img"><img src="img/achievements/achievement_40.webp"></div>
-                  <div class="achievements__name">Сайты и веб-сервисы (Рейтинг&nbsp;Рунета)</div>
-                </div>
-              </div>
-        </div>
-        <div class="its-container">
-          <div class="home-intro__content">
-            <div class="start__col">
-              <div class="start__desc">
-                <div class="start__title title__99">Работаем с&nbsp;лидерами рынка <br> <span>Мощная разработка и управление проектами</span>
-                </div>
-                    <div class="print-text" data-js="printText" data-text="[&quot;# Корпоративные порталы&quot;, &quot;# Веб сервисы&quot;, &quot;# B2B, B2С личные кабинеты&quot;, &quot;# Сайты&quot;, &quot;# Сложные интеграции&quot;, &quot;# Автоматизация&quot;, &quot;# Мобильные приложения&quot;]">
-                      <div class="print-text__printing" data-js="printTextPrinting"></div>
+                <div class="home-intro__content">
+                  <div class="start__col">
+                    <div class="start__desc">
+                      <div class="start__title title__99">Работаем с&nbsp;лидерами рынка <br> <span>Мощная разработка и управление проектами</span>
+                      </div>
+                          <div class="print-text" data-js="printText" data-text="[&quot;# Корпоративные порталы&quot;, &quot;# Веб сервисы&quot;, &quot;# B2B, B2С личные кабинеты&quot;, &quot;# Сайты&quot;, &quot;# Сложные интеграции&quot;, &quot;# Автоматизация&quot;, &quot;# Мобильные приложения&quot;]">
+                            <div class="print-text__printing" data-js="printTextPrinting"></div>
+                          </div>
                     </div>
-              </div>
-            </div><a class="btn start__btn js-header__menu__item" href="#tell-us">Оставить заявку</a>
-          </div>
-        </div>
-      </div>
-      <div class="partners">
-        <div class="its-container its-container--full">
-          <div class="partners__slider swiper-container js-partners__slider">
-            <div class="swiper-wrapper">
-              <div class="partners__slide swiper-slide"><img src="img/partners__slide__1.png" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__2.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__3.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__4.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__5.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__6.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__7.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__8.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__9.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__10.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__11.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__12.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__13.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__14.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__15.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/partners__slide__1.png" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__2.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__3.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__4.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__5.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__6.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__7.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__8.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__9.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__10.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__11.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__12.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__13.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__14.svg" alt=""></div>
-              <div class="partners__slide swiper-slide"><img src="img/svg/partners__slide__15.svg" alt=""></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cases__section section section--bottom" id="cases" data-js="anhorSection">
-        <div class="cases__inner">
-          <div class="its-container">
-            <div class="cases__title title__99">Кейсы</div>
-            <div class="cases rellax" data-rellax-speed="1">
-              <div class="cases__col rellax" data-rellax-speed="-3"><a class="case case__big-margin" href="#">
-                  <div class="case__picture case__picture--1">
-                    <picture>
-                      <source media="(max-width: 992px )" srcset="img/case__picture__1.png"><img src="img/case__picture__1.png" alt="">
-                    </picture>
-                  </div>
-                  <div class="case__desc">
-                    <div class="case__desc__title">СберМобайл</div>
-                    <div class="case__desc__text text__18">Тут может быть еще какое то описание</div>
-                  </div>
-                  <div class="case__labels">
-                    <div class="case__label">#Аналитика</div>
-                    <div class="case__label">#Дизайн</div>
-                    <div class="case__label">#Аналитика</div>
-                    <div class="case__label">#Дизайн</div>
-                  </div></a><a class="case" href="#">
-                  <div class="case__picture case__picture--2">
-                    <picture>
-                      <source media="(max-width: 992px )" srcset="img/case__picture__3.png"><img src="img/case__picture__3.png" alt="">
-                    </picture>
-                  </div>
-                  <div class="case__desc">
-                    <div class="case__desc__title">Сбербанк</div>
-                    <div class="case__desc__text text__18">Тут может быть еще какое то описание</div>
-                  </div>
-                  <div class="case__labels">
-                    <div class="case__label">#Дизайн</div>
-                    <div class="case__label">#Аналитика</div>
-                    <div class="case__label">#Дизайн</div>
-                    <div class="case__label">#Аналитика</div>
-                  </div></a></div>
-              <div class="cases__col rellax" data-rellax-speed="0"><a class="case" href="#">
-                  <div class="case__picture case__picture--2">
-                    <picture>
-                      <source media="(max-width: 992px )" srcset="img/case__picture__2.png"><img src="img/case__picture__2.png" alt="">
-                    </picture>
-                  </div>
-                  <div class="case__desc">
-                    <div class="case__desc__title">Московский комсомолец спорт</div>
-                    <div class="case__desc__text text__18">Тут может быть еще какое то описание</div>
-                  </div>
-                  <div class="case__labels">
-                    <div class="case__label">#Дизайн</div>
-                    <div class="case__label">#Аналитика</div>
-                  </div></a><a class="case case__big-margin" href="#">
-                  <div class="case__picture case__picture--1">
-                    <picture>
-                      <source media="(max-width: 992px )" srcset="img/case__picture__4.png"><img src="img/case__picture__4.png" alt="">
-                    </picture>
-                  </div>
-                  <div class="case__desc">
-                    <div class="case__desc__title">Haier</div>
-                    <div class="case__desc__text text__18">Тут может быть еще какое то описание</div>
-                  </div>
-                  <div class="case__labels">
-                    <div class="case__label">#Аналитика</div>
-                    <div class="case__label">#Дизайн</div>
-                  </div></a></div>
-            </div>
-            <div class="cases__show"><a class="cases__show-more" href="#">Все проекты</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="releases section" id="releases" data-js="anhorSection">
-        <div class="its-container">
-          <div class="releases__title title__65"> Релизы 2024 года
-          </div>
-          <div class="releases__cards">
-            <div class="releases__card releases-card releases-card--dark"><a class="releases-card__link" href="https://tverdomer.ru/" target="_blank"></a>
-              <div class="releases-card__img"><img src="img/release_1.jpg" alt=""></div>
-              <div class="releases-card__title">tverdomer.ru</div>
-            </div>
-            <div class="releases__card releases-card"><a class="releases-card__link" href="https://www.bonum-trailer.ru/" target="_blank"></a>
-              <div class="releases-card__img"><img src="img/release_2.jpg" alt=""></div>
-              <div class="releases-card__title">bonum-trailer.ru</div>
-            </div>
-            <div class="releases__card releases-card"><a class="releases-card__link" href="https://www.tn.ru/" target="_blank"></a>
-              <div class="releases-card__img"><img src="img/release_3.jpg" alt=""></div>
-              <div class="releases-card__title">tn.ru</div>
-            </div>
-            <div class="releases__card releases-card"><a class="releases-card__link" href="https://vrf-mrv.ru/" target="_blank"></a>
-              <div class="releases-card__img"><img src="img/release_4.jpg" alt=""></div>
-              <div class="releases-card__title">vrf-mrv.ru</div>
-            </div>
-            <div class="releases__card releases-card"><a class="releases-card__link" href="https://fishmarket.ru/" target="_blank"></a>
-              <div class="releases-card__img"><img src="img/release_5.jpg" alt=""></div>
-              <div class="releases-card__title">fishmarket.ru</div>
-            </div>
-            <div class="releases__card releases-card"><a class="releases-card__link" href="https://kolkunovo.ru/" target="_blank"></a>
-              <div class="releases-card__img"><img src="img/release_6.jpg" alt=""></div>
-              <div class="releases-card__title">kolkunovo.ru</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="developing__section section" id="developing" data-js="anhorSection">
-        <div class="its-container">
-          <div class="developing__title title__65"> Эксперты <br> <span>в интеграциях</span>
-          </div>
-          <div class="developing">
-            <div class="developing__item">
-              <div class="developing__item__title"> 1С
-              </div>
-              <div class="developing__item__list">
-                <ul>
-                  <li>С сайтами
-                  </li>
-                  <li>С web-сервисами
-                  </li>
-                  <li>С CRM-системами
-                  </li>
-                </ul>
+                  </div><a class="btn start__btn js-header__menu__item" href="#tell-us">Оставить заявку</a>
+                </div>
               </div>
             </div>
-            <div class="developing__item">
-              <div class="developing__item__title"> CRM
-              </div>
-              <div class="developing__item__list">
-                <ul>
-                  <li>Bitrix24
-                  </li>
-                  <li>Amo CRM
-                  </li>
-                  <li>Retail CRM
-                  </li>
-                </ul>
+            <div class="swiper-slide main-slider__slide" data-id="cases">
+              <div class="cases__section section section--bottom">
+                <div class="cases__inner">
+                  <div class="cases__title title__99">Кейсы</div>
+                  <div class="cases rellax" data-rellax-speed="1">
+                    <div class="cases__col rellax" data-rellax-speed="-3"><a class="case case__big-margin" href="#">
+                        <div class="case__picture case__picture--1">
+                          <picture>
+                            <source media="(max-width: 992px )" srcset="img/case__picture__1.png"><img src="img/case__picture__1.png" alt="">
+                          </picture>
+                        </div>
+                        <div class="case__desc">
+                          <div class="case__desc__title">СберМобайл</div>
+                          <div class="case__desc__text text__18">Тут может быть еще какое то описание</div>
+                        </div>
+                        <div class="case__labels">
+                          <div class="case__label">#Аналитика</div>
+                          <div class="case__label">#Дизайн</div>
+                          <div class="case__label">#Аналитика</div>
+                          <div class="case__label">#Дизайн</div>
+                        </div></a><a class="case" href="#">
+                        <div class="case__picture case__picture--2">
+                          <picture>
+                            <source media="(max-width: 992px )" srcset="img/case__picture__3.png"><img src="img/case__picture__3.png" alt="">
+                          </picture>
+                        </div>
+                        <div class="case__desc">
+                          <div class="case__desc__title">Сбербанк</div>
+                          <div class="case__desc__text text__18">Тут может быть еще какое то описание</div>
+                        </div>
+                        <div class="case__labels">
+                          <div class="case__label">#Дизайн</div>
+                          <div class="case__label">#Аналитика</div>
+                          <div class="case__label">#Дизайн</div>
+                          <div class="case__label">#Аналитика</div>
+                        </div></a></div>
+                    <div class="cases__col rellax" data-rellax-speed="0"><a class="case" href="#">
+                        <div class="case__picture case__picture--2">
+                          <picture>
+                            <source media="(max-width: 992px )" srcset="img/case__picture__2.png"><img src="img/case__picture__2.png" alt="">
+                          </picture>
+                        </div>
+                        <div class="case__desc">
+                          <div class="case__desc__title">Московский комсомолец спорт</div>
+                          <div class="case__desc__text text__18">Тут может быть еще какое то описание</div>
+                        </div>
+                        <div class="case__labels">
+                          <div class="case__label">#Дизайн</div>
+                          <div class="case__label">#Аналитика</div>
+                        </div></a><a class="case case__big-margin" href="#">
+                        <div class="case__picture case__picture--1">
+                          <picture>
+                            <source media="(max-width: 992px )" srcset="img/case__picture__4.png"><img src="img/case__picture__4.png" alt="">
+                          </picture>
+                        </div>
+                        <div class="case__desc">
+                          <div class="case__desc__title">Haier</div>
+                          <div class="case__desc__text text__18">Тут может быть еще какое то описание</div>
+                        </div>
+                        <div class="case__labels">
+                          <div class="case__label">#Аналитика</div>
+                          <div class="case__label">#Дизайн</div>
+                        </div></a></div>
+                  </div>
+                  <div class="cases__show"><a class="cases__show-more" href="#">Все проекты</a></div>
+                </div>
               </div>
             </div>
-            <div class="developing__item">
-              <div class="developing__item__title"> API
+            <div class="swiper-slide main-slider__slide" data-id="releases">
+              <div class="releases">
+                <div class="releases__title title__65"> Релизы 2024 года
+                </div>
+                <div class="releases__cards">
+                  <div class="releases__card releases-card releases-card--dark"><a class="releases-card__link" href="https://tverdomer.ru/" target="_blank"></a>
+                    <div class="releases-card__img"><img src="img/release_1.jpg" alt=""></div>
+                    <div class="releases-card__title">tverdomer.ru</div>
+                  </div>
+                  <div class="releases__card releases-card"><a class="releases-card__link" href="https://www.bonum-trailer.ru/" target="_blank"></a>
+                    <div class="releases-card__img"><img src="img/release_2.jpg" alt=""></div>
+                    <div class="releases-card__title">bonum-trailer.ru</div>
+                  </div>
+                  <div class="releases__card releases-card"><a class="releases-card__link" href="https://www.tn.ru/" target="_blank"></a>
+                    <div class="releases-card__img"><img src="img/release_3.jpg" alt=""></div>
+                    <div class="releases-card__title">tn.ru</div>
+                  </div>
+                  <div class="releases__card releases-card"><a class="releases-card__link" href="https://vrf-mrv.ru/" target="_blank"></a>
+                    <div class="releases-card__img"><img src="img/release_4.jpg" alt=""></div>
+                    <div class="releases-card__title">vrf-mrv.ru</div>
+                  </div>
+                  <div class="releases__card releases-card"><a class="releases-card__link" href="https://fishmarket.ru/" target="_blank"></a>
+                    <div class="releases-card__img"><img src="img/release_5.jpg" alt=""></div>
+                    <div class="releases-card__title">fishmarket.ru</div>
+                  </div>
+                  <div class="releases__card releases-card"><a class="releases-card__link" href="https://kolkunovo.ru/" target="_blank"></a>
+                    <div class="releases-card__img"><img src="img/release_6.jpg" alt=""></div>
+                    <div class="releases-card__title">kolkunovo.ru</div>
+                  </div>
+                </div>
               </div>
-              <div class="developing__item__list">
-                <ul>
-                  <li>Используем готовые решения
-                  </li>
-                  <li>Разрабатываем кастомные решения
-                  </li>
-                </ul>
+            </div>
+            <div class="swiper-slide main-slider__slide" data-id="developing">
+              <div class="developing__section">
+                <div class="developing__title title__65"> Эксперты <br> <span>в интеграциях</span>
+                </div>
+                <div class="developing">
+                  <div class="developing__item">
+                    <div class="developing__item__title"> 1С
+                    </div>
+                    <div class="developing__item__list">
+                      <ul>
+                        <li>С сайтами
+                        </li>
+                        <li>С web-сервисами
+                        </li>
+                        <li>С CRM-системами
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="developing__item">
+                    <div class="developing__item__title"> CRM
+                    </div>
+                    <div class="developing__item__list">
+                      <ul>
+                        <li>Bitrix24
+                        </li>
+                        <li>Amo CRM
+                        </li>
+                        <li>Retail CRM
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="developing__item">
+                    <div class="developing__item__title"> API
+                    </div>
+                    <div class="developing__item__list">
+                      <ul>
+                        <li>Используем готовые решения
+                        </li>
+                        <li>Разрабатываем кастомные решения
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

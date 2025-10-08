@@ -361,7 +361,7 @@ body {
     font-size: 99px;
     font-style: normal;
     font-weight: 700;
-    line-height: 94%;
+    line-height: 105%;
     letter-spacing: -0.06em;
 
     span {
@@ -1897,12 +1897,9 @@ body {
 
     &__section {
         overflow: hidden;
-        margin-top: 180px;
         display: block;
 
-        @include max(sm) {
-            margin-top: 50px;
-        }
+        @include max(sm) {}
 
         @include max(md) {
             .cases__col:last-child {
@@ -1930,9 +1927,6 @@ body {
     }
 
     &__btn {
-        // position: absolute;
-        // bottom: 0;
-        // left: calc(50% - 128px);
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 135px;
@@ -2171,8 +2165,6 @@ body {
                     font-size: 25px;
                 }
             }
-
-            &__text {}
         }
     }
 
@@ -3643,5 +3635,15 @@ body {
             width: 5%;
             white-space: nowrap;
         }
+    }
+}
+
+.main-slider {
+    overflow: hidden;
+
+    &__slide {
+        padding-top: 140px;
+        height: 100vh;
+        overflow: hidden;
     }
 }
