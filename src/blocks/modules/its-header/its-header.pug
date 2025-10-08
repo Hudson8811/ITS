@@ -15,17 +15,15 @@ header.its-header
 			.tell-us__QR__picture
 				img(src="img/qr.png" alt="")
 
-		//-a(href="#tell-us" data-js="headerMenuItem").btn.btn--small.its-header__menu__btn.js-header__menu__item Оставить заявку
-
 	.its-header__right.its-header__side
 		.its-header__soc
-			a(href="https://t.me/itspacegroup_bot").its-header__other__item.its-header__other__item--icon
+			a(href="https://t.me/itspacegroup_bot").its-header__other__item.its-header__other__item--tg.its-header__other__item--icon
 				svg
 					use(xlink:href=`img/sprites/sprite.svg#tg`)
-			a(href="mailto:mail@itspace.group").its-header__other__item.its-header__other__item--icon
+			a(href="https://wa.me/+79851228007").its-header__other__item.its-header__other__item--wa.its-header__other__item--icon
 				svg
 					use(xlink:href=`img/sprites/sprite.svg#wt_current`)
-			a(href="mailto:mail@itspace.group").its-header__other__item.its-header__other__item--icon
+			a(href="https://vc.ru/u/4145713-itspacegroup").its-header__other__item.its-header__other__item--vc.its-header__other__item--icon
 				svg
 					use(xlink:href=`img/sprites/sprite.svg#vc_current`)
 
@@ -48,7 +46,7 @@ header.its-header
 			.burger-menu__logo
 				img(src="img/logo.png" alt="logo")
 
-			<button class="hamburger hamburger--collapse" type="button">
+			<button class="hamburger hamburger--collapse is-active" type="button">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
 				</span>
@@ -62,9 +60,21 @@ header.its-header
 		.burger-menu__bottom
 			.burger-menu__fone.burger-menu__link
 				a(href="tel:+74999384899") +7(499) 938-48-99
-			.burger-menu__mail.burger-menu__link
+			.burger-menu__mail.burger-menu__link.burger-menu__link--tg
 				a(href="https://t.me/itspacegroup_bot") @itspacegroup_bot
 			.burger-menu__mail.burger-menu__link
 				a(href="mailto:mail@itspace.group") mail@itspace.group
+
+			.burger-menu__soc
+				a(href="https://t.me/itspacegroup_bot").its-header__other__item.its-header__other__item--tg.its-header__other__item--icon
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#tg`)
+				a(href="https://wa.me/+79851228007").its-header__other__item.its-header__other__item--wa.its-header__other__item--icon
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#wt_current`)
+				a(href="https://vc.ru/u/4145713-itspacegroup").its-header__other__item.its-header__other__item--vc.its-header__other__item--icon
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#vc_current`)
+
 			.btn.btn--small.burger-menu__btn.js-show-form(href="javascript:;") Оставить заявку
 .burger-menu--overlay(data-js="burgerMenuOverlay")

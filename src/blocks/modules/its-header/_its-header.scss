@@ -12,6 +12,16 @@
 	height: auto;
 	box-sizing: border-box;
 
+	@include max(lg) {
+		padding: 10px 32px;
+		border-bottom: 1px solid #CCCCCC;
+	}
+
+	@include max(sm) {
+		padding: 10px 16px;
+	}
+
+
 	&__side {
 		display: flex;
 		flex-direction: column;
@@ -20,6 +30,12 @@
 		top: 0;
 		height: 100vh;
 		height: 100dvh;
+
+		@include max(lg) {
+			position: relative;
+			height: auto;
+			gap: 10px;
+		}
 
 	}
 
@@ -33,6 +49,16 @@
 			max-width: 210px;
 			padding: 24px 20px 30px;
 		}
+
+		@include max(lg) {
+			max-width: fit-content;
+			padding: 0;
+			border-right: none;
+
+			.tell-us__QR {
+				display: none;
+			}
+		}
 	}
 
 	&__right {
@@ -44,6 +70,14 @@
 		@include max(xl) {
 			max-width: 90px;
 			padding: 24px 20px 30px;
+		}
+
+		@include max(lg) {
+			flex-direction: row;
+			align-items: center;
+			max-width: fit-content;
+			padding: 0;
+			border-left: none;
 		}
 	}
 
@@ -59,6 +93,17 @@
 			right: calc(100% + 20px);
 			top: 24px;
 		}
+
+		@include max(lg) {
+			position: relative;
+			top: 0;
+			right: 0;
+			gap: 10px;
+		}
+
+		@include max(xs) {
+			display: none;
+		}
 	}
 
 	&__menu {
@@ -71,6 +116,10 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		padding-bottom: 10px;
+
+		@include max(lg) {
+			display: none;
+		}
 
 		&__item {
 			position: relative;
@@ -133,9 +182,23 @@
 		height: 36px;
 		padding: 0;
 
+
+		@include max(lg) {
+			order: 1;
+			margin-left: 10px;
+			width: 20px;
+			height: 13px;
+		}
+
 		&-box {
+			display: block;
 			width: 40px;
 			height: 36px;
+
+			@include max(lg) {
+				width: 20px;
+				height: 13px;
+			}
 		}
 
 		.hamburger-inner,
@@ -143,15 +206,29 @@
 		.hamburger-inner::after {
 			width: 40px;
 			height: 3px;
+
+			@include max(lg) {
+				width: 20px;
+				height: 2px;
+			}
 		}
 
 		.hamburger-inner::after {
 			top: -30px;
 			bottom: auto;
+
+			@include max(lg) {
+				top: -10px;
+			}
 		}
 
 		.hamburger-inner::before {
 			top: -15px;
+
+			@include max(lg) {
+				width: 60%;
+				top: -5px;
+			}
 		}
 
 		&.is-active {
@@ -175,7 +252,6 @@
 		min-width: 158px;
 		max-width: 158px;
 		margin-right: 75px;
-		transform: translateY(-3px);
 
 		@include max(1500) {
 			margin-right: 30px;
@@ -206,6 +282,15 @@
 		gap: 16px;
 		width: 100%;
 		max-width: 100%;
+
+		@include max(lg) {
+			gap: 10px;
+			flex-direction: row;
+		}
+
+		@include max(xs) {
+			display: none;
+		}
 
 		&__item {
 			position: relative;
@@ -239,6 +324,16 @@
 					height: 50px;
 				}
 
+				@include max(lg) {
+					width: 40px;
+					height: 40px;
+				}
+
+				@include max(xs) {
+					width: 50px;
+					height: 50px;
+				}
+
 				svg {
 					width: 25px;
 					height: 25px;
@@ -247,11 +342,42 @@
 						width: 20px;
 						height: 20px;
 					}
+
+					@include max(lg) {
+						width: 15px;
+						height: 15px;
+					}
+
+					@include max(xs) {
+						width: 20px;
+						height: 20px;
+					}
 				}
 
 				&:hover {
 					color: $blue;
 					border-color: $blue;
+				}
+			}
+
+			&--tg {
+				&:hover {
+					color: #40A7E3;
+					border-color: #40A7E3;
+				}
+			}
+
+			&--wa {
+				&:hover {
+					color: #25D366;
+					border-color: #25D366;
+				}
+			}
+
+			&--vc {
+				&:hover {
+					color: #FFC9ED;
+					border-color: #FFC9ED;
 				}
 			}
 
@@ -277,6 +403,10 @@
 	height: calc(100dvh - 104px);
 	overflow-y: auto;
 	border-radius: 0 0 20px 20px;
+
+	@include max(sm) {
+		padding-top: 24px;
+	}
 
 	&__section {
 		position: fixed;
@@ -329,6 +459,11 @@
 		margin-bottom: 32px;
 		border-bottom: 1px solid $greyHover;
 		padding: 0px 16px 24px 32px;
+
+		@include max(sm) {
+			padding: 0px 16px 24px 16px;
+			margin-bottom: 24px;
+		}
 	}
 
 	&--overlay {
@@ -362,7 +497,7 @@
 		padding: 0px 16px 44px 32px;
 
 		@include max(sm) {
-			padding: 0px 16px 44px 16px;
+			padding: 0px 16px 24px 16px;
 		}
 
 		&__item {
@@ -514,6 +649,12 @@
 				color: $grey;
 			}
 		}
+
+		&--tg {
+			@include max(xs) {
+				display: none;
+			}
+		}
 	}
 
 	&__top {
@@ -549,61 +690,50 @@
 		}
 	}
 
-	.header__other__user {
-		svg {
-			margin-right: 10px;
-		}
-	}
+	&__soc {
+		display: none;
+		align-items: center;
+		gap: 10px;
 
-	.header__other__lang {
-		margin-right: 0;
-
-	}
-
-	.soc {
-		position: relative;
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-		flex-flow: row nowrap;
-		left: auto;
-		top: auto;
-		margin-top: 22px;
-		margin-left: -12px;
-
-		&__text {
-			display: none;
-		}
-
-		&__item {
+		@include max(xs) {
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: #fff;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 500;
-			line-height: normal;
-			letter-spacing: 0.7px;
-			text-decoration: none;
-			width: 44px;
-			height: 44px;
-			transition: all 0.3s;
-			border-radius: 7px;
-
-			&__text {
-				display: none;
-			}
-
-			&:hover {
-				transition: all 0.3s;
-				background: rgba(255, 255, 255, 0.21);
-			}
 		}
 	}
 
 	&__btn {
 		margin-top: 20px;
+	}
+
+	.hamburger {
+		padding: 0;
+
+		@include max(lg) {
+
+			.hamburger-inner,
+			.hamburger-inner::before,
+			.hamburger-inner::after {
+				width: 30px;
+				height: 3px;
+			}
+
+			.hamburger-box {
+				width: 30px;
+				height: 20px;
+			}
+		}
+
+		@include max(sm) {
+
+			.hamburger-inner,
+			.hamburger-inner::before,
+			.hamburger-inner::after {
+				width: 24px;
+			}
+
+			.hamburger-box {
+				width: 24px;
+			}
+		}
 	}
 }
 
@@ -630,6 +760,14 @@
 		padding: 0 110px 0 230px;
 	}
 
+	@include max(lg) {
+		padding: 0 32px;
+	}
+
+	@include max(sm) {
+		padding: 0 16px;
+	}
+
 
 	&--full {
 		padding: 0 130px 0 250px;
@@ -638,6 +776,13 @@
 			padding: 0 90px 0 210px;
 		}
 
+		@include max(lg) {
+			padding: 0;
+		}
+
+		@include max(sm) {
+			padding: 0;
+		}
 
 	}
 }
@@ -666,6 +811,14 @@
 
 		@include max(xl) {
 			top: 24px;
+		}
+
+		@include max(lg) {
+			top: 0;
+		}
+
+		@include max(sm) {
+			top: auto;
 		}
 	}
 }

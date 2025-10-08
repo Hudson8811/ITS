@@ -9,7 +9,6 @@
     }
 
     &--start {
-        margin-left: auto;
         margin-bottom: 10px;
 
 
@@ -59,8 +58,8 @@
         height: 61px;
 
         @media (max-width: 1439px) {
-            width: 70px;
-            height: 61px;
+            width: 60px;
+            height: 52px;
         }
 
         img {

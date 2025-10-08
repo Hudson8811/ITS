@@ -11,7 +11,7 @@
 	color: #fff;
 	min-height: 551px;
 
-	@include max(lg) {
+	@include max(mdHeader) {
 		gap: 10px;
 	}
 
@@ -165,10 +165,11 @@
 		width: 258px;
 		margin-right: 34px;
 
-		@include max(mdHeader) {
+		@include max(xl) {
 			min-width: auto;
 			width: 100%;
 			max-width: 258px;
+			margin-right: 20px;
 		}
 
 		&__tg {

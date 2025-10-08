@@ -88,7 +88,7 @@ jQuery(function () {
 
     let overlayBg = document.querySelector('[data-js="burgerMenuOverlay"]');
     let mobMenu = document.querySelector('[data-js="burgerMenuSection"]');
-    let humb = document.querySelector(".hamburger");
+    //let humb = document.querySelector(".hamburger");
 
     function menuSwipeController() {
         const durationLimit = 200 // длительность свайпа (мс)
@@ -154,10 +154,10 @@ jQuery(function () {
     menuSwipeController()
 
 
-    var hamburger = $(".hamburger");
+    /*var hamburger = $(".hamburger");
     hamburger.on("click", function(e) {
         hamburger.toggleClass("is-active");
-    });
+    });*/
     var search = $(".header__other__search");
     search.click( function(e) {
         $(this).children(".header__other__search__input").addClass("active");
@@ -173,7 +173,7 @@ jQuery(function () {
 
     overlayBg.addEventListener("click", function () {
         mobMenu.classList.remove("active");
-        humb.classList.remove("is-active");
+        //humb.classList.remove("is-active");
         bodyYesScroll()
     });
 
@@ -213,7 +213,7 @@ jQuery(function () {
                     behavior: "smooth"
                 });
                 mobMenu.classList.remove("active");
-                humb.classList.remove("is-active");
+                //humb.classList.remove("is-active");
                 bodyYesScroll();
             }
 
@@ -240,7 +240,7 @@ jQuery(function () {
                     behavior: "smooth"
                 });
                 mobMenu.classList.remove("active");
-                humb.classList.remove("is-active");
+                //humb.classList.remove("is-active");
                 bodyYesScroll();
             }
 

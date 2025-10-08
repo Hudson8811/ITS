@@ -105,6 +105,14 @@ body {
         @include max(mdHeader) {
             padding-top: 0;
         }
+
+        @include max(lg) {
+            padding-top: 80px;
+        }
+
+        @include max(xs) {
+            padding-top: 40px;
+        }
     }
 
     &.site-main__over-visidle {
@@ -309,9 +317,6 @@ body {
             border: 1px solid $blue;
         }
     }
-
-    &--two {}
-
 }
 
 .back-link {

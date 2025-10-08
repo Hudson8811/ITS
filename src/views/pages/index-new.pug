@@ -8,7 +8,9 @@ block variables
 block content
 	.start__section.section.home-intro#home-intro(data-js="anhorSection")
 		.its-container.start__achievements
-			+achievements
+			+achievements({
+				classes: 'achievements--start'
+			})
 		.its-container
 			.home-intro__content
 				.start__col
