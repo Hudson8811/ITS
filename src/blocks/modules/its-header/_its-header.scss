@@ -799,6 +799,7 @@
 		align-items: center;
 		width: 100%;
 		z-index: 10;
+		margin-top: 12vh;
 
 		@include max(xs) {
 			flex-flow: column nowrap;
@@ -813,11 +814,11 @@
 		transform: none;
 
 		@include max(xl) {
-			top: 0;
+			top: -70px;
 		}
 
 		@include max(lg) {
-			top: 0;
+			//top: 0;
 		}
 
 		@include max(sm) {

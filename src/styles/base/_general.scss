@@ -786,15 +786,13 @@ body {
     &__section {
         height: calc(100vh - 170px);
         min-height: 700px;
-        align-items: center;
+        align-items: flex-start;
 
         @media (max-width: 1800px) {
-            padding-top: 150px;
             min-height: 600px;
         }
 
         @media (max-width: 1439px) {
-            padding-top: 120px;
             min-height: 540px;
         }
 
@@ -3645,5 +3643,9 @@ body {
         padding-top: 140px;
         height: 100vh;
         overflow: hidden;
+
+        @include max(xl) {
+            padding-top: 94px;
+        }
     }
 }
