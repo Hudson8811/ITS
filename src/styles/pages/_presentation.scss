@@ -30,6 +30,11 @@
         @include max(sm) {
             margin-top: 24px;
             width: 100%;
+            font-size: 24px;
+        }
+
+        @include max(xs) {
+            font-size: 24px;
         }
     }
 
@@ -47,6 +52,16 @@
         @include max(md) {
             width: 130px;
             height: 130px;
+        }
+
+        @include max(sm) {
+            position: relative;
+            bottom: 0;
+            margin-top: 30px;
+        }
+
+        @include max(xs) {
+            margin-bottom: 50px;
         }
 
     }
@@ -68,6 +83,14 @@
         @include max(md) {
             gap: 16px;
         }
+
+        @include max(sm) {
+            margin-top: 24px;
+        }
+
+        @include max(xs) {
+            flex-direction: column;
+        }
     }
 
     &__card {
@@ -80,6 +103,11 @@
         @include max(md) {
             flex: 0 0 calc((100% - 16px) / 2);
         }
+
+        @include max(xs) {
+            flex: 0 0 auto;
+            width: 100%;
+        }
     }
 
     .whowe-card--img {
@@ -91,6 +119,11 @@
 
         @include max(md) {
             flex: 0 0 calc((100% - 16px) / 2);
+        }
+
+        @include max(xs) {
+            flex: 0 0 auto;
+            width: 100%;
         }
     }
 
@@ -119,6 +152,8 @@
     }
 
     &--img {
+        background-color: #F24942;
+        justify-content: center;
         padding: 0;
         aspect-ratio: 377 / 173;
 
@@ -152,6 +187,11 @@
             flex-direction: column;
             gap: 32px;
         }
+
+        @include max(sm) {
+            margin-top: 24px;
+            gap: 24px;
+        }
     }
 
     &__desc {
@@ -164,6 +204,11 @@
         @include max(lg) {
             flex: 0 0 auto;
             max-width: 700px;
+            margin-top: 0;
+        }
+
+        @include max(sm) {
+            font-size: 24px;
         }
     }
 
@@ -177,6 +222,11 @@
 
         @include max(mdHeader) {
             padding-left: 160px;
+        }
+
+        @include max(sm) {
+            padding-left: 0;
+            gap: 10px;
         }
     }
 
@@ -200,6 +250,10 @@
             max-width: 150px;
         }
 
+        @include max(sm) {
+            display: none;
+        }
+
     }
 
     &__list {
@@ -211,10 +265,19 @@
         background-color: #D9D9D9;
         border-radius: 14px;
 
+        @include max(sm) {
+            gap: 10px;
+            padding: 14px;
+        }
+
         li {
             font-weight: 400;
             font-size: 18px;
             line-height: 140%;
+
+            @include max(sm) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -231,6 +294,11 @@
             grid-template-columns: minmax(0, 1fr);
             gap: 24px;
         }
+
+        @include max(sm) {
+            margin-top: 24px;
+            gap: 16px;
+        }
     }
 }
 
@@ -243,6 +311,11 @@
     flex-direction: column;
     align-items: stretch;
 
+    @include max(sm) {
+        padding: 15px 10px;
+        border-radius: 16px;
+    }
+
     &__header {
         flex: 0 0 auto;
         display: grid;
@@ -254,6 +327,22 @@
         @include max(mdHeader) {
             grid-template-columns: 150px auto;
         }
+
+        @include max(sm) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 0;
+        }
+
+    }
+
+    &__title {
+        .title__35 {
+            @include max(xs) {
+                font-size: 30px;
+            }
+        }
     }
 
     &__logo {
@@ -261,8 +350,18 @@
         width: fit-content;
         margin: 0 auto;
 
+        @include max(xs) {
+            max-height: 25px;
+            margin: 0;
+        }
+
         img {
             max-width: 100%;
+
+            @include max(xs) {
+                object-fit: contain;
+                max-height: 100%;
+            }
         }
     }
 
@@ -270,6 +369,14 @@
         font-weight: 550;
         font-size: 18px;
         line-height: 140%;
+
+        @include max(sm) {
+            margin-top: 10px;
+        }
+
+        @include max(xs) {
+            font-size: 16px;
+        }
     }
 
     &__content {
@@ -281,6 +388,12 @@
         padding-top: 38px;
         padding-left: 51.74%;
         min-height: 476px;
+
+        @include max(sm) {
+            padding-top: 16px;
+            padding-left: 0;
+            min-height: auto;
+        }
     }
 
     &__img {
@@ -290,10 +403,20 @@
         max-width: 70%;
         height: 100%;
 
+        @include max(sm) {
+            width: 100%;
+            max-width: none;
+            opacity: 0.3;
+        }
+
         img {
             height: 100%;
             max-width: 100%;
             object-fit: contain;
+
+            @include max(sm) {
+                width: 100%;
+            }
         }
     }
 
@@ -304,5 +427,9 @@
     &__btn {
         margin-top: auto;
         align-self: flex-end;
+
+        @include max(sm) {
+            align-self: flex-start;
+        }
     }
 }

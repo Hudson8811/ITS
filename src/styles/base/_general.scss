@@ -356,11 +356,15 @@ body {
     font-size: 18px;
     line-height: 140%;
 
+    @include max(xs) {
+        font-size: 16px;
+    }
+
     p,
     ol,
     ul {
-        margin-top: 25px;
-        margin-bottom: 25px;
+        margin-top: 1.39em;
+        margin-bottom: 1.39em;
     }
 
     ul,
@@ -369,7 +373,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 25px;
+        gap: 1.39em;
     }
 
     ul li {
@@ -859,12 +863,19 @@ body {
         min-height: 700px;
         align-items: flex-start;
 
+        /*old start*/
+        align-items: center;
+        /*old end*/
+
         @media (max-width: 1800px) {
             min-height: 600px;
         }
 
         @media (max-width: 1439px) {
             min-height: 540px;
+            /*old start*/
+            padding-top: 120px;
+            /*old end*/
         }
 
         @media (max-width: 480px) {
