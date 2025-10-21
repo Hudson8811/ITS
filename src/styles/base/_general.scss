@@ -316,6 +316,77 @@ body {
             background: $blue;
             border: 1px solid $blue;
         }
+
+        svg {
+            width: 23px;
+            height: 23px;
+        }
+    }
+
+    &--blue {
+        gap: 36px;
+        border-radius: 14px;
+        background-color: $blue;
+        border: 1px solid $blue;
+
+        &:hover {
+            background-color: $mainDark;
+            border: 1px solid $mainDark;
+        }
+    }
+
+    &--white {
+        gap: 36px;
+        border-radius: 14px;
+        background-color: #fff;
+        border: 1px solid #fff;
+        color: #2A2A2A;
+
+        &:hover {
+            background-color: $blue;
+            border: 1px solid $blue;
+            color: #fff;
+        }
+    }
+}
+
+.text-editor {
+    font-size: 18px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+
+    p,
+    ol,
+    ul {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    ul li {
+        position: relative;
+        padding-left: 28px;
+    }
+
+    ul li::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 0.4em;
+        width: 0.333em;
+        height: 0.333em;
+        background-color: #fff;
+        border-radius: 100%;
+
     }
 }
 

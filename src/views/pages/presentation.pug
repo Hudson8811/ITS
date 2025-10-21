@@ -1,0 +1,111 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "О нас 2";
+
+block content
+	section.section.section--top.section--bottom.presentation
+		.container
+			.presentation__intro
+				h1.section__title.presentation__title.title__65 Нужны продажи онлайн? <br>Хотите уникализировать ваш бренд в&nbsp;сети?
+
+				.presentation__text.title__35 Мы создаем продающие сайты, которые превращают посетителей в&nbsp;клиентов. Берем на&nbsp;себя все&nbsp;этапы создания&nbsp;— от&nbsp;идеи до&nbsp;запуска
+				a.btn.start__btn(href="#tell-us") Обсудить проект
+
+	section.section.section--bottom.whowe
+		.container
+			.whowe__title.title__65 Кто мы
+			.whowe__cards
+				.whowe__card.whowe-card
+					.whowe-card__title.title__65 294
+					.whowe-card__text проекта <br>реализовано
+				.whowe__card.whowe-card
+					.whowe-card__title.title__65 32+
+					.whowe-card__text проекта <br>реализовано
+				.whowe__card.whowe-card
+					.whowe-card__title.title__65 6 лет
+					.whowe-card__text проекта <br>реализовано
+				.whowe__card.whowe-card.whowe-card--img
+					img(src="img/awards/awards_whowe.jpg" alt="")
+
+	section.section.section--bottom.techstack
+		.container
+			.techstack__title.title__65 Технологический стек
+			.techstack__content
+				.techstack__desc Популярные системы управления контентом и&nbsp;самописанные CMS на&nbsp;PHP
+				.techstack__body
+					.techstack__item
+						.techstack__subtitle FRONTEND
+						ul.techstack__list
+							li HTML
+							li CSS
+							li JavaScript
+							li 3D WebGL
+					.techstack__item
+						.techstack__subtitle BACKEND
+						ul.techstack__list
+							li PHP
+							li MySQL
+							li Laravel
+							li Git
+					.techstack__item
+						.techstack__subtitle ПЛАТФОРМЫ
+						ul.techstack__list
+							li 1C-Битрикс
+							li Wordpress
+							li MODX
+							li OpenCart
+
+					a.btn.btn--blue.btn--small(href="#tell-us")
+						span Обсудить проект
+						svg
+							use(xlink:href=`img/sprites/sprite.svg#arrow_link_right`)
+
+	section.section.section--bottom.projects
+		.container
+			.techstack__title.title__65 Наши проекты
+			.projects__list
+				.projects-card(style="background: #11191C;")
+					.projects-card__header
+						.projects-card__logo
+							img(src="img/projects/met/logo.svg" alt="")
+						.projects-card__title
+							.title__35 ООО “Центр “МЕТ”
+							.projects-card__subtitle разработка корпоративного сайта и b2b Личного кабинета
+					.projects-card__content
+						.projects-card__img
+							img(src="img/projects/met/card_img.png" alt="")
+						.projects-card__desc.text-editor
+							ul
+								li разработка корпоративного сайта
+								li разработка 3D моделей оборудования
+								li разработка B2B Личного кабинет с интеграцией 1С
+
+						a.btn.btn--white.btn--small.projects-card__btn(href="javascript:void(0);")
+							span Читать кейс
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#arrow_link_right`)
+
+				.projects-card(style="background: linear-gradient(180deg, #010001 0%, #720100 100%);")
+					.projects-card__header
+						.projects-card__logo
+							img(src="img/projects/tochpribor/logo.svg" alt="")
+						.projects-card__title
+							.title__35 ООО “ТД Точприбор”
+							.projects-card__subtitle разработка корпоративного сайта с 3D анимацией оборудования
+					.projects-card__content
+						.projects-card__img
+							img(src="img/projects/tochpribor/card_img.png" alt="")
+						.projects-card__desc.text-editor
+							ul
+								li разработка корпоративного сайта
+								li разработка 3D модели завода, 3D моделей оборудования и их анимация  на сайте
+								li корпоративный ресурс содержит 25+ уникальных шаблонов страниц
+
+
+						a.btn.btn--white.btn--small.projects-card__btn(href="javascript:void(0);")
+							span Читать кейс
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#arrow_link_right`)
+
