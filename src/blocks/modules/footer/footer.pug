@@ -66,6 +66,15 @@ mixin footer(noTellUs = false, itsDesign = false)
 								.contacts__form__input-block
 									textarea(name="msg").contacts__form__input.contacts__form__input--textarea.text__13
 									.contacts__form__input-block__name Расскажите о своем проекте
+								.contacts__form__input-block
+									+field-file({
+										placeholder: 'Загрузите ТЗ',
+										inputAttr: {
+											'multiple': '',
+											'data-size': '10485760',
+											'accept': 'image/*, text/plain, .docx, .pdf'
+										}
+									})
 							.form__buttons
 								.form__buttons__text
 									label.form__check

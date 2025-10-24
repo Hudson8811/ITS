@@ -255,10 +255,10 @@ jQuery(function () {
        event.preventDefault();
     });
     $('.js-contact-form button[type="submit"]').on('click',function (){
-       event.preventDefault();
-       let button = $(this);
-       let form = $(this).closest('form');
-       let allowSend = true;
+        event.preventDefault();
+        let button = $(this);
+        let form = $(this).closest('form');
+        let allowSend = true;
 
        form.find('input[required]').each(function (){
            if (!checkField($(this))){

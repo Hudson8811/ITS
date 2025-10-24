@@ -29,7 +29,7 @@
         }
     }
 
-    &--full {
+    /*&--full {
         .field-file__fakeinput {
             .icon-empty {
                 display: none;
@@ -43,6 +43,27 @@
         .field-file__note {
             display: none;
         }
+    }*/
+
+    &--full {
+        .field-file__fakeinput {
+            display: flex;
+        }
+
+        .field-file__fakeinput--default {
+            display: none;
+        }
+
+        .field-file__note {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
     }
 
     &__fakeinput {
@@ -81,7 +102,7 @@
             }
         }
 
-        .icon-full {
+        /*.icon-full {
             display: none;
             width: 32px;
             height: 32px;
@@ -101,7 +122,7 @@
                 transition: color $tr-time linear;
                 color: $greyBlack;
             }
-        }
+        }*/
     }
 
     &__note {
