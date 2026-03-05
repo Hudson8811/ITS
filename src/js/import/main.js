@@ -274,11 +274,13 @@ jQuery(function () {
 
        if (allowSend && allowAjaxForm){
            allowAjaxForm = false;
-           let formData = form.serialize();
+           let formData = new FormData(form[0]);
            $.ajax({
                type: 'POST',
                url: '/php/mail.php',
                data: formData,
+               processData: false,
+               contentType: false,
                dataType: 'json',
                beforeSend: function() {
                    button.attr('disabled',true);
