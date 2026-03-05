@@ -1099,7 +1099,7 @@ body {
 .hashtag {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1126,7 +1126,7 @@ body {
         position: relative;
         display: block;
         color: rgba(42, 42, 42, 0.2);
-        font-size: 18px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
